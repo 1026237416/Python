@@ -1,0 +1,8 @@
+#coding=gbk
+__author__ = 'Ä¾Ê¯Ç°ÃË'
+
+def index():
+    return "Hello Python"
+
+def hello():
+    return "Hello jike"

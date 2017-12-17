@@ -1,0 +1,16 @@
+name: execute_script
+label: 执行脚本
+description: 在一台或者多台安装了cowbell的虚拟机上执行相同的脚本.
+type: job
+
+parameters:
+  execute_script_content:
+    type: string
+  script_params:
+    type: list
+    content:
+      type: map
+        key:
+          type: string
+        value:
+          type: string

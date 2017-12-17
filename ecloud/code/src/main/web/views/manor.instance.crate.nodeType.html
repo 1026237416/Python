@@ -1,0 +1,53 @@
+
+<div class="tab-box" style="width: 100%;">
+    <div i18n="title=apply.template.create.param.title" class="tab-box-ct">
+        <h3 style="color:#5d5d5d;border-bottom:1px solid #eaeaea;font-size: 14px;margin:0;line-height: 40px;margin-bottom: 15px;font-weight: normal;margin-left: 20px;
+    margin-right: 20px;">参数列表</h3>
+        <div class="script_params_setting" style="height: 363px;overflow-y:auto;margin-right: 20px;margin-left: 20px;">
+
+        </div>
+        <!--<p class="radio-param-wrapper">-->
+            <!--<span>参数01</span>-->
+            <!--<span class="param_radio">01</span>-->
+            <!--<span class="param_radio">02</span>-->
+            <!--<span class="param_radio">03</span>-->
+            <!--<span class="param_radio">04</span>-->
+        <!--</p>-->
+    </div>
+    <div i18n="title=apply.template.create.script.title" title class="tab-box-ct">
+        <div class="code_mirror_box">
+            <form>
+                    <textarea id="codes" name="code" >#bash</textarea>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    .param_infos
+    {
+        padding:10px;
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+    .param_des
+    {
+        clear:both;
+        display: block;
+    }
+    .param_radio
+    {
+        clear:both;
+    }
+    .wrap_left_border
+    {
+        display: inline-block;
+        width: 2px;
+        height: 27px;
+        /* border: 1px solid red; */
+        float: left;
+        background: #c3584a;
+    }
+</style>
+<link href="./js/libs/codemirror/codemirror.css" rel="stylesheet" type="text/css">
+<link href="./js/libs/codemirror/abcdef.css" rel="stylesheet" type="text/css">
+<link href="./js/libs/codemirror/show-hint.css" rel="stylesheet" type="text/css">

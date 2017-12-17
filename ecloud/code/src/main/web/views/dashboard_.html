@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>引导页</title>
+    <link href="theme/default/css/global.css" rel="stylesheet"  type="text/css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="theme/default/css/login.css">
+    <script type="text/javascript" src="js/libs/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src=""></script>
+</head>
+<body>
+<div class="easyui-layout" style="width:1260px;height:300px;">
+    <div data-options="region:'north'" style="height: 40px">
+        <div  style="padding:5px;">
+            <a href="#" class="easyui-linkbutton" data-options="plain:true">首页</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-reload'">计算</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-search'">存储</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true">应用</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-print'">告警</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-help'">日志 </a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'">工单</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-back'">报表</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-back'">配置</a>
+        </div>
+    </div>
+    <div data-options="region:'west',split:false" title="虚拟机" style="width:50%;">
+        <div class="easyui-layout" style="width: 615px;height:220px;margin:5px">
+            <div data-options="region:'west'"  style="width:32%;"></div>
+            <div data-options="region:'east'"  style="width:32%;"></div>
+            <div data-options="region:'center'"  style="width:32%;"></div>
+        </div>
+    </div>
+    <div data-options="region:'east'" title="宿主机" style="width:50%;">
+        <div class="easyui-layout" style="width: 615px;height:220px;margin:5px">
+            <div data-options="region:'west'"  style="width:32%;"></div>
+            <div data-options="region:'east'"  style="width:32%;"></div>
+            <div data-options="region:'center'"  style="width:32%;"></div>
+        </div>
+    </div>
+
+</div>
+<div class="easyui-layout" style="width:1260px;height:260px;">
+    <div data-options="region:'west',split:false" title="代办工单" style="width:50%;">
+        <div style="padding:5px">
+            <table class="easyui-datagrid" title="代办工单" style="width:100%;" align="center"
+                   data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+                <thead>
+                <tr>
+                    <th data-options="field:'id',width:80">ID</th>
+                    <th data-options="field:'type',width:100">类型</th>
+                    <th data-options="field:'user',width:80,align:'right'">用户</th>
+                    <th data-options="field:'time',width:80,align:'right'">时间</th>
+                    <th data-options="field:'detail',width:200">详情</th>
+                    <th data-options="field:'operate',width:60,align:'center'">操作</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+    <div data-options="region:'east'" title="告警" style="width:50%;">
+
+    </div>
+
+</div>
+</body>
+</html>

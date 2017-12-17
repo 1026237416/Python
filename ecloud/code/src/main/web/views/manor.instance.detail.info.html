@@ -1,0 +1,76 @@
+<div class="manor_instance_detail_info">
+    <ul class="item-list-ul-first hide">
+        <li>
+            <label><span i18n="apply.instance.detail.info.field.id"></span></label>
+            <span class="manor_instance_info_field"><span id="idField"/></span>
+        </li>
+        <li >
+            <label><span i18n="apply.instance.detail.info.field.state"></span></label>
+            <span class="manor_instance_info_field"><input id="stateField"/></span>
+        </li>
+        <li>
+            <label><span i18n="apply.instance.detail.info.field.project"></span></label>
+            <span class="manor_instance_info_field"><input id="projectField"/></span>
+        </li>
+        <li >
+            <label><span i18n="apply.instance.detail.info.field.vlan"></span></label>
+            <span class="manor_instance_info_field"><input id="vlanField"/></span>
+        </li>
+        <li >
+            <label><span i18n="apply.instance.detail.info.field.user"></span></label>
+            <span><input id="userField"/></span>
+        </li>
+        <li >
+            <label><span i18n="apply.instance.detail.info.field.ip"></span></label>
+            <span><input id="ipField"/></span>
+        </li>
+        <li style="clear:left;display: block">
+            <label style="vertical-align: top"><span i18n="apply.instance.detail.info.field.backup"></span></label>
+            <span class="manor_instance_info_field"><input id="backupField"/></span>
+        </li>
+    </ul>
+</div>
+<!--<div class="button-route">-->
+    <!--<ul class="button-step viewstack">-->
+        <!--<li class="viewstack-li selected">-->
+            <!--<span class="btn next manorInfoCloseBtn">-->
+                <!--<a>确定</a>-->
+            <!--</span>-->
+        <!--</li>-->
+<!--</ul></div>-->
+<style>
+    .manor_instance_detail_info
+    {
+        margin-left:50px;
+        /*width: 85%;*/
+        height: 293px;
+    }
+    .manor_instance_detail_info .item-list-ul-first li
+    {
+        margin-bottom:8px;
+    }
+    .manor_instance_info_field
+    {
+        display: inline-block;
+        padding-top:2px;
+    }
+    .manor_instance_info_color_active span.textbox.textbox-readonly input, .manor_instance_info_color_active span.textbox.textbox-readonly textarea
+    {
+        color:#539a02;
+    }
+    .manor_instance_info_color_shutoff span.textbox.textbox-readonly input, .manor_instance_info_color_shutoff span.textbox.textbox-readonly textarea
+    {
+        color:#6a6a6a;
+    }
+    .manor_instance_info_color_offline span.textbox.textbox-readonly input, .manor_instance_info_color_offline span.textbox.textbox-readonly textarea
+    {
+        color:#f5a442;
+    }
+    .item-list-ul-first li label {
+
+        min-width: 48px;
+         margin-left: 0px;
+
+    }
+</style>
+<link href="./theme/default/css/manorTemplate.css" rel="stylesheet" type="text/css">

@@ -1,0 +1,187 @@
+<link rel="stylesheet" href="theme/default/css/dashborard.css" type="text/css">
+<div class="dashboard-box">
+    <div class="expired-alert-wrapper">
+        <div class="expired-alert-bg"></div>
+        <div class=""></div>
+    </div>
+    <div>
+        <div class="left_area">
+            <!--tree icon-->
+            <div class="tree_list">
+                <ul>
+                    <li class="warn-fatal"><i class="warn-icon warn-icon-fault"></i><span i18n="dashboard.fault.label">故障</span>(<em id="fatal" class="alarm"><span class="num" style="vertical-align: middle;display: inline-block"></span></em>)</li>
+                    <li class="warn-warn"><i class="warn-icon warn-icon-warn"></i><span i18n="dashboard.warn.label">警告</span>(<em id="warn" class="alarm"><span class="num" style="vertical-align: middle;display: inline-block"></span></em>)</li>
+                    <li class="warn-notice"><i class="warn-icon warn-icon-attention"></i><span i18n="dashboard.notice.label">注意</span>(<em id="notice" class="alarm"><span class="num" style="vertical-align: middle;display: inline-block"></span></em>)</li>
+                </ul>
+            </div>
+            <div class="one_box box-shad" style="background-color:#fff">
+                <div class="block-list-label block-label-mag">性能</div>
+                <div class="topn-wrapper">
+                    <table style="width: 100%;height: 100%;">
+                        <tr>
+                            <td style="width: 50%;height: 100%;">
+                                <div style="display: block;width: 100%;height: 380px;" class="demo_dbox_left"></div>
+                            </td>
+                            <td style="width: 50%;height: 100%;">
+                                <div style="display: block;width: 100%;height: 380px;" class="demo_dbox_right"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- <table width="100%">
+                     <tr>
+                         <td>
+                             &lt;!&ndash;data 01> &ndash;&gt;
+                             <div class="databox">
+                                 <dl>
+                                     <dt>CPU利用率TOP5</dt>
+                                     <dd>
+                                         <div class="left demo_dbox_cont">
+                                             <div class="demo_dbox_left">
+                                             </div>
+                                         </div>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </td>
+                         <td>
+                             &lt;!&ndash;data 02>&ndash;&gt;
+                             <div class="databox">
+                                 <dl>
+                                     <dt>内存使用率 TOP5</dt>
+                                     <dd>
+                                         <div class="right demo_dbox_cont">
+                                             <div class="demo_dbox_right">
+
+                                             </div>
+                                         </div>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </td>
+                     </tr>
+                 </table>-->
+            </div>
+            <div class="box-con">
+                <div class="two_box left">
+                    <div class="block-list-label block-label-mag">云主机</div>
+                    <div class="color_box color_up_box green_box left left-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">运行</dt>
+                            <dd class="yun_left h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">台</span>
+                        </dl>
+                    </div>
+                    <div class="color_box color_down_box red_box right right-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">停止</dt>
+                            <dd class="yun_right h_center cell"><div class="num-b left"><span class="num leftnum"></span></div></dd>
+                            <span class="h_bottom">台</span>
+                        </dl>
+                    </div>
+                </div>
+                <div class="two_box right">
+                    <div class="block-list-label block-label-mag">云硬盘</div>
+                    <div class="color_box color_up_box blue_box left left-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">数量</dt>
+                            <dd class="disk_left h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">个</span>
+                        </dl>
+                    </div>
+                    <div class="color_box color_down_box blue_box right right-mar num-box green-border">
+                        <dl class="clearfix">
+                            <dt class="h_title left">容量</dt>
+                            <dd class="disk_right h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom h_GB">GB</span>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="box-con">
+                <div class="two_box left">
+                    <div class="block-list-label block-label-mag">应用</div>
+                    <div class="color_box color_up_box blue_box left left-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">可用</dt>
+                            <dd class="snap_left h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">个</span>
+                        </dl>
+                    </div>
+                    <div class="color_box color_down_box blue_box right right-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">不可用</dt>
+                            <dd class="snap_right h_center cell"><div class="num-b left"><span class="num leftnum"></span></div></dd>
+                            <span class="h_bottom">个</span>
+                        </dl>
+                    </div>
+                </div>
+                <div class="two_box right">
+                    <div class="block-list-label block-label-mag">快照</div>
+                    <div class="color_box color_up_box blue_box left left-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">数量</dt>
+                            <dd class="backup_left h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">个</span>
+                        </dl>
+                    </div>
+                    <div class="color_box color_down_box blue_box right right-mar num-box green-border">
+                        <dl class="clearfix">
+                            <dt class="h_title left">容量</dt>
+                            <dd class="backup_right h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom h_GB">GB</span>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="box-con">
+                <div class="two_box left">
+                    <div class="block-list-label block-label-mag">宿主机</div>
+                    <div class="color_box color_up_box green_box left-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">可用</dt>
+                            <dd class="su_left h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">台</span>
+                        </dl>
+                    </div>
+                    <div class="color_box color_down_box red_box right-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">不可用</dt>
+                            <dd class="su_right h_center cell"><div class="num-b left"><span class="num leftnum"></span></div></dd>
+                            <span class="h_bottom">台</span>
+                        </dl>
+                    </div>
+                </div>
+                <div class="two_box right">
+                    <div class="block-list-label block-label-mag">IP</div>
+                    <div class="color_box color_up_box yellow_box left left-mar num-box">
+                        <dl class="clearfix">
+                            <dt class="h_title left">使用</dt>
+                            <dd class="ip_left h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">个</span>
+                        </dl>
+                    </div>
+                    <div class="color_box color_down_box blue_box right right-mar num-box green-border">
+                        <dl class="clearfix">
+                            <dt class="h_title left">空闲</dt>
+                            <dd class="ip_right h_center cell"><div class="num-b left"><span class="num"></span></div></dd>
+                            <span class="h_bottom">个</span>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_area">
+            <div class="datelist">
+                <div class="datelist-blank"></div>
+                <span class="operation_log_title block-list-label block-label-mag">操作日志</span>
+            <span style="padding-left:162px;font-size: 14px;font-weight:normal;color:#4c4c4c;" id="time">
+</span>
+                <div class="datalist-bottom"></div>
+                <ul class="dashboard_log_box">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

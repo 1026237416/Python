@@ -1,0 +1,658 @@
+
+table.vlan-detail-descript input{
+    background: #ffffff;
+}
+table.vlan-detail-descript td{
+    height: 40px;
+    line-height: 40px;
+}
+.add_vlanall .btn
+{
+    color: #679BD5;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    border: 0.5px solid #679BD5;
+    float:right;
+}
+.pre-table td{
+    width: 90px;
+    font-size: 16px;
+    height: 50px;
+}
+.step-base-icon
+{
+    background-position: -14px -100px;
+}
+.step-base-icon-select
+{
+    background-position: -14px -100px;
+}
+.step-setting-icon
+{
+    background-position: -251px -294px;
+}
+.step-setting-icon-select
+{
+    background-position: -186px -294px;
+}
+.step-net-icon
+{
+    background-position: -380px -294px;
+}
+.step-net-icon-select
+{
+    background-position: -315px -294px;
+}
+.step-complete-icon
+{
+    background-position: -392px -100px;
+}
+.setp-complete-icon-select
+{
+    background-position: -467px -100px;
+}
+.icon-step-text
+{
+    font-size: 15px;
+}
+.valn_cont .plain-datagrid
+{
+    width: 96.5%;
+    margin-left: 20px;
+}
+.valn_cont .block-list:first-child .plain-datagrid  .datagrid{
+    margin-top:-19px;
+}
+/*.data_name .validatebox-text*/
+/*{*/
+/*color: #aaa;*/
+/*}*/
+/*.data_DNS .validatebox-text*/
+/*{*/
+/*color: #aaa;*/
+/*}*/
+.td_text_color
+{
+    color: #aaa;
+}
+#hosttd
+{
+    position: relative;
+    height: 165px;
+    width: 130px;
+    margin-top: 30px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+.vlan-detail-descript td .textbox-disabled{
+    border: none;
+}
+.vlan-detail-descript td .textbox input
+{
+    color: #aaaaaa;
+}
+.viewstack-box2
+{
+    height: 400px;
+    position: absolute;
+    top: 70px;
+    left: 0!important;
+}
+.plain-table
+{
+    line-height: 80px;
+    font-size: 14px;
+}
+.plain-table.two
+{
+    position: relative;
+    left: 90px;
+    top: 105px;
+}
+#IPtd
+{
+    height: 80px;
+    width: 260px;
+    overflow-y: hidden;
+    position: absolute;
+    top:30px;
+}
+#IPtd:hover
+{
+    overflow-y: auto !important;
+}
+.cont-ip
+{
+    margin:0 25px;
+    height: 400px;
+}
+/*.ip_box_set-content
+{
+    height: 340px;
+    overflow: hidden;
+}*/
+#DNStd{
+    position: absolute;
+    line-height: 15px;
+    top: 30px;
+    height: 120px;
+    min-width: 130px;
+    overflow-x: hidden;
+}
+/*#DNStd:hover
+{
+    overflow-y: auto !important;
+/*}*!/*/
+/*.button-route .button-step span.btn*/
+/*{*/
+/*border-radius: 10px 10px 0 0 !important;*/
+/*}*/
+.button-route .button-step span.btn a:hover
+{
+    box-shadow: 0 3px 3px #7A1310 inset !important;
+    /*border-radius: 10px 10px 0 0 !important;*/
+}
+.addVlanDNS .textbox{
+    border:1px dashed #bcbcbc;
+}
+.input-text .ef-textbox .textbox
+{
+    width: 180px
+}
+.input-text .ef-combox .textbox
+{
+    width: 160px !important;
+}
+.data_dns .textbox{
+    border:1px solid #bcbcbc;
+}
+.data_name .textbox{
+    border:1px solid #bcbcbc;
+}
+span.textbox-invalid {
+    background: transparent;
+    border: 1px dotted red !important;
+}
+.vlan_icon
+{
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+.valn_cont .ef-textbox .textbox
+{
+    height: 28px !important;
+    width: 175px !important;
+}
+.valn_cont .input-text .ef-combox .textbox {
+    width: 200px !important;
+}
+.icon-menus-icon-vlan-dns-delete
+{
+    float: right;
+    margin-top: -25px;
+}
+.addDns
+{
+    width: 305px;
+}
+.addDns .add_dns
+{
+    color:#808080;
+    border-top:1px solid #dfdfdf;
+}
+.addVlanDNSadd > .addDns:first-child span
+{
+    border-top:none !important;
+}
+.icon-change>li{
+    border-top: 100px solid transparent;
+    border-left: 100px solid #98181c;
+    border-bottom: 100px solid transparent;
+}
+.step-change-info {
+    background-position: -412px -389px;
+}
+.icon-change-text{
+    left:48px;
+    font-size:18px;
+}
+.iconChangeCon{
+    top:-70px;
+    left:-104px;
+}
+.viewstack-box2{
+    top:70px;
+    left:15%;
+}
+.icon-change-text-lateral{
+    top: 8px;
+    padding-bottom: 10px;
+    position: absolute;
+    left: 53px;
+}
+.icon-change li:nth-child(2) .icon-change-text
+{
+    margin-top: 9px!important;
+}
+.icon-change li:nth-child(2) .icon-change-text-lateral
+{
+    top: 15px!important;
+}
+.item-list-ul-first li
+{
+    width:80%;
+    margin-bottom: 20px!important;
+}
+.item-list-ul-first li label
+{
+    width: 90px !important;
+}
+.addvlan-net
+{
+    font-size: 16px;
+    margin-top: 3px;
+}
+.pos
+{
+    width: 43px;
+    text-align: center;
+}
+.cont-ip-duan
+{
+    font-size: 14px;
+    line-height: 40px;
+}
+.ip_legend
+{
+    margin-left: 20px;
+    line-height: 23px;
+}
+.ip-selected-text
+{
+    color: #aaaaaa;
+    float: right;
+    margin-right: 0px;
+}
+.ip-splice
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #777777;
+}
+.tenant-bottom
+{
+    margin-top: -20px;
+}
+.ip-legend
+{
+    border: none!important;
+}
+.ip_sect span.textbox.textbox-readonly
+{
+    width:30px!important;
+    overflow:hidden!important;
+    position:relative!important;
+    left:-5px!important;
+    text-align:center;
+}
+.ip_sect span.textbox.textbox-readonly input
+{
+    width:30px!important;
+    overflow:hidden!important;
+    color:black!important;
+    font-size: 14px;
+}
+.ef-cidr-pos span.textbox.textbox-readonly
+{
+    width:10px!important;
+    overflow:hidden!important;
+    position:relative!important;
+    left:-5px!important;
+    text-align:center;
+}
+.ef-cidr-pos span.textbox.textbox-readonly input
+{
+    width:10px!important;
+    overflow:hidden!important;
+    color:black!important;
+}
+.tenant-bottom div label
+{
+    width: 130px;
+    float: left;
+}
+.tenant-bottom div
+{
+    width: 40%;
+    float: left;
+    font-size: 16px;
+    line-height: 80px;
+}
+.addVlan-watermark
+{
+    position: absolute;
+    top: 347px;
+    left: 137px;
+}
+.addVlan-watermark-over
+{
+    margin-top: 120px;
+    margin-left: 260px;
+}
+.vlan-detail-descript
+{
+    margin-left: 40px;
+}
+.vlan-detail-descript div
+{
+    line-height: 40px;
+    width: 33%;
+    float: left;
+    /*font-size: 12px;*/
+}
+.vlan-detail-descript div label
+{
+    font-size: 14px;
+    width: 91px;
+    float: left;
+    text-align: right;
+    color: gray;
+}
+.vlan-detail-descript div span{
+
+}
+.vlan-detail-descript .textbox .textbox-text
+{
+    padding-left: 0!important;
+    font-size: 14px;
+    color: #333;
+}
+.tabs-header
+{
+    margin-top: 10px!important;
+    margin-bottom: 15px;
+    margin-left: 10px!important;
+}
+.hostSlave_state
+{
+    position: relative;
+    top: 6px;
+    /*left:8px;*/
+    font-size:12px;
+    padding-left:18px !important;
+    /*position: absolute;*/
+    /*margin-top: -10px;*/
+    /*margin-left: 10px;*/
+}
+.running
+{
+    width: 100%;
+}
+.icon-state
+{
+    height: 30px;
+    width: 15px;
+}
+.host_status
+{
+    position: relative;
+    top: -7px;
+}
+#hosttd div:first-child
+{
+    margin-top: 0!important;
+}
+.ip_box.viewstack
+{
+    height: 817px;
+    margin-left: 20px;
+    font-size: 14px;
+    position: relative;
+    overflow-y: auto;
+}
+.ip_sect{
+    margin-left: 20px !important;
+    margin-top: 10px;
+    margin-bottom: 9px;
+}
+.ip_legend.add{
+    margin-left: 0px;
+}
+.ip_sect .textbox .textbox-text, .combo
+{
+    text-align: center;
+}
+.hostSlave_icon
+{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 8px;
+}
+.ip_sect_search
+{
+    width: 100%;
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 30px;
+    height: 30px;
+}
+.ip_sect_search span
+{
+    float: left;
+    text-align: center;
+}
+.ip_box_set.viewstack
+{
+    width: 600px;
+    overflow-x:hidden
+}
+.ip_box_set.viewstack>.viewstack-li.selected
+{
+    height: 270px;
+    overflow: hidden;
+}
+.ip_box_set.viewstack>.viewstack-li.selected:hover
+{
+    height: 270px;
+    overflow-y: auto;
+}
+#subnetDetailIPContent .pagination-info
+{
+    float: none;
+}
+/*.datagrid-btable tr td[field="vlan_type"],*/
+/*.datagrid-btable tr td[field="cpus"],*/
+/*.datagrid-btable tr td[field="ocp"]{*/
+    /*padding-left: 3px !important;*/
+/*}*/
+/*.datagrid-btable tr td[field="status"],*/
+/*.datagrid-btable tr td[field="dns"]{*/
+    /*padding-left: 2px !important;*/
+/*}*/
+/*.datagrid-btable tr td[field="subnet_count"],*/
+/*.datagrid-btable tr td[field="tenants"]{*/
+    /*padding-left: 4px !important;*/
+/*}*/
+/*.datagrid-btable tr td[field="vlan_id"]{*/
+    /*padding-left: 7px !important;*/
+/*}*/
+/*.datagrid-btable tr td[field="status"]>div,*/
+/*.datagrid-btable tr td[field="status"]>div>div{*/
+    /*padding-left: 0px !important;*/
+/*}*/
+datagrid-btable tr td[field="status"] {
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="status"]>div, .datagrid-btable tr td[field="status"]>div>div {
+    padding-left: 8px !important;
+}
+.valn_cont .icon-menus{
+    top:-13px;
+    left:3px;
+}
+.block-list:first-child>.block-list-content .detail-page-nav {
+    margin-bottom: 0 !important;
+}
+.block-list:first-child>.block-list-content .icon-menus{
+    top: 8px;
+    left: -15px;
+}
+/*
+.block-list-vlan-dhcp
+{
+    float: left;
+    height: 140px;
+    margin-left: 17px;
+    width: 41%;
+}
+.block-list-vlan-descript
+{
+    height: 140px;
+    float: left;
+    width: 55%;
+}*/
+.running span{
+    padding-left:1px;
+}
+#ok span.btn{
+    background: #d12026;
+    color: #e5e5e5;
+}
+.plain-datagrid-margin .datagrid{
+    margin-top: -4px;
+}
+.host-step-cont
+{
+    width: 650px;
+    height: 80px;
+    margin-left: 0;
+    margin-top: 20px;
+    float: left;
+}
+.basic-result-box
+{
+    position: relative;
+    width: 34.5%;
+    float: right;
+    z-index: 1;
+}
+.addsubnet .item-list-ul-first
+{
+    margin-left: 110px;
+}
+.addsubnet .stack-cont
+{
+    margin-top: 90px;
+}
+.basic-result-box .ef-result-list
+{
+    width: 344px;
+}
+.basic-result-box .ef-result-cont
+{
+    width: 304px;
+}
+.basic-result-box .ef-result-list .ef-result-title
+{
+    width: 304px;
+}
+.viewstack-box2.addsubnet
+{
+    width: 65%;
+    float: left;
+}
+.addsubnet.button-route .viewstack-li
+{
+    width: 680px;
+    position: relative;
+    left: -16px;
+    margin-top: 15px;
+}
+.cont-ip-duan
+{
+    margin-left: 0px;
+}
+.ipSelectAll-content
+{
+    position: relative;
+    top: -13px;
+    margin-left: 20px;
+}
+.btn-router-bottom{
+    width:64.4%;
+    padding:10px 0;
+}
+#resultBox .ef-result-list{
+    width:328px;
+}
+.ef-result-list .ef-result-cont{
+    width:292px;
+    height:340px;
+}
+li.icon-step-first{
+    left:-66px;
+}
+li.icon-step-end{
+    right:-66px;
+}
+.step_wrapper{
+    padding-bottom:22px;
+}
+.ef-result-list .ef-result-title{
+    height:36px;
+    line-height:36px;
+    padding-left:15px;
+}
+.ef-result-list-list-value{
+    width:192px !important;
+    height:170px;
+    border-left:1px solid #e6e6e6;
+}
+.ef-result-list-list-title{
+    width:30%;
+    border-right:none;
+}
+.btn-router-bottom .button-step .prev{
+    margin-left:36px;
+}
+.btn-router-bottom .button-step .next, .btn-router-bottom .button-step .last{
+    margin-right:36px;
+}
+.ef-dailog .panel-header{
+    height:49px;
+}
+.item-list-ul-first i{
+    padding-left:5px;
+}
+/*td[field="name"]>div{*/
+    /*padding-left:16px;*/
+/*}*/
+/*.icon-step-svm.icon-step {
+    background: url(../images/createnet_line.png) repeat-x center 30%;
+}*/
+.icon-step li:last-child .bg{
+    width:27.7%;
+}
+/*td[field="ip"]>div>div{*/
+    /*padding-left:2px;*/
+/*}*/
+/*td[field="cpus"]>div>div{*/
+    /*padding-left:0;*/
+/*}*/
+.icon-step .selected{
+    color:#000000;
+}
+.button-step span.btn {
+    width: 82px;
+}
+td[field='ck'] {
+    position: relative;
+    left: 7px;
+    top: 2px;
+}
+.ef-result-item-label{
+    width:30%;
+}

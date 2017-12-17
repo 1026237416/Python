@@ -1,0 +1,17 @@
+[
+  {
+    "value":"all"
+  },
+  {
+    "value":"active"
+  },
+  {
+    "value":"stopped"
+  },
+  {
+    "value":"error"
+  },
+  {
+    "value":"other"
+  }
+  ]

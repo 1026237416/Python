@@ -1,0 +1,15 @@
+name: reboot_node
+label: 重启
+description: 重启一个结点
+type: job
+
+parameters:
+  group_name:
+    type: string
+    description: 组名称
+  target:
+    type: option
+    value:
+        - group
+        - all
+

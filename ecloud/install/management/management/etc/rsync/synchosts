@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+
+# Start/stop ecloud daemons
+# chkconfig: - 70 80
+
+### BEGIN INIT INFO
+# Provides:          ecloud
+# Default-Start:
+# Default-Stop:
+# Required-Start:    $remote_fs $named $network $time
+# Required-Stop:     $remote_fs $named $network $time
+# Short-Description: Start ecloud distributed file system daemons at boot time
+# Description:       Enable ecloud distributed file system services.
+### END INIT INFO
+
+compute_hosts=
+
+hosts=(${compute_hosts[@]//,/ })
+
+sync_hosts_start()
+{
+	inotifywait -mrq --format '%Xe %w%f' -e modify,create,delete,attrib /etc/hosts | while read file
+	do
+		for IP in ${hosts[@]}
+		do
+			rsync -zrtopg --progress --stats -e ssh /etc/hosts root@${IP}:/etc/hosts > /dev/null 2>&1
+		done
+	done
+}
+
+sync_hosts_stop()
+{
+	pid=`ps -aux | grep synchosts | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+	kill -9 pid  1>/dev/null 2>&1  
+}
+
+sync_hosts_restart()
+{
+	pid=`ps -aux | grep synchosts | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+	kill -9 pid  1>/dev/null 2>&1 
+
+	inotifywait -mrq --format '%Xe %w%f' -e modify,create,delete,attrib /etc/hosts | while read file
+	do
+		for IP in ${hosts[@]}
+		do
+			rsync -zrtopg --progress --stats -e ssh /etc/hosts root@${IP}:/etc/hosts > /dev/null 2>&1
+		done
+	done	
+}
+
+sync_hosts_status()
+{
+	pid=`ps -aux | grep synchosts | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+	if [ ! -n "${pid}" ];
+	then
+		echo synchosts service not running
+	else
+		echo synchosts service has running
+		ps -aux | grep synchosts | grep -v 'grep'
+	fi
+}
+
+
+
+case "$1" in
+	start)
+		sync_hosts_restart &
+	;;
+	stop)
+		sync_hosts_stop
+	;;
+	restart)
+		sync_hosts_restart &
+	;;
+	status)
+		sync_hosts_status
+	;;
+	*)
+	  echo "Usage: service synchosts {start|stop|restart|status}"
+esac

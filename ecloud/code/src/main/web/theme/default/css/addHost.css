@@ -1,0 +1,258 @@
+.viewstack-box li .combox-to-input
+{
+    width: 45%;
+}
+.osText
+{
+    margin-top: 0;
+    width: 80%;
+    float: left;
+    height: 10px;
+
+}
+.combox-to-input label
+{
+    width: 85px;
+    float: left;
+}
+.bound-area-ul li
+{
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+.addHost-net li
+{
+
+}
+.addHost-net li label
+{
+    width: 65px;
+    line-height: 70px;
+}
+#remark
+{
+    resize: none;
+    margin-top: 30px;
+    width: 562px;
+    height: 156px;
+}
+.operate
+{
+    height: 43px;
+    width: 320px;
+    line-height: 43px;
+}
+
+.step-icon{
+    height: 100%;
+    width: 18%;
+    overflow: hidden;
+    float: left;
+    margin-left: 0px;
+}
+/*新建第二个页面的css*/
+.saveQuota
+{
+    text-align: center;
+    height: 35px;
+    width: 100px;
+    line-height: 35px;
+}
+.block-lists
+{
+    /*margin-left: 20%;*/
+}
+.border-bottom{
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom:9px;
+}
+.none-border{
+    border-bottom: 0px;
+    margin-top: 20px;
+}
+.slider{
+    padding-top:20px;
+    margin-top:0;
+}
+.cpuRange,.memoRange,.saveRange{
+    padding-top:20px;
+}
+.slider>label,.border-bottom>label{
+    font-size: 14px;
+    color:#333;
+}
+.config_squ .quotaSquare{
+    width:85px;
+    height:26px;
+    color:#A9A9A9;
+    margin-bottom:10px;
+    /*border:1px solid #bfbfbf;*/
+    font-size: 15px;
+}
+.config_squ_save .quotaSquare{
+    width:140px;
+    height:26px;
+    color:#A9A9A9;
+    margin-bottom:20px;
+    /*border:1px solid #bfbfbf;*/
+    font-size: 15px;
+
+}
+/*新建第二个页面的css完*/
+/*新建第四个页面的css*/
+.pre-table{
+    width:726px;
+    margin-top:24px;
+    margin-left:146px;
+    margin-right:72px;
+}
+.plain-table{
+    color:black;
+    font-size:15px;
+    width:207px;
+    margin-top:0;
+    margin-bottom:10px;
+}
+.plain-table tr:not(first-child)>td{
+    padding-top:20px;
+}
+.plain-table td:nth-child(even)
+{
+    overflow:hidden;
+    color:#7e7e7e;
+    max-width:100px;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+.plain-table td:nth-child(odd)
+{
+    width: 75px;
+    padding-right:10px;
+
+}
+.slider-item{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.slider{
+    padding-top: 0px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+.ml-5{
+    margin-left: 5px;
+    font-size: 14px;
+    color:#333;
+}
+#vlans tr:not(first-child) td:first-child{
+    width:31%;
+    padding-left:20px;
+    /*padding-right:20px;*/
+    padding-top:10px;
+}
+#vlans tr:not(first-child) td:nth-child(2){
+    width:35.9%;
+    padding-left:41px;
+    /*padding-right:20px;*/
+    padding-top:10px;
+}
+#vlans tr:not(first-child) td:last-child{
+    width:249px;
+    padding-left:29px;
+    padding-top:10px;
+}
+#lvlan{
+    color:#333;
+    /*padding-top:15px;*/
+}
+#vlans td[class$="_net"],#vlans td[class$="_ip"]{
+    color:#8f8f8f;
+    font-size:15px;
+}
+/*添加子网后*/
+.net{
+    display:inline-block;
+    width:23%;
+}
+.vlan{
+    display:inline-block;
+    width:20%;
+}
+.ip{
+    display:inline-block;
+    width:25%;
+}
+.childnet{
+    display:inline-block;
+    width:20%;
+}
+.vlancontent{
+    color:#999999;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+#vlans li{
+    margin-top:10px;
+}
+.vlanshow{
+    list-style:none;
+    max-height:137px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    margin-bottom:10px;
+    padding-left:25px;
+}
+.vlanshow>li{
+    margin-top:15px;
+}
+.vlanshow>li>span:nth-child(2){
+    padding-left:10px;
+}
+.vlanshow>li>span:nth-child(3){
+    padding-left:11px;
+}
+.vlanshow>li>span:nth-child(4){
+    padding-left:8px;
+}
+.textbox{
+    box-shadow: 0 0;
+}
+.drawer_bar
+{
+    height: 100%;
+    width: 20px;
+    vertical-align: middle;
+}
+#resultBox .ef-result-list
+{
+    height: 498px;
+}
+#resultBox .ef-result-list .ef-result-cont
+{
+    height: 398px;
+}
+.small_icon_style
+{
+    padding-right:5px;
+}
+#addHostDialog .icon-step-svm .icon-step-end .icon-step-icon i
+{
+    width: 57px;
+}
+.button-step span.btn {
+    width: 82px;
+}
+.btn-router-bottom{
+    width:64.6%;
+}
+.height{
+    height:94px;
+}
+.datagrid-empty-tip div span{
+    top:0;
+}

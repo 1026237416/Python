@@ -1,0 +1,11 @@
+{
+  "columns":[
+    {"label":"Vlan 130","id":"002","detail":"VLAN 130"},
+    {"label":"Vlan 140","id":"003","detail":"VLAN 131"}
+  ],
+  "items":
+  [
+    {"from":"002","to":"003","status":"1","twoway":"0"},
+    {"from":"public","to":"003","status":"1","twoway":"0"}
+  ]
+}

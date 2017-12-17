@@ -1,0 +1,26 @@
+[
+  {
+    "name":"zhang",
+    "ip":"11.11.11.11",
+    "configure":"12g",
+    "status":"正常"
+  },
+  {
+    "name":"wang",
+    "ip":"12.12.12.12",
+    "configure":"12g",
+    "status":"正常"
+  },
+  {
+    "name":"li",
+    "ip":"13.13.13.11",
+    "configure":"12g",
+    "status":"正常"
+  },
+  {
+    "name":"zhao",
+    "ip":"14.141.114.11",
+    "configure":"12g",
+    "status":"正常"
+  }
+]

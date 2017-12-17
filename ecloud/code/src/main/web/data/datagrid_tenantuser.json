@@ -1,0 +1,23 @@
+[
+    {
+        "tenname": "wangjunwei",
+        "name": "王俊伟",
+        "email": "wangjunwei@easted.com.cn",
+        "tel": "181****1378",
+        "id": "租户管理员"
+    },
+    {
+        "tenname": "gaoshan",
+        "name": "高山",
+        "email": "gaoshan@easted.com.cn",
+        "tel": "186****6262",
+        "id": "普通用户"
+    },
+    {
+        "tenname": "cuigang",
+        "name": "崔钢",
+        "email": "cuigang@easted.com.cn",
+        "tel": "187****3702",
+        "id": "普通用户"
+    }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id":1,
+    "name":"Ecloud",
+    "description":"部署simple-test",
+    "status":"on",
+    "action":"offline"
+  },
+  {
+    "id":2,
+    "name":"Ecloud1",
+    "description":"部署simple-test1",
+    "status":"off",
+    "action":"online"
+  }
+]

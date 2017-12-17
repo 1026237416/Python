@@ -1,0 +1,59 @@
+<div class="addDisk">
+    <div class="cal-adddisk disk_des">
+        <div>
+            <span class="addDisk-left">
+                <label><i id="cal-adddisk-name"></i>：</label>
+                <span ><input id="Disk_Name" style="height: 30px;"></span><i class="cal-adddisk-i">*</i>
+            </span>
+            <span>
+                <label >数量<i id="cal-adddisk-count"></i>：</label>
+                <span ><input id="Disk_num" style="height: 30px;width: 220px;"></span><i class="cal-adddisk-i">*</i>
+            </span>
+        </div>
+        <div>
+            <span class="addDisk-left">
+                <label >项目<i id="cal-adddisk-pro"></i>：</label>
+                <span ><input id="Disk_pro" style="height: 30px;"></span><i class="cal-adddisk-i">*</i>
+            </span>
+            <span>
+                <label >用户：</label>
+                <span ><input id="Disk_user" style="height: 30px;"></span>
+            </span>
+        </div>
+        <div>
+            <span class="addDisk-left">
+                <label >存储类型：</label>
+                <span ><input id="Disk_type" style="height: 30px;"></span>
+            </span>
+            <span style="display:none;" class="host-disk">
+                <label >宿主机：</label>
+                <span ><input id="Disk_host" style="height: 30px;"></span><i class="cal-adddisk-i">*</i>
+            </span>
+        </div>
+    </div>
+    <div class="cal-adddisk">
+        <label style="margin-top: 7px;"><i id="cal-adddisk-cap"></i>：</label>
+        <div class="slider_input">
+            <span style="margin-left: 5px;">
+                <input id="adddiskslider" class="easyui-slider" style="width:325px;"
+               data-options="showTip:true,rule:[10,10000],min:10,max:10000,step:1" />
+            </span>
+            <span style="margin-left: 23px;">
+                <input type="text" id="adddiskvolume"  maxlength="5" style="width:70px;height: 30px;">
+                <span style="margin-left: 10px;" id="datadishGB"></span>
+            </span>
+        </div><i class="cal-adddisk-i cal-adddisk-i-slider">*</i>
+    </div>
+    <div class="cal-adddisk"style="margin-top: 28px;">
+        <label  class="cal-adddisk-backup"></label>
+        <textarea id="adddiskbackup"  style="margin-left: 0;"  maxlength="50" ></textarea>
+    </div>
+</div>
+<div class="panel-bottom">
+    <ul class="button-step  button-step-bottom" >
+        <li><span class="btn diskConfirmBtn"><a id="adddiskcancel"></a></span></li>
+        <li id="adddiskokall"><span class="btn diskConfirmBtn"><a id="adddiskok"></a></span></li>
+    </ul>
+</div>
+
+<link href="theme/default/css/disk.css" rel="stylesheet" type="text/css">

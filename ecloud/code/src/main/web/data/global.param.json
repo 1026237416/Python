@@ -1,0 +1,152 @@
+[{
+  "name": "compute.memory_allocation_ratio",
+  "default": 1.5,
+  "value": 1.5,
+  "readonly": false,
+  "type": "Float",
+  "help": null
+},
+  {
+    "name": "compute.cpu_range",
+    "default": "1/2/4/8/16",
+    "value": "1/2/4/8/16",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "compute.max_runing",
+    "default": "5",
+    "value": 5,
+    "readonly": false,
+    "type": "Integer",
+    "help": null
+  },
+  {
+    "name": "compute.cpu_allocation_ratio",
+    "default": 16.0,
+    "value": 16.0,
+    "readonly": false,
+    "type": "Float",
+    "help": null
+  },
+  {
+    "name": "compute.max_interval",
+    "default": "120",
+    "value": 200,
+    "readonly": false,
+    "type": "Integer",
+    "help": null
+  },
+  {
+    "name": "compute.memory_range",
+    "default": "1/2/4/8/16/32",
+    "value": "1/2/4/8/16/32",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "network.model",
+    "default": "vlan",
+    "value": "vlan",
+    "readonly": true,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "alarm.mails",
+    "default": [],
+    "value": [],
+    "readonly": false,
+    "type": "List of String",
+    "help": null
+  },
+  {
+    "name": "storage.default_type",
+    "default": "iscsi",
+    "value": "Default/SSD/iSCSI",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "identify.send_password_mail",
+    "default": true,
+    "value": false,
+    "readonly": false,
+    "type": "Boolean",
+    "help": null
+  },
+  {
+    "name": "mail.username",
+    "default": null,
+    "value": "test@test.com",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "mail.smtp_port",
+    "default": 25,
+    "value": 25,
+    "readonly": false,
+    "type": "Integer",
+    "help": null
+  },
+  {
+    "name": "mail.smtp_host",
+    "default": null,
+    "value": "smtp.test.com",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "mail.password",
+    "default": null,
+    "value": "password",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "log.syslog_server_port",
+    "default": 514,
+    "value": 514,
+    "readonly": false,
+    "type": "Integer",
+    "help": null
+  },
+  {
+    "name": "log.files_max_size",
+    "default": 1,
+    "value": 1024,
+    "readonly": false,
+    "type": "Integer",
+    "help": null
+  },
+  {
+    "name": "log.file_ttl",
+    "default": 10,
+    "value": 10,
+    "readonly": false,
+    "type": "Integer",
+    "help": null
+  },
+  {
+    "name": "log.syslog_server_ip",
+    "default": "",
+    "value": "",
+    "readonly": false,
+    "type": "String",
+    "help": null
+  },
+  {
+    "name": "log.file_path",
+    "default": "/tmp",
+    "value": "/var/log/ecloud",
+    "readonly": true,
+    "type": "String",
+    "help": null
+  }]

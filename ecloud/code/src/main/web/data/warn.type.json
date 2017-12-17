@@ -1,0 +1,10 @@
+[
+  {
+    "label":"云主机",
+    "value":"vm"
+  },
+  {
+    "label":"宿主机",
+    "value":"host"
+  }
+]

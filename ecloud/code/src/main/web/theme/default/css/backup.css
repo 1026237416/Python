@@ -1,0 +1,97 @@
+.backup-box .timeline
+{
+    margin:0 auto;
+    min-width: 260px;
+    
+}
+.timeline td
+{
+    text-align: left;
+}
+.timeline-text p.date
+{
+    margin-left:-120px;
+    margin-top:8px;
+    color:gray;
+}
+.timeline-text p.desc
+{
+    margin-top:-16px;
+}
+.icon-menus-icon-add{
+    background-position: -16px -11px;
+}
+.icon-menus-icon-delete{
+    background-position: -95px -11px;
+}
+#backuptabs>div.tabs-header{
+    /*margin-left: 22px;*/
+    width: 97% !important;
+}
+.tabs li a.tabs-inner,.tabs li a.tabs-inner:hover{
+    height:36px !important;
+    line-height:34px !important;
+    border-width:0;
+    padding-top:2px;
+}
+.tabs li a.tabs-inner:hover{
+    line-height:30px !important;
+}
+.right-cont{
+    margin-bottom:5px;
+}
+.tabs li.tabs-selected a.tabs-inner{
+    line-height:30px !important;
+}
+.padding_top25{
+    padding-top:13px;
+}
+.resize-margin{
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+}
+/*.plain-backup>.panel{*/
+    /*margin-bottom:20px;*/
+/*}*/
+.backup_padding{
+    padding-left:20px;
+    padding-right:20px;
+    background: #fff;
+}
+.datagrid-btable tr td[field="name"]{
+    padding-left: 4px !important;
+}
+.datagrid-btable tr td[field="displayname"]{
+    padding-left: 8px !important;
+}
+.datagrid-btable tr td[field="user"]{
+     padding-left: 10px !important;
+ }
+.datagrid-btable tr td[field="operation"] div{
+    padding-left: 6px !important;
+}
+.datagrid-btable tr td[field="role"] div{
+    padding-left: 4px !important;
+}
+.right-content-padding {
+    background-color: #F5F6F7;
+}
+.ef-backup .icon-menus {
+    left:0;
+}
+.plain-backup{
+    border: 1px solid #dbdbdb;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width:96.5%;
+
+}
+.backupBox
+{
+    width: 94%;
+    margin-left: 3%;
+}
+.backup-des
+{
+    left: 70px!important;
+}

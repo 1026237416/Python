@@ -1,0 +1,14 @@
+[
+  {
+    "label":"故障",
+    "value":"fatal"
+  },
+  {
+    "label":"警告",
+    "value":"warning"
+  },
+  {
+    "label":"注意",
+    "value":"notice"
+  }
+]

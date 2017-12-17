@@ -1,0 +1,10 @@
+name: start_node
+label: 启动
+description: 启动一个结点
+type: job
+
+parameters:
+  group_name:
+    type: string
+    description: 组名称
+

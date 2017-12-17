@@ -1,0 +1,17 @@
+<div >
+    hello
+
+</div>
+<button class="closeDialogBtn">关闭</button>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        var dialog=ef.Dialog.getDialog("winDialog");
+        $(".closeDialogBtn").click(function()
+        {
+            dialog.close();
+            //ef.Dialog.closeAll();
+        });
+
+    });
+</script>

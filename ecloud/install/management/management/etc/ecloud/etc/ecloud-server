@@ -1,0 +1,129 @@
+#!/bin/sh
+# Start/stop ecloud-server daemons
+# chkconfig: - 70 80
+
+### BEGIN INIT INFO
+# Provides:          ecloud-server
+# Default-Start:
+# Default-Stop:
+# Required-Start:    $remote_fs $named $network $time
+# Required-Stop:     $remote_fs $named $network $time
+# Short-Description: Start ecloud-server distributed file system daemons at boot time
+# Description:       Enable ecloud-server distributed file system services.
+### END INIT INFO
+
+TOP_DIR=`pwd`
+LOCAL_ECLOUD_DIR=/opt/ecloud
+ecloud_server_start()
+{
+    pid=`ps -aux | grep server.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+		printf "Starting ecloud-server........."
+		cd $LOCAL_ECLOUD_DIR/python
+		python server.pyc  --config-file ../etc/ecloud.conf & 1 >> start.log 2>&1
+		sleep 1
+		pid=`ps -aux | grep server.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+		echo "pid=$pid"
+		if [ ! -n "$pid" ];
+		then
+				echo failed
+		else
+				echo "start ecloud-server on $pid"
+		fi
+    else
+		echo Starting ecloud-server............ecloud-server already running on $pid
+    fi
+}
+
+ecloud_server_stop()
+{
+        pid=`ps -aux | grep server.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+        if [ ! -n "$pid" ];
+        then
+                echo "Stoping ecloud-server...ecloud-server not running"
+                exit
+        else
+                echo "Stoping ecloud-server..."
+                kill -9 $pid
+                echo -n "kill $pid........"
+                pid=`ps -aux | grep server.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+                if [ ! -n "$pid" ];
+                then
+                        echo done
+                        echo ""
+                else
+                        echo failed
+                        echo ""
+                fi
+        fi
+}
+
+ecloud_server_restart()
+{
+    pid=`ps -aux | grep server.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+            echo "Stoping ecloud-server...ecloud service not running"
+            exit
+    else
+            kill -9 $pid
+            echo -n "Stoping ecloud-server...kill $pid..........."
+            pid=`ps -aux | grep server.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+            if [ ! -n "$pid" ];
+            then
+                    echo done
+            else
+                    echo failed
+            fi
+    fi
+
+    pid=`ps -aux | grep server.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+            printf "Starting ecloud-server........."
+            cd $LOCAL_ECLOUD_DIR/python
+            python server.pyc   --config-file ../etc/ecloud.conf & 1 >> start.log 2>&1
+            sleep 3
+            pid=`ps -aux | grep server.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+            echo "pid=$pid"
+            if [ ! -n "$pid" ];
+            then
+                    echo failed
+            else
+                    echo "start ecloud-server on $pid"
+            fi
+    else
+            echo Starting ecloud-server............ecloud-server already running on $pid
+    fi
+}
+
+ecloud_server_status()
+{
+        pid=`ps -aux | grep server.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+        if [ ! -n "$pid" ];
+        then
+                echo ecloud-server not running
+        else
+                echo ecloud-server has running
+                ps -aux | grep server.pyc | grep -v 'grep'
+        fi
+}
+
+case "$1" in
+        start)
+                ecloud_server_start
+        ;;
+        stop)
+                ecloud_server_stop
+        ;;
+        restart)
+                ecloud_server_restart
+        ;;
+        status)
+                ecloud_server_status
+        ;;
+        *)
+              echo "Usage: service ecloud-server {start|stop|restart|status}"
+esac
+

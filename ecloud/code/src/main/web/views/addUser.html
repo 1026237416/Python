@@ -1,0 +1,76 @@
+
+<div class="add_user_box" >
+    <div class="input-area" >
+        <label > <i id="lusername"></i>：</label>
+        <input type="text" style="width:197px;padding-left:10px;height: 30px"  id="iusername" /><i>*</i>
+    </div>
+    <div class="input-area right-area" >
+        <label > <i id="lname"></i>：</label>
+        <input type="text"  style="width:197px;padding-left:10px;height: 30px" id="name"/><i>*</i>
+    </div>
+    <div class="input-area" >
+        <label ><i id="lemail"></i>：</label>
+        <input type="text"  style="width:197px;padding-left:10px;height: 30px" id="email"/><i>*</i>
+    </div>
+    <div class="input-area right-area" >
+        <label ><i id="lphone"></i></label>
+        <input type="text"  style="width:197px;padding-left:10px;height: 30px" id="phone" />
+    </div>
+    <div class="input-area" >
+        <label ><i id="lpwd"></i>：</label>
+        <input type="password"  style="width:197px;padding-left:10px;height: 30px" id="pwd" /><i>*</i>
+    </div>
+    <div class="input-area right-area" >
+        <label ><i id="lpassword"></i>：</label>
+        <input type="password"  style="width:197px;padding-left:10px;height: 30px" id="password" /><i>*</i>
+    </div>
+
+</div>
+<div class="panel-bottom">
+    <ul class="button-step button-step-bottom">
+        <li><span class="btn templateConfirmBtn"><a id="user-cancel">取消</a></span></li>
+        <li id="hl_ok"><span class="btn templateConfirmBtn hl_ok_span"><a id="user_ok_btn"></a></span></li>
+
+    </ul>
+</div>
+
+<!--<div class="submit-area"  style="margin-top: 3px;">
+    <ul class="button-step">
+        <li><span class="btn" id="hl_cancel"><a id="user_cancel_btn"></a></span></li>
+        <li><span class="btn" id="hl_ok"><a id="user_ok_btn"></a></span></li>
+    </ul>
+</div>-->
+<link rel="stylesheet" href="theme/default/css/user.css" type="text/css"/>
+<style>
+    .add_user_box
+    {
+        height: 200px;
+        overflow: hidden;
+        margin:0 auto;
+        margin-top: 20px;
+        position: relative;
+        width: 92%;
+
+    }
+    .input-area:nth-child(even)
+    {
+        float:left;
+    }
+    .right-area
+    {
+        margin-left: 90px;
+    }
+    .input-area
+    {
+        padding:0;
+        margin-right:0;
+    }
+    .button-step-bottom{
+        position: absolute;
+        right: 40%;
+        bottom: 10px;
+        /*margin-right: 64px;*/
+    }
+
+</style>
+

@@ -1,0 +1,14 @@
+[
+  {
+    "label":"全部",
+    "value":"all"
+  },
+  {
+    "label":"创建规则",
+    "value":"create"
+  },
+  {
+    "label":"删除规则",
+    "value":"delete"
+  }
+]

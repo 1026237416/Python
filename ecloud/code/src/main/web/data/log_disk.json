@@ -1,0 +1,23 @@
+[
+    {
+        "value":"all"
+    },
+    {
+        "value":"create"
+    },
+    {
+        "value":"update"
+    },
+    {
+        "value":"attach"
+    },
+    {
+        "value":"detach"
+    },
+    {
+        "value":"delete"
+    },
+    {
+        "value":"set_user"
+    }
+]

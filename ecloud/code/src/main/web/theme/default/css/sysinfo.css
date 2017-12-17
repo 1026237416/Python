@@ -1,0 +1,25 @@
+.sysinfo .plain-table tr
+{
+    line-height: 42px;
+}
+#upload
+{
+    padding: 5px 44px;
+    color: #4DA4D6;
+    width: 125px;
+    height: 25px;
+    border: 1px solid #4DA4D6;
+    text-decoration: none;
+}
+.sysinfo .plain-table tr td span
+{
+    color: #333;
+}
+.plain-table tr td label
+{
+    width: 100px;
+    float: left;
+    text-align: right;
+    color:#666;
+}
+

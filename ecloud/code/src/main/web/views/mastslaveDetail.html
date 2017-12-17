@@ -1,0 +1,157 @@
+<!--<div class="icon-menus-box">-->
+<!--<div class="icon-menus-bg"></div>-->
+<!--<div class="mastslavedetail-icon-box icon-menus-cont"></div>-->
+<!--</div>-->
+<div class="block-lists block-lists-padding">
+    <div class="right-cont">
+        <div class="block-list">
+            <div class="block-list-content box_shadow" style="height: auto">
+                <div class="icons-mastslaveDetail" style="float: right;margin-top:-10px;margin-right:-10px"></div>
+                <div class="detail-page-nav">
+                    <div class="block-list-label" id="description" >
+                    </div>
+
+                </div>
+                <div class="host-detail-descript">
+                    <div class="float-table hostSlaveDetail" style="height: 200px;margin-bottom: 10px;">
+                        <table class="plain-table">
+                            <tr>
+                                <td class="host_name" >主机名称：</td>
+                                <td><span class="data_name" style=""></span></td>
+                            </tr>
+                            <tr>
+                                <td class="host_status" style="font-size: 14px;margin-left: 0px;margin-top:0px;">状态：</td>
+                                <td><span class="data_status" style="display:inline-block;"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="host_cpu" >CPU：</td>
+                                <td><span class="data_cpus" style=""></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="host_memo" >内存：</td>
+                                <td><span class="data_memory_mb" style=""></span></td>
+
+                            </tr>
+                            <tr>
+                                <td class="host_IP" >IP：</td>
+                                <!--<td class="data_ip"></td>-->
+                                <td><span class="data_ip" style=""></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float-table hostSlaveDetail" style="height: 200px;">
+                        <div class="border"></div>
+                        <table class="plain-table">
+                            <tr>
+                                <td class="host_IPMI">IPMI：</td>
+                                <td class="slave_input"><a target="_blank" id="a_ipmi" class="data_ipmi_ip"></a>
+                                    <span><input id="put_ipmi" class="data_ipmi_ip" type="text" style="height: 30px;"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="host_user">登录名：</td>
+                                <td class="slave_input"><span><input class="data_ipmi_user" type="text" style="height: 30px;"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="host_pass">密码：</td>
+                                <td class="slave_input">
+                                    <span><input class="data_ipmi_pass" id="pwd" type="password" style="height: 30px;"></span>
+                                    <span><input class="data_ipmi_pass" id="pwdEye" type="text" style="height: 30px;"></span>
+                                </td>
+                            </tr>
+                            <tr style="display: none;">
+                                <td class="host_vlan">所在VLAN：</td>
+                                <td><div class="data_vlans" style="width: 232px;overflow-y:auto "></div></td>
+                            </tr>
+                            <tr>
+                                <td class="host_des">备注：</td>
+                                <td class="slave_input"><textarea class="data_des" readonly maxlength="50" style="font-family:'Microsoft YaHei';"></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--<div class="float-table no-right-border hostSlaveDetail" style="height: 130px;">-->
+                        <!--<table class="plain-table">-->
+                            <!--<tr style="display: none;">-->
+                                <!--<td class="host_vlan">所在VLAN：</td>-->
+                                <!--<td><div class="data_vlans" style="width: 232px;overflow-y:auto "></div></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td class="host_des">备注：</td>-->
+                                <!--<td class="slave_input"><textarea class="data_des" readonly maxlength="50" style="font-family:'Microsoft YaHei';"></textarea></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="block-list" >
+            <div class="block-list-content box_shadow">
+                <div class="detail-page-nav">
+                    <div class="block-list-label" id="machine">
+                    </div>
+
+                    <!--  虚拟机-->
+                </div>
+                <div  class="vm plain-datagrid">
+                    <table id="mastslavevm_grid" style="height: 430px;width: 100%"></table>
+                </div>
+            </div>
+        </div>
+        <div class="block-list box_shadow"  id="storage">
+            <div class="block-list-content box_shadow">
+               <div class="detail-page-nav">
+                    <div class="block-list-label" id="local-store">
+                    </div>
+
+                <!--  本地存储-->
+                <span class="right upspan" id="totalstore" style="display:none;font-weight:normal;font-size:14px;margin-right:8px;"><i class="istyle totalused" style="color:#333333"></i>&nbsp;&nbsp;(共<i class="istyle total" style="color:#5d5d5d;"></i>GB)</span>
+            </div>
+
+            <!--<div style="border-bottom: 1px solid #e6e6e6;"></div>-->
+            <div id="scroll-wrapper">
+                <div  id="nodes-store" class="nodes-store clearfix">
+                    <div style="margin-top:12%;margin-left:48%;font-size:14px;" id="nostore">
+                        暂无数据
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+        <div class="block-list-right left" style="width:100%;">
+            <div class="block-list-content box_shadow">
+                <div class="pic_type"></div>
+                <div class="detail-page-nav">
+                    <div class="block-list-label" id="monitor"></div>
+                </div>
+
+                <div class="monitor-cont" style="padding:5px;margin-top:20px;position:relative;">
+                    <div style="z-index: 1;position:absolute;left:139px;top:6px;">
+                        <select id="cc" class="easyui-combobox" name="dept" style="width:200px;height: 30px;padding-left:10px;">
+                            <option value="cpu">CPU利用率</option>
+                            <option value="memo">内存使用率</option>
+                            <option value="inflow">网络Input</option>
+                            <option value="outflow">网络Output</option>
+                        </select>
+                    </div>
+                    <div class="disk-box" style="width: 96%;border: none;margin:0 auto;text-align: left;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block-list hostWarn">
+            <div class="block-list-content box_shadow">
+                <div class="detail-page-nav">
+                    <div class="block-list-label" id="wanning"> </div>
+                </div>
+
+                <div  class="plain-datagrid">
+                    <table id="mastslavewarn_grid" style="width:100%;height: 420px;" >
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="theme/default/css/host.css" rel="stylesheet">
+<link href="theme/default/css/hostSlave.css" rel="stylesheet">
+<link href="theme/default/css/hostslavedetail.css" rel="stylesheet">

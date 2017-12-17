@@ -1,0 +1,111 @@
+.right-cont{
+    margin-top: 0;
+    /* margin-left: 0;*/
+}
+table.plain-table{
+    margin-top: 0px;
+}
+table.plain-table td{
+    vertical-align: top;
+    height: 40px;
+    line-height: 40px;
+}
+
+table.plain-table span{ display: inline-block;padding: 0 3px;}
+table.plain-table span input{ color:#999;text-align: left;vertical-align: top;}
+span#uid,span#tenant{
+    margin-left: 8px;
+}
+span.textbox-invalid{
+    background: transparent;
+    border: 1px dotted red !important;
+}
+.message
+{
+    float:left;
+    color: #ff0000;
+    height: 20px;
+    font-size: 16px;
+    width:100%;
+    color:#ff0000;
+}
+span.input-oth
+{
+    border:0;
+
+}
+table.plain-table input{
+    background:#fff;
+}
+.secInclude .validatebox-text[disabled=disabled]
+{
+    background-color: transparent;
+    color: #999 !important;
+    border:none;
+}
+.secInclude .textbox-disabled
+{
+    border-bottom: none !important;
+}
+.roleInclude .validatebox-text[disabled=disabled]
+{
+    background-color: transparent;
+    border:none;
+}
+.roleInclude .textbox-icon-disabled{
+    display: none;
+}
+.roleInclude .textbox-disabled
+{
+    border-bottom: none !important;
+}
+/*.plain-datagrid
+{
+    border: none !important;
+}*/
+.userdescription label
+{
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+}
+.float-table
+{
+    height:72px !important;
+}
+.input-area span
+{
+    height: 29px !important;
+}
+#addUser .input-area
+{
+    width: 310px;
+}
+#addUser .input-area label{
+    width: 80px;
+    text-align: right;
+}
+#addUser .input-area label i{
+    width: 0px;
+}
+.add_user_box  .input-area>i{
+    position: relative;
+    left:5px;
+}
+.atPro
+{
+    word-break:break-all;
+    padding-left:9px;
+}
+.panel.window.ef-dailog {
+    height: 292px !important;
+    top: 31% !important;
+}
+.textbox .textbox-text{
+    color:#333;
+    font-size: 14px;
+}
+.plain-datagrid{
+    width: 96.5%;
+    margin-left: 20px;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Chat Example</title>
+</head>
+<body>
+<ul class="pages">
+    <li class="chat page">
+        <div class="chatArea">
+            <ul class="messages"></ul>
+        </div>
+        <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+        <div class="form">
+            <h3 class="title">What's your nickname?</h3>
+            <input class="usernameInput" type="text" maxlength="14"/>
+        </div>
+    </li>
+</ul>
+
+<script>
+    //var ws = new WebSocket("wss://10.10.130.87:8443/socket/network");
+    var ws = new WebSocket("wss://10.10.130.87:8443/socket/host/detail");
+
+    ws.onopen = function () {
+        console.log("握手成功");
+        data = {
+            //"id":"5c68d521-d2bb-4359-ad6a-37b3c9c0ca87",
+            //"chart":""
+            "id":"1",
+            "chart":{counter_name: "hardware.network.incoming.bytes.rate", limit: 10}
+
+        };
+        ws.send(JSON.stringify(data));
+    };
+    ws.onmessage = function (e) {
+        console.log("message:" ,JSON.parse(e.data));
+//        ws.send("ok");
+    };
+    ws.onerror = function () {
+        console.log("error", arguments);
+    };
+
+
+
+</script>
+</body>
+</html>

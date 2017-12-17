@@ -1,0 +1,32 @@
+.datagrid-btable tr td[field="name"]{
+    padding-left:9px !important;
+}
+.datagrid-btable tr td[field="min_disk"] div,
+.datagrid-btable tr td[field="type"] div{
+    padding-left:4px !important;
+}
+.datagrid-btable tr td[field="size"] div{
+    padding-left:6px !important;
+}
+.datagrid-btable tr td[field="created_at"] div{
+    padding-left:7px !important;
+}
+
+
+.datagrid-btable tr td[field="os"] div,
+.datagrid-btable tr td[field="status"] div{
+    padding-left:3px !important;
+}
+.datagrid-btable tr td[field="os"] div{
+    padding-left:14px !important;
+}
+.datagrid-btable tr td[field="disk_format"]{
+    padding-left: 16px !important;
+}
+
+#datagrid-row-r3-2-0  td[field="des"]>div{
+    padding-left:5px  !important;
+}
+#datagrid-row-r3-2-0  td[field="des"] .datagrid-cell div[useformate="true"]{
+    padding-left:5px !important;
+}

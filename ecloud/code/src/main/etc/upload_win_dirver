@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+
+check_dir=`echo $PWD | grep "ecloud/bin"`
+if [ -z "$check_dir" ];
+then
+     printf "\033[41;37m%s \033[0m\n" "You must execute this script in ${LOCAL_ECLOUD_DIR}/bin directory"
+     exit 1
+fi
+
+source /root/keystonerc_admin
+glance image-create --name "win_dirver" --disk-format qcow2  --min-disk=1 --container-format bare --is-public True --progress <packages/virtio-win-0.1.126.iso --property ecloud_image_type=2 --property disk_bus=ide

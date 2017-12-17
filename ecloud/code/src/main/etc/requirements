@@ -1,0 +1,11 @@
+tornado
+oslo.config
+tornado_mysql
+apscheduler
+dateutils
+pika
+pymongo
+motor
+pyinotify
+pyaml
+pycrypto

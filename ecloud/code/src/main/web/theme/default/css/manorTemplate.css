@@ -1,0 +1,665 @@
+.item-ul-one-col li
+{
+    margin-bottom: 17px;
+}
+.item-ul-one-col li label
+{
+    position: relative;
+    top: 5px;
+    font-size: 14px;
+    min-width: 45px;
+    /*margin-left: 20px;*/
+    float: left;
+}
+.viewstack-box-dlg
+{
+    height: 528px;
+}
+.install-one
+{
+    width: 830px;
+    margin:0 auto;
+    padding-top:20px;
+}
+.install-one-left
+{
+    width: 330px;
+    border:1px solid #d6d6d6;
+    height: 455px;
+    background: white;
+}
+.install-one-right
+{
+    width: 487px;
+    height: 455px;
+    background: #f7f7f7;
+    border: 1px solid #d6d6d6;
+}
+.tab-box
+{
+    margin-top:-20px;
+}
+.manor-instance-tabs .tab-box
+{
+    margin-top:0 ;
+}
+.code_mirror_box
+{
+}
+.icon-template-left-add
+{
+    background-position: -1074px -956px;
+    width: 30px;
+}
+.icon-recycle-delete
+{
+    width: 30px;
+}
+.icon-template-left-refresh
+{
+    background-position: -278px -167px;
+    width: 30px;
+}
+.icon-template-left-auto
+{
+    background-position: -1074px -1086px;
+    width: 30px;
+}
+.tab-box-ct
+{
+    height: 418px;
+    width: 519px !important;
+}
+.manor_flow_box
+{
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.manor_flow_cont
+{
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.manor_flow_set_step
+{
+    margin: 0 auto;
+    position: relative;
+}
+.manor_flow_step_right_btn
+{
+    position:absolute;
+    top:0;
+    right:0;
+    min-width: 120px;
+}
+.manor_flow_set_step label
+{
+    min-width: 80px;
+    display: inline-block;
+    text-align: right;
+
+}
+.manor_flow_set_step ul li
+{
+    margin: 30px 0;
+}
+.flow_param
+{
+    width: 100%;
+    height: 410px;
+    overflow-y: auto;
+    overflow-x:hidden ;
+    /*padding-left: 20px;*/
+}
+
+.flow_param_left
+{
+    width: 280px;
+    margin-left: 20px;
+}
+.flow_param_right
+{
+    background: white;
+    width: 198px;
+    margin-top: 20px;
+    border: 1px solid #d7d7d7;
+    border-right: none;
+}
+.flow_param_box
+{
+    margin-left: 3%;
+    width: 94%;
+    height: 350px!important;
+    overflow-y: auto;
+    background-color: #fff;
+}
+.flow_param .flow_param_box .paramSquare
+{
+    width: 100%;
+    font-size:14px;
+}
+.flow_param .flow_param_box .paramSquare span
+{
+    display: inline-block;
+    padding-left:10px;
+}
+.flow_param_item_ul li
+{
+    margin:14px 0;
+}
+.flow_param_left .flow_param_item_ul li:first-child
+{
+    margin-top:19px;
+}
+.flow_param_item_ul li label
+{
+    font-size: 14px;
+    min-width: 42px;
+    display: inline-block;
+    text-align: left;
+}
+.flow_param_title
+{
+    height: 37px;
+    background: white;
+    font-size:14px;
+    margin: 0;
+    line-height: 37px;
+    padding-left: 10px;
+}
+/*.button-step span.btn*/
+/*{*/
+/*border-radius: 10px 10px 0 0;*/
+/*}*/
+/*.button-step span.btn a:hover*/
+/*{*/
+/*box-shadow: 0 3px 3px #7A1310 inset;*/
+/*border-radius: 10px 10px 0 0;*/
+/*}*/
+.icon-manorTemplate-param-add
+{
+    background-position: -170px -896px;
+}
+.icon-manorTemplate-param-delete
+{
+    background-position: -1158px -903px;
+}
+.icon-manorTemplate-param
+{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.icon-manorTemplate-param-text
+{
+    font-size: 14px;
+    position: relative;
+    top: -8px;
+}
+.manorTemplate-param-label
+{
+    vertical-align: top;
+}
+.code_mirror_indi
+{
+    height: 65px;
+    overflow: hidden;
+    line-height: 65px;
+    background: #f7f7f7;
+}
+.code_mirror_indi label
+{
+    float:left;
+    font-size: 14px;
+    width: 250px;
+    display: inline-block;
+    height: 100%;
+    margin-left:30px ;
+}
+.code_mirror_indi_checkbox
+{
+    float: left;
+    height: 65px;
+    line-height: 105px;
+    padding-left:30px;
+}
+.code_mirror_indi_checkbox .checkRender
+{
+    display: inline-block;
+    min-width: 70px;
+    width: auto;
+}
+.code_mirror_indi_checkbox .checkRender .checkInfo
+{
+
+}
+.param_two{
+    width:96%;
+    margin-left: 20px;
+}
+.param_two label
+{
+    width: 110px;
+    font-size: 14px;
+    float: left;
+    /*text-align: right;*/
+}
+.paramTop label,.param_image label{
+    text-align: right;
+    width: 90px;
+}
+.param_image i{
+    position: relative;
+    top: 14px;
+    left: 5px;
+}
+.paramTop div i,
+.flow_param_item_ul li i,
+.flow_param_three div i,
+.item-ul-one-col li i{
+    position: relative;
+    left: 5px;
+}
+.param_cpu_title
+{
+    width: 100% !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.paramTop div
+{
+    line-height: 40px;
+}
+.param_cpu
+{
+    width: 100%;
+    height: 120px;
+    border-top: 1px solid #e9e9e9;
+}
+.param_memo
+{
+    width: 100%;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+.paramImage
+{
+    position: relative;
+    top: 10px;
+}
+.checkInfo_choose
+{
+    line-height: 33px!important;
+    width: 48px;
+    float: left;
+}
+.checkInfo_choose .checkInfo
+{
+    width: 30px;
+    margin-top: -6px;
+    /*margin-left: -12px;*/
+}
+.choose_param
+{
+    margin-right: -16px;
+    margin-top: -5px;
+    height: 0;
+    width: 30%;
+    float: right;
+}
+.choose_cpu_memo
+{
+    height: 30px;
+    position: relative;
+    top: -30px;
+    width: 48px;
+    float: left;
+}
+.choose_cpu_memo .checkInfo
+{
+    width: 30px;
+    margin-top: 0;
+    /*margin-left: -12px;*/
+}
+.manor_template_flows
+{
+    min-height: 540px !important;
+    /*margin-top:20px;*/
+    /*padding-left:6px;*/
+    width: 96.4% !important;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.manor_template_flows .viewstack-box-dlg
+{
+    height: auto;
+}
+.create_flows_right
+{
+    float:right;
+    margin-top:-45px ;
+}
+/*.create_flow_dialog*/
+/*{*/
+/*width: 90%;*/
+/*margin: 30px auto;*/
+/*}*/
+.create_flow_dialog .item-list-ul-first
+{
+    height: 282px;
+    overflow: hidden;
+}
+.manor_template_flows .install-one
+{
+    width: 100%;
+}
+.manor_template_flows .viewstack-box-dlg
+{
+    width: 100%;
+}
+.manor_template_flows .install-one .install-one-left
+{
+    width: 40%;
+}
+.manor_template_flows .install-one .install-one-right
+{
+    margin-left: 16px;
+    width: 57.9%;
+    float: left;
+}
+.manor_flow_panel .item-list-ul-first
+{
+    height: auto;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    width: 1084px;
+}
+.manor_flow_panel .item-list-ul-first li
+{
+    margin-top:20px;
+    margin-bottom:0;
+    width:339px;
+}
+.manor_flow_panel .item-list-ul-first li:last-child
+{
+    width:866px;
+}
+.tabs-panels
+{
+    height: 636px !important;
+    min-height: 500px !important;
+    border: none!important;
+    width:100% !important;
+}
+.tabs-wrap
+{
+    /*width: 473px!important;*/
+    /*border:1px solid #ccc;*/
+    /*border-bottom:none;*/
+    width: 99.8% !important;
+    border: 1px solid #d6d6d6;
+    border-bottom: none;
+}
+.flow_param_three label
+{
+    font-size: 14px;
+    width: 77px;
+    float: left;
+    text-align: right;
+}
+.noContent
+{
+    font-size: 20px;
+    text-align: center;
+    line-height: 370px;
+}
+.tabs-header
+{
+    margin-left: 0;
+    margin-top: 0;
+}
+.choose_param_three .checkInfo
+{
+    margin-top: -3px;
+}
+.choose_param_three
+{
+    width: 30%;
+    float: right;
+}
+#rebootChoose
+{
+    position: relative;
+    top: 25px;
+    left: -5px;
+}
+.template_des_content .ef-dailog span.textbox textarea
+{
+    padding-left: 0!important;
+}
+.icon-manorTemplate-param-parent
+{
+    cursor: pointer;
+}
+.tabs li a
+{
+    width: 70px;
+    border-left-width:0;
+}
+.tabs li a.tabs-inner{
+    border-top-width:2px !important;
+}
+/*.tabs li a.tabs-inner span.tabs-title:hover{*/
+    /*line-height:34px !important;*/
+/*}*/
+.template-action-icon
+{
+    position: relative;
+}
+.quotaSquare
+{
+    width: 55px;
+    border-radius: 4px;
+}
+textarea
+{
+    border-radius: 0!important;
+    overflow: auto;
+}
+.icon-menus-icon-delete-tem
+{
+    background-position: -1074px -999px;
+    width: 30px;
+}
+.textbox textarea.textbox-text
+{
+    overflow-y: auto;
+}
+.detail-block td
+{
+    vertical-align: top;
+}
+.manor_detail_table textarea
+{
+}
+.manor_flow_panel .item-list-ul-first li
+{
+    display: inline-block;
+    vertical-align: top;
+}
+.manorMangeIconBox
+{
+    display: inline-block;
+}
+/*.des_sep .textbox*/
+/*{*/
+/*position: relative;*/
+/*top:-10px;*/
+/*}*/
+.noContent
+{
+    visibility: hidden !important;
+}
+.noContent-parent
+{
+    height: 100%;
+    position: relative;
+}
+.noContent-parent .icon_water_Parent
+{
+    position: absolute;
+    bottom:0;
+}
+.create_dialog .tabs-header
+{
+    width:100% !important;
+}
+.code_mirror_indi_group span{
+    font-size: 14px !important;
+
+}
+.datagrid-btable tr td[field="label"]{
+    padding-left: 11px !important;
+}
+.datagrid-btable tr td[field="description"]>div{
+    padding-left: 3px !important;
+}
+.datagrid-btable tr td[field="status"]>div{
+    padding-left: 3px !important;
+}
+.datagrid-btable tr td[field="action"]>div{
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="action"]>div>div{
+    padding-left:5px !important;
+}
+.datagrid-btable tr td[field="status"] .datagrid-cell span{
+    padding-left: 1px !important;
+}
+.tabs-header {
+    /*margin-left: 20px;*/
+    width: 100%!important;
+    margin-left: -1px;
+}
+.create_flows_right .icon-menus{
+    top:-20px;
+}
+.btn-router-bottom {
+    position: absolute;
+    width: 100%!important;
+    bottom: 0px;
+    padding: 13px 0px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+.btn-router-bottom .viewstack-li {
+    width: 100%;
+    overflow: hidden;
+    cursor: default;
+}
+.btn-router-bottom .button-step .next, .btn-router-bottom .button-step .last {
+    float: right;
+    margin-right: 40px;
+    background: #d12026;
+    color: #e5e5e5;
+    cursor: pointer;
+}
+.btn-router-bottom .button-step .prev {
+    margin-left: 40px;
+    cursor: pointer;
+    float: left;
+}
+/*.button-step li:last-child {*/
+/*padding-left: 0px;*/
+/*}*/
+.flow_param_item_ul  li span span.textbox{
+    width:211px !important;
+}
+.flow_param_item_ul  li:nth-child(4) span span.textbox{
+    height:120px !important;
+}
+.flow_param_three{
+    padding-left: 20px;
+}
+.manor_flow_set_step li span.textbox{
+    width:213px !important;
+}
+.manor_flow_panel .item-list-ul-first li:nth-child(3){
+    width:330px !important;
+}
+.item-list-ul-first li:first-child {
+    margin-top:20px;
+    width:351px;
+}
+.item-list-ul-first li{
+    margin-bottom: 17px;
+    width:500px;
+}
+.button-step-bottom {
+    position: absolute;
+    right: 33%;
+    bottom: 10px;
+}
+.item-list-ul-first li i{
+    position:relative;
+    left:2px;
+}
+.detail-block {
+    padding-top: 0px;
+}
+.manor_detail_table .detail-row label{
+    min-width: 24px;
+}
+/*.moduleflow{*/
+/*margin-left:20px;*/
+/*margin-right:20px;*/
+/*border:1px solid #ddd;*/
+/*}*/
+#addManorTemplateDialog .install-one-right{
+    width:  56.5%;;
+    border: 1px solid #ccc;
+}
+#addManorTemplateDialog .manor_template_flows{
+    width:960px;
+}
+#addManorTemplateDialog .tabs-panels{
+    width: 521px !important;
+    border: none !important;
+}
+#addManorTemplateDialog .install-one .install-one-left {
+    width: 41%;
+    border: 1px solid #ccc;
+}
+.icon-offline,.icon-online{
+    top:7px;
+    height:23px;
+}
+
+.textbox .textbox-text {
+    height: 27px;
+    line-height: 27px;
+}
+
+.tabs{
+    width:100%;
+    padding-left:0;
+}
+.install-one-right .tabs-wrap{
+    border: none;
+}
+.checkInfo {
+    padding-left: 18px;
+}
+.tabs-panels  .panel{
+    width:100% !important;
+}
+.choose_param_three .checkRender:last-child{
+    padding-left: 17px;
+}
+.frontStep .checkRender {
+    padding-left: 20px;
+}

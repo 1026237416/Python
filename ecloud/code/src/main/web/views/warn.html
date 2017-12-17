@@ -1,0 +1,107 @@
+<div class="right-content-padding">
+    <div class="right-cont" >
+        <div class="search-item">
+                    <span>
+                         <select class="easyui-combobox" name="user" data-options="
+                prompt:'请选择告警',
+                url: 'data/warntype.json',
+                method: 'get',
+                valueField:'value',
+                textField:'label',
+            "
+                                 style="width:197px;height:30px;padding-left:10px">
+
+                         </select>
+                    </span>
+                    <span>
+                         <select class="easyui-combobox" name="state"
+                                 data-options="
+                prompt:'告警级别',
+                url: 'data/warnlev.json',
+                method: 'get',
+                valueField:'value',
+                textField:'label',
+            "
+                                 style="width:197px;height:30px;padding-left:10px" >
+
+                         </select>
+                    </span>
+            </p>
+        </div>
+        <div class="block-list">
+            <div class="block-list-content" >
+                <div class="block-list-label">
+                    物理机
+                </div>
+                <div style="padding:5px;margin-top:20px;margin-bottom:20px" class="plain-datagrid">
+                    <table class="easyui-datagrid" title="代办工单" style="width:100%;" align="center"
+                           data-options="singleSelect:false,width:'100%',fitColumns:'true'">
+                        <thead>
+                        <tr>
+                            <!--<th data-options="field:'id',checkbox:'true',width:50"></th>-->
+                            <th data-options="field:'type',width:100">编号</th>
+                            <th data-options="field:'user',width:100">级别</th>
+                            <th data-options="field:'email',width:100">对象</th>
+                            <th data-options="field:'dienti',width:100">告警次数</th>
+                            <th data-options="field:'uu',width:100">时间</th>
+                            <th data-options="field:'tena'">操作</th>
+
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>
+                                <a class="table-btn">清除</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block-list">
+            <div class="block-list-content">
+                <div class="block-list-label">
+                    虚拟机
+                </div>
+                <div  class="plain-datagrid box_shadow">
+                    <table class="easyui-datagrid" title="代办工单" style="width:100%;" align="center"
+                           data-options="singleSelect:false,width:'100%',fitColumns:'true'">
+                        <thead>
+                        <tr>
+                            <!--<th data-options="field:'id',checkbox:'true',width:50"></th>-->
+                            <th data-options="field:'type',width:100">编号</th>
+                            <th data-options="field:'user',width:100">级别</th>
+                            <th data-options="field:'email',width:100">对象</th>
+                            <th data-options="field:'dienti',width:100">告警次数</th>
+                            <th data-options="field:'uu',width:100">时间</th>
+                            <th data-options="field:'tena'">操作</th>
+
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>严重</td>
+                            <td>vm001</td>
+                            <td>关机告警</td>
+                            <td>3</td>
+                            <td>2015-9-1 10:05</td>
+                            <td>
+                                <a class="table-btn">清除</a>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/libs/easyui/locale/easyui-lang-zh_CN.js"></script>-->

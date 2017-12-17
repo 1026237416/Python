@@ -1,0 +1,56 @@
+.addpro {
+    margin-top: 0px;
+    margin-left: 36px;
+}
+.addpro span{
+    display: inline-block;
+}
+.addpro div
+{
+    font-size: 14px;
+    margin-top: 36px;
+}
+.addpro div label
+{
+    /*margin-top: 5px;*/
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    width: 42px;
+}
+.warn
+{
+    font-size: 14px;
+    color: red;
+    margin-left: 50px;
+    padding-left: 20px;
+    height: 20px;
+    margin-top: 18px;
+}
+#add_ok
+{
+    float: right;
+    margin-top: 5px;
+}
+.spinner-arrow
+{
+    background-color: transparent !important;
+}
+span.textbox.textbox-disabled
+{
+    /*height: 25px !important;*/
+    border: none !important;
+}
+.unit_all
+{
+    margin-top: 3px;
+    position: absolute;
+}
+.unlimit
+{
+    position: relative;
+    /*top: 2px;*/
+}
+.unit_all.ml4{
+    margin-left: 4px;
+}

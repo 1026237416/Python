@@ -1,0 +1,29 @@
+<div class="template blank">
+    <div class="cal-template">
+        <label >镜像名称：</label>
+        <span ><input id="template_Name" style="height: 30px;"><i class="required_name">*</i></span>
+    </div>
+    <div class="cal-template">
+        <label >超级用户<!--<i>*</i>-->：</label>
+        <span ><input id="super_user" style="height: 30px;"></span>
+    </div>
+    <div style="width: 59%;float:left;"><label >当前密码<!--<i >*</i>-->：</label>
+        <span ><input id="template_pwd" type="password" style="height: 30px;"></span>
+    </div>
+    <div>
+        <label>确认密码<!--<i >*</i>-->：</label>
+        <span><input id="template_password" type="password" style="height: 30px;"></span>
+    </div>
+    <div class="cal-template">
+        <label class="cal-template-backup">备注：</label>
+        <textarea id="addtemplatebackup" maxlength="50"></textarea>
+    </div>
+</div>
+<div class="panel-bottom">
+    <ul class="button-step button-step-bottom">
+        <li><span class="btn templateConfirmBtn"><a id="addtemplatecancel">取消</a></span></li>
+        <li id="addtemplateokall"><span class="btn templateConfirmBtn"><a id="addtemplateok">确定</a></span></li>
+    </ul>
+</div>
+
+<link href="theme/default/css/addhostDetail.css" rel="stylesheet" type="text/css">

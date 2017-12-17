@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <title>Sign In -Easted Cloud WarIndustry</title>
+    <link href="theme/default/css/global.css" rel="stylesheet"  type="text/css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/icon.css">
+    <link href="theme/default/css/components.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="theme/default/css/layout.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="theme/default/css/login.css">
+    <link rel="shortcut icon" href="theme/default/images/favicon.ico"/>
+    <script type="text/javascript" data-main="js/login.config" src="js/libs/require/require.js"></script>
+</head>
+<body >
+<div class="wrapper-login">
+    <div class="login-box">
+        <div class="login-left" style="display: none">
+            <div class="login-left-cont"><i></i></div>
+            <div class="login-left-render"></div>
+        </div>
+        <div class="login-right" style="display: none">
+            <div class="login-inputs">
+               <div style="width: 100%;position: relative">
+                   <i></i>
+                   <div class="login-name">
+                       <input id="username" class="login-input" data-options="prompt:'请输入用户名',iconCls:'icon-man',iconAlign:'right',required:true
+                            ,missingMessage:'用户名必填',validType:
+		'minlength[3]',maxlength:20,tipPosition:'left'" style="width:358px;height:48px;" >
+                   </div>
+                   <div class="login-pwd">
+                       <input id="password" class="login-input" type="password" data-options="prompt:'请输入密码',iconCls:'icon-lock',iconAlign:'right',
+                            required:true,
+                            missingMessage:'密码必填',validType:
+		'minlength[8]',maxlength:20,tipPosition:'left'" style="width:358px;height:48px;">
+                   </div>
+                   <div class="login-btn">
+                <span >
+                      <a class="login-submit-btn" >登录</a>
+                </span>
+                   </div>
+               </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="theme/default/css/ie9.css">
+    <script type="text/javascript" src="js/libs/compatible/html5shiv.js"></script>
+<![endif]-->
+</body>
+</html>

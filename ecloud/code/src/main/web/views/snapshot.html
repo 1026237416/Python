@@ -1,0 +1,74 @@
+<div class="right-cont" style="margin-top:17px;">
+        <div class="block-list" style="clear:both">
+            <div class="block-list-content" style="min-height: 230px;padding-bottom:10px">
+                <div class="block-list-label">
+                    云主机
+                </div>
+                <div class="search-bar">
+                            <span>
+                         <select class="easyui-combobox" name="user" data-options="
+                prompt:'请输入名称',
+                url: 'data/vmnames.json',
+                method: 'get',
+                valueField:'value',
+                textField:'label',
+            "
+                                 style="width:197px;height:30px;padding-left:10px">
+
+                         </select>
+                    </span>
+                </div>
+                <div style="padding:5px" class="plain-datagrid">
+                    <table id="snapshot_host"  title="代办工单" style="width:100%;" data-options="
+				singleSelect:true,
+				pagination:true,
+				pageSize:10">
+                        <thead>
+                        <tr>
+                            <th data-options="field:'id'" width="25%" formatter="ef.formatter['idFormatter']">ID</th>
+                            <th data-options="field:'name'" width="25%">名称</th>
+                            <th data-options="field:'no'"  width="26%">快照数目(个)</th>
+                            <th data-options="field:'zone'"   width="26%">快照空间(GB)</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block-list" style="clear:both;display: block;">
+            <div class="block-list-content" style="padding-bottom:10px ">
+                <div class="block-list-label">
+                    云硬盘
+                </div>
+                <div class="search-bar">
+                            <span>
+                         <select class="easyui-combobox" name="user" data-options="
+                prompt:'名称',
+                url: 'data/vmnames_yyp.json',
+                method: 'get',
+                valueField:'value',
+                textField:'label',
+            "
+                                 style="width:197px;height:30px;padding-left:10px">
+
+                         </select>
+                    </span>
+                </div>
+                <div style="padding:5px 5px 20px 5px" class="plain-datagrid">
+                    <table id="snapshot_disk"  style="width:100%;" data-options="
+				singleSelect:true,
+				pagination:true,
+				pageSize:10">
+                        <thead>
+                        <tr>
+                            <th data-options="field:'id'" width="25%" formatter="ef.formatter['idFormatter']">ID</th>
+                            <th data-options="field:'name'" width="25%">名称</th>
+                            <th data-options="field:'no'" width="26%">快照数目(个)</th>
+                            <th data-options="field:'zone'" width="26%">快照空间(GB)</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>

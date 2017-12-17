@@ -1,0 +1,362 @@
+
+
+body,html{
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    margin: 0 auto;
+    padding: 0;
+}
+.host-detail.right-cont{
+    margin: 0 ;
+    padding: 0;
+}
+
+/*.host-detail .block-lists{*/
+    /*padding-top: 18px;*/
+    /*padding-left: 18px;*/
+    /*padding-right: 18px;*/
+/*}*/
+.host-detail .padding_top50{
+    padding-top: 65px;
+}
+.host-detail .block-list{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px;
+}
+.host-detail .block-list-content{
+    margin: 0 ;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.host-detail .block-list-label{
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    /*margin-bottom: 20px;*/
+    /*font-size: 16px;*/
+}
+.host-detail .host-detail-descript{
+    margin: 0 ;
+    padding: 0;
+}
+.host-detail .float-table:not(:last-child){
+    width:31.8%;
+    height: 100%;
+    border-right: 1px solid #efefef;
+}
+.host-detail .float-table:last-child{
+    width:35.8%;
+    height: 100%;
+}
+.datagrid-cell-c21-des div{
+     overflow: hidden;
+     text-overflow:ellipsis;
+     white-space:nowrap;
+
+ }
+.host-detail .plain-table{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    text-align: left;
+    border-collapse:collapse;
+}
+.host-detail .plain-table tr
+{
+    height: 40px;
+}
+.host-detail a{
+    text-decoration: none;
+}
+
+.host-detail .plain-table td{
+    color: #4c4c4c;
+    text-align: right;
+    vertical-align: top;
+    border-collapse: collapse;
+    border-spacing:20px;
+}
+label
+{
+    width: 120px;
+    float: left;
+    color: #4c4c4c;
+    text-align: right;
+    vertical-align: top;
+    border-collapse: collapse;
+    border-spacing:20px;
+}
+.host-detail .plain-table td:nth-child(odd){
+    width: 120px;
+}
+.host-detail .reamrkwidth{
+    min-width: 213px;
+}
+.host-detail input,textarea{
+    resize: none;
+    background: #ffffff;
+    color: #999999;
+    padding: 0px;
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+}
+span.textbox input.textbox-text{
+    color: #333333;
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    padding: 0;
+    font-size:14px;
+}
+span.textbox textarea.textbox-text{
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    padding: 0;
+}
+.host-detail .plain-table td:nth-child(even){
+    text-align: left!important;
+    color: #333333;
+}
+
+.host-detail textarea.textbox-text.validatebox-text{
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    line-height: 18px;
+    overflow-x:visible;
+    overflow-y:visible;
+    font-size: 14px;
+    color: #333333;
+}
+.host-detail .textareass span.textbox{
+    text-align: left;
+    vertical-align: middle;
+    margin-top:5px;
+}
+/*.mount{
+    margin-right: 20px;
+    margin-bottom: -5px;
+}*/
+.monitor-cont{
+    padding: 0;
+    margin:0;
+}
+
+.monitor-cont > table{
+   /* width: 96.5%;
+    margin-left: 20px;
+    margin-right: 20px;*/
+    width: 100%;
+    margin-right: -16px;
+}
+.monitor-cont > table td{
+    width: 50%;
+}
+.monitor-cont .guage-box{
+    margin:0;
+    padding: 0;
+    margin-left: -16px;
+}
+.monitor-cont .memo-box{
+    margin:0;
+    padding: 0;
+}
+.warn,.operation th{
+    font-size: 16px;
+    color: #000;
+    vertical-align: top;
+}
+.warn,.operation td{
+    font-size: 13px;
+    color: #444343;
+    /*overflow:hidden;*/
+    /*text-overflow:ellipsis;*/
+    /*-o-text-overflow: ellipsis;/!* for Opera *!/*/
+    /*display: block;*/
+}
+.warn .plain-datagrid{
+    margin-left:20px;
+    /*padding-bottom: 0;*/
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*padding:5px;*/
+    /*border:none;*/
+    border-collapse:collapse;
+    border-spacing:0;
+    width: 96.5%;
+}
+.warn .plain-datagrid div.panel.datagrid.easyui-fluid{
+    padding-right: 19px;
+    /*width:1089px !important;*/
+}
+/*.operation{
+    height: 430px;
+}*/
+.operation .plain-datagrid{
+    margin-left:20px;
+    /*padding-bottom: 0;*/
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*padding:5px;*/
+    /*border:none;*/
+    border-collapse:collapse;
+    border-spacing:0;
+    width: 96.5%;
+}
+div.plain-warn.plain-datagrid{
+    margin-bottom:0px;
+}
+div.plain-backup.plain-datagrid{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+div.plain-datagrid.plain-host{
+    margin-bottom: 0px;
+}
+.operation .plain-datagrid div.panel.datagrid.easyui-fluid{
+    padding-right: 19px;
+}
+.host-detail .icons-userdetail{
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin-top: 0px;
+}
+.gbox{
+    border-left:none;
+    border-top:none;
+    border-bottom:none;
+    /*border-right:1px solid #b5bfc7;*/
+}
+.data_created_at
+{
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    width: 80%;
+    overflow: hidden;
+    display: inline-block;
+}
+.sys_user
+{
+    white-space: nowrap;
+}
+.sys_user span
+{
+    float:left;
+}
+span.data_remark
+{
+    display: inline-block;
+    width: 100%;
+    word-break: break-all;
+}
+#hostAllotUserDialog .datagrid-header-row
+{
+    background: white;
+    background-color: #fff;
+}
+.sys_user_span
+{
+    padding-left: 5px;
+}
+.host_disk span
+{
+    display: inline-block;
+    margin-left:5px;
+    /*vertical-align: middle;*/
+    min-height: 19px;
+    position: relative;
+}
+.data_state .ef-coverlayer .ef-preload .ef-preload-cont
+{
+    text-align: left;
+}
+.host-linechart span.textbox.textbox-disabled{
+    border: 1px solid #bcbcbc !important;
+    background: #f5f5f5;
+    padding-left: 5px;
+}
+/*多网卡相关样式*/
+.net{
+    display:inline-block;
+    width:22%;
+}
+.vlan{
+    display:inline-block;
+    width:22%;
+}
+.ip{
+    display:inline-block;
+    width:34%;
+}
+.childnet{
+    display:inline-block;
+    width:22%;
+}
+.vlancontent{
+    margin-top: 2px;
+    width: 110px;
+    margin-right:45px;
+    color: #333;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    cursor:default;
+}
+#vlans ul:not(:first-child) li{
+    margin-top:10px;
+}
+/*.net-div{
+    /!*border-top:1px solid #f2f2f2;*!/
+    /!*border-bottom:1px solid #f2f2f2;*!/
+    width:90%;
+    padding-bottom:6px;
+}*/
+#vlanshow{
+    max-height: 90px;
+    list-style:none;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.host_disk
+{
+    width: 199px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.icon-eye
+{
+    width: 20px;
+}
+.float-table
+{
+    border: none;
+}
+.textbox.textbox-readonly
+{
+    position: relative;
+    top: 2px;
+}
+.float-table.no-right-border>div
+{
+    margin-bottom: 15px;
+}
+.float-table tbody tr td:first-child{
+    color:#666;
+}
+.float-table tbody tr td:last-child{
+    color:#333;
+}
+.hostDetail-disk-show
+{
+    top: -4px;
+}
+.hostDetail-status-icon
+{
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    position: relative;
+}
+.delete_hostDetail_promot
+{
+    position: relative;
+    color: red;
+    font-size: 14px;
+    top: -60px;
+}
+

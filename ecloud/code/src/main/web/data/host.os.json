@@ -1,0 +1,34 @@
+[
+  {
+    "name":"windows",
+    "class":"icon1"
+  },
+  {
+    "name":"centos",
+    "class":"icon2"
+  },
+  {
+    "name":"ubuntu",
+    "class":"icon3"
+  },
+  {
+    "name":"redhat",
+    "class":"icon4"
+  },
+  {
+    "name":"suse",
+    "class":"icon5"
+  },
+  {
+    "name":"fedora",
+    "class":"icon6"
+  },
+  {
+    "name":"debian",
+    "class":"icon7"
+  },
+  {
+    "name":"neokylin",
+    "class":"icon8"
+  }
+]

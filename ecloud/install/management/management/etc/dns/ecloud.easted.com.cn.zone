@@ -1,0 +1,8 @@
+$TTL 1D
+@			IN SOA	ecloud.easted.com.cn. root.ecloud.easted.com.cn. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+			NS		ns.ecloud.easted.com.cn.

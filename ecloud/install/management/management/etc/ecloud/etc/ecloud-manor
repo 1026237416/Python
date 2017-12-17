@@ -1,0 +1,88 @@
+#!/bin/sh
+# Start/stop manor daemons
+# chkconfig: - 70 80
+
+### BEGIN INIT INFO
+# Provides:          manor
+# Default-Start:
+# Default-Stop:
+# Required-Start:    $remote_fs $named $network $time
+# Required-Stop:     $remote_fs $named $network $time
+# Short-Description: Start manor distributed file system daemons at boot time
+# Description:       Enable manor distributed file system services.
+### END INIT INFO
+
+TOP_DIR=`pwd`
+LOCAL_ECLOUD_DIR=/opt/ecloud
+
+manor_service_start()
+{
+    pid=`ps -aux | grep "etc/conf" | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    printf "Start manor service..........."
+    if [ ! -n "$pid" ];
+    then
+            cd ${LOCAL_ECLOUD_DIR}/manor/farm
+            python manor.pyc -f ../etc/conf&
+            sleep 1
+            pid=`ps -aux | grep "etc/conf" | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+            printf "start manor on ${pid}................."
+            if [ ! -n "$pid" ];
+            then
+                    echo failed
+            else
+                    echo "done"
+            fi
+    else
+            echo "manor services already running on $pid"
+    fi
+}
+
+manor_service_stop()
+{
+        pid=`ps -aux | grep "etc/conf" | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+        if [ ! -n "$pid" ];
+        then
+                echo "Stop manor service............manor service not running"
+                exit
+        else
+                printf "Stop manor service............"
+                ps -aux | grep "etc/conf"|grep -v 'grep'|awk '{print $2}'|xargs kill -9
+                echo -n "kill $pid....................."
+                pid=`ps -aux | grep "etc/conf" | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+                if [ ! -n "$pid" ];
+                then
+                        echo done
+                else
+                        echo failed
+                fi
+        fi
+}
+manor_service_status()
+{
+        pid=`ps -aux | grep "etc/conf" | grep -v 'grep'|awk '{print $2}'`
+        if [ ! -n "$pid" ];
+        then
+                echo manor service not running
+        else
+                echo maor service has running
+                ps -aux | grep manor.pyc | grep -v 'grep'
+        fi
+}
+
+case "$1" in
+        start)
+                manor_service_start
+        ;;
+        stop)
+                manor_service_stop
+        ;;
+        restart)
+                manor_service_stop
+                manor_service_start
+        ;;
+        status)
+                manor_service_status
+        ;;
+        *)
+              echo "Usage: service manor {start|stop|restart|status}"
+esac

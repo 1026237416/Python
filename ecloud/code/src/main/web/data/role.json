@@ -1,0 +1,13 @@
+[
+  {
+    "user":{
+      "role":{
+        "username":"ecloud",
+        "password":"password",
+        "name":"Ecloud",
+        "value":88,
+        "roleType":"admin"
+      }
+    }
+  }
+]

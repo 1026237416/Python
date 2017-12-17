@@ -1,0 +1,66 @@
+[
+    {
+        "label":"EcNode101",
+        "ip":"10.10.3.101",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"4核 8GB",
+        "value":"1"
+    },
+    {
+        "label":"EcNode102",
+        "ip":"10.10.3.102",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"8核 16GB",
+        "value":"2"
+    },
+    {
+        "label":"EcNode103",
+        "ip":"10.10.3.103",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"4核 8GB",
+        "value":"3"
+    },
+    {
+        "label":"EcNode104",
+        "ip":"10.10.3.104",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"4核 8GB",
+        "value":"4"
+    },
+    {
+        "label":"EcNode105",
+        "ip":"10.10.3.105",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"8核 16GB",
+        "value":"5"
+    },
+    {
+        "label":"EcNode106",
+        "ip":"10.10.3.106",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"4核 8GB",
+        "value":"6"
+    },
+    {
+        "label":"EcNode107",
+        "ip":"10.10.3.107",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"4核 8GB",
+        "value":"7"
+    },
+    {
+        "label":"EcNode108",
+        "ip":"10.10.3.108",
+        "vlan":"130,131,132",
+        "status":"0",
+        "quota":"4核 8GB",
+        "value":"8"
+    }
+]

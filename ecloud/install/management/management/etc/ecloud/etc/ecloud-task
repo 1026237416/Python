@@ -1,0 +1,131 @@
+#!/bin/sh
+# Start/stop ecloud-task daemons
+# chkconfig: - 70 80
+
+### BEGIN INIT INFO
+# Provides:          ecloud-task
+# Default-Start:
+# Default-Stop:
+# Required-Start:    $remote_fs $named $network $time
+# Required-Stop:     $remote_fs $named $network $time
+# Short-Description: Start ecloud-task distributed file system daemons at boot time
+# Description:       Enable ecloud-task distributed file system services.
+### END INIT INFO
+
+TOP_DIR=`pwd`
+LOCAL_ECLOUD_DIR=/opt/ecloud
+FILE_TYPE=py
+
+ecloud_task_start()
+{
+    pid=`ps -aux | grep task.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+		printf "Starting ecloud-task........."
+		cd $LOCAL_ECLOUD_DIR/python
+		python task.pyc  --config-file ../etc/ecloud.conf & 1 >> start.log 2>&1
+		sleep 1
+		pid=`ps -aux | grep task.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+		echo "pid=$pid"
+		if [ ! -n "$pid" ];
+		then
+			echo failed
+		else
+			echo "start ecloud-task on $pid"
+		fi
+    else
+		echo "Starting ecloud-task............ecloud-task already running on $pid"
+    fi
+}
+
+ecloud_task_stop()
+{
+        pid=`ps -aux | grep task.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+        if [ ! -n "$pid" ];
+        then
+			echo "Stoping ecloud-task...ecloud-task not running"
+			exit
+        else
+			echo "Stoping ecloud-task..."
+			kill -9 $pid
+			echo -n "kill $pid........"
+			pid=`ps -aux | grep task.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+			if [ ! -n "$pid" ];
+			then
+				echo done
+				echo ""
+			else
+				echo failed
+				echo ""
+			fi
+        fi
+}
+
+ecloud_task_restart()
+{
+    pid=`ps -aux | grep task.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+		echo "Stoping ecloud-task...ecloud task not running"
+		exit
+    else
+		kill -9 $pid
+		echo -n "Stoping ecloud-task...kill $pid..........."
+		pid=`ps -aux | grep task.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+		if [ ! -n "$pid" ];
+		then
+			echo done
+		else
+			echo failed
+		fi
+    fi
+
+    pid=`ps -aux | grep task.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+		printf "Starting ........."
+		cd $LOCAL_ECLOUD_DIR/python
+		python task.pyc   --config-file ../etc/ecloud.conf & 1 >> start.log 2>&1
+		sleep 3
+		pid=`ps -aux | grep task.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+		echo "pid=$pid"
+		if [ ! -n "$pid" ];
+		then
+			echo failed
+		else
+			echo "start ecloud-task on $pid"
+		fi
+    else
+		echo "Starting ecloud-task............ecloud-task already running on $pid"
+    fi
+}
+
+ecloud_task_status()
+{
+	pid=`ps -aux | grep task.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+	if [ ! -n "$pid" ];
+	then
+		echo ecloud-task not running
+	else
+		echo ecloud-task has running
+		ps -aux | grep task.pyc | grep -v 'grep'
+	fi
+}
+
+case "$1" in
+        start)
+			ecloud_task_start
+        ;;
+        stop)
+			ecloud_task_stop
+        ;;
+        restart)
+			ecloud_task_restart
+        ;;
+        status)
+			ecloud_task_status
+        ;;
+        *)
+			echo "Usage: service ecloud-task {start|stop|restart|status}"
+esac
+

@@ -1,0 +1,232 @@
+.item-title
+{
+    clear:both;
+    padding-left:30px;
+    font-size:15px;
+}
+
+.quota
+{
+    font-size: 16px;
+    margin-left: 60px;
+}
+.quota div
+{
+    float: left;
+}
+.quota div span
+{
+
+    vertical-align:bottom;
+}
+
+
+.quota label
+{
+    margin-right: 20px;
+    margin-top: 13px;
+    float: left;
+
+}
+
+.quota input
+{
+    margin-right: 20px;
+}
+.host-step-box
+{
+    width:715px;
+    overflow:hidden;
+}
+li.host-step-first
+{
+    margin:0;
+}
+li.host-step-end
+{
+
+}
+.operate-list
+{
+    width:660px;
+    height: 140px;
+    overflow-y:scroll ;
+}
+.operate-list li
+{
+    float:left;
+    width:300px;
+    height:34px;
+    background-color:#edf0f3;
+    line-height: 34px;
+    margin:1px;
+    padding-left:5px;
+    overflow: hidden;
+    cursor: pointer;
+    padding:5px 5px;
+    font-size:13px;
+}
+
+.operate-list span
+{
+    display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+    padding-left:5px;
+}
+.host-route
+{
+    clear:both;
+    padding-right: 35px;
+}
+.host-route span
+{
+    cursor: pointer;
+    color:darkgreen;
+    float: right;
+}
+.item-list
+{
+    clear:both;
+    font-size:16px;
+}
+.item-list li
+{
+    float:left;
+    padding:0px 10px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 5px 20px;
+    min-width:38px;
+    text-align: center;
+    background: #edf0f3;
+}
+
+.item-list-title
+{
+    font-weight: normal;
+    width:75px;
+    cursor: none;
+    border:none!important;
+}
+
+.backup-box
+{
+    margin:20px;
+    margin-left:30px;
+}
+.bound-area
+{
+    height:220px;
+}
+.item-list li.item-list-title,.item-list li.item-list-none
+{
+    cursor: default;
+    background: none!important;
+}
+.pre-table
+{
+    font-size:16px;
+    color:gray;
+}
+.pre-table
+{
+    color:black;
+}
+.pre-table td:nth-child(even)
+{
+    color:#999999;
+}
+.pre-table td:nth-child(odd)
+{
+    min-width: 90px;
+}
+.data_disk span
+{
+    display: inline-block;
+    padding-right:10px;
+}
+.mount,.unmount
+{
+    vertical-align: middle;
+}
+.mount img,.unmount img
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.last
+{
+    font-size: 16px;
+    margin-right: 100px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.last span{
+    width: 60px;
+    color: #808080;
+}
+.over
+{
+    padding-top: 60px;
+    position: absolute;
+}
+
+.unit{
+    margin-left: -50px;
+}
+
+.newbtn
+{
+    margin-top: 200px;
+}
+.new1btn
+{
+    cursor: pointer;
+    float: right;
+}
+
+.tenant-bottom input
+{
+    position: absolute;
+    margin-left: -40px;
+    margin-top: 5px;
+}
+
+.unit
+{
+    margin-right: 50px;
+    margin-left: -50px;
+}
+#vlandiv label{ float: left;}
+#vlandiv span{ width: 100%; display:block; margin-top: -10px; line-height:30px; }
+.ip{
+    margin-top: 10px;
+    width: 647px;/*605px;*/
+    padding: 5px;
+    padding-left: 0px;
+    padding-top: 4px;
+    height: 360px;
+    overflow-y: auto;
+}
+.datagrid-btable tr td[field="username"] {
+    padding-left: 0px !important;
+}
+.ipSelectAll-content
+{
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+}
+.bar_ip_box.viewstack>li.viewstack-li.selected{
+    /*width:615px !important;*/
+}
+.ip-legend>li.square_occupy,.ip-legend>li.square_dhcp_edit,.ip-legend>li.square_dhcp{
+    display:none;
+}
+span.pos1,span.pos2{
+    padding-right:5px;
+}

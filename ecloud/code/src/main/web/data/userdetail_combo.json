@@ -1,0 +1,27 @@
+[
+  {
+    "label":"系统管理员",
+    "value":"sys_admin"
+  },
+  {
+    "label":"安全管理员",
+    "value":"sec_admin"
+  },
+  {
+    "label":"安全审计员",
+    "value":"audit_admin"
+  },
+  {
+    "label":"普通用户",
+    "value":"user"
+
+  },
+ {
+        "label":"项目管理员",
+        "value":"tenant_admin"
+ },
+  {
+    "label":"超级用户",
+    "value":"ecloud_admin"
+  }
+]

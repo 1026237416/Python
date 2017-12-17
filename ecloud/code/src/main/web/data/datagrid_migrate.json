@@ -1,0 +1,35 @@
+[
+  {
+    "id":"001",
+    "name":"host01",
+    "ip":"127.12.11",
+    "running_vms":" ",
+    "cpus":2,
+    "used_cpus":3,
+    "memory_mb":4,
+    "used_memory_mb":4,
+    "status":"active"
+  },
+  {
+    "id":"002",
+    "name":"host02",
+    "ip":"127.12.11",
+    "running_vms":" ",
+    "cpus":2,
+    "used_cpus":3,
+    "memory_mb":4,
+    "used_memory_mb":4,
+    "status":"active"
+  },
+  {
+    "id":"003",
+    "name":"host03",
+    "ip":"127.12.11",
+    "running_vms":1,
+    "cpus":2,
+    "used_cpus":3,
+    "memory_mb":4,
+    "used_memory_mb":4,
+    "status":"active"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "label":"入口",
+    "value":"ingress",
+    "selected":true
+  },
+  {
+    "label":"出口",
+    "value":"egress"
+  }
+]

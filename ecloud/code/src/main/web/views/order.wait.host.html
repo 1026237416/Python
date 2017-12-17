@@ -1,0 +1,195 @@
+<!--<div class="icon-menus-box">-->
+    <!--<div class="icon-menus-bg"></div>-->
+    <!--<div class="orderwait-icon-box icon-menus-cont"></div>-->
+<!--</div>-->
+<div class="right-cont host-detail" id="host-all">
+    <div class="block-lists padding_top50">
+        <div class="block-list" >
+            <div class="block-list-content" id="sec_content">
+                <div class="block-list-label" id="description" >
+                    基本信息
+                </div>
+                <div class="host-detail-descript">
+                    <div class="float-table">
+                        <table class="plain-table">
+                            <tr>
+                                <td class="secretfield">密级<i>*</i>：</td>
+                                <td><input class="sec_host_secret" style="height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <td class="datafield">数据中心<i>*</i>：</td>
+                                <td  class="datacenter"><input style="height: 30px;" class="sec_host_datacenter"></td>
+                            </tr>
+                            <tr>
+                                <td class="osfield">操作系统：</td>
+                                <td class="data_host_os"></td>
+                            </tr>
+                            <tr>
+                                <td class="imagefield">镜像<i>*</i>：</td>
+                                <td class="image"><input style="height: 30px;" id="sec_host_image"></td>
+                            </tr>
+                            <tr>
+                                <td class="transactorfield">经办人：</td>
+                                <td class="data_host_transactor"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float-table">
+                        <table class="plain-table">
+                            <tr>
+                                <td class="userfield">用户<i>*</i>：</td>
+                                <td class="user"><input style="height: 30px;" class="sec_host_user" ></td>
+                            </tr>
+                            <tr>
+                                <td class="oprojectfield">项目<i>*</i>：</td>
+                                <td class="project"><input style="height: 30px;" class="sec_host_project"></td>
+                            </tr>
+                            <tr>
+                                <td class="osuserfield">操作系统用户：</td>
+                                <td class="data_host_osuser"></td>
+                            </tr>
+                            <tr>
+                                <td class="ospasswordfield">初始密码：</td>
+                                <td>
+                                    <span class="order_pwd"><input style="height: 30px;" id="sec_host_ospwd" type="password"></span>
+                                    <span class="order_pwd"><input style="height: 30px;" id="sec_host_text" type="text"></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float-table no-right-border">
+                        <table class="plain-table" style="margin-top: 10px;margin-bottom: 10px;">
+                            <tr>
+                                <td class="vlanfield">VLAN<i>*</i>：</td>
+                                <td class="VLAN"><input style="height: 30px;" id="sec_host_VLAN"></td>
+                            </tr>
+
+                            <tr class="textareass">
+                                <td class="ipfield">IP：</td>
+                                <td class="IP"><input id="sec_host_IP" style="height: 30px;"></td>
+                            </tr>
+                            <tr>
+                                <td class="hostfield">宿主机：</td>
+                                <td class="host"><input style="height: 30px;" id="sec_host_host"></td>
+                            </tr>
+                            <tr>
+                                <td class="backupfield" style="vertical-align: top">备注：</td>
+                                <td><textarea class="data_host_backup" maxlength="50"></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-list-content" id="sec_content_disk">
+            <div class="block-list-label">
+                基本信息
+            </div>
+            <div class="host-detail-descript">
+                <div class="float-table">
+                    <table class="plain-table">
+                        <tr>
+                            <td class="secretfield">密级<i>*</i>：</td>
+                            <td><input class="sec_host_secret" style="height: 30px"></td>
+                        </tr>
+                        <tr>
+                            <td class="datafield">数据中心<i>*</i>：</td>
+                            <td><input class="sec_host_datacenter" style="height: 30px"></td>
+                        </tr>
+                        <tr>
+                            <td class="userfield">用户<i>*</i>：</td>
+                            <td class="user"><input class="sec_host_user" style="height: 30px"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="float-table">
+                    <table class="plain-table">
+                        <tr>
+                            <td class="oprojectfield">项目<i>*</i>：</td>
+                            <td><input class="sec_host_project" style="height: 30px"></td>
+                        </tr>
+                        <tr>
+                            <td class="transactorfield">经办人：</td>
+                            <td class="data_host_transactor"></td>
+                        </tr>
+                        <tr>
+                            <td class="disk_mountfield">挂载至<i>*</i>：</td>
+                            <td><input id="mount" style="height: 30px"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="float-table no-right-border">
+                    <table class="plain-table">
+                        <tr>
+                            <td class="backupfield">备注：</td>
+                            <td><textarea class="data_host_backup"></textarea></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block-list-content" id="sys_content">
+            <div class="block-list-label">
+                基本信息
+            </div>
+            <div class="host-detail-descript">
+                <div class="float-table">
+                    <table class="plain-table">
+                        <tr>
+                            <td clss="typefield">工单类型：</td>
+                            <td class="data_sys_type"></td>
+                        </tr>
+                        <tr id="transactor">
+                            <td class="osfield">操作系统：</td>
+                            <td class="data_sys_os"></td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="float-table">
+                    <table class="plain-table">
+                        <tr>
+                            <td class="transactorfield">经办人：</td>
+                            <td class="data_sys_transactor"></td>
+                        </tr>
+                        <tr id="strategy">
+                            <td class="allocation">分配策略：</td>
+                            <td class="data_sys_allocation"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="float-table no-right-border">
+                    <table class="plain-table">
+                        <tr>
+                            <td class="backupfield">备注：</td>
+                            <td class="data_sys_backup" style="width: 230px;overflow: hidden;text-overflow: ellipsis;float: left"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-list operation" id="table_wait">
+        <div >
+            <div class="block-list-content" style="margin-top: 18px;">
+                <div class="block-list-label" id="operation">
+                    资源列表
+                </div>
+                <div  class="plain-datagrid" style="border: none">
+                    <table id="orderdetail_wait"
+                           data-options="singleSelect:true,
+                               width:'100%',
+                                fitColumns:'true',
+                                pagination:true,
+                                pageSize:10
+                                ">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<link href="theme/default/css/order.wait.css" rel="stylesheet">

@@ -1,0 +1,27 @@
+{
+  "logo": {
+    "description": "所有logo资源 ",
+    "sources": [
+      {
+        "description": "登陆页顶部大logo",
+        "src": "/code/src/main/web/theme/default/images/logo_new.png"
+      },
+      {
+        "description": "登陆页中间logo",
+        "src": "/code/src/main/web/theme/default/images/icons.png"
+      },
+      {
+        "description": "内页左上角主logo",
+        "src": "/code/src/main/web/theme/default/images/icons.png"
+      },
+      {
+        "description": "内页显示的ecloud企业版",
+        "description": "/code/src/main/web/theme/default/images/icons.png"
+      }
+    ]
+  },
+  "copyright": {
+    "description": "版权信息",
+    "src": "/code/src/main/web/data/edition.json"
+  }
+}

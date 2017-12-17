@@ -1,0 +1,60 @@
+<div class="icon-menus-box">
+    <div class="icon-menus-bg"></div>
+    <ul class="icon-menus icon-menus-cont">
+        <li>
+            <img src="theme/default/images/add.png" title="增加" >
+        </li>
+        <li>
+            <img src="theme/default/images/delete.png" title="删除">
+        </li>
+
+    </ul>
+
+</div>
+<div class="right-cont" style="margin-top:54px;">
+
+    <div class="search-item">
+        <p class="input-text">
+                    <span class="combox-to-input">
+                        <select  class="easyui-combobox" data-options="
+                        prompt:'名称/用户',
+                        iconCls:'icon-search',
+                        iconAlign:'left',
+                        url: 'data/mash.json',
+                        method: 'get',
+                        valueField:'value',
+                        textField:'label',
+                        " style="width:197px;padding-left:10px;height:30px">
+
+                        </select></span><span>
+                    </span>
+
+        </p>
+    </div>
+    <div style="padding:5px;display: block" class="plain-datagrid">
+        <table class="easyui-datagrid" title="代办工单" style="width:100%;height:300px" align="center"
+               data-options="singleSelect:false,collapsible:true,width:'100%',fitColumns:'true'">
+            <thead>
+            <tr>
+                <th data-options="field:'cid',checkbox:'true'">ID</th>
+                <th data-options="field:'name',width:200">名称</th>
+                <th data-options="field:'type',width:200">规则</th>
+                <th data-options="field:'user',width:200">告警对象</th>
+                <th data-options="field:'time',width:200">规则</th>
+            </tr>
+            </thead>
+            <tr>
+                <td></td>
+                <td><a class="table-link" onclick="ef.nav.goto('test.html')" >异常关机</a></td>
+                <td>保持连续运行</td>
+                <td>虚拟机</td>
+                <td>严重</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!--
+<script type="text/javascript" src="js/menufade.js"></script>
+<script type="text/javascript" src="js/vlan.js"></script>
+<script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/libs/easyui/locale/easyui-lang-zh_CN.js"></script>-->

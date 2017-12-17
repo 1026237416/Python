@@ -1,0 +1,130 @@
+#!/bin/sh
+# Start/stop ecloud-message daemons
+# chkconfig: - 70 80
+
+### BEGIN INIT INFO
+# Provides:          ecloud-message
+# Default-Start:
+# Default-Stop:
+# Required-Start:    $remote_fs $named $network $time
+# Required-Stop:     $remote_fs $named $network $time
+# Short-Description: Start ecloud-message distributed file system daemons at boot time
+# Description:       Enable ecloud-message distributed file system services.
+### END INIT INFO
+
+TOP_DIR=`pwd`
+LOCAL_ECLOUD_DIR=/opt/ecloud
+
+ecloud_message_start()
+{
+    pid=`ps -aux | grep message.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+            printf "Starting ecloud-message........."
+            cd $LOCAL_ECLOUD_DIR/python
+            python message.pyc  --config-file ../etc/ecloud.conf & 1 >> start.log 2>&1
+            sleep 1
+            pid=`ps -aux | grep message.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+            echo "pid=$pid"
+            if [ ! -n "$pid" ];
+            then
+                    echo failed
+            else
+                    echo "start ecloud-message on $pid"
+            fi
+    else
+            echo "Starting ecloud-message............ecloud-message already running on $pid"
+    fi
+}
+
+ecloud_message_stop()
+{
+        pid=`ps -aux | grep message.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+        if [ ! -n "$pid" ];
+        then
+                echo "Stoping ecloud-message...ecloud-message not running"
+                exit
+        else
+                echo "Stoping ecloud-message..."
+                kill -9 $pid
+                echo -n "kill $pid........"
+                pid=`ps -aux | grep message.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+                if [ ! -n "$pid" ];
+                then
+                        echo done
+                        echo ""
+                else
+                        echo failed
+                        echo ""
+                fi
+        fi
+}
+
+ecloud_message_restart()
+{
+    pid=`ps -aux | grep message.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+            echo "Stoping ecloud-message...ecloud message not running"
+            exit
+    else
+            kill -9 $pid
+            echo -n "Stoping ecloud-message...kill $pid..........."
+            pid=`ps -aux | grep message.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+            if [ ! -n "$pid" ];
+            then
+                    echo done
+            else
+                    echo failed
+            fi
+    fi
+
+    pid=`ps -aux | grep message.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+    if [ ! -n "$pid" ];
+    then
+            printf "Starting ecloud-message........."
+            cd $LOCAL_ECLOUD_DIR/python
+            python message.pyc   --config-file ../etc/ecloud.conf & 1 >> start.log 2>&1
+            sleep 3
+            pid=`ps -aux | grep message.pyc | grep -v 'grep' | awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+            echo "pid=$pid"
+            if [ ! -n "$pid" ];
+            then
+                    echo failed
+            else
+                    echo "start ecloud-message on $pid"
+            fi
+    else
+            echo "Starting ecloud-message............ecloud-message already running on $pid"
+    fi
+}
+
+ecloud_message_status()
+{
+        pid=`ps -aux | grep message.pyc | grep -v 'grep'|awk '{print $2}' | sed 's/^[ \t]*//g' | sed 's/[ \t]*$//g' | sed -r ':1;N;$!b1;s/\s+/ /g'`
+        if [ ! -n "$pid" ];
+        then
+                echo ecloud-message not running
+        else
+                echo ecloud-message has running
+                ps -aux | grep message.pyc | grep -v 'grep'
+        fi
+}
+
+case "$1" in
+        start)
+                ecloud_message_start
+        ;;
+        stop)
+                ecloud_message_stop
+        ;;
+        restart)
+                ecloud_message_restart
+        ;;
+        status)
+                ecloud_message_status
+        ;;
+        *)
+              echo "Usage: service ecloud-message {start|stop|restart|status}"
+esac
+

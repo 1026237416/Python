@@ -1,0 +1,665 @@
+[
+    {
+      "name": "",
+      "type": "deploy",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "start"
+            },
+            "create_nodes$master-1": {
+              "shape": "box",
+              "id": "create_nodes$master-1",
+              "label": "master"
+            },
+            "create_nodes$server-2": {
+              "shape": "box",
+              "id": "create_nodes$server-2",
+              "label": "server"
+            },
+            "execute_script$edp-install-3": {
+              "shape": "box",
+              "id": "execute_script$edp-install-3",
+              "label": "edp_install"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$0000": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$0000",
+              "to": "create_nodes$master-1"
+            },
+            "line_nodes$1111": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$1111",
+              "to": "create_nodes$server-2"
+            },
+            "line_nodes$$2222": {
+              "arrows": "to",
+              "from": "create_nodes$master-1",
+              "id": "line_nodes$2222",
+              "to": "execute_script$edp-install-3"
+            },
+            "line_nodes$3333": {
+              "arrows": "to",
+              "from": "create_nodes$server-2",
+              "id": "line_nodes$3333",
+              "to": "execute_script$edp-install-3"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "create_nodes$master-1": {
+          "params": [
+
+            {
+              "group_name": "master",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "amount": 1,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "limit": 1,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "cores": 4,
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "memory": 8192,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "disk_capacity": 8,
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "tenant": "",
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "network": "",
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "image": "",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            }
+          ]
+        },
+        "create_nodes$server-2": {
+          "params": [
+            {
+              "group_name": "server",
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "amount": 2,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "limit": 1,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "cores": 4,
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "memory": 8192,
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "disk_capacity": "8",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "tenant": "",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "network": "",
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "image": "${IMAGE}",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            }
+          ]
+        },
+        "execute_script$edp-install-3": {
+          "params": [
+            {
+              "script_params": [
+                {
+                  "type": "system_default",
+                  "description": "all ips",
+                  "name": "ALL_IPS",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                },
+                {
+                  "type": "system_default",
+                  "description": "group name",
+                  "name": "GROUP_NAME",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                }
+              ],
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false,
+              "execute_script_content": "#!/usr/bin/env python\nimport argparse\nimport base64\nimport json\nimport sys\nimport traceback\nimport urllib2\n\nprint 'init...'\n\n\ndef trace():\n    exc_type,exc_value,exc_traceback=sys.exc_info()\n    error_str=\"\"\n    for e in traceback.format_exception(exc_type,exc_value,exc_traceback):\n        error_str+=e\n    return error_str\n\n\ndef call_rest(api_url,data=None,method='GET'):\n    req=urllib2.Request('%s/%s'%(base_url,api_url))\n    base64string=base64.encodestring('%s:%s'%(\"admin\",\"admin\")).replace('\\\n','')\n    req.add_header(\"Authorization\",\"Basic %s\"%base64string)\n    if method=='PUT':\n        req.get_method=lambda:'PUT'\n    if method=='DELETE':\n        req.get_method=lambda:'DELETE'\n    if data:\n        response=urllib2.urlopen(req,json.dumps(data))\n    else:\n        response=urllib2.urlopen(req)\n    return response.read()\n\n\ndef get_cluster_name(rs):\n    return rs['items'][0]['Clusters']['cluster_name']\n\n\ntry:\n    base_url='http://localhost:8080'\n    print base_url\n\n    pars=argparse.ArgumentParser()\n    pars.add_argument('-hosts')\n    args=pars.parse_args()\n\n    print args.hosts\n\n    role=[_ for _ in args.hosts.split(',')\n          if _.find('@')!=-1][0].split('|')[1].split('_')[0]\n    if 'master'!=role:\n        print 'not master exit.'\n        exit(0)\n\n    cluster_name=get_cluster_name(json.loads(call_rest('api/v1/clusters')))\n    print cluster_name\n\n    result=call_rest('api/v1/clusters/%s/hosts/%s?fields=Hosts/host_state'%(\n        cluster_name,'${HOST_NAME}'))\n    print result\n\n    req=urllib2.Request('%s/%s'%('http://169.254.169.254:4042','info'))\n    req.add_header('info-token','token-for-test-001')\n    urllib2.urlopen(req,result)\n\nexcept:\n    print trace()"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "start_app",
+      "type": "manage",
+      "description": "start_by_group",
+      "label":"\u6309\u7EC4\u542F\u52A8",
+      "target":"app",
+      "icon":"icon-recycle-start",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "开始"
+            },
+            "start_node$start-master-1": {
+              "shape": "box",
+              "id": "start_node$start-master-1",
+              "label": "master"
+            },
+            "start_node$start-server-2": {
+              "shape": "box",
+              "id": "start_node$start-server-2",
+              "label": "server"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$$33333": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$33333",
+              "to": "start_node$start-master-1"
+            },
+            "line_nodes$44444": {
+              "arrows": "to",
+              "from": "start_node$start-master-1",
+              "id": "line_nodes$44444",
+              "to": "start_node$start-server-2"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "start": {
+          "params": [
+          ]
+        },
+        "start_node$start-master-1": {
+          "params": [
+
+            {
+              "group_name": "master"
+            }
+          ]
+        },
+        "start_node$start-server-2": {
+          "params": [
+            {
+              "group_name": "server"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "stop_app",
+      "type": "manage",
+      "description": "stop_by_group",
+      "label":"\u6309\u7EC4\u505C\u6B62",
+      "target":"app",
+      "icon":"icon-recycle-end",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "开始"
+            },
+            "stop_node$stop-server-1": {
+              "shape": "box",
+              "id": "stop_node$stop-server-1",
+              "label": "server"
+            },
+            "stop_node$stop-master-2": {
+              "shape": "box",
+              "id": "stop_node$stop-master-2",
+              "label": "master"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$$333333": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$333333",
+              "to": "stop_node$stop-server-1"
+            },
+            "line_nodes$444444": {
+              "arrows": "to",
+              "from": "stop_node$stop-server-1",
+              "id": "line_nodes$444444",
+              "to": "stop_node$stop-master-2"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "start": {
+          "params": [
+          ]
+        },
+        "stop_node$stop-server-1": {
+          "params": [
+            {
+              "group_name": "server"
+            }
+          ]
+        },
+        "stop_node$stop-mster-2": {
+          "params": [
+
+            {
+              "group_name": "master"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "",
+      "type": "manage",
+      "description": "EDP_status",
+      "label":"\u83B7\u53D6EDP\u7684\u670D\u52A1\u72B6\u6001",
+      "target":" node",
+      "icon":"icon-menus-icon-add",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "\u5F00\u59CB"
+            },
+            "execute_script$get-status-1": {
+              "shape": "box",
+              "id": "execute_script$get-status-1",
+              "label": "EDP_status"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$11111111": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$11111111",
+              "to": "execute_script$get-status-1"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "execute_script$get-status-1": {
+          "params": [
+            {
+              "script_params": [
+                {
+                  "type": "system_default",
+                  "description": "all ips",
+                  "name": "ALL_IPS",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                },
+                {
+                  "type": "system_default",
+                  "description": "group name",
+                  "name": "GROUP_NAME",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                }
+              ],
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true,
+              "execute_script_content": "#!/usr/bin/env python\nimport argparse\nimport base64\nimport json\nimport sys\nimport traceback\nimport urllib2\n\nprint 'init...'\n\n\ndef trace():\n    exc_type,exc_value,exc_traceback=sys.exc_info()\n    error_str=\"\"\n    for e in traceback.format_exception(exc_type,exc_value,exc_traceback):\n        error_str+=e\n    return error_str\n\n\ndef call_rest(api_url,data=None,method='GET'):\n    req=urllib2.Request('%s/%s'%(base_url,api_url))\n    base64string=base64.encodestring('%s:%s'%(\"admin\",\"admin\")).replace('\\\n','')\n    req.add_header(\"Authorization\",\"Basic %s\"%base64string)\n    if method=='PUT':\n        req.get_method=lambda:'PUT'\n    if method=='DELETE':\n        req.get_method=lambda:'DELETE'\n    if data:\n        response=urllib2.urlopen(req,json.dumps(data))\n    else:\n        response=urllib2.urlopen(req)\n    return response.read()\n\n\ndef get_cluster_name(rs):\n    return rs['items'][0]['Clusters']['cluster_name']\n\n\ntry:\n    base_url='http://localhost:8080'\n    print base_url\n\n    pars=argparse.ArgumentParser()\n    pars.add_argument('-hosts')\n    args=pars.parse_args()\n\n    print args.hosts\n\n    role=[_ for _ in args.hosts.split(',')\n          if _.find('@')!=-1][0].split('|')[1].split('_')[0]\n    if 'master'!=role:\n        print 'not master exit.'\n        exit(0)\n\n    cluster_name=get_cluster_name(json.loads(call_rest('api/v1/clusters')))\n    print cluster_name\n\n    result=call_rest('api/v1/clusters/%s/hosts/%s?fields=Hosts/host_state'%(\n        cluster_name,'${HOST_NAME}'))\n    print result\n\n    req=urllib2.Request('%s/%s'%('http://169.254.169.254:4042','info'))\n    req.add_header('info-token','token-for-test-001')\n    urllib2.urlopen(req,result)\n\nexcept:\n    print trace()"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "",
+      "type": "manage",
+      "description": "Delete_node",
+      "icon":"icon-menus-icon-cancel",
+      "label":"\u5220\u9664\u8282\u70B9",
+      "target":" node",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "\u5F00\u59CB"
+            },
+            "execute_script$remove-node-1": {
+              "shape": "box",
+              "id": "execute_script$remove-node-1",
+              "label": "remove_node"
+            },
+            "delete_node$delete-node-1": {
+              "shape": "box",
+              "id": "delete_node$delete-node-2",
+              "label": "Delete_node"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$222111": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$222111",
+              "to": "execute_script$remove-node-1"
+            },
+            "line_nodes$111222": {
+              "arrows": "to",
+              "from": "execute_script$remove-node-1",
+              "id": "line_nodes$111222",
+              "to": "delete_node$delete-node-2"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "execute_script$remove-node-1": {
+          "params": [
+            {
+              "script_params": [
+                {
+                  "type": "system_default",
+                  "description": "all ips",
+                  "name": "ALL_IPS",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                },
+                {
+                  "type": "system_default",
+                  "description": "group name",
+                  "name": "GROUP_NAME",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                }
+              ],
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true,
+              "execute_script_content": "#!/usr/bin/env python\nimport argparse\nimport base64\nimport json\nimport sys\nimport traceback\nimport urllib2\n\nprint 'init...'\n\n\ndef trace():\n    exc_type,exc_value,exc_traceback=sys.exc_info()\n    error_str=\"\"\n    for e in traceback.format_exception(exc_type,exc_value,exc_traceback):\n        error_str+=e\n    return error_str\n\n\ndef call_rest(api_url,data=None,method='GET'):\n    req=urllib2.Request('%s/%s'%(base_url,api_url))\n    base64string=base64.encodestring('%s:%s'%(\"admin\",\"admin\")).replace('\\\n','')\n    req.add_header(\"Authorization\",\"Basic %s\"%base64string)\n    if method=='PUT':\n        req.get_method=lambda:'PUT'\n    if method=='DELETE':\n        req.get_method=lambda:'DELETE'\n    if data:\n        response=urllib2.urlopen(req,json.dumps(data))\n    else:\n        response=urllib2.urlopen(req)\n    return response.read()\n\n\ndef get_cluster_name(rs):\n    return rs['items'][0]['Clusters']['cluster_name']\n\n\ntry:\n    base_url='http://localhost:8080'\n    print base_url\n\n    pars=argparse.ArgumentParser()\n    pars.add_argument('-hosts')\n    args=pars.parse_args()\n\n    print args.hosts\n\n    role=[_ for _ in args.hosts.split(',')\n          if _.find('@')!=-1][0].split('|')[1].split('_')[0]\n    if 'master'!=role:\n        print 'not master exit.'\n        exit(0)\n\n    cluster_name=get_cluster_name(json.loads(call_rest('api/v1/clusters')))\n    print cluster_name\n\n    result=call_rest('api/v1/clusters/%s/hosts/%s?fields=Hosts/host_state'%(\n        cluster_name,'${HOST_NAME}'))\n    print result\n\n    req=urllib2.Request('%s/%s'%('http://169.254.169.254:4042','info'))\n    req.add_header('info-token','token-for-test-001')\n    urllib2.urlopen(req,result)\n\nexcept:\n    print trace()"
+            }
+          ]
+        },
+        "delete_node$delete-node-2": {
+          "params": [
+            {
+              "server_id": "",
+              "streamlet_params_properties_read_only": false,
+              "streamlet_params_properties_hide": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "",
+      "type": "manage",
+      "description": "center",
+      "icon":"icon-menus-icon-save",
+      "label":"\u5220\u9664\u8282\u70B9",
+      "target":" node",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "save"
+            },
+            "execute_script$remove-node-1": {
+              "shape": "box",
+              "id": "execute_script$remove-node-1",
+              "label": "remove_node"
+            },
+            "delete_node$delete-node-1": {
+              "shape": "box",
+              "id": "delete_node$delete-node-2",
+              "label": "Delete_node"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$222111": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$222111",
+              "to": "execute_script$remove-node-1"
+            },
+            "line_nodes$111222": {
+              "arrows": "to",
+              "from": "execute_script$remove-node-1",
+              "id": "line_nodes$111222",
+              "to": "delete_node$delete-node-2"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "execute_script$remove-node-1": {
+          "params": [
+            {
+              "script_params": [
+                {
+                  "type": "system_default",
+                  "description": "all ips",
+                  "name": "ALL_IPS",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                },
+                {
+                  "type": "system_default",
+                  "description": "group name",
+                  "name": "GROUP_NAME",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                }
+              ],
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true,
+              "execute_script_content": "#!/usr/bin/env python\nimport argparse\nimport base64\nimport json\nimport sys\nimport traceback\nimport urllib2\n\nprint 'init...'\n\n\ndef trace():\n    exc_type,exc_value,exc_traceback=sys.exc_info()\n    error_str=\"\"\n    for e in traceback.format_exception(exc_type,exc_value,exc_traceback):\n        error_str+=e\n    return error_str\n\n\ndef call_rest(api_url,data=None,method='GET'):\n    req=urllib2.Request('%s/%s'%(base_url,api_url))\n    base64string=base64.encodestring('%s:%s'%(\"admin\",\"admin\")).replace('\\\n','')\n    req.add_header(\"Authorization\",\"Basic %s\"%base64string)\n    if method=='PUT':\n        req.get_method=lambda:'PUT'\n    if method=='DELETE':\n        req.get_method=lambda:'DELETE'\n    if data:\n        response=urllib2.urlopen(req,json.dumps(data))\n    else:\n        response=urllib2.urlopen(req)\n    return response.read()\n\n\ndef get_cluster_name(rs):\n    return rs['items'][0]['Clusters']['cluster_name']\n\n\ntry:\n    base_url='http://localhost:8080'\n    print base_url\n\n    pars=argparse.ArgumentParser()\n    pars.add_argument('-hosts')\n    args=pars.parse_args()\n\n    print args.hosts\n\n    role=[_ for _ in args.hosts.split(',')\n          if _.find('@')!=-1][0].split('|')[1].split('_')[0]\n    if 'master'!=role:\n        print 'not master exit.'\n        exit(0)\n\n    cluster_name=get_cluster_name(json.loads(call_rest('api/v1/clusters')))\n    print cluster_name\n\n    result=call_rest('api/v1/clusters/%s/hosts/%s?fields=Hosts/host_state'%(\n        cluster_name,'${HOST_NAME}'))\n    print result\n\n    req=urllib2.Request('%s/%s'%('http://169.254.169.254:4042','info'))\n    req.add_header('info-token','token-for-test-001')\n    urllib2.urlopen(req,result)\n\nexcept:\n    print trace()"
+            }
+          ]
+        },
+        "delete_node$delete-node-2": {
+          "params": [
+            {
+              "server_id": "",
+              "streamlet_params_properties_read_only": false,
+              "streamlet_params_properties_hide": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "add_node",
+      "type": "manage",
+      "description": "add_node",
+      "label":"\u6DFB\u52A0\u8282\u70B9",
+      "target":"group",
+      "icon":"icon-manor-add",
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": "开始"
+            },
+            "create_nodes$create-vm-1": {
+              "shape": "box",
+              "id": "create_nodes$create-vm-1",
+              "label": "cerate-vm"
+            },
+            "execute_script$add-node-script-2": {
+              "shape": "box",
+              "id": "execute_script$add-node-script-2",
+              "label": "add_node"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "line_nodes$777888": {
+              "arrows": "to",
+              "from": "start",
+              "id": "line_nodes$777888",
+              "to": "create_nodes$create-vm-1"
+            },
+            "line_nodes$888777": {
+              "arrows": "to",
+              "from": "create_nodes$create-vm-1",
+              "id": "line_nodes$888777",
+              "to": "execute_script$add-node-script-2"
+            }
+          }
+        }
+      },
+      "streamlet": {
+        "create_nodes$create-vm-1": {
+          "params": [
+            {
+              "group_name": "master",
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "amount": 2,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "limit":2 ,
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "cores": 4,
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "memory": 8192,
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "disk_capacity": "8",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "tenant": "",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true
+            },
+            {
+              "network": "",
+              "streamlet_params_properties_hide": true,
+              "streamlet_params_properties_read_only": false
+            },
+            {
+              "image": "${IMAGE}",
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": false
+            }
+          ]
+        },
+        "execute_script$add-node-script-2": {
+          "params": [
+            {
+              "script_params": [
+                {
+                  "type": "system_default",
+                  "description": "all ips",
+                  "name": "ALL_IPS",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                },
+                {
+                  "type": "system_default",
+                  "description": "group name",
+                  "name": "GROUP_NAME",
+                  "ui":"",
+                  "ui_value":"",
+                  "value":""
+                }
+              ],
+              "streamlet_params_properties_hide": false,
+              "streamlet_params_properties_read_only": true,
+              "execute_script_content": "#!/usr/bin/env python\nimport argparse\nimport base64\nimport json\nimport sys\nimport traceback\nimport urllib2\n\nprint 'init...'\n\n\ndef trace():\n    exc_type,exc_value,exc_traceback=sys.exc_info()\n    error_str=\"\"\n    for e in traceback.format_exception(exc_type,exc_value,exc_traceback):\n        error_str+=e\n    return error_str\n\n\ndef call_rest(api_url,data=None,method='GET'):\n    req=urllib2.Request('%s/%s'%(base_url,api_url))\n    base64string=base64.encodestring('%s:%s'%(\"admin\",\"admin\")).replace('\\\n','')\n    req.add_header(\"Authorization\",\"Basic %s\"%base64string)\n    if method=='PUT':\n        req.get_method=lambda:'PUT'\n    if method=='DELETE':\n        req.get_method=lambda:'DELETE'\n    if data:\n        response=urllib2.urlopen(req,json.dumps(data))\n    else:\n        response=urllib2.urlopen(req)\n    return response.read()\n\n\ndef get_cluster_name(rs):\n    return rs['items'][0]['Clusters']['cluster_name']\n\n\ntry:\n    base_url='http://localhost:8080'\n    print base_url\n\n    pars=argparse.ArgumentParser()\n    pars.add_argument('-hosts')\n    args=pars.parse_args()\n\n    print args.hosts\n\n    role=[_ for _ in args.hosts.split(',')\n          if _.find('@')!=-1][0].split('|')[1].split('_')[0]\n    if 'master'!=role:\n        print 'not master exit.'\n        exit(0)\n\n    cluster_name=get_cluster_name(json.loads(call_rest('api/v1/clusters')))\n    print cluster_name\n\n    result=call_rest('api/v1/clusters/%s/hosts/%s?fields=Hosts/host_state'%(\n        cluster_name,'${HOST_NAME}'))\n    print result\n\n    req=urllib2.Request('%s/%s'%('http://169.254.169.254:4042','info'))\n    req.add_header('info-token','token-for-test-001')\n    urllib2.urlopen(req,result)\n\nexcept:\n    print trace()"
+            }
+          ]
+        }
+      }
+    }
+  ]

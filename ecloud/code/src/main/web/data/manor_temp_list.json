@@ -1,0 +1,194 @@
+[
+  {
+    "action": [{
+      "stream_module": {
+        "nodes": {
+          "_data": {
+            "start": {
+              "id": "start",
+              "label": " start"
+            },
+            "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354": {
+              "id": "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354",
+              "label": "master"
+            },
+            "execute_script$271f1605-2841-4119-bc82-17d08535e052": {
+              "id": "execute_script$271f1605-2841-4119-bc82-17d08535e052",
+              "label": "test"
+            },
+            "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a": {
+              "id": "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a",
+              "label": "server"
+            }
+          }
+        },
+        "edges": {
+          "_data": {
+            "start_create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a": {
+              "from": "start",
+              "id": "start_create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a",
+              "to": "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a"
+            },
+            "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a_execute_script$271f1605-2841-4119-bc82-17d08535e052": {
+              "from": "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a",
+              "id": "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a_execute_script$271f1605-2841-4119-bc82-17d08535e052",
+              "to": "execute_script$271f1605-2841-4119-bc82-17d08535e052"
+            },
+            "start_create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354": {
+              "from": "start",
+              "id": "start_create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354",
+              "to": "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354"
+            },
+            "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354_execute_script$271f1605-2841-4119-bc82-17d08535e052": {
+              "from": "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354",
+              "id": "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354_execute_script$271f1605-2841-4119-bc82-17d08535e052",
+              "to": "execute_script$271f1605-2841-4119-bc82-17d08535e052"
+            }
+          }
+        }
+      },
+      "name": "deploy",
+      "type": "deploy",
+      "streamlet": {
+        "create_nodes$167013c8-f77c-c7b0-33ed-7924f3291354": {
+          "params": [{
+            "group_name": "master",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "amount": 1,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "memory": 2048,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "cores": 2,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "tenant": "uuid",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "limit": 2,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "disk_capacity": 4,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "network": "uuid",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "image": "uuid",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          }]
+        },
+        "execute_script$271f1605-2841-4119-bc82-17d08535e052": {
+          "params": [{
+            "app_info_return": false,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "script_params": [{
+              "type": "system_default",
+              "description": " 所有节点的 IP 地址",
+              "name": "ALL_IPS",
+              "ui": "",
+              "ui_value": "",
+              "value": ""
+            }],
+            "streamlet_params_properties_hide": false,
+            "streamlet_params_properties_read_only": false,
+            "script_content": "#!/bin/bash\necho 'install ok'\necho ‘ip -’ $ALL_IPS >> /var/log/test_log.log\necho 'group name -' $GROUP_NAME >> /var/log/test_log.log\n"
+          }]
+        },
+        "create_nodes$d488e78e-f08b-61dd-51f6-a2ab748c3b2a": {
+          "params": [{
+            "group_name": "server",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "amount": 1,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "memory": 2048,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "cores": 2,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "tenant": "uuid",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "limit": 2,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "disk_capacity": 4,
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "network": "uuid",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          },{
+            "image": "uuid",
+            "streamlet_params_properties_read_only": false,
+            "streamlet_params_properties_hide": false
+          }]
+        }
+      }
+    },
+      {
+        "stream_module": {
+          "nodes": {
+            "_data": {
+              "start": {
+                "id": "start",
+                "label": " 开始"
+              },
+              "start_node$3f12d864-4fb6-b230-6483-32a05aa16da4": {
+                "id": "start_node$3f12d864-4fb6-b230-6483-32a05aa16da4",
+                "label": "s"
+              }
+            }
+          },
+          "edges": {
+            "_data": {
+              "start_start_node$3f12d864-4fb6-b230-6483-32a05aa16da4": {
+                "from": "start",
+                "id": "start_start_node$3f12d864-4fb6-b230-6483-32a05aa16da4",
+                "to": "start_node$3f12d864-4fb6-b230-6483-32a05aa16da4"
+              }
+            }
+          }
+        },
+        "name": "start_node_test",
+        "type": "manage",
+        "target": "node",
+        "streamlet": {
+          "start_node$3f12d864-4fb6-b230-6483-32a05aa16da4": {
+            "params": [{
+              "group_name": "master",
+              "streamlet_params_properties_read_only": false,
+              "streamlet_params_properties_hide": false
+            }]
+          }
+        }
+      }],
+    "description": "带一个管理流程的测试模板",
+    "name": "testttt",
+    "status": "aaa",
+    "group_names": ["master","server"]
+  }
+]

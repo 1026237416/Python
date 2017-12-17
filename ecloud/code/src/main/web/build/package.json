@@ -1,0 +1,30 @@
+{
+  "name": "ecloud",
+  "version": "1.1.0",
+  "description": "Ecloud Web ",
+  "main": "index.js",
+  "scripts": {
+    "test": "ef"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.10.3.85/dev/ecloud.git"
+  },
+  "keywords": [
+    "ecloud",
+    "web",
+    "design"
+  ],
+  "author": "Easted UI Team on Xi'An",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.2"
+  }
+}

@@ -1,0 +1,30 @@
+.datagrid-btable tr td[field="displayname"]{
+    padding-left:11px !important;
+}
+.datagrid-btable tr td[field="ip"] {
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="ip"]>div {
+    padding-left: 5px !important;
+}
+.datagrid-btable tr td[field="user"] {
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="user"]>div{
+    padding-left: 5px !important;
+}
+.datagrid-btable tr td[field="tenant"] {
+    padding-left: 9px !important;
+}
+.datagrid-btable tr td[field="state"]>div {
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="state"] div {
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="cores"]>div {
+     padding-left: 17px !important;
+ }
+.datagrid-btable tr td[field="used_cpus"]>div {
+    padding-left: 3px !important;
+}

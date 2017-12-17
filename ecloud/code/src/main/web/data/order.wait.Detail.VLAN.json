@@ -1,0 +1,14 @@
+[
+    {
+        "label":"VLAN1",
+        "value":"1"
+    },
+    {
+        "label":"VLAN2",
+        "value":"2"
+    },
+    {
+        "label":"VLAN3",
+        "value":"3"
+    }
+]

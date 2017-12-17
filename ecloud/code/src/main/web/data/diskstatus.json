@@ -1,0 +1,22 @@
+[
+  {
+    "label":"全部",
+    "value":"all"
+  },
+  {
+    "label":"已挂载",
+    "value":"in-use"
+  },
+  {
+    "label":"未挂载",
+    "value":"available"
+  },
+  {
+    "label":"其它",
+    "value":"other"
+  },
+  {
+    "label":"异常",
+    "value":"error"
+  }
+]

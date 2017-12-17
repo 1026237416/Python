@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<link rel="stylesheet" href="theme/default/css/font-awesome.css" type="text/css">-->
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/easted/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/icon.css">
+    <link rel="stylesheet" href="theme/default/css/vis.css" type="text/css">
+    <link href="theme/default/css/global.css" rel="stylesheet"  type="text/css">
+    <link href="js/libs/easyui/themes/easted/smartMenu.css" rel="stylesheet" type="text/css">
+    <link href="theme/default/css/components.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="theme/default/css/index.css">
+    <link href="theme/default/css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="theme/default/css/layout.css" type="text/css">
+    <script type="text/javascript" src="js/libs/way/way.min.js"></script>
+    <link rel="shortcut icon" href="assets/favicon.ico"/>
+    <script type="text/javascript" data-main="js/app.config" src="js/libs/require/require.js"></script>
+</head>
+<body>
+<div class="expire-time-wrapper" style="display: none;">
+    <p class="expire-time-content">许可证剩余<span class="expire-time">100</span>天</p>
+    <span class="expire-time-close"><i class="expire-close-icon"></i></span>
+</div>
+<div class="wrap">
+    <div class="left-nav">
+        <div class="logo">
+            <i title="Easted logo">
+                <img src="assets/index_logo.png"/>
+            </i>
+        </div>
+        <div class="data-center-wrapper" style="display: block;"><!--class="right-info-select"-->
+            <!--<select class="easyui-combobox userinfocombo"
+                    name="user"
+                    style="width:193px;height: 46px;"
+                    data-options= "prompt:'数据中心',
+                                valueField:'region',
+                                custom:'right-select-custom data-center-panel',
+                                textField:'displayname',
+                                editable:false,
+                                data:[{
+                                    displayname:'RegionOne',
+                                    region:'2',
+                                    selected:true
+                                },{
+                                    displayname:'RegionTwo',
+                                    region:'2'
+                                }]
+                   "></select>-->
+            <!--<div class="data-center-es" style="display: none;">
+                <input type="text" class="easyui-textbox" style="width: 193px; height: 46px"/>
+            </div>
+            <div class="data-center-inner" style="display: none;">
+                <div class="data-center-item data-center-selected">yangtao-1</div>
+                <div class="data-center-item data-center-hover">yangtao-2</div>
+            </div>-->
+        </div>
+        <div class="left-nav-cont">
+
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="right-header">
+            <i class="ecloud">
+                <img src="assets/index_ecloud.png"/>
+            </i>
+            <div class="right-content-wrapper">
+                <span class="right-content-block">
+                    <span class="right-info-role"></span>
+                    <span>:</span>
+                    <span class="right-info-name"></span>
+                </span>
+                <span class="right-content-block">
+                    <span class="right-text-wrapper reset-pass">
+                        <i class="icon-content-wrapper key-icon"></i>
+                        <span class="key-text text-f12">修改密码</span>
+                    </span>
+                </span>
+                <span class="right-content-block">
+                     <span class="right-text-wrapper user-quit">
+                        <i class="icon-content-wrapper logout"></i>
+                        <span class="key-text text-f12">退出</span>
+                    </span>
+                </span>
+            </div>
+            <span class="right-info-pass" style="display: none;">
+                 <span class="right-info-pass-spliter"><input id="change_origin_pass"/></span>
+                <span class="right-info-pass-spliter"><input id="change_new_pass"/></span>
+                <span class="right-info-pass-spliter"><input id="change_renew_pass"/></span>
+                <span class="right-info-pass-spliter pass-tick-margin"><i class="icon-white-tick pointer reset-pass-panel-icon"></i></span>
+                <span class="right-info-pass-spliter pass-right-padding"><i class="icon-white-wrong pointer reset-pass-panel-icon"></i></span>
+            </span>
+        </div>
+        <div class="right-entity-wrapper">
+            <div class="icon-menus-box">
+                <div class="icon-menus-bg">
+                    <div class="bread-position">
+                        <i class="icon-position"></i>您的位置：</div>
+                    <div class="bread-items"></div>
+                </div>
+                <div id="js-menus-wrapper" class="icon-menus-wrapper"></div>
+            </div>
+            <div class="right-entity">
+            </div>
+        </div>
+    </div>
+</div>
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="theme/default/css/ie9.css">
+<script type="text/javascript" src="js/libs/compatible/html5shiv.js"></script>
+<![endif]-->
+</body>
+</html>

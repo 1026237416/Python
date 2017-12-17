@@ -1,0 +1,24 @@
+[{
+  "icon": "theme/default/images/setting.png",
+  "iconClass": "nav-icon-setting",
+  "access": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "id": "setting",
+  "children": [
+    {
+      "src": "sysinfo.html",
+      "id": "setting.sysinfo",
+      "selected":true,
+      "access": [
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ]
+}]

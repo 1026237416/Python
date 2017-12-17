@@ -1,0 +1,369 @@
+
+input{
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    font-size: 14px;
+    color: #999;
+    width: 80px;
+}
+textarea.textbox-text
+{
+    width: 200px;
+    height:18px;
+}
+textarea{
+    font-family: "arial","Microsoft YaHei","微软雅黑";
+    font-size: 16px;
+    line-height: 16px;
+    color: #999;
+}
+textarea:disabled{
+    box-shadow: 0 0;
+}
+textarea:-moz-disabled{
+    box-shadow: 0 0;
+}
+span#username{
+    color:#999;
+    margin-left: 5px;
+}
+#userid input{
+border:0;
+color: #999;
+margin-left: 21px;
+}
+span.textbox-invalid{
+    background: transparent;
+    border: 1px dotted red !important;
+}
+#remark{
+    /*margin-top: 4px;*/
+    color:#333;
+}
+.left-tenante-table span.textbox
+{
+    width: 200px;
+}
+.left-tenante-table span.textbox input
+{
+   color:#333;
+}
+
+.describe
+{
+    height:280px;
+    width: 474px;
+    float:left;
+}
+
+.left-palin-tenante-table table{
+    height: 130px;
+    margin-top: 6px;
+}
+
+.left-palin-tenante-table table tr{
+    height: 32px;
+}
+.left-tenante-table
+{
+    height: 130px;
+    width: 87%;
+    float: left;
+    margin-left:44px;
+}
+.left-tenante-table td
+{
+    height: 38px;
+    text-align: left;
+    vertical-align: top;
+
+}
+#remark textarea{ width:270px; height: 93px;}
+.block-list .message
+{
+
+    color: #ff0000;
+    height: 20px;
+    font-size: 16px;
+    width:100%;
+    color:#ff0000;
+}
+.right-tenante-table table tr{
+    height: 32px;
+}
+.right-tenante-table {
+    border: 0;
+    margin-left: 44px;
+    width: 93%;
+}
+.right-tenante-table .wu input{
+    border: 0 none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /*background-color: #ffffff;*/
+    color: #A9A9A9;
+    width: 90px;
+}
+.right-tenante-table  .wu
+{
+    border-radius: 5px;
+    width: 96px;
+    /*   background-color: #9a9a9a;*/
+    color: #A9A9A9;
+    border-bottom: 0 none;
+}
+.right-tenante-table .ll{
+    margin-left: 5px;
+    color: #999;
+}
+.abc{
+    border-bottom: 1px solid;
+    text-align: left;
+    margin:0;
+    padding:0
+}
+.right-tenante-table input{
+    /*border: none;*/
+    background-color: #ffffff;
+    text-align: left;
+}
+.right-tenante-table span{
+    color: #999;
+}
+.right-tenante-table  td{
+    height: 27px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.right-tenante-table .spinner-arrow {
+    /*background-color: #ffffff;*/
+}
+.message
+{
+    float:left;
+    color: #ff0000;
+    height: 20px;
+    font-size: 16px;
+    width:100%;
+    color:#ff0000;
+}
+.input-oth1
+{
+    border-bottom: 1px solid;
+    border-radius: 0px;
+}
+.right-tenante-table input[type="checkbox"]
+{
+    border: 1px solid #aaaaaa;
+    background: transparent;
+    background-color: #fff;
+    margin-bottom: 13px;
+}
+.right-tenante-table-divmemo{
+    margin-left: 10px;
+}
+
+#hostlistBox span{
+    margin-right: 5px;
+}
+.right-tenante-table .ge{
+    color:#999;
+}
+.GB
+{
+    color:#999;
+}
+.messager-icon
+{
+    word-break: break-word ;
+}
+.right-tenante-table .textbox
+{
+    border:none;
+}
+/*.right-tenante-table .textbox.spinner*/
+/*{*/
+    /*border-bottom:1px solid #999;*/
+/*}*/
+.safe
+{
+    text-align: center;
+    margin-top: 20%;
+    font-size: 16px;
+}
+.dialog-table-ten,.dialog-table-control
+{
+    text-align: center;
+    height: 490px;
+    line-height: 430px;
+    font-size: 16px;
+}
+/*.dialog-table-control{*/
+    /*text-align: center;*/
+    /*font-size: 16px;*/
+/*}*/
+/*#ck1 .datagrid-cell-check{
+    visibility: hidden;
+}*/
+.btn
+{
+    color: #679BD5;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.plain-datagrid
+{
+    width: 96.4%;
+    margin-left: 20px;
+
+}
+#remark
+{
+    height: 100px;
+    width: 180px;
+    resize: none;
+    background-color: transparent;
+}
+/*.textbox-addon-right
+{
+    display: none;
+}*/
+.right-tenante-table  span.textbox.textbox-disabled{
+    border: 1px solid #e5e5e5 !important;
+}
+span.textbox.textbox-disabled{
+    border:none !important;
+}
+.numberSpi
+{
+    position: relative;
+    top: -3px;
+}
+.dialog-table-ten a,.dialog-table-control a,.safe a
+{
+    color: #4DA4D6;
+    text-decoration: none;
+}
+.icon-menus .toggle-button > li{
+    display: block;
+}
+.plain-table-addten{
+    width:87%;
+    margin: 0 auto;
+    margin-top:25px !important;
+    margin-bottom: 22px;
+    border:1px solid #d7d7d7 !important;
+}
+/*.button-step li:first-child{*/
+    /*margin-right:50px;*/
+/*}*/
+/*.button-step span.btn, .button-step span.btn:hover,.button-step span.btn a,.button-step span.btn a:hover{*/
+    /*border-radius:5px;*/
+/*}*/
+/*.control>.plain-datagrid .datagrid-header td,.control>.plain-datagrid .datagrid-body td,.control>.plain-datagrid .datagrid-footer td{*/
+    /*padding-left:10px;*/
+/*}*/
+.plain-table-addten>div.easyui-fluid{
+    height:425px !important;
+}
+/*.bottom .icon-menus-icon-add {*/
+    /*background-position: -12px -11px;*/
+/*}*/
+/*.bottom .icon-menus-icon-tenant{*/
+    /*background-position: -565px -462px;*/
+/*}*/
+.datacenter{
+    display:inline-block;
+    width:148px;
+    height:16px;
+    line-height:16px;
+    border:1px solid #fa9649;
+    border-radius: 3px;
+    background:#fffcdb;
+    color:#fa9649;
+    margin-left:20px;
+    font-size:12px;
+    font-weight:normal;
+    padding-left:5px;
+
+}
+.ip-legend
+{
+    border: none!important;
+}
+.ip_sect span.textbox.textbox-readonly input
+{
+    width:30px!important;
+    overflow:hidden!important;
+    color:black!important;
+    /*margin-top: -1px;*/
+    font-size: 14px;;
+}
+.topo_button
+{
+    white-space: nowrap;
+}
+.bar_ip_box.viewstack>.viewstack-li.selected
+{
+    height: 420px;
+    /*overflow-y: scroll;*/
+    /*overflow: hidden;*/
+}
+.bar_ip_box.viewstack>.viewstack-li.selected:hover
+{
+    height: 420px;
+    overflow-y: auto;
+}
+.textbox.textbox-readonly.combo
+{
+    text-align: center;
+}
+.hostlist
+{
+    display: none;
+}
+.righticons>.toggle-button>li>ul.icon-menus,
+.lefticons>.toggle-button>li>ul.icon-menus,
+.descriptBtns>.toggle-button li>ul.icon-menus{
+    top: -12px;
+
+}
+.left-tenante-table tr td:first-child{
+    width:45px;
+    color: #666;
+}
+.unlimited .inputwu {
+    width: 103px !important;
+    height: 26px !important;
+    line-height: 26px;
+    padding: 0px 15px 0px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background: #FFFFFF;
+}
+.numberbox{
+    width:133px !important;
+    height:26px !important;
+    margin-top: 3px;
+}
+.ip-list-block-none
+{
+    text-align: center;
+    margin-top: 200px;
+}
+td[field="ck"]{
+    position: relative;
+    left:7px;
+    top: 2px;
+}
+.datagrid-body{
+    overflow-y: hidden;
+}
+td[field="vm_counts"]>div>div{
+    padding-left:17px;
+}
+td[field="vd_counts"]>div>div{
+    padding-left:14px;
+}

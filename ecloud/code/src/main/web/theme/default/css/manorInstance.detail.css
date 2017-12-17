@@ -1,0 +1,253 @@
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.text-color{
+    display:block;
+}
+/*.group{*/
+    /*padding: 0px 8px;*/
+/*}*/
+.group-wrapper{
+    margin: 15px 0px 8px;
+    width: 548px;
+   /* padding-bottom: 5px;*/
+    border: 1px solid #d6d6d6;
+    float: left;
+    background: #fff;
+    overflow: hidden;
+}
+.group-wrapper:nth-of-type(even)
+{
+    float:right;
+}
+.group-title{
+    /*padding-top: 10px;*/
+   /* padding-bottom: 10px;*/
+    width: 514px;
+}
+.group-title-inner{
+    padding-bottom: 0px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 53px;
+    font-weight: bold;
+}
+.group-total{
+    font-size: 16px;
+    color: #e57d03;
+    font-weight: normal;
+}
+.group-box{
+    /*margin-top: 8px;*/
+    height: 120px;
+    width: 90%;
+}
+.group-box1{
+    margin-top: 8px;
+    height: 120px;
+    width: 90%;
+}
+.add-node-content{
+    position: relative;
+}
+.add-node{
+    position: absolute;
+    top: -40px;
+    right: 0px;
+}
+.ef-combox .textbox{
+    height: 20px !important;
+}
+.auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+.manor-add-input .textbox .textbox-prompt,
+.manor-add-input .textbox .textbox-text{
+    line-height: 20px;
+    height: 20px;
+}
+.icon-manor-add1{
+    background-position: -170px -895px;
+}
+
+.group-box{
+    width: 100%;
+    height:180px;
+    margin-bottom:5px;
+}
+.auto{
+    margin-right:auto;
+    margin-left:auto;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.app-wrapper{
+    height: 100%;
+}
+.appblock{
+    width: 125px;
+    float: left;
+    text-align: center;
+    height: 31%;
+    border: 1px solid #A9A9A9;
+    border-radius: 10px;
+    margin: 10px;
+    line-height:2.4;
+    position: relative;
+}
+.app-utils{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.app-utils .icon-menus{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #af3b35;
+}
+.app-utils .icon-menus i{
+    margin: 5px;
+}
+.app-utils .icon-menus .tooltip-f{
+    height: 33px;
+    width: 41px;
+}
+.ctr{
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+.ctr-item{
+    position: absolute;
+    top: -70px;
+    background: url("../images/icons.png") no-repeat 0 0;
+    text-decoration: none;
+    height: 20px;
+    width: 20px;
+}
+.left-ctr{
+    left: -20px;
+    background-position: -566px -573px
+}
+.right-ctr{
+    right: -20px;
+    background-position: -560px -531px;
+}
+div.group-state-active
+{
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+}
+div.group-state-part
+{
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+}
+div.group-state-stop
+{
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+}
+.addInputBtns
+{
+    width: 100%;
+}
+.addInputBtns .icon-menus
+{
+    top:2px;
+    width: auto;
+}
+.group_title_box
+{
+    display: inline-block;min-height: 30px;;overflow: hidden;
+}
+.group_title_group_name
+{
+    float:left;
+    height:53px;
+    max-width: 100px;overflow: hidden;text-overflow: ellipsis; margin-right: 10px;line-height: 53px;
+}
+.group_title_group_right
+{
+    width: 100%;height: 45px;display: inline-block;text-align: right
+}
+.add_group_node
+{
+    display: none;
+    height:45px;position: relative;top:-5px
+}
+.instance_monitor_started
+{
+    color:green;
+}
+.instance_monitor_installed
+{
+    color:#c5ad1e;
+}
+.instance_monitor_install_failed
+{
+    color:red;
+}
+.plain-table {
+
+    margin: 0px;
+    margin-left:20px;
+
+}
+.float-table td:nth-child(odd) {
+    min-width: 69px;
+    text-align: right;
+}
+.appBlock-block {
+    width: 158px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #A9A9A9;
+    border-radius: 5px;
+    margin: 16px 5px 10px 5px;
+    vertical-align: middle;
+    height: 35px;
+    line-height: 35px;
+}
+div.node-state-shutoff {
+    background: #f5f6f8;
+    border: 1px solid #bebebe;
+}
+div.node-state-shutoff:hover {
+    background: #c91c20;
+    border: 1px solid #bebebe;
+}
+div.node-state-active {
+    background: #f5f6f8;
+    border: 1px solid #b1b1b1;
+}
+.icon-menus-icon-delete {
+    background-position: -1116px -1083px;
+}
+.group-title-inner tr td:nth-child(2){
+    line-height: 26px;
+}
+.addInputBtns .icon-menus{
+    right:-88px;
+}
+.add_group_node .textbox{
+    width:90px !important;
+}

@@ -1,0 +1,183 @@
+ <div class="row">
+     <div class="width_p_100 v_top">
+         <div class="step_wrapper"></div>
+         <ul class="viewstack-box">
+             <!--
+
+                 <li>
+                     &lt;!&ndash;first step&ndash;&gt;
+                         <div class="bound-area">
+                             <span class="combox-to-input" style="float:left;">
+                                 <lable><i id="name">*</i>：</lable>
+                                 <input id="easyname" style="width:197px;padding-left:10px;height:30px" />
+                             </span>
+                             <span class="combox-to-input">
+                                 <lable>数据中心<i>*</i>：</lable>
+                                 <input id="datacenter" style="width:197px;padding-left:10px;height:30px" />
+                             </span>
+                             <span class="combox-to-input" style="float:left;margin-top: 16px;">
+                                 <lable>项目<i>*</i>：</lable>
+                                 <input id="projectInput" style="width:197px;padding-left:10px;height:30px" />
+                             </span>
+                             <span class="combox-to-input" style="position: relative;
+                     top: -25px;
+                     float: right;
+                     left: 55px;">
+                                 <lable>用户<i>*</i>：</lable>
+                                 <input id="user" style="width:197px;padding-left:10px;height:30px" />
+                             </span>
+                             <p class="osText" style="height: 0px"><i id="pos">*</i>：</p>
+                             <div class="operate-list" style="height: 240px;position: relative;top: 10px;"></div>
+                             <span class="combox-to-input" style="position: relative;top: 30px;">
+                                 <lable>镜像<i>*</i>：</lable>
+                                 <input id="image" style="width:197px;padding-left:10px;height:30px" />
+                             </span>
+                         </div>
+                 </li>&lt;!&ndash;first step&ndash;&gt;
+                 <li style="margin-top: 25px;">
+                     &lt;!&ndash;second step&ndash;&gt;
+                     <div class="block-lists">
+                         <ul class="bound-area-ul">
+                             <li style="border-bottom: 1px solid #aaaaaa;">
+                                 <h3 style="margin-top: -10px;">CPU<i>*</i>(核)：</h3>
+                                 <div class="cpuRange"></div>
+                             </li>
+                             <li style="border-bottom: 1px solid #aaaaaa">
+                                 <h3>内存<i>*</i>(GB)：</h3>
+                                 <div class="memoRange"></div>
+                             </li>
+                             <li>
+                                 <h3>存储类型<i>*</i>：</h3>
+                                 <div class="saveRange"></div>
+                             </li>
+                             <li>
+                                 <div class="slider">
+                                     <label style="font-size: 18px;">高可用性：</label>
+                                     <span id="swtich"><input id="addhostswitch" style="height: 20px;width: 48px"/></span>
+                                 </div>
+                             </li>
+
+                                 &lt;!&ndash;<div class="slider">
+                                     <label id="allocation"></label>
+                                     <label><i>*</i>：</label>
+                                     <span><input id="strategy" style="width:197px;padding-left:10px;height:30px"></span>
+                                 </div>
+                                 <div class="slider">
+                                     <label id="sliderbackup"></label>
+                                     <textarea id="addhostremark"  maxlength="50" style="resize: none;" maxlength="50"></textarea>
+                                 </div>&ndash;&gt;
+                         </ul>
+                     </div>
+                 </li>&lt;!&ndash;second step&ndash;&gt;
+                 <li style="margin-top: 25px;">
+                     &lt;!&ndash;third step&ndash;&gt;
+                     <div class="block-lists">
+                         <ul class="addHost-net">
+                             <li>
+                                 <label>VLAN<i>*</i>：</label>
+                                 <span><input id="vlan" style="width:197px;padding-left:10px;height:30px"></span>
+                             </li>
+                             <li>
+                                 <span style="width: 55%;float: left;">
+                                 <label>IP<i>*</i>：</label>
+                                 <span><input id="ip" style="width:197px;padding-left:10px;height:30px"></span>
+                                     </span>
+                                 <label>宿主机<i>*</i>：</label>
+                                 <span><input id="host" style="width:197px;padding-left:10px;height:30px"></span>
+                             </li>
+                             <li>
+                                 <label>备注：</label>
+                                 <textarea id="remark"></textarea>
+                             </li>
+                         </ul>
+                     </div>
+                 </li> &lt;!&ndash;third step&ndash;&gt;
+                 <li>
+                     &lt;!&ndash;fourth step&ndash;&gt;
+                     <div class="three-name" style="margin-bottom: 35px;padding-top: 30px;">
+                         <label class="label_two" id="ldatadishname"></label>
+                         <input id="datadishname" style="width:125px;height:30px">
+                     </div>
+                     <div class="three-name" style="margin-bottom: 55px;">
+                         <label class="label_two" id="ldatadishvolunm"></label>
+                         <input id="datadishslider" class="easyui-slider" style="width:190px;"
+                                data-options="showTip:true,rule:[10,2048],min:10,max:2048,step:2" />
+                         <span style="margin-left: 10px"><input type="text" id="addhostvolume"  maxlength="4" style="width: 45px;border:none; border-bottom:1px solid black; "><span id="datadishGB"></span> </span>
+                         <i class="addhost-adddatadish" id="add_datadish" style="background-position: -15px -168px;cursor: pointer;margin-left: 7px"></i>
+                     </div>
+                     <div class="plain-datagrid" style="width: 77%;float:right;">
+                           <table id="addHostlist" style="height: 210px;" data-options="
+                              singleSelect:true,
+                              pagination:false"><thead></thead></table>
+                     </div>
+                 </li>&lt;!&ndash;fourth step&ndash;&gt;
+                 <li id="four">
+                     &lt;!&ndash;five step&ndash;&gt;
+                         <table class="pre-table" >
+                             <tr>
+                                 <td>
+                                     <table class="plain-table" style="width: 300px">
+                                         <tr>
+                                             <td style="vertical-align: top"><label id="lname"></label></td>
+                                             <td id="overname"></td>
+                                         </tr>
+                                         <tr>
+
+                                         </tr>
+                                         <tr>
+                                             <td style="vertical-align: top"><label id="lquota"></label></td>
+                                             <td id="overquota"></td>
+                                         </tr>
+                                         <tr>
+                                             <td style="vertical-align: top"><label id="1allocation"></label></td>
+                                             <td id="overstrategy"></td>
+                                         </tr>
+                                         <tr>
+                                             <td style="vertical-align: top;" ><label id="ldatadish"></label></td>
+                                             <td ><div id="overdatadish"></div></td>
+                                         </tr>
+
+                                     </table>
+                                 </td>
+                                 <td style="width: 200px;vertical-align: top;">
+                                     <table class="pre-table plain-table" style="width: 300px">
+                                         <tr>
+                                             <td style="vertical-align: top"><label id="los"></label></td>
+                                             <td id="overos"></td>
+                                         </tr>
+                                         <tr>
+
+                                         </tr>
+                                         <tr>
+                                             <td><label id="lclosewarn"></label></td>
+                                             <td><span id="overswitch"><input id="overaddhostswitch" style="height: 20px;width: 48px"/></span></td>
+                                         </tr>
+                                         <tr>
+                                             <td style="vertical-align: top"><label id="lbackup"></label></td>
+                                             <td id="overbackup"></td>
+                                         </tr>
+                                     </table>
+                                 </td>
+                             </tr>
+
+                         </table>
+                 </li>&lt;!&ndash;five step&ndash;&gt;
+             -->
+
+             <li>1</li>
+             <li>2</li>
+             <li>3</li>
+             <li>4</li>
+         </ul>
+     </div>
+     <div class="v_middle">
+         <i class="drawer_btn"></i>
+     </div>
+     <div class="v_top">
+         <div id="resultBox"></div>
+     </div>
+ </div>
+<div class="btn-router-bottom button-route-box"  id="route">
+</div>
+<link rel="stylesheet" href="theme/default/css/addHost.css" type="text/css"/>
+

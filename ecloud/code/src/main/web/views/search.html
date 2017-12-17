@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索页面</title>
+    <link href="theme/default/css/global.css" rel="stylesheet"  type="text/css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/easted/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/icon.css">
+    <script type="text/javascript" src="js/libs/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <link rel="stylesheet" type="text/css" href="theme/default/css/index.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="left-nav">
+        <div class="logo">
+            <img src="theme/default/images/logo.png" title="Easted logo">
+        </div>
+        <ul class="nav">
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/home.png"></span>
+                    <span class="nav-text">首页</span>
+                </div>
+                <ul>
+                    <li>云主机</li>
+                    <li>虚拟磁盘</li>
+                    <li>快照与备份</li>
+                    <li>镜像与模版</li>
+                    <li>宿主机</li>
+                </ul>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/Calculation.png"></span>
+                    <span class="nav-text">计算</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/save.png"></span>
+                    <span class="nav-text">存储</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/app.png"></span>
+                    <span class="nav-text">应用</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/alarm.png"></span>
+                    <span class="nav-text">告警</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/log.png"></span>
+                    <span class="nav-text">日志</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/order.png"></span>
+                    <span class="nav-text">工单</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/data.png"></span>
+                    <span class="nav-text">报表</span>
+                </div>
+            </li>
+            <li>
+                <div class="lev0">
+                    <span class="nav-icon"><img src="theme/default/images/setting.png"></span>
+                    <span class="nav-text">配置</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="right-content">
+        <div class="right-header">
+            <span class="ecloud"><img src="theme/default/images/ecloud.png"></span>
+                <span class="right-info">
+                    <span class="right-info-role">租户管理员：</span>
+                    <span class="right-info-name">王辉</span>
+                    <span class="right-info-vline">
+                        <span></span>
+                    </span>
+                    <span class="exit" title="退出"><img src="theme/default/images/zx.png"></span>
+                </span>
+        </div>
+        <div class="current-pos">
+            <ul class="bread">
+                <li>首页</li>
+                <li class="end">云主机</li>
+            </ul>
+        </div>
+        <div class="right-entity">
+            <ul class="icon-menus">
+                <li>
+                    <img src="theme/default/images/connect.png" title="连接">
+                </li>
+                <li>
+                    <img src="theme/default/images/shutdown.png" title="关机">
+                </li>
+                <li>
+                    <img src="theme/default/images/setting_mgr.png" title="保存">
+                </li>
+                <li>
+                    <img src="theme/default/images/delete.png" title="删除">
+                </li>
+            </ul>
+            <div class="block-lists search-title-icon">
+                <img src="theme/default/images/search.png" />
+            </div>
+            <div class="block-lists">
+               <div class="search-item">
+                    <p class="label">名称:</p>
+                    <p class="input-text"><input type="text" class="easyui-textbox"/></p>
+               </div>
+                <div class="search-item">
+                    <p class="label">用户:</p>
+                    <p class="input-text"><input type="text" class="easyui-textbox"/></p>
+                </div>
+                <div class="search-item">
+                    <p class="label">租户:</p>
+                    <p class="input-text"><input type="text" class="easyui-textbox"/></p>
+                </div>
+                <div class="search-item">
+                    <p class="label">状态:</p>
+                    <p class="input-text"><input type="text" class="easyui-textbox"/></p>
+                </div>
+                <div class="search-item">
+                    <p class="label">宿主机:</p>
+                    <p class="input-text"><input type="text" class="easyui-textbox"/></p>
+                </div>
+            </div>
+            <div class="block-lists plain-datagrid">
+                <table class="easyui-datagrid" title="代办工单"  align="center"
+                       data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+                    <thead>
+                    <tr>
+                        <th data-options="field:'id',width:80">ID</th>
+                        <th data-options="field:'type',width:100">类型</th>
+                        <th data-options="field:'user',width:80,align:'right'">用户</th>
+                        <th data-options="field:'time',width:80,align:'right'">时间</th>
+                        <th data-options="field:'detail',width:200">详情</th>
+                        <th data-options="field:'operate',width:60,align:'center'">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

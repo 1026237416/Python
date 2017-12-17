@@ -1,0 +1,111 @@
+<div class="cal-create-wrapper cal-create-network-wrapper">
+    <div class="cal-create-blank-net" style="width:83%;margin:0 auto">
+        <div class="cal-net-wrapper no-border height">
+
+            <div id="scroll-wrapper">
+                <ul id="cal-net-vi" class="cal-net-vi"></ul>
+            </div>
+            <ul style="margin-top:-10px">
+                <li class="net-vi-content clearfix" style="border:0">
+                    <div>
+                        <div class="cal-input-cell clearfix">
+                            <span class="left">
+                                <label class="cal-input-label">物理网络：</label>
+                                <div class="cal-input-value left-value">
+                                    <input id="net-host-host" type="text"
+                                           style="width: 150px; height: 30px;" />
+                                </div>
+                                <i>*</i>
+                            </span>
+                            <span class="right">
+                                <label class="cal-input-label right-label">网络：</label>
+                                <div class="cal-input-value">
+                                    <input id="net-parent-vlan" type="text"
+                                           style="width: 150px; height: 30px;" />
+                                </div>
+                                <i>*</i>
+                            </span>
+                        </div>
+                        <div class="cal-input-cell clearfix">
+                            <span class="left">
+                                <label class="cal-input-label">子网：</label>
+                                <div class="cal-input-value left-value">
+                                    <input id="net-child-vlan" type="text"
+                                           style="width: 150px; height: 30px;" />
+                                </div>
+                                <i>*</i>
+                            </span>
+                            <span class="right">
+                                <label class="cal-input-label right-label">IP：</label>
+                                <div class="cal-input-value">
+                                    <span class="prefix" style="display: none;"></span>
+                                    <span class="sig-item">
+                                        <input id="net-first-ip" type="text" style="width: 45px; height: 30px;" />
+                                    </span>
+                                    <span class="sig-item">
+                                        <input id="net-second-ip" type="text" style="width: 45px; height: 30px;" />
+                                    </span>
+                                    <span class="sig-item">
+                                        <input id="net-third-ip" type="text" style="width: 45px; height: 30px;" />
+                                    </span>
+                                    <span class="sig-item">
+                                        <input id="net-last-ip" type="text" style="width: 45px; height: 30px;" />
+                                    </span>
+                                </div>
+                                <i>*</i>
+                                <span class="cal-add-btn-wrapper">
+                                    <i id="vi-add-btn" class="vi-add-icon"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <!--<div class="cal-input-cell clearfix">
+                            <span class="left">
+                                <label class="cal-input-label">物理地址：</label>
+                                <div class="cal-input-value left-value">
+                                    <input id="hostDetailMac" style="width: 150px;height: 30px"/>
+                                </div>
+                            </span>
+                            <span class="cal-add-btn-wrapper">
+                                <i id="vi-add-btn" class="vi-add-icon"></i>
+                            </span>
+                        </div>-->
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="netTableGrid" style="clear:both;border:1px solid #ccc;box-sizing: border-box">
+            <div id="netGrid" style="border:1px solid #cccccc;height: 100px;">
+
+            </div>
+        </div>
+        <div class="cal-net-wrapper p15 no-border">
+            <lable class="cal-net-label">宿主机：</lable>
+            <div class="cal-net-content">
+                <input id="cal_svm" type="text"
+                       style="width: 210px; height: 30px;" />
+            </div>
+        </div>
+        <div class="cal-net-wrapper no-border">
+            <lable class="cal-net-label">备注：</lable>
+            <div class="cal-net-content">
+                <input id="cal_desc" type="text"
+                       style="width: 642px; height: 90px;" />
+            </div>
+        </div>
+    </div>
+</div>
+<script id="vi-template" type="text/html">
+    <div class="script-wrapper">
+        <li id="{{masterId}}" class="cal-net-vi-item">
+            <span class="vi-item-bottom vi-icon pt7">
+                <i class="vi-reduce-icon vi-reduce-btn"></i>
+            </span>
+            <span class="vi-item-bottom">{{hostValue}}</span>
+            <span class="vi-item-bottom">{{parentValue}}</span>
+            <span class="vi-item-bottom tin5">{{childValue}}</span>
+            <span class="vi-item-bottom vi-item-ips tin5">{{ipValue}}</span>
+        </li>
+    </div>
+</script>

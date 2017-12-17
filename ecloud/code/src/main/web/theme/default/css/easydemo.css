@@ -1,0 +1,28 @@
+fieldset{
+    width: 80%;
+    margin: 10px auto;
+}
+.show-wrapper{
+    border: 1px solid #c2c2c2;
+    min-height: 60px;
+}
+.input-basic{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.code-mirror-wrapper{
+    margin-top: 20px;
+}
+.tabs-mg{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.tabs-header{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mg10{
+    margin-left: 10px;
+    margin-top: 10px;
+}

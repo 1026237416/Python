@@ -1,0 +1,34 @@
+{
+  "columns":[
+    {
+      "label":"Vlan 130",
+      "id":"002",
+      "detail":"名称：VLAN130，CIDR：192.168.130.64/25，网关：192.168.130.95，IP占用：5/29",
+      "ip":[26,27,28,29],
+      "host":["host1","host2","host3","host4"],
+      "tenant":["tenant1","tenant2"]
+    },
+    {
+      "label":"Vlan 140",
+      "id":"003",
+      "ip":[26,27,28,29],
+      "host":["host1","host2","host3","host4"],
+      "detail":"名称：VLAN131，CIDR：192.168.131.128/26，网关：192.168.131.190，IP占用：30/61"
+    },
+    {
+      "label":"Vlan 132",
+      "id":"004",
+      "ip":[26,27,28,29],
+      "host":["host1","host2","host3","host4"],
+      "detail":"名称：VLAN132，CIDR：192.168.132.128/25，网关：192.168.132.254，IP占用：20/125"
+    }
+  ],
+  "items":
+  [
+    {"from":"004","to":"public","status":"1","twoway":"0"},
+    {"from":"002","to":"004","status":"0","twoway":"1"},
+    {"from":"003","to":"002","status":"1","twoway":"0"},
+    {"from":"003","to":"004","status":"1","twoway":"1"},
+    {"from":"003","to":"public","status":"1","twoway":"0"}
+  ]
+}

@@ -1,0 +1,167 @@
+[
+  {
+  "image":{"os": "windows", "id": "6ba4da43-8ddd-4849-abe2-9f6fa34065ab", "name": "win7"},
+  "id": "c86250a9-753d-47d6-beef-0cda8bcdffae",
+  "keepalive": 1,
+  "network": {
+    "VLAN99": ["10.10.99.130"]
+  },
+  "state": "active",
+  "memory": 4096,
+  "sys_volume": {
+    "type": "Default",
+    "id": "b94f2829-f602-4918-95c8-647521a11e58",
+    "size": 21
+  },
+  "displayname": "VM9",
+  "host": {
+    "ip": "10.10.3.153",
+    "id": 2,
+    "name": "node3"
+  },
+  "user": {
+    "displayname": "wjw",
+    "name": "demo",
+    "id": "138d0169b8ce410f9adbceb3a0231754"
+  },
+  "attach_volumes": [{
+    "id": "b94f2829-f602-4918-95c8-647521a11e58"
+  },
+    {
+      "id": "d3ad6330-f3ee-4c50-9a4a-0e4d5f895e52"
+    }],
+  "tenant": {
+    "displayname": "",
+    "id": "7e5da76a229d4540958bbe1c416a9d39",
+    "name": "demo"
+  },
+  "name": "vm-10",
+  "created_at": "2016-03-31T07:51:49Z",
+  "des": "",
+  "cores": 2,
+    "network_info":[{"name":"openstack"},{"name":"openstack1"},{"name":"openstack2"}]
+},
+  {
+    "image":{"os": "windows", "id": "6ba4da43-8ddd-4849-abe2-9f6fa34065ab", "name": "win7"},
+    "id": "c86250a9-753d-47d6-beef-0cda8bcdffae",
+    "keepalive": 1,
+    "network": {
+      "VLAN99": ["10.10.99.130"]
+    },
+    "state": "active",
+    "memory": 4096,
+    "sys_volume": {
+      "type": "Default",
+      "id": "b94f2829-f602-4918-95c8-647521a11e58",
+      "size": 21
+    },
+    "displayname": "VM9",
+    "host": {
+      "ip": "10.10.3.153",
+      "id": 2,
+      "name": "node3"
+    },
+    "user": {
+      "displayname": "wjw",
+      "name": "demo",
+      "id": "138d0169b8ce410f9adbceb3a0231754"
+    },
+    "attach_volumes": [{
+      "id": "b94f2829-f602-4918-95c8-647521a11e58"
+    },
+      {
+        "id": "d3ad6330-f3ee-4c50-9a4a-0e4d5f895e52"
+      }],
+    "tenant": {
+      "displayname": "",
+      "id": "7e5da76a229d4540958bbe1c416a9d39",
+      "name": "demo"
+    },
+    "name": "vm-8",
+    "created_at": "2016-03-31T07:51:49Z",
+    "des": "",
+    "cores": 2
+  },
+  {
+    "image":{"os": "windows", "id": "6ba4da43-8ddd-4849-abe2-9f6fa34065ab", "name": "win7"},
+    "id": "c86250a9-753d-47d6-beef-0cda8bcdffae",
+    "keepalive": 1,
+    "network": {
+      "VLAN99": ["10.10.99.130"]
+    },
+    "state": "active",
+    "memory": 4096,
+    "sys_volume": {
+      "type": "Default",
+      "id": "b94f2829-f602-4918-95c8-647521a11e58",
+      "size": 21
+    },
+    "displayname": "VM9",
+    "host": {
+      "ip": "10.10.3.153",
+      "id": 2,
+      "name": "node3"
+    },
+    "user": {
+      "displayname": "wjw",
+      "name": "demo",
+      "id": "138d0169b8ce410f9adbceb3a0231754"
+    },
+    "attach_volumes": [{
+      "id": "b94f2829-f602-4918-95c8-647521a11e58"
+    },
+      {
+        "id": "d3ad6330-f3ee-4c50-9a4a-0e4d5f895e52"
+      }],
+    "tenant": {
+      "displayname": "",
+      "id": "7e5da76a229d4540958bbe1c416a9d39",
+      "name": "demo"
+    },
+    "name": "vm-8",
+    "created_at": "2016-03-31T07:51:49Z",
+    "des": "",
+    "cores": 2
+  },
+  {
+    "image":{"os": "windows", "id": "6ba4da43-8ddd-4849-abe2-9f6fa34065ab", "name": "win7"},
+    "id": "c86250a9-753d-47d6-beef-0cda8bcdffae",
+    "keepalive": 1,
+    "network": {
+      "VLAN99": ["10.10.99.130"]
+    },
+    "state": "active",
+    "memory": 4096,
+    "sys_volume": {
+      "type": "Default",
+      "id": "b94f2829-f602-4918-95c8-647521a11e58",
+      "size": 21
+    },
+    "displayname": "VM9",
+    "host": {
+      "ip": "10.10.3.153",
+      "id": 2,
+      "name": "node3"
+    },
+    "user": {
+      "displayname": "wjw",
+      "name": "demo",
+      "id": "138d0169b8ce410f9adbceb3a0231754"
+    },
+    "attach_volumes": [{
+      "id": "b94f2829-f602-4918-95c8-647521a11e58"
+    },
+      {
+        "id": "d3ad6330-f3ee-4c50-9a4a-0e4d5f895e52"
+      }],
+    "tenant": {
+      "displayname": "",
+      "id": "7e5da76a229d4540958bbe1c416a9d39",
+      "name": "demo"
+    },
+    "name": "vm-8",
+    "created_at": "2016-03-31T07:51:49Z",
+    "des": "",
+    "cores": 2
+  }
+]

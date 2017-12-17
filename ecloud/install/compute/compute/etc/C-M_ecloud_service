@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+chown -R root:kvm /dev/kvm
+chmod -R 666 /dev/kvm
+

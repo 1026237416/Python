@@ -1,0 +1,47 @@
+<div class="addImageContent" style="height: 389px;">
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>名称：</label><i class="image-edit-i">*</i>
+            <input id="editImageName" type="text" />
+        </span>
+        <span>
+            <label>操作系统：</label><i class="image-edit-i image-edit-i-os">*</i>
+            <input id="editImageOs" type="text" />
+        </span>
+    </div>
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>超级用户：</label>
+            <input id="editImageRoot" type="text" />
+        </span>
+        <span>
+            <label>密码：</label>
+            <span style="display: none;"><input id="editImagePwd" type="text" /></span>
+            <span><input id="editImagePwdHide" type="password" /></span>
+        </span>
+    </div>
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>系统盘最小容量(GB)：</label><i class="image-edit-i">*</i>
+            <input id="editImageMin" type="text" />
+        </span>
+         <span style="display: none;">
+            <label>镜像驱动：</label>
+            <input id="editImageDrive" type="text" />
+        </span>
+    </div>
+    <div class="addImageTr" style="clear: both;">
+        <span>
+            <label>备注：</label>
+            <textarea id="editImageDes" type="text" style="margin-top: 10px;" maxlength="50"></textarea>
+        </span>
+    </div>
+</div>
+<div class="panel-bottom">
+    <ul class="button-step button-step-bottom" >
+        <li><span class="btn templateConfirmBtn"><a id="editImageCancel">取消</a></span></li>
+        <li id="hl_ok"><span class="btn templateConfirmBtn hl_ok_span"><a id="editImageOk" class="ef-button-rea ef-button-disabled">确定</a></span></li>
+    </ul>
+</div>
+
+<link rel="stylesheet" href="theme/default/css/image.css" type="text/css">

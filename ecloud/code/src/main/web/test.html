@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试用页面</title>
+    <script type="text/javascript" src="js/libs/way/way.min.js"></script>
+    <link rel="stylesheet" href="theme/default/css/font-awesome.css" type="text/css">
+    <script type="text/javascript" src="js/libs/require/require.js" data-main="js/test.config"></script>
+    <!--<script type="text/javascript" src="js/libs/easyui/jquery.min.js"></script>-->
+    <!--<style type="text/javascript" src="js/libs/require/require.js" data-main="js/test.config"></style>-->
+    <!--<script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/framework.js"></script>-->
+    <link href="js/libs/easyui/themes/easted/smartMenu.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/easted/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/icon.css">
+    <link href="theme/default/css/global.css" rel="stylesheet" type="text/css">
+    <link href="theme/default/css/components.css" rel="stylesheet" type="text/css">
+    <link href="theme/default/css/host.css" rel="stylesheet" type="text/css">
+    <link href="./js/libs/codemirror/codemirror.css" rel="stylesheet" type="text/css">
+    <link href="./js/libs/codemirror/abcdef.css" rel="stylesheet" type="text/css">
+    <link href="./js/libs/codemirror/show-hint.css" rel="stylesheet" type="text/css">
+    <link href="theme/default/css/echart.css" rel="stylesheet" type="text/css">
+    <style>
+        fieldset
+        {
+            width: 80%;
+            margin:10px auto;
+        }
+        code
+        {
+            font-size:10px;
+            font-style: italic;
+            border: 1px dotted gray;
+            padding: 5px;
+            color: #ff3f50;
+        }
+        code .code
+        {
+
+        }
+        i.testIcon
+        {
+            width: 30px;
+            height: 30px;
+            background: url("./theme/default/images/loading.gif");
+            background-repeat:no-repeat ;
+        }
+        .icons-box i
+        {
+            width: 35px;
+            height: 35px;
+        }
+        .icons-box li
+        {
+            display: inline-block;
+            height: 35px;
+            line-height: 50px;
+            border:1px solid #cacaca;
+            padding-top:5px;
+            display: inline-block;
+            padding-left:5px;
+            padding-right: 10px;
+        }
+        .icons-box li i,.icons-box li span
+        {
+            display: inline-block;
+            float:left;
+        }
+        .icons-box li span
+        {
+            line-height: 30px;
+        }
+        .loading_ span
+        {
+            display: inline-block;
+        }
+
+        .cidr_gp_box span
+        {
+            display: inline-block;
+        }
+        .cidr_gp_box li
+        {
+            padding: 5px 0;
+        }
+        .cidr_gp_box input
+        {
+            text-align: center;
+        }
+        #getIpsBtn
+        {
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+        }
+        .row
+        {
+            display: table;
+            width: 100%;
+        }
+        .span12
+        {
+            clear: both;
+        }
+        .row .span3
+        {
+            display: table-cell;
+            width: 25%;
+        }
+        legend
+        {
+            font-weight: bold;
+
+        }
+        .font_awesome li
+        {
+            height: 35px;
+            line-height: 35px;
+        }
+        .font_awesome li i
+        {
+            width: 30px;
+            height: 25px;
+            font-size:20px;
+            color:green;
+        }
+        h2
+        {
+            font-size:16px;
+        }
+        legend
+        {
+            font-size:18px;
+        }
+
+        .changeCode textarea:nth-child(odd)
+        {
+            float:left;
+            width: 45%;
+        }
+        .changeCode textarea:nth-child(even)
+        {
+            float:right;
+            width: 45%;
+        }
+        .changeCode button
+        {
+            display: block;
+            clear:both;
+        }
+        .ef-copyAll
+        {
+            margin:0;
+            float: right;
+            width: 200px;
+            height: 35px;
+            background:transparent;
+            border:0;
+            margin-top:5px;
+            font-size: 16px;
+
+            background: rgb(1, 11, 4);
+        }
+        /*详情模块*/
+        .module-block-lists .block-lists {
+            height: auto;
+            margin: 0 auto;
+            clear: both;
+            font-size: 14px;
+        }
+        .module-block-lists .block-list {
+            height: auto;
+            margin: 0 auto;
+            clear: both;
+        }
+        .module-block-lists .block-list-left {
+            width: 100%;
+        }
+        .module-block-lists .block-list-content {
+            margin-bottom: 19px;
+            border: 1px solid #e9e9e9;
+            height: auto;
+            display: block;
+            background: #ffffff;
+        }
+        .module-block-lists .box_shadow {
+            background: #fff;
+            -webkit-box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+            -moz-box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+            box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+        }
+        /*导航*/
+        .module-block-lists .detail-page-nav {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            margin:0px 20px 20px;
+        }
+        .module-block-lists .block-list-label {
+            background-color: transparent;
+            border-left: 5px solid #D04742;
+            height: 15px;
+            line-height: 15px;
+            padding: 0;
+            margin: 0;
+            padding-left: 6px;
+            font-size: 14px;
+            color: #1a1a1a;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        /*icon位置*/
+        .module-block-lists .righticon {
+            min-width: 96px !important;
+            position: relative;
+            top: -66px;
+        }
+
+        .module-block-lists .grid-content-wrapper-module {
+            padding: 0px 20px 13px 20px;
+        }
+        .module-block-lists .de_table{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+        }
+        .module-block-lists .de_table table{
+            height: 428px;
+        }
+        /*详情模块结束*/
+
+        .grid-box-shadow{
+            padding: 0px 20px 20px 20px;
+            background: #fff;
+            -webkit-box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+            -moz-box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+            box-shadow: 0px 2px 3px 0px rgba(120,120,120,0.28);
+        }
+        .grid-box-title-wrapper{
+            margin-bottom: 20px;
+            height: 52px;
+            line-height: 52px;
+            vertical-align: middle;
+            border-bottom: 1px solid #f0f0f0;
+            overflow: hidden;
+        }
+        .grid-box-title{
+            float: left;
+            font-size: 14px;
+        }
+        .grid-box-title-border{
+            margin: 0px 5px 0px 20px;
+            border-left: 5px solid #D04742;
+        }
+        .grid-box-title-small{
+            font-size: 12px;
+        }
+        .grid-box-icon{
+            float: right;
+        }
+        .grid-box-table-wrapper{
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+    <legend>Font-Awesome字体图标</legend>
+    <div class="font_awesome">
+        <div class="span12">
+            <h2 class="page-header">3.0 版本中新增的图标</h2>
+        </div>
+        <section id="icons-new" class="row">
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-cloud-download"></i> icon-cloud-download</li>
+                    <li><i class="icon-cloud-upload"></i> icon-cloud-upload</li>
+                    <li><i class="icon-lightbulb"></i> icon-lightbulb</li>
+                    <li><i class="icon-exchange"></i> icon-exchange</li>
+                    <li><i class="icon-bell-alt"></i> icon-bell-alt</li>
+                    <li><i class="icon-file-alt"></i> icon-file-alt</li>
+                    <li><i class="icon-beer"></i> icon-beer</li>
+                    <li><i class="icon-coffee"></i> icon-coffee</li>
+                    <li><i class="icon-food"></i> icon-food</li>
+                    <li><i class="icon-fighter-jet"></i> icon-fighter-jet</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-user-md"></i> icon-user-md</li>
+                    <li><i class="icon-stethoscope"></i> icon-stethoscope</li>
+                    <li><i class="icon-suitcase"></i> icon-suitcase</li>
+                    <li><i class="icon-building"></i> icon-building</li>
+                    <li><i class="icon-hospital"></i> icon-hospital</li>
+                    <li><i class="icon-ambulance"></i> icon-ambulance</li>
+                    <li><i class="icon-medkit"></i> icon-medkit</li>
+                    <li><i class="icon-h-sign"></i> icon-h-sign</li>
+                    <li><i class="icon-plus-sign-alt"></i> icon-plus-sign-alt</li>
+                    <li><i class="icon-spinner"></i> icon-spinner</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-angle-left"></i> icon-angle-left</li>
+                    <li><i class="icon-angle-right"></i> icon-angle-right</li>
+                    <li><i class="icon-angle-up"></i> icon-angle-up</li>
+                    <li><i class="icon-angle-down"></i> icon-angle-down</li>
+                    <li><i class="icon-double-angle-left"></i> icon-double-angle-left</li>
+                    <li><i class="icon-double-angle-right"></i> icon-double-angle-right</li>
+                    <li><i class="icon-double-angle-up"></i> icon-double-angle-up</li>
+                    <li><i class="icon-double-angle-down"></i> icon-double-angle-down</li>
+                    <li><i class="icon-circle-blank"></i> icon-circle-blank</li>
+                    <li><i class="icon-circle"></i> icon-circle</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-desktop"></i> icon-desktop</li>
+                    <li><i class="icon-laptop"></i> icon-laptop</li>
+                    <li><i class="icon-tablet"></i> icon-tablet</li>
+                    <li><i class="icon-mobile-phone"></i> icon-mobile-phone</li>
+                    <li><i class="icon-quote-left"></i> icon-quote-left</li>
+                    <li><i class="icon-quote-right"></i> icon-quote-right</li>
+                    <li><i class="icon-reply"></i> icon-reply</li>
+                    <li><i class="icon-github-alt"></i> icon-github-alt</li>
+                    <li><i class="icon-folder-close-alt"></i> icon-folder-close-alt</li>
+                    <li><i class="icon-folder-open-alt"></i> icon-folder-open-alt</li>
+                </ul>
+            </div>
+        </section>
+        <div class="span12">
+            <h2 class="page-header">适合 Web 应用的图标</h2>
+        </div>
+        <section id="icons-web-app" class="row">
+
+
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-adjust"></i> icon-adjust</li>
+                    <li><i class="icon-asterisk"></i> icon-asterisk</li>
+                    <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+                    <li><i class="icon-bar-chart"></i> icon-bar-chart</li>
+                    <li><i class="icon-barcode"></i> icon-barcode</li>
+                    <li><i class="icon-beaker"></i> icon-beaker</li>
+                    <li><i class="icon-beer"></i> icon-beer</li>
+                    <li><i class="icon-bell"></i> icon-bell</li>
+                    <li><i class="icon-bell-alt"></i> icon-bell-alt</li>
+                    <li><i class="icon-bolt"></i> icon-bolt</li>
+                    <li><i class="icon-book"></i> icon-book</li>
+                    <li><i class="icon-bookmark"></i> icon-bookmark</li>
+                    <li><i class="icon-bookmark-empty"></i> icon-bookmark-empty</li>
+                    <li><i class="icon-briefcase"></i> icon-briefcase</li>
+                    <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+                    <li><i class="icon-calendar"></i> icon-calendar</li>
+                    <li><i class="icon-camera"></i> icon-camera</li>
+                    <li><i class="icon-camera-retro"></i> icon-camera-retro</li>
+                    <li><i class="icon-certificate"></i> icon-certificate</li>
+                    <li><i class="icon-check"></i> icon-check</li>
+                    <li><i class="icon-check-empty"></i> icon-check-empty</li>
+                    <li><i class="icon-circle"></i> icon-circle</li>
+                    <li><i class="icon-circle-blank"></i> icon-circle-blank</li>
+                    <li><i class="icon-cloud"></i> icon-cloud</li>
+                    <li><i class="icon-cloud-download"></i> icon-cloud-download</li>
+                    <li><i class="icon-cloud-upload"></i> icon-cloud-upload</li>
+                    <li><i class="icon-coffee"></i> icon-coffee</li>
+                    <li><i class="icon-cog"></i> icon-cog</li>
+                    <li><i class="icon-cogs"></i> icon-cogs</li>
+                    <li><i class="icon-comment"></i> icon-comment</li>
+                    <li><i class="icon-comment-alt"></i> icon-comment-alt</li>
+                    <li><i class="icon-comments"></i> icon-comments</li>
+                    <li><i class="icon-comments-alt"></i> icon-comments-alt</li>
+                    <li><i class="icon-credit-card"></i> icon-credit-card</li>
+                    <li><i class="icon-dashboard"></i> icon-dashboard</li>
+                    <li><i class="icon-desktop"></i> icon-desktop</li>
+                    <li><i class="icon-download"></i> icon-download</li>
+                    <li><i class="icon-download-alt"></i> icon-download-alt</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-edit"></i> icon-edit</li>
+                    <li><i class="icon-envelope"></i> icon-envelope</li>
+                    <li><i class="icon-envelope-alt"></i> icon-envelope-alt</li>
+                    <li><i class="icon-exchange"></i> icon-exchange</li>
+                    <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+                    <li><i class="icon-external-link"></i> icon-external-link</li>
+                    <li><i class="icon-eye-close"></i> icon-eye-close</li>
+                    <li><i class="icon-eye-open"></i> icon-eye-open</li>
+                    <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+                    <li><i class="icon-fighter-jet"></i> icon-fighter-jet</li>
+                    <li><i class="icon-film"></i> icon-film</li>
+                    <li><i class="icon-filter"></i> icon-filter</li>
+                    <li><i class="icon-fire"></i> icon-fire</li>
+                    <li><i class="icon-flag"></i> icon-flag</li>
+                    <li><i class="icon-folder-close"></i> icon-folder-close</li>
+                    <li><i class="icon-folder-open"></i> icon-folder-open</li>
+                    <li><i class="icon-folder-close-alt"></i> icon-folder-close-alt</li>
+                    <li><i class="icon-folder-open-alt"></i> icon-folder-open-alt</li>
+                    <li><i class="icon-food"></i> icon-food</li>
+                    <li><i class="icon-gift"></i> icon-gift</li>
+                    <li><i class="icon-glass"></i> icon-glass</li>
+                    <li><i class="icon-globe"></i> icon-globe</li>
+                    <li><i class="icon-group"></i> icon-group</li>
+                    <li><i class="icon-hdd"></i> icon-hdd</li>
+                    <li><i class="icon-headphones"></i> icon-headphones</li>
+                    <li><i class="icon-heart"></i> icon-heart</li>
+                    <li><i class="icon-heart-empty"></i> icon-heart-empty</li>
+                    <li><i class="icon-home"></i> icon-home</li>
+                    <li><i class="icon-inbox"></i> icon-inbox</li>
+                    <li><i class="icon-info-sign"></i> icon-info-sign</li>
+                    <li><i class="icon-key"></i> icon-key</li>
+                    <li><i class="icon-leaf"></i> icon-leaf</li>
+                    <li><i class="icon-laptop"></i> icon-laptop</li>
+                    <li><i class="icon-legal"></i> icon-legal</li>
+                    <li><i class="icon-lemon"></i> icon-lemon</li>
+                    <li><i class="icon-lightbulb"></i> icon-lightbulb</li>
+                    <li><i class="icon-lock"></i> icon-lock</li>
+                    <li><i class="icon-unlock"></i> icon-unlock</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-magic"></i> icon-magic</li>
+                    <li><i class="icon-magnet"></i> icon-magnet</li>
+                    <li><i class="icon-map-marker"></i> icon-map-marker</li>
+                    <li><i class="icon-minus"></i> icon-minus</li>
+                    <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+                    <li><i class="icon-mobile-phone"></i> icon-mobile-phone</li>
+                    <li><i class="icon-money"></i> icon-money</li>
+                    <li><i class="icon-move"></i> icon-move</li>
+                    <li><i class="icon-music"></i> icon-music</li>
+                    <li><i class="icon-off"></i> icon-off</li>
+                    <li><i class="icon-ok"></i> icon-ok</li>
+                    <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+                    <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+                    <li><i class="icon-pencil"></i> icon-pencil</li>
+                    <li><i class="icon-picture"></i> icon-picture</li>
+                    <li><i class="icon-plane"></i> icon-plane</li>
+                    <li><i class="icon-plus"></i> icon-plus</li>
+                    <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+                    <li><i class="icon-print"></i> icon-print</li>
+                    <li><i class="icon-pushpin"></i> icon-pushpin</li>
+                    <li><i class="icon-qrcode"></i> icon-qrcode</li>
+                    <li><i class="icon-question-sign"></i> icon-question-sign</li>
+                    <li><i class="icon-quote-left"></i> icon-quote-left</li>
+                    <li><i class="icon-quote-right"></i> icon-quote-right</li>
+                    <li><i class="icon-random"></i> icon-random</li>
+                    <li><i class="icon-refresh"></i> icon-refresh</li>
+                    <li><i class="icon-remove"></i> icon-remove</li>
+                    <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+                    <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+                    <li><i class="icon-reorder"></i> icon-reorder</li>
+                    <li><i class="icon-reply"></i> icon-reply</li>
+                    <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+                    <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+                    <li><i class="icon-retweet"></i> icon-retweet</li>
+                    <li><i class="icon-road"></i> icon-road</li>
+                    <li><i class="icon-rss"></i> icon-rss</li>
+                    <li><i class="icon-screenshot"></i> icon-screenshot</li>
+                    <li><i class="icon-search"></i> icon-search</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-share"></i> icon-share</li>
+                    <li><i class="icon-share-alt"></i> icon-share-alt</li>
+                    <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+                    <li><i class="icon-signal"></i> icon-signal</li>
+                    <li><i class="icon-signin"></i> icon-signin</li>
+                    <li><i class="icon-signout"></i> icon-signout</li>
+                    <li><i class="icon-sitemap"></i> icon-sitemap</li>
+                    <li><i class="icon-sort"></i> icon-sort</li>
+                    <li><i class="icon-sort-down"></i> icon-sort-down</li>
+                    <li><i class="icon-sort-up"></i> icon-sort-up</li>
+                    <li><i class="icon-spinner"></i> icon-spinner</li>
+                    <li><i class="icon-star"></i> icon-star</li>
+                    <li><i class="icon-star-empty"></i> icon-star-empty</li>
+                    <li><i class="icon-star-half"></i> icon-star-half</li>
+                    <li><i class="icon-tablet"></i> icon-tablet</li>
+                    <li><i class="icon-tag"></i> icon-tag</li>
+                    <li><i class="icon-tags"></i> icon-tags</li>
+                    <li><i class="icon-tasks"></i> icon-tasks</li>
+                    <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+                    <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+                    <li><i class="icon-time"></i> icon-time</li>
+                    <li><i class="icon-tint"></i> icon-tint</li>
+                    <li><i class="icon-trash"></i> icon-trash</li>
+                    <li><i class="icon-trophy"></i> icon-trophy</li>
+                    <li><i class="icon-truck"></i> icon-truck</li>
+                    <li><i class="icon-umbrella"></i> icon-umbrella</li>
+                    <li><i class="icon-upload"></i> icon-upload</li>
+                    <li><i class="icon-upload-alt"></i> icon-upload-alt</li>
+                    <li><i class="icon-user"></i> icon-user</li>
+                    <li><i class="icon-user-md"></i> icon-user-md</li>
+                    <li><i class="icon-volume-off"></i> icon-volume-off</li>
+                    <li><i class="icon-volume-down"></i> icon-volume-down</li>
+                    <li><i class="icon-volume-up"></i> icon-volume-up</li>
+                    <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+                    <li><i class="icon-wrench"></i> icon-wrench</li>
+                    <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+                    <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+                </ul>
+            </div>
+        </section>
+        <div class="span12">
+            <h2 class="page-header">文本编辑器图标</h2>
+        </div>
+        <section id="icons-text-editor" class="row">
+
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-file"></i> icon-file</li>
+                    <li><i class="icon-file-alt"></i> icon-file-alt</li>
+                    <li><i class="icon-cut"></i> icon-cut</li>
+                    <li><i class="icon-copy"></i> icon-copy</li>
+                    <li><i class="icon-paste"></i> icon-paste</li>
+                    <li><i class="icon-save"></i> icon-save</li>
+                    <li><i class="icon-undo"></i> icon-undo</li>
+                    <li><i class="icon-repeat"></i> icon-repeat</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-text-height"></i> icon-text-height</li>
+                    <li><i class="icon-text-width"></i> icon-text-width</li>
+                    <li><i class="icon-align-left"></i> icon-align-left</li>
+                    <li><i class="icon-align-center"></i> icon-align-center</li>
+                    <li><i class="icon-align-right"></i> icon-align-right</li>
+                    <li><i class="icon-align-justify"></i> icon-align-justify</li>
+                    <li><i class="icon-indent-left"></i> icon-indent-left</li>
+                    <li><i class="icon-indent-right"></i> icon-indent-right</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-font"></i> icon-font</li>
+                    <li><i class="icon-bold"></i> icon-bold</li>
+                    <li><i class="icon-italic"></i> icon-italic</li>
+                    <li><i class="icon-strikethrough"></i> icon-strikethrough</li>
+                    <li><i class="icon-underline"></i> icon-underline</li>
+                    <li><i class="icon-link"></i> icon-link</li>
+                    <li><i class="icon-paper-clip"></i> icon-paper-clip</li>
+                    <li><i class="icon-columns"></i> icon-columns</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-table"></i> icon-table</li>
+                    <li><i class="icon-th-large"></i> icon-th-large</li>
+                    <li><i class="icon-th"></i> icon-th</li>
+                    <li><i class="icon-th-list"></i> icon-th-list</li>
+                    <li><i class="icon-list"></i> icon-list</li>
+                    <li><i class="icon-list-ol"></i> icon-list-ol</li>
+                    <li><i class="icon-list-ul"></i> icon-list-ul</li>
+                    <li><i class="icon-list-alt"></i> icon-list-alt</li>
+                </ul>
+            </div>
+        </section>
+        <div class="span12">
+            <h2 class="page-header">指示方向的图标</h2>
+        </div>
+        <section id="icons-directional" class="row">
+
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-angle-left"></i> icon-angle-left</li>
+                    <li><i class="icon-angle-right"></i> icon-angle-right</li>
+                    <li><i class="icon-angle-up"></i> icon-angle-up</li>
+                    <li><i class="icon-angle-down"></i> icon-angle-down</li>
+                    <li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+                    <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+                    <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+                    <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-caret-down"></i> icon-caret-down</li>
+                    <li><i class="icon-caret-left"></i> icon-caret-left</li>
+                    <li><i class="icon-caret-right"></i> icon-caret-right</li>
+                    <li><i class="icon-caret-up"></i> icon-caret-up</li>
+                    <li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+                    <li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+                    <li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+                    <li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+                    <li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+                    <li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+                    <li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+                    <li><i class="icon-double-angle-left"></i> icon-double-angle-left</li>
+                    <li><i class="icon-double-angle-right"></i> icon-double-angle-right</li>
+                    <li><i class="icon-double-angle-up"></i> icon-double-angle-up</li>
+                    <li><i class="icon-double-angle-down"></i> icon-double-angle-down</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-hand-down"></i> icon-hand-down</li>
+                    <li><i class="icon-hand-left"></i> icon-hand-left</li>
+                    <li><i class="icon-hand-right"></i> icon-hand-right</li>
+                    <li><i class="icon-hand-up"></i> icon-hand-up</li>
+                    <li><i class="icon-circle"></i> icon-circle</li>
+                    <li><i class="icon-circle-blank"></i> icon-circle-blank</li>
+                </ul>
+            </div>
+        </section>
+        <div class="span12">
+            <h2 class="page-header">视频播放器图标</h2>
+        </div>
+        <section id="icons-video-player" class="row">
+
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-play-circle"></i> icon-play-circle</li>
+                    <li><i class="icon-play"></i> icon-play</li>
+                    <li><i class="icon-pause"></i> icon-pause</li>
+                    <li><i class="icon-stop"></i> icon-stop</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-step-backward"></i> icon-step-backward</li>
+                    <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+                    <li><i class="icon-backward"></i> icon-backward</li>
+                    <li><i class="icon-forward"></i> icon-forward</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+                    <li><i class="icon-step-forward"></i> icon-step-forward</li>
+                    <li><i class="icon-eject"></i> icon-eject</li>
+                </ul>
+            </div>
+            <div class="span3">
+                <ul class="the-icons">
+                    <li><i class="icon-fullscreen"></i> icon-fullscreen</li>
+                    <li><i class="icon-resize-full"></i> icon-resize-full</li>
+                    <li><i class="icon-resize-small"></i> icon-resize-small</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</fieldset>
+    <fieldset>
+        <legend>中文与unicode互转组件</legend>
+        <div class="changeCode"></div>
+    </fieldset>
+    <fieldset>
+        <legend>icon图标使用</legend>
+        <div>
+            <ul class="icons-box">
+                <li><i class="icon-menus-icon-edit"></i><span></span></li>
+                <li><i class="icon-menus-icon-cancel"></i><span></span></li>
+                <li><i class="icon-menus-icon-save"></i><span></span></li>
+                <li><i class="icon-menus-icon-add"></i><span></span></li>
+                <li><i class="icon-menus-icon-run"></i><span></span></li>
+                <li><i class="icon-menus-icon-shutdown"></i><span></span></li>
+                <li><i class="icon-menus-icon-restart"></i><span></span></li>
+                <li><i class="icon-menus-icon-connect"></i><span></span></li>
+                <li><i class="icon-menus-icon-template"></i><span></span></li>
+                <li><i class="icon-menus-icon-sys"></i><span></span></li>
+                <li><i class="icon-menus-icon-user"></i><span></span></li>
+                <li><i class="icon-menus-icon-tenant"></i><span></span></li>
+                <li><i class="icon-menus-icon-move"></i><span></span></li>
+                <li><i class="icon-menus-icon-setting"></i><span></span></li>
+                <li><i class="icon-menus-icon-copy"></i><span></span></li>
+                <li><i class="icon-menus-icon-setting_mgr"></i><span></span></li>
+                <li><i class="icon-menus-icon-delete"></i><span></span></li>
+                <li><i class="icon-menus-icon-revert"></i><span></span></li>
+                <li><i class="icon-recycle-delete"></i><span></span></li>
+                <li><i class="icon-recycle-start"></i><span></span></li>
+                <li><i class="icon-recycle-end"></i><span></span></li>
+                <li><i class="icon-manor-add"></i><span></span></li>
+                <li><i class="con-menus-icon-back"></i><span></span></li>
+                <li><i class="icon-menus-icon-delecan"></i><span></span></li>
+                <li><i class="icon-menus-icon-open"></i><span></span></li>
+                <li><i class="icon-menus-icon-revoke"></i><span></span></li>
+                <li><i class="icon-menus-icon-key"></i><span></span></li>
+                <li><i class="icon-menus-icon-refresh"></i><span></span></li>
+                <li><i class="icon-menus-icon-refresh"></i><span></span></li>
+                <li><i class="icon-menus-icon-refresh"></i><span></span></li>
+
+            </ul>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            测试iconMenu
+        </legend>
+        <div>
+            <div style="width: 60%">
+                <table width="100%">
+                    <tr>
+                        <td style="width: 40%"></td>
+                        <td>
+                            <div class="menu-box" style="text-align: right">
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            测试toggleButton
+        </legend>
+        <div>
+            <div class="toggle-box">
+
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试自动播放组件</legend>
+        <div>
+            <button id="playBtn">播放</button>
+            <div class="increment-box" style="width: 100px;height:100px;border:1px solid red;clear:both;display: inline-block;text-align: center;vertical-align: middle;line-height: 100px;font-size:30px">
+                <span class="num" style="vertical-align: middle;display: inline-block"></span>
+            </div>
+            <div class="increment-box2" style="width: 100px;height:100px;border:1px solid red;clear:both;display: inline-block;text-align: center;vertical-align: middle;line-height: 100px;font-size:30px">
+                <span class="num" style="vertical-align: middle;display: inline-block"></span>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试confirm组件</legend>
+        <div>
+            <button id="openDialog" style="display: block">打开alert</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试拓扑组件</legend>
+        <div>
+            <div class="topo-box" style="height: 320px;overflow:hidden"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试ipbox</legend>
+        <div>
+            <div style="height: 200px;clear:both;overflow-y:scroll" class="ip_box">
+
+            </div>
+            <button class="select_ip_all">全选</button>
+            <button class="unselect_ip_all">全部反选</button>
+            <button class="ip_click">点击</button>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>测试iconstep组件</legend>
+        <div>
+            <div style="height: 200px;width:500px" class="iconstep-box">
+
+            </div>
+            <p>
+                <span class="firstBtn">first</span>
+                <span class="lastBtn">last</span>
+                <span class="prevBtn">prev</span>
+                <span class="nextBtn">next</span>
+            </p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试iconchange组件</legend>
+        <div>
+            <div style="height: 500px;width:500px" class="iconchange-box">
+
+            </div>
+            <p>
+                <span class="firstBtn">first</span>
+                <span class="lastBtn">last</span>
+                <span class="prevBtn">prev</span>
+                <span class="nextBtn">next</span>
+            </p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试buttonstep</legend>
+        <div class="buttonstep_box">
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试viewstack</legend>
+        <div>
+            <ul class="viewstack-box">
+                <li>
+                    0
+                </li>
+                <li>
+                    1
+                </li>
+                <li>
+                    2
+                </li>
+                <li>
+                    3
+                </li>
+            </ul>
+            <p>
+                <span class="vfirstBtn">first</span>
+                <span class="vlastBtn">last</span>
+                <span class="vprevBtn">prev</span>
+                <span class="vnextBtn">next</span>
+            </p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试打开无头部的dialog</legend>
+        <div>
+            <div class="winFormBtn">
+                winform
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>显示扩展canvas的绘图api</legend>
+        <div>
+            <!-- 扩展-->
+            <canvas width="300" height="300" id="extendCanvas" ></canvas>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>显示顶部提示的placard组件</legend>
+        <div><button id="showPlaBtn">info</button>
+            <button id="showWarnPlaBtn">warn</button>
+            <button id="showErrorPlaBtn">error</button>
+            <button id="showMailPlaBtn">mail</button>
+            <button id="showTickPlaBtn">tick</button>
+            <button id="showDoingPlaBtn">doing</button>
+            <button id="showCustomPlaBtn">custom</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试css sprite组件</legend>
+        <div><div class="icon-box" style="margin:0 auto"></div></div>
+    </fieldset>
+    <input id="bo"/>
+    <fieldset>
+        <legend>下载组件(请部署在apache或tomcat上测试)</legend>
+        <div>
+            <button id="downloadBtn">下载</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试备份</legend>
+        <div>
+            <div id="backupBox"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试framework扩展</legend>
+        <div>
+            <div class="extendDom"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>测试输入框限制条件validType</legend>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <label>白名单:whitelist</label>
+                    </td>
+                    <td>
+                        <input class="whitelist">
+                    </td>
+                    <td>
+                        <code>validType: 'whitelist["a-zA-Z0-9_","只能输入字母，数字，下划线"]'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>黑名单:blacklist</label>
+                    </td>
+                    <td>
+                        <input class="blacklist">
+                    </td>
+                    <td>
+                        <code>validType: 'blacklist["&$#","不能输入&$#"]'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>正则匹配:reg</label>
+                    </td>
+                    <td>
+                        <input class="reg">
+                    </td>
+                    <td>
+                        <code>validType: 'reg[/\\d+/]'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>正则匹配:regx</label>
+                    </td>
+                    <td>
+                        <input class="regx">
+                    </td>
+                    <td>
+                        <code>validType: 'regx[/\\d+/,"只能输入字符等，自定义提示"]'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>长度匹配:length</label>
+                    </td>
+                    <td>
+                        <input class="len">
+                    </td>
+                    <td>
+                        <code>validType: 'length[2,8]'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>最小长度匹配:minlength</label>
+                    </td>
+                    <td>
+                        <input class="minlen">
+                    </td>
+                    <td>
+                        <code>validType: 'minlength[2]'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>邮件匹配:email</label>
+                    </td>
+                    <td>
+                        <input class="email">
+                    </td>
+                    <td>
+                        <code>validType: 'email'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>地址匹配:url</label>
+                    </td>
+                    <td>
+                        <input class="url">
+                    </td>
+                    <td>
+                        <code>validType: 'url'</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>服务端校验:remote</label>
+                    </td>
+                    <td>
+                        <input class="remote">
+                    </td>
+                    <td>
+                        <code>validType: 'remote["http://url:port"]'</code>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>预加载preload组件</legend>
+        <div class="preload_box" style="height: 200px"></div>
+        <!--<form action="http://localhost/server/upload.php" method="post"-->
+              <!--enctype="multipart/form-data" id="meForm">-->
+            <!--<label for="file">Filename:</label>-->
+            <!--<input type="file" name="file" id="file" />-->
+            <!--<br />-->
+            <!--<input type="submit" name="submit" value="Submit" />-->
+        <!--</form>-->
+    </fieldset>
+    <fieldset>
+        <legend>ajax上传</legend>
+        <form id= "uploadForm">
+            <p >上传文件： <input type="file" name="file" id="fileUp"/></p>
+        </form>
+        <button id="uploadBtn">upload</button>
+    </fieldset>
+    <fieldset class="testLoad">
+        <legend>ajax上传组件</legend>
+        <div id="uploadBox">
+
+        </div>
+        <div><span class="upload_ok">abddeeee</span></div>
+    </fieldset>
+    <fieldset>
+        <legend>按顺序异步请求SequenceLoader</legend>
+        <div>
+            <button class="sequenceBtn">请求</button>
+            <div>
+
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>switch</legend>
+        <div>
+            <div class="switchBox"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>quota</legend>
+        <div class="quotaBox"></div>
+        <button id="quotaClick">点击</button>
+    </fieldset>
+    <fieldset>
+        <legend>application</legend>
+        <div class="appBox" style="width: 50%;height: 120px;"></div>
+    </fieldset>
+    <ul class="testUl">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <fieldset>
+        <legend>参数</legend>
+        <div class="applyBox" ></div>
+        <button class="paramClick" ></button>
+        <button class="paramClickAdd" ></button>
+    </fieldset>
+    <fieldset i18n="a=abc">
+        <legend>CodeMirror编辑器</legend>
+        <div>
+            <input class="code_mirror_select">
+            <div class="codeBox" style="width: 100%;margin-top:10px">
+                <form ><textarea id="code" name="code" ></textarea>
+                </form>
+            </div>
+        </div>
+
+    </fieldset>
+    <fieldset>
+        <legend>复选框信息</legend>
+        <div class="checkBox" ></div>
+    </fieldset>
+    <fieldset>
+        <legend>复选框信息</legend>
+        <div class="checkRadio" ></div>
+    </fieldset>
+    <fieldset>
+        <legend>覆盖层CoverLayer</legend>
+        <div class="cover_box">
+            <pre>dsssdsdsddsdssd
+            ds
+            sd
+            dsd
+            sds
+            ds
+            ds
+            ds
+            ds
+            ds
+            ds
+            ds
+            ds</pre>
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Tiles组件</legend>
+        <div class="TilesBox">
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Picker组件</legend>
+        <div class="pickerBox">
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Data center</legend>
+        <div class="data-center-wrapper">
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>e chart</legend>
+        <div class="echart-1" style="height: 420px;width: 750px;margin: 0 auto;border: 1px solid red;">
+            <div class="echart-1-title">
+                <span>性能</span>
+            </div>
+            <div class="echart-1-content">
+                <table style="widht: 100%; height: 100%;">
+                    <tr>
+                        <td style="width: 50%; height: 100%;">
+                            <div class="echart-1-left"></div>
+                        </td>
+                        <td style="width: 50%; height: 100%;">
+                            <div class="echart-1-right"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>e chart 折线</legend>
+        <div class="echart-2" style="height: 400px;width: 100%;">
+
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>viewstack(根据数据生成)</legend>
+        <div class="vs_box"></div>
+    </fieldset>
+    <fieldset>
+        <legend>menubutton</legend>
+        <div>
+            <a href="javascript:void(0)" id="mb" class="easyui-menubutton"
+               data-options="menu:'#mm',iconCls:'icon-edit'">Edit</a>
+            <div id="mm" style="width:150px;">
+                <div data-options="iconCls:'icon-undo'">Undo</div>
+                <div data-options="iconCls:'icon-redo'">Redo</div>
+                <div class="menu-sep"></div>
+                <div>Cut</div>
+                <div>Copy</div>
+                <div>Paste</div>
+                <div class="menu-sep"></div>
+                <div data-options="iconCls:'icon-remove'">Delete</div>
+                <div>Select All</div>
+            </div>
+        </div>
+        <input type="file" name="file">
+    </fieldset>
+    <fieldset>
+        <legend>切片上传试验</legend>
+        <div id="sliceUpload">
+            <button id="upload">上传</button>
+            <span id="output" style="font-size:12px">等待</span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>button 样式</legend>
+        <span>
+            <a id="conf" href="javascript:void(0)" class="ef-button-common ef-button-rea" role="button">确定</a>
+        </span>
+        <span style="margin-left: 10px;">
+            <a href="javascript:void(0)" class="ef-button-common">方框</a>
+        </span>
+        <span style="margin-left: 10px;">
+            <a href="javascript:void(0)" class="ef-button-common ef-button-disabled">不可用</a>
+        </span>
+        <span style="margin-left: 10px;">
+            <span class="ef-button-common">通用</span>
+        </span>
+    </fieldset>
+    <fieldset class="loading_">
+        <span><div id="loadingUpload"></div></span>
+        <span><label id="loadingPercent"></label>%</span>
+        <div>
+            <button id="loadingUploadClick">点击</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>问号</legend>
+        <div><i class="question-icon"></i></div>
+    </fieldset>
+    <fieldset>
+        <legend>Cidr</legend>
+        <div class="cidr_gp_box">
+            <ul>
+                <li>
+                    <span>Cidr：</span>
+                    <span>
+                        <div class="cidr_group">
+                        </div>
+                    </span>
+                </li>
+                <li>
+                    <span>IP段：</span>
+                    <span class="pos1"></span>
+                    <span>.</span>
+                    <span class="pos2"></span>
+                    <span>.</span>
+                    <span id="pos3">
+                        <input id="pos3Sel" style="width: 50px;height: 30px;text-align: center"/>
+                    </span>
+                    <span>.</span>
+                    <span id="pos4">X</span>
+                    <!--<span>/</span>-->
+                    <!--<span id="gateValue"></span>-->
+
+
+                </li>
+                <li>
+                    <span>网关：</span>
+                    <span>
+                        <div>
+                        <span class="pos1"></span>
+                        <span>.</span>
+                        <span class="pos2"></span>
+                        <span>.</span>
+                        <span class="pos3"></span>
+                        <span>.</span>
+                        <span class="pos4"></span>
+                    </div>
+                    </span>
+                </li>
+                <li>
+                    <div class="cidr_create_ip_box" style="clear:left;float:left;width:70%"></div>
+                </li>
+                <li>
+                    <div style="float:left;border-left:1px solid red;height: 750px;width:28%;border-left: 1px solid lightgray;padding-left:10px;">
+                        <a id="getIpsBtn" class="ef-button-common">获取所有选择的ip</a>
+                        <div class="ip_datalist"></div>
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>IP legend</legend>
+        <div>
+            <div class="ip_legend"></div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>TopoNew legend</legend>
+        <div>
+            <div class="topo_new"></div>
+        </div>
+    </fieldset>
+<fieldset>
+    <legend>grid UI 样式组件</legend>
+    <div>
+        <div class="grid-box-shadow">
+            <div class="grid-box-title-wrapper">
+                <div class="grid-box-title">
+                    <span class="grid-box-title-border"></span>
+                    <span id="xxx">详情模块</span>
+                    <span class="grid-box-title-small"></span>
+                </div>
+                <div class="grid-box-icon">
+                    <ul class="toggle-button">
+                        <li>
+                            <ul class="icon-menus transparent">
+                                <li class="hide tooltip-f" title="" style="opacity: 0.7; display: inline-block; text-align: right;">
+                                    <i class="icon-menus-icon icon-menus-icon-add"></i>
+                                </li>
+                                <li class="hide tooltip-f icon-disable" title="" style="opacity: 0.2; display: inline-block; text-align: right;">
+                                    <i class="icon-menus-icon icon-menus-icon-delete"></i>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-box-table-wrapper">
+                <div id="tenantcontrollist" style="width:100%;height: 450px;"></div>
+            </div>
+        </div>
+    </div>
+
+</fieldset>
+<fieldset>
+    <legend>datagrid</legend>
+    <div class="block-lists">
+        <div class="plain-datagrid">
+            <table id="userlist"></table>
+        </div></div>
+</fieldset>
+<fieldset>
+    <legend>双向绑定way.js</legend>
+    <form way-data="globalData" >
+        <input type="text" name="name" id="wayName">
+        <input type="text" name="age" id="wayAge">
+        <input type="text" name="gender" id="gender">
+    </form>
+
+    Name: <span way-data="globalData.name"></span>
+    Age: <span way-data="globalData.age"></span>
+    Gender: <span way-data="globalData.gender"></span>
+</fieldset>
+<fieldset>
+    <legend>结果框组件</legend>
+    <div>
+        <div id="resultListRender" style="float:left">
+
+        </div>
+        <div style="float:left">
+            <ul class="bindData">
+                <li><label for="input1">修改容量：</label><input id="input1" /></li>
+                <li><label for="input2" >修改插槽数：</label><input id="input2" /></li>
+                <li><label for="wayChangeBtn">改变随机CPU:</label><button id="wayChangeBtn" >随机</button></li>
+                <li><p><label for="input3">增加数据表格<input id="input3" type="button" value="增加表格行"/></label></p></li>
+                <li><p><label for="input4">删除一行数据<input id="input4" type="button" value="删除表格行"/></label></p></li>
+            </ul>
+        </div>
+        <div way-repeat="formData.skills">
+            <span>aaaa</span>
+
+        </div>
+</fieldset>
+<fieldset> 
+    <legend>增加通知</legend> 
+    <div> 
+        <button id="addNotiBtn">新增</button>
+             </div> 
+</fieldset>
+<fieldset>
+    <legend>scrollbar</legend>
+    <div >
+        <div id="scrollBarBox" style="height: 100px;width:100px"><pre>
+                abc
+                def
+                d
+                g
+                f
+                y
+                u
+                i
+
+                u
+                i
+
+                u
+                i
+                p
+                z
+        </pre></div>
+    </div>
+</fieldset>
+
+<fieldset> 
+    <legend>增加通知</legend> 
+    <div class="right-entity"> </div> 
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <copyright class="lift_box">
+
+    </copyright>
+</body>
+</html>
+<style>
+
+</style>

@@ -1,0 +1,192 @@
+.item-ul-one-col li
+{
+    margin-bottom:21px;
+    float: left;
+}
+.item-ul-one-col li label
+{
+    position: relative;
+    top: 5px;
+    font-size: 14px;
+    min-width:70px;
+    /*margin-left: 20px;*/
+    float: left;
+    text-align: right;
+}
+.viewstack-box-dlg
+{
+    height: 382px;
+}
+.install-one
+{
+    width: 923px;
+    margin-left:20px;
+    padding-top:20px;
+    margin-right:20px;
+}
+.install-one-left
+{
+    width: 388px;
+    border:1px solid #d6d6d6;
+    height: 450px;
+}
+.install-one-right
+{
+    width: 517px;
+    height: 450px;
+    border:1px solid #d6d6d6;
+    margin-left:14px;
+}
+.manor-instance-tabs div.tab-box
+{
+    margin-top:0 !important;
+    overflow-y:auto ;
+}
+.tab-box
+{
+    margin-top:-20px;
+    width: 100% !important;
+}
+
+.code_mirror_box
+{
+    height: 380px;
+}
+.icon-template-left-auto
+{
+    background-position: -1074px -1085px;
+}
+.tab-box-ct
+{
+    height: 420px;
+    width: 100% !important;
+}
+.manor_flow_box
+{
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.manor_flow_cont
+{
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.manor_flow_set_step
+{
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+.manor_flow_step_right_btn
+{
+    position:absolute;
+    right: 65px;
+    top:0;
+}
+.groupCom{
+    display: inline-block;
+    font-size: 14px;
+    width: 84px;
+    text-align: right;
+}
+.manor-add{border-bottom:1px solid #ccc;margin-left:25px}
+.groupVal{font-size:16px;margin-left:20px;}
+/*.cpuRange .quotaSquare{width:30px;height:28px;}
+.memRange .quotaSquare{width:30px;height:28px;margin-bottom:8px;}*/
+.radio-param-wrapper{
+    font-size: 14px;
+    overflow: hidden;
+    line-height: 16px;
+    border-bottom:1px dotted #cccccc;
+    /*padding-bottom:10px;*/
+    color:#929191;
+}
+.radio-param-wrapper span{
+}
+.manor-add-wrapper{
+    padding-bottom: 2px;
+    /*border-bottom: 1px solid #ccc;*/
+}
+.manor-add-wrapper:nth-child(odd)
+{
+    border-bottom: 1px solid #ccc;
+}
+.no-border{
+    border-bottom: 0px;
+}
+.cpuRange .quotaSquare{
+    margin-right: 18px;
+}
+.memRange .quotaSquare{
+    margin-right: 25px;
+}
+#icon-step .icon-change>li{
+    border-top: 100px solid transparent;
+    border-left: 100px solid #98181c;
+    border-bottom: 100px solid transparent;
+}
+.icon-change-text{
+    left:72px;
+    top:-12px;
+}
+.icon-change .icon-change-icon{
+    margin-left:32px;
+    margin-top:30px;
+}
+.button-router-bottom .button-step .btn,.button-router-bottom .button-step .selected .btn:hover{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/*.vlanComboxer .textbox*/
+/*{*/
+    /*width: 195px !important;*/
+/*}*/
+.param_tit
+{
+    padding: 5px 0;
+    display: block;
+    color:#5d5d5d;
+    background: #f0f0f0;
+    padding-left: 12px;
+}
+/*.button-step li {*/
+     /*float: right;*/
+/*}*/
+.item-ul-one-col li:nth-child(1),
+.item-ul-one-col li:nth-child(3),
+.item-ul-one-col li:nth-child(5){
+    width:55%;
+}
+.item-ul-one-col li i{
+    position: relative;
+    left: 5px;
+}
+.icon-watermark {
+    margin-right: 76px;
+    top: 23px;
+}
+
+.button-step li:last-child {
+     padding-left: 0px;
+}
+.tab-box-ct .manor-add:first-child  i{
+    position:relative;
+    left:5px;
+}
+.tab-box-ct ul:last-child  i{
+    position:relative;
+    left:5px;
+}
+.manor-add li h3{
+    font-size: 14px;
+}
+.tabs-panels{
+    height: 413px;
+}
+.tabs-header {
+    margin-left: 0px;
+}

@@ -1,0 +1,40 @@
+.topo-box
+{
+    width: 97%;
+    clear:both;
+}
+.topbtns
+{
+    height:45px;
+    margin-bottom:10px ;
+}
+.nettop
+{
+    margin-top:17px;
+}
+.nettop .search-item
+{
+    margin:0;
+}
+.nettop .input-text
+{
+    margin-left: 8px;
+}
+.nettop .topbtns
+{
+    margin-top: 10px;
+}
+.right-entity
+{
+    background-color: #f4f7f7;
+}
+.topo-box{
+    padding:50px 0px 20px 0px;
+    display: block;
+    position:absolute;
+    /* clear: both; */
+    height: auto;
+    background: white;
+    margin: 20px;
+   border: 1px solid #dbdbdb;
+}

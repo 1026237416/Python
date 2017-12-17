@@ -1,0 +1,14 @@
+[
+  {
+    "label":"全部",
+    "value":"all"
+  },
+  {
+    "label": "可用",
+    "value": "available"
+  },
+  {
+    "label":"不可用",
+    "value":"unavailable"
+  }
+]

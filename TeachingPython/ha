@@ -1,0 +1,19 @@
+        uyedfayuawgf
+        aefbywfgv
+        gysregfyu
+        beyfghbsrgh
+        byufebaywoebf
+        beugfaw4y7tr5783wq4gt
+        bdfyuwge4rfuisbr
+        sbweuifghseyiur
+        bgueysay44rft
+
+backend sv.oldboy.com
+        server 10.10.1328 weight 20
+
+backend www.oldboy.com
+        server 10.10.132.8 weight 20
+
+backend buy.oldboy.com
+        server 10.10.13.28 weight 20
+        server 10.10.11.28 weight 20

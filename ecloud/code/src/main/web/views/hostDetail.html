@@ -1,0 +1,192 @@
+<link href="theme/default/css/hostDetail.css" rel="stylesheet" type="text/css">
+<link href="theme/default/css/hostSlave.css" rel="stylesheet">
+
+<!--<div class="icon-menus-box">-->
+<!--<div class="icon-menus-bg"></div>-->
+<!--<div class="hostdetail-icon-box icon-menus-cont"></div>-->
+<!--</div>-->
+<div class="right-cont host-detail" id="host-all" style="display:none">
+    <div class="block-lists block-lists-padding ">
+        <div class="block-list" >
+            <div class="block-list-content box_shadow">
+                <div class="icons-userdetail righticons" style="margin-top:-10px"></div>
+                <div class="detail-page-nav">
+                    <div class="block-list-label" id="description" >
+                    </div>
+                </div>
+                <div class="host-detail-descript">
+                    <div class="float-table">
+                        <table class="plain-table">
+                            <tr>
+                                <td id="namefield"></td>
+                                <td class="data_displayname"></td>
+                            </tr>
+                            <tr>
+                                <td id="idfield"></td>
+                                <td class="data_name"></td>
+                            </tr>
+                            <tr>
+                                <td id="atatusfield"></td>
+                                <td class="data_state"></td>
+                            </tr>
+                            <tr>
+                                <td id="tenantfield"></td>
+                                <td class="data_tenant"></td>
+                            </tr>
+                            <tr>
+                                <td id="userfield"></td>
+                                <td class="data_user"></td>
+                            </tr>
+                            <tr>
+                                <td id="hypervisorfield"></td>
+                                <td class="data_hypervisor"></td>
+                            </tr>
+                            <tr>
+                                <td id="operatingsystemfield"></td>
+                                <td class="nextline-td data_os"></td>
+                            </tr>
+                            <!--<tr>-->
+                            <!--<td id="ipfield"></td>-->
+                            <!--<td class="nextline-td data_ip"></td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                            <!--<td id="orderfield"></td>-->
+                            <!--<td class="data_order"><a href="#" style="color: #4DA4D6"></a></td>-->
+                            <!--</tr>-->
+                        </table>
+                    </div>
+                    <div class="float-table">
+                        <table class="plain-table">
+                            <tr>
+                                <td i18n="host.hostdetail.operate.password"></td>
+                                <td class="sys_user">
+                                    <span class="sys_user_field"></span>
+                                    <span class="sys_user_span"><i class="icon-eye pointer"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="mirrorfield"></td>
+                                <td class="data_image"></td>
+                            </tr>
+                            <tr>
+                                <td id="formatfield"></td>
+                                <td class="data_format"></td>
+                            </tr>
+                            <tr>
+                                <td id="timestampfield" style="line-height: 30px; vertical-align: middle;"></td>
+                                <td style="line-height: 13px; vertical-align: middle;"><span class="data_created_at"></span></td>
+                            </tr>
+                            <tr>
+                                <td id="systemdiskfield"></td>
+                                <td class="data_systemdisk"></td>
+                            </tr>
+                            <tr>
+                                <td id="openclosefield"></td>
+                                <td class="data_open_close" style="position:relative">
+                                    <span id="switch" style="position:absolute;display: inline-block;top: 5px;"></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="float-table no-right-border">
+                        <div style="margin-top: 7px;height: auto;min-height: 25px;">
+                            <label id="diskfield" ></label>
+                            <div class="data_disk" style="cursor:pointer">
+                            </div>
+                        </div>
+                        <div class="net-div" id="vlans">
+                            <label>IP：</label>
+                            <div id="vlanshow"></div>
+                        </div>
+                        <table class="plain-table" style="margin-top: -5px;">
+                            <tr class="textareass">
+                                <td id="remarkfield"></td>
+                                <td class="reamrkwidth"><!--<textarea id="dataremark" style="height: 100px;width:150px;"></textarea>-->
+                                    <span  class="data_remark" maxlength="50"></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-list">
+            <div class="block-list-content box_shadow">
+                <div class="detail-page-nav">
+                    <div class="block-list-label" id="monitor">
+                    </div>
+                </div>
+
+                <div class="monitor-cont">
+                    <table>
+                        <tr>
+                            <td style="border-right: 1px solid #b5bfc7;"><div class="guage-box gbox" style="width: 530px;"></div></td>
+
+                            <td><div class="memo-box" style="width: 530px;border:none"></div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div class="host-linechart" style="position:relative;">
+                        <span style="display:block;position:absolute;left: 136px;top:18px;z-index: 1000;">
+                             <select id="abc" class="easyui-combobox" name="user" data-options=""
+                                     style="width:197px;height:30px;padding-left:10px;">
+                                 <option id="cpuChart" value="1"></option>
+                                 <option id="memChart" value="2"></option>
+                                 <option id="diskinput" value="3"></option>
+                                 <option id="diskoutput" value="4"></option>
+                                 <option id="networkinput" value="5"></option>
+                                 <option id="networkoutput" value="6"></option>
+                             </select>
+                            </span>
+                                    <div class="disk-box" style="width: 100%;border: none;padding-top:20px;">
+                                    </div>
+                                </div>
+                                <!--  <div class="monitor-cont" style="padding:5px;margin-top:14px;border:1px solid #d7d7d7;">
+                                      <div style="min-width: 110px;text-align:left;margin-left:80px;float: left;margin-top: 25px;">
+                                          <span class="use_rate"><input checked type="radio" class="disk_input" name="use_rate"/><span>磁盘Input(字节/秒)</span></span>
+                                          <span class="use_rate"><input type="radio" class="disk_output" name="use_rate"/><span>磁盘Output(字节/秒)</span></span>
+                                          <span class="use_rate"><input type="radio" class="net_input" name="use_rate"/><span>网络Input(字节/秒)</span></span>
+                                          <span class="use_rate"><input type="radio" class="net_output" name="use_rate"/><span>网络Output(字节/秒)</span></span>
+                                      </div>
+                                      <div class="disk-box" style="width: 70%;margin-left:320px;border: none"></div>
+                                  </div>-->
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="block-list warn" id="warn">
+            <div class="block-list-left">
+                <div class="block-list-content box_shadow">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="alarm">
+                        </div>
+                    </div>
+
+                    <div class="plain-datagrid plain-warn">
+                        <table id="host_alarmList" style="height: 420px;">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-list operation">
+            <div class="block-list-left" >
+                <div class="block-list-content box_shadow">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="operation">
+                        </div>
+                    </div>
+
+                    <div class="plain-datagrid plain-host">
+                        <table id="logList" style="height: 428px"></table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

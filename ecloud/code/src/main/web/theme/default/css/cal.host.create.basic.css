@@ -1,0 +1,465 @@
+.cal-create-wrapper{
+    display: block;
+}
+#sys-list{
+}
+.cal-create-blank{
+
+}
+.cal-input-area{
+    padding-bottom: 10px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #D3D3D3;
+}
+.cal-create-inner{
+    width: 85%;
+    margin: 0 auto;
+}
+.cal-input-cell .left,
+.cal-input-cell .right,
+.cal-image-wrapper .left{
+
+
+    position: relative;
+    width: 50%;
+}
+.cal-input-label{
+    /* position: absolute; */
+    line-height: 30px;
+    float: left;
+    text-align: right;
+    /* width: px */
+    min-width: 75px;
+    color: #333;
+}
+.cal-net-wrapper>label{
+    font-size: 14px;
+    color:#333;
+}
+.cal-input-value{
+    float: left;
+    margin-right: 5px;
+}
+.left-value{
+
+}
+.right-label{
+    left: 30px;
+}
+.cal-input-cell{
+    margin: 15px 0px;
+    height: 26px;
+}
+.cal-sys-wrapper{
+    height: 210px;
+}
+.cal-sys-title{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.cal-image-wrapper{
+    height: 26px;
+    /*margin-top: -10px;*/
+}
+.cal-sys .quotaSquare{
+    width: 295px;
+    height: 40px;
+    margin-bottom: 15px;
+    color: #A9A9A9;
+    float:left;
+    margin-right:55px;
+}
+.quotaSquare-select{
+    background: transparent;
+}
+.iconChangeAll{
+    /*left: 230px !important;*/
+    margin-left:-1px;
+}
+.iconAllRender{
+    background: rgba(252, 252, 252, 0);
+}
+.cal-sys .quotaSquare-select .squireSel{
+    top: 10px;
+    right: 10px;
+    color: #A9A9A9;
+}
+.border-bottom .quotaSquare-select .squireSel{
+    top: 2px;
+    color: #A9A9A9;
+}
+/*a.panel-tool-close{*/
+    /*background-position: -330px -970px;*/
+/*}*/
+.button-router-bottom .button-step .btn,
+.button-router-bottom .button-step .btn a:hover{
+    border-radius: 5px;
+}
+.cal-sys .quotaText{
+    text-align: left;
+    text-indent: 75px;
+}
+.cal-sys #Squire-pic{
+    position: absolute;
+    left: 13px;
+    top: 2px;
+}
+.cal-sys .quotaText{
+    line-height: 40px;
+}
+.cal-sys-right{
+    float: left;
+    content:"";
+}
+.button-router-bottom{
+    position: absolute;
+    right: 42px;
+    bottom: 0;
+    height: 30px;
+}
+/*.panel-title{*/
+    /*background-color: transparent;*/
+    /*border-left: 5px solid #D04742;*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*margin-top: 5px;*/
+    /*padding-left: 10px;*/
+    /*font-size: 18px;*/
+    /*color: #6a6a6a;*/
+/*}*/
+/*.ef-dailog .panel-header{*/
+    /*height: 40px;*/
+/*}*/
+.cal-network-desc .left{
+    width: 100%;
+}
+.cal-network-desc .left .textbox{
+    width: 560px !important;
+}
+.cal-network-bottom{
+    margin-bottom: 30px;
+}
+#icon-step .icon-change{
+    margin-top: 118px;
+}
+#icon-step .iconChangeAll{
+    height: 100px;
+}
+#icon-step .icon-change>li{
+    border-top: 100px solid transparent;
+    border-left: 100px solid #98181c;
+    border-bottom: 100px solid transparent;
+}
+#icon-step .icon-change-text{
+    left: 80px;
+    font-size: 18px;
+}
+#icon-step .step-change-info{
+    background-position: -375px -390px;
+}
+#icon-step .step-change-quota{
+    background-position: -453px -391px;
+}
+#icon-step .step-change-net{
+    background-position: -349px -590px;
+}
+#icon-step .step-change-over{
+    background-position: -482px -695px;
+}
+#icon-step .icon-change i{
+    width: 80px;
+}
+.mb17{
+    margin-bottom: 17px;
+}
+.water-mark{
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    bottom: -60px;
+    right: -17px;
+}
+.water-mark-img{
+    height: 76px;
+    width: 410px;
+    background: url("../images/icons.png") no-repeat -15px -1035px;
+}
+#addhostswitch{
+    height: 20px;
+    width: 48px;
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+}
+#overaddhostswitch{
+    height: 20px;
+    width: 48px;
+}
+.icon1
+{
+    height: 36px;
+    width: 36px;
+    background-position: -55px -50px;
+}
+.icon2{
+    height: 36px;
+    width: 36px;
+    background-position: -110px -50px;
+}
+.icon3{
+    height: 36px;
+    width: 36px;
+    background-position: -435px -165px;
+}
+.icon4{
+    height: 36px;
+    width: 36px;
+    background-position: -210px -50px;
+}
+.icon5{
+    height: 36px;
+    width: 36px;
+    background-position: -535px -203px;
+}
+.icon6{
+    height: 36px;
+    width: 36px;
+    background-position: -1021px -584px;
+}
+.icon7{
+    height: 36px;
+    width: 36px;
+    background-position: -485px -163px;
+}
+.icon8{
+    height: 36px;
+    width: 36px;
+    background-position: -255px -50px;
+}
+.cal-type-wrapper{
+    height: 50px;
+    padding-top: 3px;
+}
+.cal-type-label{
+    float: left;
+    line-height: 60px;
+}
+.cal-switch-value{
+    float: left;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+.cal-type-wrapper .saveRange{
+    padding-top: 0;
+}
+.cal-type-wrapper .cal-type-value{
+    height: 60px;
+    margin-left: 88px;
+    padding-top: 15px;
+    overflow-x: hidden;
+}
+.cal-sys .cal-sys-right{
+    margin-right: 0px;
+}
+/*添加本地存储*/
+.localtip{
+    position: absolute;
+    left: -18px;
+    color:#dd0000;
+    padding-left:13%;
+    margin-top: -8px;
+    font-size:12px;
+}
+.cal-create-blank-net{
+}
+.cal-number-spinner{
+    float: left;
+    margin-left: 100px;
+}
+.cal-net-wrapper{
+    position: relative;
+    /*border-bottom: 1px solid #dfdfdf;*/
+}
+.cal-net-label{
+    position: absolute;
+    margin-top: 5px;
+}
+.cal-net-vi{
+    max-height: 178px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.cal-net-content{
+    margin-left: 70px;
+}
+.p15{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.net-vi-title{
+    height: 30px;
+}
+.vi-item{
+    float: left;
+    /*width: 26%;*/
+    width: 33%;
+    text-align: left;
+    line-height: 30px;
+}
+.w35{
+    /*width: 40%;*/
+    width: 33%;
+}
+.mgl22{
+    /*margin-left: 22px;*/
+}
+.rign{
+    /*float: right;*/
+}
+.mgl55{
+    /*margin-left: 55px;*/
+}
+.no-border{
+    /*border: 0;*/
+}
+.net-vi-content{
+    height: 46px;
+    padding-top: 5px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.sig-item{
+
+}
+.first-value{
+    padding-top: 0px;
+}
+.last-value{
+    border-bottom: 0;
+}
+.p8{
+    padding-top: 8px;
+}
+.prefix{
+    font-size: 16px;
+    color: #1a1a1a;
+    vertical-align:middle;
+}
+.vi-item-bottom{
+    float: left;
+    width: 22%;
+    text-align: left;
+    line-height: 30px;
+}
+.vi-icon{
+    width: 18px;
+}
+.vi-add-icon-wrapper{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 7px;
+    cursor: default;
+}
+.cal-add-btn-wrapper{
+    position: relative;
+    /*float: left;*/
+    /*margin-left: -40px;*/
+    top: 5px;
+    overflow: hidden;
+}
+.vi-add-icon{
+    width: 20px;
+    height: 20px;
+    background-position: -653px -628px;
+    vert-align: middle;
+}
+.cal-net-vi-item{
+    font-size: 15px;
+    color: #4c4c4c;
+    overflow: hidden;
+}
+.cal-net-title .cal-net-vi-item{
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+}
+.cal-net-vi-item span{
+    display: inline-block;
+    line-height: 30px;
+    text-align: left;
+}
+.vi-reduce-icon{
+    width: 20px;
+    height: 20px;
+    background-position: -653px -595px;
+    vert-align: middle;
+    cursor: pointer;
+}
+.vi-reduce-icon:hover{
+    background-position: -618px -595px;
+}
+.vi-add-ready{
+    background-position: -617px -628px;
+    cursor: pointer;
+}
+.pt7{
+    padding-top: 7px;
+}
+.vi-item-ips{
+    width: 30%;
+}
+.tin5{
+    text-indent: 5px;
+}
+.title-icon{
+    width: 20px;
+    height: 20px;
+}
+.system-box .quotaSquare{
+    width: 30%;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px;
+    border: 0;
+    text-align: left;
+}
+.system-box .Squire-pic{
+    position: relative;
+    display: inline-block;
+    margin-left: 26px;
+    vertical-align: middle;
+}
+.system-box .quotaText{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: left;
+    text-indent: 65px;
+    color: #333333;
+}
+.system-box .quotaSquare .squireSel{
+    background-position: -772px -1040px;
+}
+.system-box .squireSel{
+    top: auto;
+    bottom: 2px;
+}
+.system-box .quotaSquare:hover{
+    background-color: #f4f7f7;
+}
+.netTableGrid .datagrid-wrap.panel-body.panel-body-noheader{
+    height: 114px !important;
+}
+.netTableGrid .datagrid-body{
+    height: 76px !important;
+}
+/*
+    fix more than three lines for cpu and memory
+    slider will be overflow
+*/
+.block-lists{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 350px;
+}

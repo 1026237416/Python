@@ -1,0 +1,73 @@
+<div class="flow_param param_two">
+    <div class="paramTop" style="width: 100%;">
+        <div style="margin-top: 5px;">
+            <label><span i18n="apply.template.flow.param.two.group.name"></span>：</label>
+            <span>
+                <input class="param_group" id="paramGroupName" type="text">
+            </span><i>*</i>
+            <div id="paramGroupChoose" class="choose_param"></div>
+        </div>
+        <div class="other_hide">
+            <label><span i18n="apply.template.flow.param.two.group.count"></span>：</label>
+            <span>
+                <input class="param_group" id="paramGroupCount" type="text">
+            </span><i>*</i>
+            <div id="paramCountChoose" class="choose_param"></div>
+        </div>
+        <div style="margin-bottom: 5px;" class="other_hide">
+            <label><span i18n="apply.template.flow.param.two.group.node.count"></span>：</label>
+            <span>
+                <input class="param_group" id="paramNodeCount" type="text">
+            </span><i>*</i>
+            <div id="paramLimitChoose" class="choose_param"></div>
+        </div>
+        <div style="margin-bottom: 5px;" class="other_hide">
+            <label><span i18n="apply.template.flow.param.two.group.node.max.count"></span>：</label>
+            <span>
+                <input class="param_group" id="paramMaxCount" type="text">
+            </span><i>*</i>
+            <div id="paramMaxChoose" class="choose_param"></div>
+        </div>
+    </div>
+    <div class="param_cpu other_hide">
+        <label i18n="" class="param_cpu_title">CPU（核）<i>*</i>：</label>
+        <div id="cpuChoose" class="choose_param"></div>
+        <div class="param_cpu_active"></div>
+    </div>
+    <div class="param_memo other_hide">
+        <label i18n="" class="param_cpu_title">内存（GB）<i>*</i>：</label>
+        <div id="memoChoose" class="choose_param"></div>
+        <div class="param_memo_active"></div>
+    </div>
+    <div class="param_image other_hide" style="width: 100%;clear:both">
+            <label style="clear: both;margin-top: 14px;"><span i18n="apply.template.flow.param.sysVolume"></span>：</label>
+            <span class="paramImage">
+                <input class="param_group" id="paramDisk" type="text">
+            </span><i>*</i>
+            <div id="diskChoose" class="choose_param" style="margin-top: 35px;"></div>
+    <div style="margin-top: 10px;">
+        <label style="clear: both;margin-top: 14px;"><span i18n="apply.template.flow.param.two.image"></span>：</label>
+        <span class="paramImage">
+            <input class="param_group" id="paramImage" type="text">
+        </span><i>*</i>
+        <div id="imageChoose" class="choose_param" style="margin-top: 35px;"></div>
+    </div>
+    </div>
+</div>
+<style>
+    /*.checkInfo_choose .checkInfo,*/
+    /*.choose_cpu_memo .checkInfo{*/
+        /*margin-left: -23px !important;*/
+    /*}*/
+  .choose_param .checkRender:last-child{
+        padding-left:17px;
+    }
+    .quotaSquare
+    {
+        margin-right:29px;
+    }
+    .param_two div  .quotaSquare:nth-child(6){
+        margin-right: 0;
+    }
+
+</style>

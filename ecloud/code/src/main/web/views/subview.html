@@ -1,0 +1,44 @@
+<script type="text/javascript" src="js/libs/easyui/jquery.min.js"></script>
+<script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/framework.js"></script>
+<link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/easted/easyui.css">
+<link rel="stylesheet" type="text/css" href="js/libs/easyui/themes/icon.css">
+<link href="theme/default/css/global.css" rel="stylesheet" type="text/css">
+<link href="theme/default/css/components.css" rel="stylesheet" type="text/css">
+<script>
+    $(document).ready(function(){
+var _iconstep=$(".iconstep-box").iconstep(
+[
+{
+text:"abc",
+icon_up:"theme/default/images/step1.jpg",
+icon_selected:"theme/default/images/step1_selected.jpg",
+selected:false
+},
+{
+text:"abc",
+icon_up:"theme/default/images/step2.jpg",
+icon_selected:"theme/default/images/step2_selected.jpg",
+selected:false
+},
+{
+text:"abc",
+icon_up:"theme/default/images/step3.jpg",
+icon_selected:"theme/default/images/step3_selected.jpg",
+selected:false
+},
+{
+text:"abc",
+icon_up:"theme/default/images/step4.jpg",
+icon_selected:"theme/default/images/step4_selected.jpg",
+selected:false
+}
+]).change(function(response)
+{
+console.log(response);
+});
+    })
+</script>
+<div style="height: 200px;width:500px" class="iconstep-box">
+
+</div>

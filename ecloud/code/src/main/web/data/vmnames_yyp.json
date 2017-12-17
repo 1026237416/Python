@@ -1,0 +1,22 @@
+[
+    {
+        "label":"DK-监控",
+        "value":"1"
+    },
+    {
+        "label":"DK-门户",
+        "value":"2"
+    },
+    {
+        "label":"DK-存储",
+        "value":"3"
+    },
+    {
+        "label":"DK-数据1",
+        "value":"3"
+    },
+    {
+        "label":"DK-数据2",
+        "value":"3"
+    }
+]

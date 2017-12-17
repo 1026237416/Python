@@ -1,0 +1,25 @@
+.tab-box-ct {
+    height: 417px;
+    width: 609px !important;
+}
+.flow_param_three div i{
+    position: relative;
+    left: 0px;
+ }
+
+.checkInfo {
+    padding-left: 18px;
+}
+.frontStep .checkRender{
+    padding-left: 20px;
+}
+.param_two div  .quotaSquare:nth-child(6){
+    margin-right:25px;
+}
+.quotaSquare {
+    margin-right: 27px;
+}
+.detail-row span.textbox input,
+.detail-row span.textbox textarea{
+    color:#333;
+}

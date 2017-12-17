@@ -1,0 +1,8 @@
+# coding:gbk
+'''
+Created on 2016Äê10ÔÂ21ÈÕ
+
+@author: li
+'''
+
+print("ssss")

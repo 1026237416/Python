@@ -1,0 +1,35 @@
+#!/bin/sh
+# Start start_iaas daemons
+# chkconfig: - 70 80
+
+### BEGIN INIT INFO
+# Provides:          start_iaas
+# Default-Start:
+# Default-Stop:
+# Required-Start:    $remote_fs $named $network $time
+# Required-Stop:     $remote_fs $named $network $time
+# Short-Description: Start start_iaas distributed file system daemons at boot time
+# Description:       Enable start_iaas distributed file system services.
+### END INIT INFO
+
+start_iaas_start()
+{
+    service iptables stop               1>/dev/null 2>&1
+	chkconfig iptables off              1>/dev/null 2>&1
+	systemctl disable iptables.service
+	systemctl stop firewalld.service    1>/dev/null 2>&1
+	systemctl disable firewalld.service 1>/dev/null 2>&1
+    faild_service=(`systemctl list-units --type=service | grep failed | awk '{print $1}'`)
+    for service in "${faild_service[@]}"
+    do
+        systemctl start ${service}
+    done
+}
+
+case "$1" in
+	start)
+	    start_iaas_start
+	;;
+	*)
+	    echo "Usage: service start_iaas start"
+esac

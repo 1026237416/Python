@@ -1,0 +1,61 @@
+<div class="addImageContent">
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>名称：</label><i class="image-add-i">*</i>
+            <input type="text" id="imageName">
+        </span>
+         <span>
+            <label>类型：</label><i class="image-add-i">*</i>
+            <input type="text" id="imageType">
+        </span>
+    </div>
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>操作系统：</label><i class="image-add-i">*</i>
+            <input type="text" id="imageOs">
+        </span>
+        <span>
+            <label>系统盘最小容量(GB)：</label><i class="image-add-i">*</i>
+            <input type="text" id="imageGb">
+        </span>
+    </div>
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>镜像来源：</label><i class="image-add-i">*</i>
+            <input type="text" id="imageSource">
+        </span>
+        <span id="addImageFile">
+            <label>镜像文件<i class="question-icon" title="一个待上传的本地文件"></i>：</label><i class="image-add-i">*</i>
+            <div id="imageFile"></div>
+        </span>
+        <span style="display: none;" id="addImageUrl">
+            <label>镜像地址<i class="question-icon" title="使用外部(HTTP)URL加载镜像"></i>：</label><i class="image-add-i">*</i>
+             <input type="text" id="imageUrl">
+        </span>
+
+    </div>
+    <div class="addImageTr">
+        <span class="addImageTrLeft">
+            <label>镜像格式：</label><i class="image-add-i">*</i>
+            <input type="text" id="imageFormat">
+        </span>
+        <span>
+            <label>镜像驱动：</label>
+            <input type="text" id="imageDrive">
+        </span>
+    </div>
+    <div class="addImageTr" style="clear: both;padding-top: 12px;">
+        <span>
+            <label style="margin-top: -10px;">备注：</label>
+            <textarea id="imageBack" maxlength="50"></textarea>
+        </span>
+    </div>
+</div>
+<div class="panel-bottom">
+    <ul class="button-step button-step-bottom" >
+        <li><span class="btn templateConfirmBtn"><a id="image-cancel">取消</a></span></li>
+        <li id="hl_ok"><span class="btn templateConfirmBtn hl_ok_span"><a id="image_ok_btn" class="ef-button-rea ef-button-disabled">确定</a></span></li>
+    </ul>
+</div>
+<link rel="stylesheet" href="theme/default/css/image.css" type="text/css">
+<link rel="stylesheet" href="theme/default/css/addimage.css" type="text/css">

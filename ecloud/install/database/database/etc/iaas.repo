@@ -1,0 +1,7 @@
+[iaas]
+name=iaas packages for $basearch
+baseurl=http://10.10.138.80/ecloud/packages
+enabled=1
+gpgcheck=0
+type=rpm-md
+priority=1

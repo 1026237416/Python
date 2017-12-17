@@ -1,0 +1,14 @@
+[
+    {
+        "label":"Gentoo",
+        "value":"1"
+    },
+    {
+        "label":"Ubuntu",
+        "value":"2"
+    },
+    {
+        "label":"Fedora",
+        "value":"3"
+    }
+]

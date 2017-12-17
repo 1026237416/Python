@@ -1,0 +1,10 @@
+name: stop_node
+label: 关闭
+description: 关闭一个结点
+type: job
+
+parameters:
+  group_name:
+    type: string
+    description: 组名称
+

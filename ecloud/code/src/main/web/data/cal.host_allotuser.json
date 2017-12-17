@@ -1,0 +1,10 @@
+[
+  {
+    "vm-user": [
+      {
+
+        "user_id": "userId",
+        "vm_id":"vmId"
+      }]
+  }
+]

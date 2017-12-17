@@ -1,0 +1,20 @@
+[
+  {
+    "value":"all"
+  },
+  {
+    "value":"create"
+  },
+  {
+    "value":"online"
+  },
+  {
+    "value":"offline"
+  },
+  {
+    "value":"update"
+  },
+  {
+    "value":"delete"
+  }
+]

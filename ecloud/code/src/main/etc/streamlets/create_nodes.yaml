@@ -1,0 +1,19 @@
+name: create_nodes
+label: 创建结点
+description: 创建虚拟机,安装cowbell.
+type: job
+
+parameters:
+  group:
+    type: string
+    description: 这些IP地址所代表的的虚拟机的组名称
+  flavor:
+    type: string
+  image:
+    type: string
+  amount:
+    type: number
+  network:
+    type: string
+  cloud_disk:
+    type: string

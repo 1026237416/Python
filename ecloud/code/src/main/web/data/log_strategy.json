@@ -1,0 +1,14 @@
+[
+  {
+    "label":"全部",
+    "value":"all"
+  },
+  {
+    "label":"修改告警策略",
+    "value":"modify_warning_strategy"
+  },
+  {
+    "label":"修改备份策略",
+    "value":"modify_backup_strategy"
+  }
+]

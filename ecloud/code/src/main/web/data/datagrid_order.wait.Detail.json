@@ -1,0 +1,72 @@
+[
+    {
+        "type":1,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"1"
+    },
+    {
+        "type":1,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"2"
+    },
+    {
+        "type":1,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"1"
+    },
+    {
+        "type":1,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"2"
+    },
+    {
+        "type":2,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"1"
+    },
+    {
+        "type":2,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"2"
+    },
+    {
+        "type":2,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"3"
+    },
+    {
+        "type":2,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"4"
+    },
+    {
+        "type":2,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"1"
+    },
+    {
+        "type":2,
+        "name":"王俊伟",
+        "quota":"4核 8GB",
+        "save":"SSD",
+        "status":"3"
+    }
+]

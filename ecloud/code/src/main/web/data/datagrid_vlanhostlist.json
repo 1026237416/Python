@@ -1,0 +1,51 @@
+[
+  {
+    "label":"EcNode101",
+    "ip":"10.10.130.111",
+    "vlan":"111",
+    "id":"001",
+    "capacity":"4ºË 8GB"
+  },
+  {
+    "label":"EcNode102",
+    "ip":"10.10.3.112",
+    "vlan":"112",
+    "id":"002",
+    "capacity":"4ºË 8GB"
+  },
+  {
+    "label":"EcNode103",
+    "ip":"10.10.3.113",
+    "vlan":"113",
+    "id":"003",
+    "capacity":"4ºË 8GB"
+  },
+  {
+    "label":"EcNode104",
+    "ip":"10.10.3.114",
+    "vlan":"114",
+    "id":"004",
+    "capacity":"4ºË 8GB"
+  },
+  {
+    "label":"EcNode105",
+    "ip":"10.10.3.115",
+    "vlan":"115",
+    "id":"005",
+    "capacity":"4ºË 8GB"
+  },
+  {
+    "label":"EcNode106",
+    "ip":"10.10.3.116",
+    "vlan":"116",
+    "id":"006",
+    "capacity":"4ºË 8GB"
+  },
+  {
+    "label":"EcNode107",
+    "ip":"10.10.3.117",
+    "vlan":"117",
+    "id":"007",
+    "capacity":"4ºË 8GB"
+  }
+]

@@ -1,0 +1,73 @@
+<div class="security_group_create blank">
+    <div class="security_group_box">
+    <div class="table_left">
+        <ul class="e_rule">
+            <li class="label">规则</li>
+            <li><input class="security_combox_rule" style="width:300px;height: 30px"/></li>
+        </ul>
+        <ul class="e_direction">
+            <li class="label">方向</li>
+            <li><input class="security_combox_direction" style="width:300px;height: 30px"/></li>
+        </ul>
+        <ul class="e_oport">
+            <li class="label">打开端口<span class="redDot">*</span></li>
+            <li><input class="security_combox_port" style="width:300px;height: 30px"/></li>
+        </ul>
+        <ul class="e_port">
+            <li class="label"><span>端口</span><i title="输入大于1小于65535的整数" class="question-icon"></i>
+                <span class="redDot">*</span></li>
+            <li><input class="security_input_port" style="width:300px;height:30px"/></li>
+        </ul>
+        <ul class="e_ports">
+            <li class="label"><span>起始端口号</span><i title="输入大于1小于65535的整数" class="question-icon"></i><span class="redDot">*</span></li>
+            <li><input class="security_input_start" style="width:300px;height:30px"/></li>
+            <li class="label"><span>终止端口号</span><i title="输入大于1小于65535的整数" class="question-icon"></i><span class="redDot">*</span></li>
+            <li><input class="security_input_end" style="width:300px;height:30px"/></li>
+        </ul>
+        <ul class="e_type">
+            <li class="label"><span>类型</span><i title="请输入ICMP类型值范围(-1:255)" class="question-icon"></i><span class="redDot">*</span></li>
+            <li><input class="security_input_type" style="width:300px;height:30px"/></li>
+            <li class="label"><span>编码</span><i title="请输入ICMP类型值范围(-1:255)" class="question-icon"></i><span class="redDot">*</span></li>
+            <li><input class="security_input_encode" style="width:300px;height:30px"/></li>
+        </ul>
+        <ul class="e_protocol">
+            <li class="label">IP协议<i title="请输入一个0-255之间的整数值(或输入-1作为通配符)" class="question-icon"></i></li>
+            <li><input class="security_input_protocol" style="width:300px;height:30px"/></li>
+        </ul>
+        <ul class="e_group">
+            <li class="label">安全组</li>
+            <li><input class="security_combox_group" style="width:300px;height: 30px"/></li>
+        </ul>
+        <ul class="e_cidr">
+            <li class="label">CIDR<i title="无类别域间路由(e.g.192.168.0.0/24)" class="question-icon"></i>
+            </li>
+            <li><input class="security_input_cidr" style="width:300px;height:30px" value="0.0.0.0/0"/></li>
+        </ul>
+        <ul class="e_etype">
+            <li class="label">以太网类型（EtherType）</li>
+            <li><input class="security_combox_etype" style="width:300px;height: 30px"/></li>
+        </ul>
+    </div>
+    <div class="table_right">
+        <h3>说明：</h3>
+        <p>云主机可以关联访问控制规则，规则定义了允许哪些访问到达被关联的云主机。访问控制规则由以下三个主要组件组成：</p>
+
+        <p><span class="bold">规则：</span>你可以指定期望的规则模板或者使用定制规则，选项有定制TCP规则、定制UDP规则或定制ICMP规则。</p>
+
+        <p><span class="bold">打开端口/端口范围：</span>你选择的TCP和UDP规则可能会打开一个或一组端口.选择"端口范围"将为你提供开始和结束端口的范围.对于ICMP规则你需要指定ICMP类型和所提供的空间里面的代码。</p>
+
+        <p><span class="bold">CIDR：</span>指定允许通过该规则的IP地址名单。</p>
+    </div>
+</div>
+</div>
+<!--<ul class="button-step">
+    <li id="adddiskokall"><span class="btn diskConfirmBtn"><a id="adddiskok"></a></span></li>
+</ul>-->
+<div class="panel-bottom">
+    <ul class="button-step button-step-bottom">
+        <li><span class="btn templateConfirmBtn"><a id="sec-cancel">取消</a></span></li>
+        <li id="adddiskokall"><span class="btn templateConfirmBtn"><a id="adddiskok"></a></span></li>
+    </ul>
+</div>
+
+<link href="theme/default/css/securityGroup.css" rel="stylesheet" type="text/css">

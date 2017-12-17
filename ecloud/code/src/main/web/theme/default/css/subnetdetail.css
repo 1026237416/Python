@@ -1,0 +1,19 @@
+/*.block-list-right{*/
+    /*margin-left:24px;*/
+/*}*/
+.vlan-detail-descript tr td:first-child{
+    color:#666;
+}
+.vlan-detail-descript tr td:last-child{
+    color:#333;
+}
+.valn_cont .block-list:first-child .plain-datagrid .datagrid {
+    margin-top: 0px;
+}
+.delVmOcupyBtns{
+    position: relative;
+    top:5px;
+    right:5px;
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,9 @@
+name: delete_node
+label: 删除
+description: 删除一个结点
+type: job
+
+parameters:
+  server_id:
+    type: string
+    description: 结点的ID

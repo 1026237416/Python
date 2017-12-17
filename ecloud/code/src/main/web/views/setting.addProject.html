@@ -1,0 +1,51 @@
+<div class="addpro">
+   <div style="height: 372px;margin:0 auto ">
+       <div style="margin-top: 18px;">
+           <label><i id="lname"></i>：</label>
+           <input type="text" id="name" /><i>*</i>
+       </div>
+       <div>
+           <label><i id="lremark"></i></label>
+           <textarea id="remark" ></textarea>
+       </div>
+   </div>
+    <div class="panel-bottom">
+        <ul class="button-step button-step-bottom">
+            <li><span class="btn templateConfirmBtn"><a id="pro-cancel">取消</a></span></li>
+            <li id="hl_ok"><span class="btn templateConfirmBtn"><a id="ok_btn"></a></span></li>
+        </ul>
+    </div>
+
+    <!--<div style="width: 92.5%;padding:36px;margin:0 auto">
+        <ul class="button-step" style="padding-right: 40px;">
+            <li><span class="btn" id="hl_ok" style="margin-top: -5px;"><a id="ok_btn" ></a></span></li>
+        </ul>
+    </div>-->
+</div>
+<style>
+    .ef-dailog .addpro  span.textbox.textbox-disabled
+    {
+        border:0 !important;
+    }
+    .button-step-bottom{
+        position: absolute;
+        right: 35%;
+        bottom: 10px;
+        /*margin-right: 64px;*/
+    }
+    /*.button-step-bottom span.btn{*/
+        /*height: 30px;*/
+        /*line-height: 30px;*/
+    /*}*/
+    /*.button-step-bottom span.btn,*/
+    /*.button-step-bottom span.btn a:hover{*/
+        /*border-radius: 10px 10px 0 0;*/
+        /*line-height: 35px;*/
+    /*}*/
+    /*.button-step span.btn,.button-step span.btn a:hover{*/
+        /*border-radius:10px 10px 0 0;*/
+    /*}*/
+    #lname{
+        width:0;
+    }
+</style>

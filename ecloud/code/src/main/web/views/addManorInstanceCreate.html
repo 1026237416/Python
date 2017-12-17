@@ -1,0 +1,101 @@
+<div class="create_cover" style="height: 555px;">
+<ul class="viewstack-box-dlg" style="display: none">
+    <li>
+        <!--<div class="instance-step-cont" id="icon-step" style="margin-top: 140px;width: 18%;height: 100%;overflow: hidden;float:left;"></div>-->
+        <ul class="viewstack-box2" style="top: 32px;" >
+            <li>
+                <ul class="item-ul-one-col">
+                    <li >
+                        <label ><span i18n="apply.instance.create.template.name"></span>：</label>
+                        <input class="instance_name"  style="padding-left:10px;height:30px"><i>*</i>
+                    </li>
+                    <li>
+                        <label ><span i18n="apply.instance.create.instance.project2"></span>：</label>
+                        <select id="proCombox" class="easyui-combobox" style="padding-left:10px;height:30px" >
+                            <option></option>
+                        </select><i>*</i>
+                    </li>
+                    <li class="vlanComboxer">
+                        <label ><span i18n="apply.instance.create.instance.vlan2"></span>：</label>
+                        <select id="vlanCombox" class="easyui-combobox" style="padding-left:10px;height:30px" >
+                            <option></option>
+                        </select><i>*</i>
+                    </li>
+                    <li>
+                        <label ><span i18n="apply.instance.create.instance.net"></span>：</label>
+                        <select id="netCombox" class="easyui-combobox" style="padding-left:10px;height:30px" >
+                            <option></option>
+                        </select><i>*</i>
+                    </li>
+                    <li>
+                        <label ><span i18n="apply.instance.create.instance.subnet"></span>：</label>
+                        <select id="subnetCombox" class="easyui-combobox" style="padding-left:10px;height:30px" >
+                            <option></option>
+                        </select><i>*</i>
+                    </li>
+                    <li>
+                        <label ><span i18n="apply.instance.create.instance.template2"></span>：</label>
+                        <select id="typeCombox" class="easyui-combobox"  style="padding-left:10px;height:30px">
+                            <option></option>
+                        </select><i>*</i>
+                    </li>
+                    <li>
+                        <label i18n="apply.template.create.template.detail"></label>
+                        <input class="instance_detail"  style="width:670px;height: 160px;">
+                    </li>
+                    <li style="width: 100%">
+                        <i class="icon-watermark" style="float: right;position: relative;"></i>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li id="manor-node-type" class="instance_add">
+        <div id="node-type" class="install-one">
+            <div class="left install-one-left">
+                <div class="toggle-box" style="float: right;height: 50px;"></div>
+                <div id="visNetwork" style="height: 350px;margin-top: 50px;width: 100%;"></div>
+            </div>
+            <ul id="manor-instance-tabs" class="right install-one-right"  >
+               <!--js will load tabs for this part-->
+            </ul>
+        </div>
+    </li>
+
+</ul>
+
+<div class="button-route button-router-bottom btn-router-bottom">
+</div>
+</div>
+<link href="./theme/default/css/vis.css" rel="stylesheet" type="text/css">
+<link href="./theme/default/css/manorInstance.css" rel="stylesheet" type="text/css">
+
+<link href="./js/libs/codemirror/codemirror.css" rel="stylesheet" type="text/css">
+<link href="./js/libs/codemirror/abcdef.css" rel="stylesheet" type="text/css">
+<style>
+    /*.button-step span.btn*/
+    /*{*/
+        /*border-radius: 10px 10px 0 0 !important;*/
+    /*}*/
+    /*.button-step span.btn a:hover*/
+    /*{*/
+        /*box-shadow: 0 3px 3px #7A1310 inset !important;*/
+        /*border-radius: 10px 10px 0 0 !important;*/
+    /*}*/
+    #manor-instance-tabs
+    {
+
+
+    }
+    .instance-step-cont .icon-change
+    {
+        margin-top:0;
+    }
+    .toggle-button ul.icon-menus {
+        top: 7px;
+        left: 1px;
+    }
+    .button-step span.btn {
+        width: 82px;
+    }
+</style>

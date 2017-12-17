@@ -1,0 +1,19 @@
+#cal-recycle-wrapper .tabs-panels{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*
+#cal-recycle-wrapper .icon-menus-box{
+    position: relative;
+    top: auto;
+    margin-top: 15px;
+}*/
+.padding_top30{
+    padding-top: 15px;
+}
+.padding_top40{
+    padding-top: 40px;
+}
+.backup-menus{
+    z-index: 0;
+}

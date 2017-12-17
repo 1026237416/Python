@@ -1,0 +1,12 @@
+.echart-1-title{
+    line-height: 30px;
+}
+.echart-1-content{
+    padding: 10px 20px;
+}
+.echart-1-left,
+.echart-1-right{
+    height: 350px;
+    width: 350px;
+    border: 1px solid black;
+}

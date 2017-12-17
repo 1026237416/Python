@@ -1,0 +1,22 @@
+[
+    {
+        "label":"全部",
+        "value":"all"
+    },
+    {
+        "label":"创建",
+        "value":"create"
+    },
+    {
+        "label":"办理",
+        "value":"approve"
+    },
+    {
+        "label":"撤销",
+        "value":"cancel"
+    },
+    {
+        "label":"拒绝",
+        "value":"reject"
+    }
+]

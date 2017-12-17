@@ -1,0 +1,50 @@
+Management_node:
+    /etc/libvirt/libvirtd.conf:
+        all:
+            listen_tls: 0
+            listen_tcp: 1
+            listen_addr: \"0.0.0.0\"
+            auth_tcp: \"none\"
+    /etc/sysconfig/libvirtd:
+        all:
+            LIBVIRTD_ARGS: \"--listen\"
+    /etc/glance/glance-api.conf:
+        glance_store:
+            stores: glance.store.rbd.Store,
+            default_store: rbd
+            rbd_store_user: EVS_Storage
+            rbd_store_pool: EVS_Storage
+    /etc/cinder/cinder.conf:
+        DEFAULT:
+            enabled_backends: lvm,EVS_Storages
+            backup_ceph_user: EVS_Storage
+            backup_ceph_pool: EVS_Storage
+            backup_driver: cinder.backup.drivers.ceph
+        EVS_Storages:
+            volume_driver: cinder.volume.drivers.rbd.RBDDriver
+            rbd_pool: EVS_Storage
+            volume_backend_name: EVS_Storages
+            rbd_user: EVS_Storage
+            rbd_ceph_conf: /etc/ceph/ceph.conf
+            rbd_secret_uuid: 896d688a-2e84-4406-b8d1-721b7978736d
+            rados_connect_timeout: -1
+Compute_node:
+    /etc/libvirt/libvirtd.conf:
+        all:
+            listen_tls: 0
+            listen_tcp: 1
+            listen_addr: \"0.0.0.0\"
+            auth_tcp: \"none\"
+    /etc/sysconfig/libvirtd:
+        all:
+            LIBVIRTD_ARGS: \"--listen\"
+    /etc/nova/nova.conf:
+        libvirt:
+            inject_password: true
+            inject_key: true
+            inject_partition: -1
+            images_type: rbd
+            images_rbd_pool: EVS_Storage
+            images_rbd_ceph_conf: /etc/ceph/ceph.conf
+            rbd_user: EVS_Storage
+            rbd_secret_uuid: 896d688a-2e84-4406-b8d1-721b7978736d

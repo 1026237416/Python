@@ -1,0 +1,121 @@
+<div class="addhostDetail">
+    <!--<div class="cpu_memo"></div>
+    <div class="hostDetailcpu">
+        <label id="hostDetailquota-cpu"></label>
+        <span class="include" style="margin-left: 15px"><input id="cpuslider" class="easyui-slider" style="width:400px;"
+                /></span>
+        <span class="include"><input id="cpuinput" value="" type="text"  style="width:50px;border: none;background-color:transparent;text-align: right;font-size: 15px" disabled/><span id="cpuunit"></span></span>
+        &lt;!&ndash;<span>px</span>&ndash;&gt;
+    </div>
+    <div id="hostDetailmemo" style="margin-top: 50px;margin-left:25px">
+        <label id="hostDetailquota-memo"></label>
+        <span class="include"><input class="easyui-slider" id="memoslider" style="width:400px"
+                /></span>
+        <span class="include"><input id="memoinput" value="" type="text"  style="width:50px;border: none;background-color: transparent;text-align: right;font-size: 15px" disabled/><span id="memoGB"></span></span>
+    </div>
+</div>
+<div id="vlans" class="vlans">
+    <ul class="vlans-title-wrapper" style="list-style: none;padding-left:25px;">
+        <li>
+            <span class="net">物理网络</span>
+            <span class="vlan">网络</span>
+            <span class="childnet">子网</span>
+            <span class="ip">IP</span>
+        </li>
+    </ul>
+    <ul class="vlanshow" id="vlanshows">
+        &lt;!&ndash;<li><span class="status_icon_box"><i class="icons-delete-done"></i></span><span class="net vlancontent">ph-edf</span><span class="vlan vlancontent">Vlan123</span><span class="childnet vlancontent">333333333</span><span class="ip vlancontent">127.156.12.1</span></li>
+        <li><span class="status_icon_box"><i class="icons-delete-done"></i></span><span class="net vlancontent">ph-edf</span><span class="vlan vlancontent">Vlan123</span><span class="ip vlancontent">127.156.12.1</span></li>
+        <li><span class="status_icon_box"><i class="icons-delete-done"></i></span><span class="net vlancontent">ph-edf</span><span class="vlan vlancontent">Vlan123</span><span class="ip vlancontent">127.156.12.1</span></li>
+    &ndash;&gt;
+    </ul>
+    <div class="addvlan">
+        <span class="status_icon_box">
+            <i class="icon-add-disable add" style="margin-top:6px"></i>
+        </span>
+        <span class="net-wrapper">
+            <input type="text" class="net-vlan" id="ph-net" style="width:159px;height:30px;"/>
+        </span>
+        <span class="net-wrapper ml40">
+            <input type="text" class="net-vlan" id="net-vlan" style="width:159px;height:30px;"/>
+        </span>
+        <span class="net-wrapper">
+            <input type="text" class="net-vlan" id="child-net" style="width:159px;height:30px;"/>
+        </span>
+        <div class="ips ml45" style="display:inline">
+            <span class="ipspan" id="ipspan1" style="display:none"></span>
+            <span class="ip-wrapper">
+                 <input type="text" class="ipcombo" id="ip-combo1"  style="height:30px;"/>
+            </span>
+            <span class="ip-wrapper">
+                <input type="text" class="ipcombo" id="ip-combo2"  style="height:30px;"/>
+            </span>
+            <span class="ip-wrapper">
+                <input type="text" class="ipcombo" id="ipnum" style="height:30px;"/>&lt;!&ndash;width:76px&ndash;&gt;
+            </span>
+            <span class="ip-wrapper">
+                <input type="text" class="ipcombo" id="lastip" style="height:30px;"/>&lt;!&ndash;width:76px&ndash;&gt;
+            </span>
+
+        </div>
+    </div>-->
+    <ul class="hostDetail-ip">
+        <li>
+            <span class="hostDetail-ip-left">
+                <label>物理网络：</label>
+                <span>
+                    <input id="hostDetailPhynet" style="height: 30px;width: 220px;"/>
+                </span><i class="hostDetail-quota-i">*</i>
+            </span>
+            <span>
+                <label>网络：</label>
+                <span>
+                    <input id="hostDetailNet" style="height: 30px;width: 220px;"/>
+                </span><i class="hostDetail-quota-i">*</i>
+            </span>
+        </li>
+        <li>
+            <span class="hostDetail-ip-left">
+                <label>子网：</label>
+                <span>
+                    <input id="hostDetailSubnet" style="height: 30px;width: 220px;"/>
+                </span><i class="hostDetail-quota-i">*</i>
+            </span>
+            <span>
+                <label>IP：</label>
+                <span>
+                    <span><input id="hostDetailIp1" style="height: 30px;width: 46px;"/></span>
+                    <span class="hostDetailIp1" style="display: none;"></span>
+                    <span>.</span>
+                    <span><input id="hostDetailIp2" style="height: 30px;width: 46px;"/></span>
+                    <span class="hostDetailIp2" style="display: none;"></span>
+                    <span>.</span>
+                    <span>
+                         <input id="hostDetailIp3" style="height: 30px;width:46px;"/>
+                    </span>
+                    <span class="hostDetailIp3" style="display: none;"></span>
+                    <span>.</span>
+                    <input id="hostDetailIp4" style="height: 30px;width: 46px;"/>
+                </span><i class="hostDetail-quota-i">*</i>
+            </span>
+            <i class="icon-add-disable add" style="position: relative;top: 4px;"></i>
+        </li>
+        <!--<li>
+             <span class="hostDetail-ip-left">
+                <label>物理地址：</label>
+                <span class="hostDetailMac">
+                    <input id="hostDetailMac" style="height: 30px;width: 220px;"/>
+                </span>
+                   <i class="icon-add-disable add" style="position: relative;top: 4px;left: 12px;"></i>
+            </span>
+        </li>-->
+        <li class="hostDetailTablebox">
+            <div  class="plain-datagrid box_shadow" style="width: 680px;">
+                <table id="hostDetailTable" style="width:100%;height: 240px;"></table>
+            </div>
+        </li>
+    </ul>
+</div>
+<link href="theme/default/css/addhostDetail.css" rel="stylesheet" type="text/css">
+
+

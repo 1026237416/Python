@@ -1,0 +1,41 @@
+#services_tabs>div.tabs-header{
+    margin-left: 22px;
+    width: 96.2% !important;
+}
+.tabs li a.tabs-inner,.tabs li a.tabs-inner:hover{
+    height:36px !important;
+    line-height:34px !important;
+    border-width:0;
+    padding-top:2px;
+}
+.tabs li a.tabs-inner:hover{
+    line-height:30px !important;
+}
+.right-cont{
+    margin-bottom:5px;
+}
+.tabs li.tabs-selected a.tabs-inner{
+    line-height:30px !important;
+}
+/*.padding_top25{*/
+/*padding-top:13px;*/
+/*}*/
+.resize-margin{
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+}
+span.tabs-title{
+    width:75px;
+}
+.icon-status-unavailable{
+    background-position: -812px -106px;
+}
+.icon-status-available{
+    background-position: -812px -69px;
+}
+.icon-refresh-span{
+    cursor:pointer;
+}
+.right-content-padding{
+    background-color: #F5F6F7;
+}

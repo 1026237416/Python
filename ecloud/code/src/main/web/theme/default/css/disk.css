@@ -1,0 +1,272 @@
+.diskbackup,.editdisk
+{
+    height: 270px;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+.disk_backup_area,.disk_edit_area
+{
+    vertical-align: top;
+    height: 120px;
+    width: 555px;
+    resize: none;
+    /*margin-left: 50px;*/
+    font-family:'微软雅黑';
+    font-size:14px;
+}
+.disk_edit_area{
+    margin-left:0;
+}
+.diskbackup label
+{
+    width:52px;
+}
+.discreption
+{
+    width:750px;
+    margin-top: 20px;
+}
+.backup_choose
+{
+    margin-left: 50px;
+}
+.addDisk
+{
+    /*height: 418px;*/
+    margin-left:40px;
+    font-size: 14px;
+}
+label
+{
+    width: 70px;
+    float: left;
+    text-align: right;
+}
+#adddiskbackup
+{
+    border: 1px solid #bcbcbc;
+    resize: none;
+    width: 626px;
+    height: 114px;
+    vertical-align: top;
+    font-size: 15px;
+    box-shadow: 0 0;
+}
+#adddiskvolume
+{
+    text-align: center;
+    width: 45px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-size: 16px;
+}
+.disk_des
+{
+    margin-top: 9px;
+    height: 150px;
+}
+/*.slider_input
+{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 150px;
+    z-index: 100000;
+}*/
+/*.adddiskvolume_input
+{
+    height: 10px;
+    line-height: 100px;
+    position: absolute;
+    TOP: 150PX;
+    LEFT: 357PX;
+}*/
+/*.editdisk*/
+/*{*/
+    /*margin-left: 30px;*/
+    /*margin-top: 25px;*/
+    /*font-size: 15px;*/
+    /*height: 390px*/
+/*}*/
+#diskeditbackup
+{
+    border: 1px solid #bcbcbc;
+    vertical-align: top;
+    /*padding: 3px 10px;*/
+    height: 120px;
+    width: 545px;
+    resize: none;
+    box-shadow: 0 0;
+    margin-left: 0;
+    font-family: "arial", "Microsoft YaHei", "微软雅黑";
+    font-size:14px;
+}
+.context_table
+{
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.disk_des div
+{
+    line-height: 44px;
+}
+.textbox-icon.combo-arrow
+{
+}
+.menuBoundDisabled
+{
+    font-size: 12px;
+    /* line-height: 21px; */
+    text-align: center;
+    border: 1px solid #A9A9A9;
+    color: #A9A9A9;
+    /* height: 22px; */
+    width: 57px;
+    /* padding: 1px; */
+    /* height: 24px; */
+    line-height: 23px;
+}
+.water-mark{
+    position: absolute;
+    bottom: 25px;
+    right: 72px;
+}
+.water-mark-img{
+    height: 76px;
+    width: 410px;
+    background: url("../images/icons.png") no-repeat -15px -1035px;
+}
+/*.button-step span.btn,.button-step span.btn a:hover{*/
+    /*border-radius:10px 10px 0 0;*/
+/*}*/
+div.editname>span.textbox>input:first-child{
+    width:260px;
+    height:30px;
+}
+.blank{
+    margin-left: 12px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+/*a.panel-tool-close{*/
+    /*background-position: -330px -970px;*/
+/*}*/
+/*.button-step-bottom{*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*margin-right: 73px;*/
+/*}*/
+/*.button-step-bottom span.btn{*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+/*}*/
+/*.button-step-bottom span.btn,*/
+/*.button-step-bottom span.btn a:hover{*/
+    /*border-radius: 10px 10px 0 0;*/
+    /*line-height: 35px;*/
+/*}*/
+.l-btn-text
+{
+    /*line-height: 22px!important;*/
+}
+.messager-button .l-btn-text
+{
+
+}
+.addDisk-left
+{
+    width: 54.3%;
+    float: left;
+}
+.button-step-bottom{
+    position: absolute;
+    right: 37%;
+    bottom: 10px;
+    /*margin-right: 64px;*/
+}
+.datagrid-btable tr td[field="username"] {
+    padding-left: 6px !important;
+}
+.datagrid-btable tr td[field="name"]{
+     padding-left: 9px !important;
+ }
+.datagrid-btable tr td[field="host"]{
+    padding-left: 3px !important;
+}
+.datagrid-btable tr td[field="size_gb"]{
+     padding-left: 12px !important;
+ }
+.datagrid-btable tr td[field="tenantName"]{
+    padding-left: 8px !important;
+}
+.datagrid-btable tr td[field="status"] div{
+       padding-left: 0px !important;
+   }
+.datagrid-btable tr td[field="username"] div{
+    padding-left: 3px !important;
+}
+
+.datagrid-btable tr td[field="status"] .datagrid-cell div{
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="location"] div{
+    padding-left: 0px !important;
+}
+.datagrid-btable tr td[field="location"] .datagrid-cell div{
+    padding-left: 1px !important;
+}
+.menuBound .l-btn-left{
+    padding-left: 0px !important;
+}
+.cal-adddisk-i
+{
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+.slider_input
+{
+    margin-bottom: 30px;
+    width: 83%;
+    float: left;
+}
+.cal-adddisk-i-slider
+{
+    left: -160px;
+    top: 20px;
+}
+textarea{
+
+    box-shadow: 0 0;
+}
+.disk-des
+{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100px;
+    text-overflow: ellipsis;
+}
+.host_status {
+    line-height: 18px;
+}
+.addDisk  label i,.editdisk  label i{
+    width:0px;
+}
+#diskbackup-name{
+    width:0;
+}
+.editname i{
+    position: relative;
+    left:5px;
+}
+.datagrid-btable td[field="status"] .running span{
+    padding-left:5px;
+    height: 21px;
+    line-height: 21px;
+}

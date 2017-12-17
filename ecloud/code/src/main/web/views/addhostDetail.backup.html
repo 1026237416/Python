@@ -1,0 +1,33 @@
+<div class="addhostDetailbackup">
+    <div class="hostBackup-name">
+        <label><span  id="hostDetail-backup-name"></span>：</label><i>*</i>
+        <input id="name" type="text" class="easyui-textbox" style="width:220px;height:30px;"/>
+    </div>
+    <div class="remark-wrapper">
+        <label id="hostDetail-backup-des" class="remark-lable"></label>
+       <textarea  maxlength="50" class="remarktextarea" class="remark-text" ></textarea>
+    </div>
+    <div class="backupdisk" style="margin-top:20px;">
+        <span style="float:left;margin-right: 5px;" id="hostDetail-backup-disk"><input class="backupdiskall" type="checkbox" ></span>
+        <div class="backupdiskcheckbox"></div>
+        <div style="height:1px;border-bottom:1px solid #999;padding-top:15px;"></div>
+        <div id="backupdisk" style="margin-top:0;">
+            <div class="host_disk" style="width: 100%">
+                <input class="backupcheck" name="test" id="backupDiskCheckAll" disabled type="checkbox" value="all" style="border: 1px solid lightgray;margin: 0 0 3px;">
+                <span class="host_disk_name">全选</span>
+            </div>
+        </div>
+
+    </div>
+    <!--<div class="water-mark">-->
+        <!--<i class="water-mark-img"></i>-->
+    <!--</div>-->
+</div>
+<div class="panel-bottom">
+    <ul class="button-step button-step-bottom" >
+        <li id="cancel"><span class="btn" ><a id="addhostbackup_cancel"></a></span></li>
+        <li id="ok"><span class="btn" ><a id="addhostbackup_ok"></a></span></li>
+    </ul>
+</div>
+
+<link href="theme/default/css/addhostDetail.css" rel="stylesheet" type="text/css">

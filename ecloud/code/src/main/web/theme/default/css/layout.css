@@ -1,0 +1,157 @@
+html,body
+{
+    overflow: hidden;
+}
+.right-entity
+{
+    margin:0;
+    width:100%;
+    min-width:700px;
+    overflow-y: auto;
+    overflow-x:hidden ;
+    margin-top: 39px;
+    /*background: #fff;*/
+}
+.icon-menus-box
+{
+    position: fixed;
+    z-index:0;
+    margin-top:0;
+    width:100%;
+    line-height: 36px;
+    height: 36px;
+    color: #666666;
+    /*top: 47px;*/
+}
+.icon-menus
+{
+    position:absolute;
+    background-color: transparent;
+    z-index: 1;
+    -moz-border-radius-bottomleft: 0;      /* Gecko browsers */
+    -webkit-border-bottom-left-radius: 0;   /* Webkit browsers */
+    border-bottom-left-radius:0;            /* W3C syntax */
+    -moz-border-radius-bottomright: 0;      /* Gecko browsers */
+    -webkit-border-bottom-right-radius: 0;   /* Webkit browsers */
+    border-bottom-right-radius:0;            /* W3C syntax */
+    border:0;
+    right:13px;
+    padding-right: 5px;
+
+}
+.icon-menus-bg
+{
+    position: absolute;
+    width: 100%;
+    -moz-border-radius-bottomleft: 0;      /* Gecko browsers */
+    -webkit-border-bottom-left-radius: 0;   /* Webkit browsers */
+    border-bottom-left-radius:0;            /* W3C syntax */
+    -moz-border-radius-bottomright: 0;      /* Gecko browsers */
+    -webkit-border-bottom-right-radius: 0;   /* Webkit browsers */
+    border-bottom-right-radius:0;            /* W3C syntax */
+    /*background-color: #f3f3f3;*/
+    height: 36px;
+    line-height: 36px;
+    color: #666666;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(120,120,120,0.28);
+    font-size: 12px;
+}
+.right-entity-body
+{
+
+    position: relative;
+}
+.right-cont
+{
+    /*margin-left:10px;*/
+    /*margin-right:10px;*/
+    /*margin-bottom:10px;*/
+    position: relative;
+
+}
+
+.right-info-select span.combo
+{
+    background-color: transparent;
+    border: 0;
+}
+
+
+.right-info-select input,.right-info-select input:focus
+{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    outline-color:red;
+    outline-style:none;
+    border-color:red;
+    box-shadow: 0;
+}
+.right-info-select .combo-arrow:hover
+{
+    background-color: transparent;
+}
+.right-info-select .textbox-text,.right-info-select .validatebox-text .right-info-select .textbox-prompt
+{
+    color:white;
+}
+.right-info-select .textbox-focused {
+    -moz-box-shadow:none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.combo-panel.panel-body.right-select-custom{
+    border-left: 1px solid #bab9b9!important;
+    border-right: 1px solid #bab9b9!important;
+    border-bottom: 1px solid #bab9b9!important;
+}
+
+.right-select-custom
+{
+    background-color: #fff;
+    color:#b9363b;
+    border: 1px solid #df2434;
+    height:80px!important;
+    font-size: 14px!important;
+}
+.right-select-custom div
+{
+    padding-left: 10px
+}
+
+.right-select-custom .combobox-item{ height: 20px; line-height: 20px;}
+.right-select-custom div.combobox-item-selected
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color:#b9363b;
+    color:white;
+}
+.right-select-custom div.combobox-item-hover
+{
+    background-color: #5d5d5d;
+    color:#fff;
+}
+
+input:focus,select:focus,textarea:focus
+{
+    outline:none;
+}
+input[type="checkbox"]
+{
+    margin-top: 2px !important;
+}
+.datagrid-header-row input[type="checkbox"]
+{
+    margin-top: 0px !important;
+}
+.right-entity-wrapper {
+    position: relative;
+    width: 100%;
+
+    background-color: #F5F6F7;
+    border-top: 1px solid transparent;
+    z-index: 0;
+}

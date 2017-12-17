@@ -1,0 +1,250 @@
+ <!--<div class="icon-menus-box">-->
+ <!--<div class="icon-menus-bg"></div>-->
+<!--<div class="tenantdetail-icon-box icon-menus-cont"></div>-->
+<!--</div>-->
+<div class="block-lists block-lists-padding">
+    <div class="block-lists">
+        <div class="block-list">
+            <!--左上角-->
+            <div class="block-list-left left" style="width: 39.79%;">
+                <div class="block-list-content box_shadow" style="height: 280px">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="description">
+                        </div>
+                    </div>
+                    <div class="lefticons" style="float: right">
+
+                    </div>
+                    <div class="left-palin-tenante-table">
+                        <table class="left-tenante-table left-palin-table ">
+                            <!--<tr>-->
+                                <!--<td colspan="2">-->
+                                    <!--<div class="message" id="message"></div>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <tr>
+                                <td id="usernamefield"></td>
+                                <td id="tdname" style="top: -2px;position: relative;">
+                                    <input type="text" id="username" style="height: 30px;width: 180px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="remarkfield"></td>
+                                <td><span class="spanremark"><textarea id="remark" maxlength="50"></textarea></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--左上角-->
+            <!--右上角-->
+            <div class="block-list-right right " style="width:57.92%;">
+                <div class="block-list-content box_shadow" style="height: 280px;">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="quota">
+                        </div>
+                    </div>
+
+                    <div class="righticons quotaOp" style="float: right">
+                    </div>
+                    <div class="clear tenantdetail_table" style="height: 230px;">
+                        <table class="right-tenante-table right-palin-table " width="90%" align="center">
+                            <!--<tr>-->
+                                <!--<td colspan="4">-->
+                                    <!--<div class="messright message" id="messright"></div>-->
+                                <!--</td>-->
+                            <!--</tr>-->
+                            <tr>
+                                <td style="width: 60px;" id="corefield"></td>
+
+                                <td style="width:175px;">
+                                    <input type="checkbox" class="check"  id="chcore" >
+                                <span id="spancore" class="numberSpi">
+                                    <input id="cores" class="number" type="text" value="0" style="height: 24px;">
+                                </span>
+                                <span id="unlimit_cores" class="unlimited">
+                                    <input class="inputwu" type="text" disabled style="height: 30px;"/>
+                                </span>
+                                    <gecore style="color:#999;">核</gecore>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td id="memofield"></td>
+
+                                <td>
+                                    <input type="checkbox" class="check"  id="chmemo">
+                                <span id="spanmemo" class="numberSpi">
+                                    <input id="memory" class="number" type="text" value="0" style="height: 24px;">
+                                </span>
+                                <span id="unlimit_memory" class="unlimited">
+                                    <input class="inputwu" type="text" disabled style="height: 30px;"/>
+                                </span>
+                                    <gememo class="GB"></gememo>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td id="diskfield"></td>
+                                <td style="width:185px">
+                                    <input type="checkbox" class="check"  id="chdisk"/>
+                                 <span id="spandisk" class="numberSpi">
+                                     <input id="disks" class="number" type="text" alue="0" style="height: 24px;">
+                                 </span>
+                                 <span id="unlimit_disks" class="unlimited">
+                                    <input class="inputwu"  type="text" disabled style="height: 30px;"/>
+                                </span>
+                                    <gedisk class="ge"></gedisk>
+                                    <ll id="ll1" class="ll">&#44;</ll>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="check"  id="chdiskgb">
+                                <span id="spandiskgb" class="numberSpi">
+                                    <input id="disk_capacity" class="number" type="text" value="0" style="height: 24px;">
+                                </span>
+                                <span id="unlimit_disk_capacity" class="unlimited">
+                                    <input class="inputwu" type="text" disabled style="height: 30px;"/>
+                                </span>
+                                    <gediskgb class="GB"></gediskgb>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="backfield"></td>
+                                <td>
+                                    <input type="checkbox" class="check"  id="chbackunit">
+                                <span id="spanbackunit" class="numberSpi">
+                                       <input id="snapshots" class="number" type="text" value="0" style="height: 24px;">
+                                </span>
+                              <span id="unlimit_snapshots" class="unlimited">
+                                    <input class="inputwu" type="text" disabled style="height: 30px;"/>
+                              </span>
+                                    <gebackunit class="ge"></gebackunit>
+                                    <ll id="ll2" class="ll">&#44;</ll>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="check"  id="chbackgb">
+                                  <span id="spanbackgb" class="numberSpi">
+                                         <input id="snapshot_capacity" class="number" type="text" value="0" style="height: 24px;">
+                                  </span>
+
+                                <span id="unlimit_snapshot_capacity" class="unlimited">
+                                    <input class="inputwu" type="text" disabled style="height: 30px;" width="70px">
+                                </span>
+                                    <gedes class="GB"></gedes>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--右上角-->
+        </div>
+        <!--网络-->
+        <div class="block-list">
+            <div class="block-list-left">
+                <div class="block-list-content box_shadow" style="height: 575px;">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="network1">
+                        </div>
+                    </div>
+
+                    <div class="right descriptBtns" id="browser" style="margin-top: -55px;"></div>
+                    <ul class="viewstack-box-tenantDetail">
+                        <li>
+                            <div class="safe"><a href="#"></a> </div>
+                        </li>
+                        <li>
+                            <div class="topo-box" style="margin-top:30px;height:470px;overflow-y:auto ;clear:both"></div>
+                            <div id="hostlistBox"></div>
+                        </li>
+                        <li>
+                            <div class="search-item" style="margin-left: 20px;">
+                                <span class="input-text">
+                                    <span class="combox-to-input ef-textbox">
+                                        <input id="subnet-search-name" style="width:197px;height:30px">
+                                    </span>
+                                </span>
+                            <span class="ef-combox">
+                                <select id="subnet-search" name="subnet-search"
+                                        style="width:197px;height:30px;"></select>
+                            </span>
+                                <span class="icon-refresh-span"><i class="icon-refresh" id="reset"></i></span>
+                            </div>
+                            <div class="plain-datagrid" style="border: 1px solid #d7d7d7!important;margin-left: 20px;margin-top: 20px;width: 96.5%">
+                                <table id="tenantDetail-subnet-list" height="425px"></table>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--主机-->
+        <div class="block-list">
+            <div class="block-list-left">
+                <div class="block-list-content box-shadow">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="hostTitle">
+                        </div>
+                    </div>
+                    <div class="zj_control righticons" style="float: right">
+                    </div>
+                    <div id="zjc"></div>
+                    <div id="dialog-table-zj" class="dialog-table-control"><a href="#"></a></div>
+                    <div class="plain-datagrid ten" id="plain-datagrid-zj">
+                        <div class="de_table">
+                            <table id="tenanthostList" style="height: 420px;width: 100%">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--访问控制-->
+        <div class="block-list">
+            <div class="block-list-left">
+                <div class="block-list-content box_shadow">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="ac_control">
+                        </div>
+                    </div>
+                    <div class="ac_control righticons" style="float: right">
+                    </div>
+                    <div id="acc"></div>
+                    <div id="dialog-table-control" class="dialog-table-control"><a href="#"></a></div>
+                    <div class="plain-datagrid ten" id="plain-datagrid-control">
+                        <div class="de_table">
+                            <table id="tenantcontrollist" style="height: 420px;width: 100%">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--用户-->
+        <div class="block-list">
+            <div class="block-list-left">
+                <div class="block-list-content box_shadow" style="height: 510px;overflow: hidden">
+                    <div class="detail-page-nav">
+                        <div class="block-list-label" id="user">
+                        </div>
+                    </div>
+
+                    <div class="bottom righticons" style="float: right;">
+                    </div>
+                    <div id="a"></div>
+                    <div id="dialog-table-ten" class="dialog-table-ten"><a href="#"></a></div>
+                    <div class="plain-datagrid ten" id="plain-datagrid-ten">
+                        <div class="de_table">
+                            <table id="tenantuserlist" style="height: 420px;width: 100%;">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="theme/default/css/tenantDetail.css" type="text/css">
+
+

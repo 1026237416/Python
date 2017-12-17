@@ -1,0 +1,47 @@
+[{
+    "tenant_quotas": {
+        "snapshot__capacity": 500,
+        "backup_capacity": 500,
+        "used_snapshot__capacity": 0,
+        "used_backups": 0,
+        "used_memory": 10,
+        "disks": 1024,
+        "snapshots": 200,
+        "used_backup_capacity": 0,
+        "used_disks": 0,
+        "memory": 100,
+        "used_cores": 10,
+        "cores": 20,
+        "backups": 500,
+        "used_snapshots": 0
+    },
+    "description": "admintenant",
+    "enabled": true,
+    "user_count": 3,
+    "id": "125e3bf045834f38b834bfce38778f03",
+    "name": "admin"
+},
+    {
+        "tenant_quotas": {
+            "snapshot__capacity": 500,
+            "backup_capacity": 500,
+            "used_snapshot__capacity": 0,
+            "used_backups": 0,
+            "used_memory": 0,
+            "disks": 1024,
+            "snapshots": 200,
+            "used_backup_capacity": 0,
+            "used_disks": 0,
+            "memory": 100,
+            "used_cores": 0,
+            "cores": 20,
+            "backups": 500,
+            "id": 5,
+            "used_snapshots": 0
+        },
+        "description": "Tenantfortheopenstackservices",
+        "enabled": true,
+        "user_count": 2,
+        "id": "8e15ea3858a14d048f536d20bf2ed4f0",
+        "name": "services"
+}]

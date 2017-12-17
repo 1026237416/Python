@@ -1,0 +1,159 @@
+<div class="bordermoldle">
+    <ul class="viewstack-box-dlg hide create_dialog" style="overflow: hidden;height: 502px">
+        <li>
+            <!--<div class="host-step-cont" id="icon-step" style=" height: 497px;width: 162px;overflow: hidden;float:left;margin-left:0px;">-->
+            <!--<ul class="icon-change" style="margin-top:158px ">-->
+            <!--<li style="display: list-item;">-->
+            <!--<div class="bg"></div><div class="iconChangeCon">-->
+            <!--<span class="icon-change-text">基本信息</span>-->
+            <!--<p class="icon-change-icon"><i class="step-change-info"></i></p></div></li>-->
+            <!--<li><div class="bg"></div>-->
+            <!--<div class="iconChangeCon"><span class="icon-change-text">选择配置</span>-->
+            <!--<p class="icon-change-icon"><i class="step-change-quota"></i></p>-->
+            <!--</div></li><li><div class="bg"></div><div class="iconChangeCon">-->
+            <!--<span class="icon-change-text">网络</span><p class="icon-change-icon"><i class="step-change-net"></i></p></div></li><li><div class="bg"></div><div class="iconChangeCon"><span class="icon-change-text">完成</span><p class="icon-change-icon"><i class="step-change-over"></i></p></div></li></ul></div>-->
+            <ul class="viewstack-box2" style="top: 30px;">
+                <li>
+                    <ul class="item-ul-one-col">
+                        <li>
+                            <label><span i18n="apply.template.create.template.name2"></span>：</label>
+                            <input class="template_name"  style="width:197px;height: 30px;"><i>*</i>
+                        </li>
+                        <li class="template_des_content">
+                            <label i18n="apply.template.create.template.detail"></label>
+                            <input class="template_detail"  style="width:650px;height: 230px;">
+                        </li>
+                        <li>
+                            <i class="icon-watermark" style="float: right;margin-top: 48px;position: relative;"></i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li >
+            <div class="manor_template_flows " style="padding:0;width: 96%;margin:0 auto">
+                <div class="install-one">
+                    <div class="left install-one-left">
+                        <div class="toggle-box" style="float: right;height: 50px;"></div>
+                        <div id="visNetwork" style="height: 396px;margin-top: 50px;width: 100%;"></div>
+                    </div>
+                    <div class="right install-one-right">
+                        <div class="noContent-parent">
+                            <div class="noContent"   style="display:none;"></div>
+                            <div style="margin-left: 60px;" class="icon_water_Parent"><i class="icon-watermark"></i></div>
+                        </div>
+                        <div class="tab-box-nodes-parent">
+                            <div class="tab-box-nodes">
+                                <div  i18n="title=apply.template.create.prestep.title" class="tab-box-ct frontStep" style="padding-top: 20px;">
+
+                                </div>
+                                <div i18n="title=apply.template.create.param.title" class="tab-box-ct">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-box-reboot-parent">
+                            <div class="tab-box-reboot">
+                                <div  i18n="title=apply.template.create.prestep.title" class="tab-box-ct frontStep" style="padding-top: 20px;">
+
+                                </div>
+                                <div i18n="title=apply.template.create.param.title" class="tab-box-ct">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-box-delete-parent">
+                            <div class="tab-box-delete">
+                                <div  i18n="title=apply.template.create.prestep.title" class="tab-box-ct frontStep" style="padding-top: 20px;">
+
+                                </div>
+                                <!--<div i18n="title=apply.template.create.param.title" class="tab-box-ct">-->
+
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <div class="tab-box-start-parent">
+                            <div class="tab-box-start">
+                                <div  i18n="title=apply.template.create.prestep.title" class="tab-box-ct frontStep" style="padding-top: 20px;">
+
+                                </div>
+                                <div i18n="title=apply.template.create.param.title" class="tab-box-ct">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-box-stop-parent">
+                            <div class="tab-box-stop">
+                                <div  i18n="title=apply.template.create.prestep.title" class="tab-box-ct frontStep" style="padding-top: 20px;">
+
+                                </div>
+                                <div i18n="title=apply.template.create.param.title" class="tab-box-ct">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-box-script-parent">
+                            <div class="tab-box-script">
+                                <div  i18n="title=apply.template.create.prestep.title" class="tab-box-ct frontStep" style="padding-top: 20px;">
+
+                                </div>
+                                <div i18n="title=apply.template.create.script.title" class="tab-box-ct">
+                                    <div class="code_mirror_indi">
+                                        <label style="display:inline-block;width: auto;padding-left:5px;padding-right:5px;"><span i18n="apply.template.script.type"></span></label>
+                                        <span class="script_type_select" style="margin-left:-30px "></span>
+                                    <span class="code_mirror_indi_group"><span style="display:inline-block;width: auto;font-size:14px;padding-left:5px;padding-right:5px;"><span i18n="apply.template.script.apply.name3"></span><i>*</i>：</span>
+                                    <span class="script_group_select"></span></span>
+                                        <span class="toggle_info_return" style="display: inline-block;line-height: 18px;position: relative;top: 5px;left: 5px;"></span>
+                                        <div class="code_mirror_indi_checkbox" style="display: none;float:right"><span i18n="apply.template.script.type"></span></div>
+
+
+                                    </div>
+                                    <div class="code_mirror_box" style="display: none">
+                                        <form>
+                                            <textarea id="code" name="code" ></textarea>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div i18n="title=apply.template.create.param.title" class="tab-box-ct">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>
+
+<div class="button-route btn-router-bottom"></div>
+<link href="./theme/default/css/vis.css" rel="stylesheet" type="text/css">
+<link href="./theme/default/css/manorTemplate.css" rel="stylesheet" type="text/css">
+<link href="./js/libs/codemirror/codemirror.css" rel="stylesheet" type="text/css">
+<link href="./js/libs/codemirror/abcdef.css" rel="stylesheet" type="text/css">
+<link href="./js/libs/codemirror/show-hint.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="theme/default/css/addHost.css" type="text/css"/>
+<link rel="stylesheet" href="theme/default/css/cal.host.create.basic.css" type="text/css"/>
+<style>
+    #icon-step .icon-change
+    {
+        margin-top:158px;
+    }
+    .code_mirror_indi_checkbox .checkInfo
+    {
+        padding-left:25px;
+    }
+    .code_mirror_indi_group input
+    {
+        text-overflow: ellipsis;
+    }
+    .bordermoldle{
+        border: 1px solid #d6d6d6;
+        border-top:none;
+        width: 99.8%;
+    }
+    .button-step span.btn {
+        width: 82px;
+    }
+</style>

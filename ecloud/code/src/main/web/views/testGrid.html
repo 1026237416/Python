@@ -1,0 +1,26 @@
+<div style="padding:5px;display: block;" class="plain-datagrid">
+    <table id="gridtable2" title="代办工单" style="width:100%;" data-options="
+				singleSelect:false,
+				pagination:true,
+				pageSize:10">
+        <thead>
+        <tr>
+            <th field="ck" checkbox="true"></th>
+            <th field="id" formatter="idFormatter"  width="15%">ID</th>
+            <th field="name" width="15%">名称</th>
+            <th field='capability' width="20%">容量(GB)</th>
+            <th field="status" width="15%">状态</th>
+            <th field="host" formatter="hostFormatter" width="15%">云主机</th>
+            <th field="user" width="15%">用户</th>
+            <th field="tenant" width="10%" >租户</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+</div>
+<script type="text/javascript">
+    $.getJSON("data/datagrid_disklist.json",function(response)
+    {
+        $('#gridtable2').datagrid({data:response}).datagrid('clientPaging');
+    });
+</script>

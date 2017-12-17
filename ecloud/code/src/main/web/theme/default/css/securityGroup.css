@@ -1,0 +1,70 @@
+.security_group_create
+{
+    height: 410px;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+.security_group_box
+{
+    display: table;
+    width: 100%;
+    margin-left:20px;
+    margin-right:20px;
+}
+.table_left,.table_right
+{
+    width: 49%;
+    display: table-cell;
+}
+.table_right
+{
+    padding-right:30px;
+}
+.security_group_box .label
+{
+    display: inline-block;
+    padding:5px 0;
+    font-weight: bold;
+}
+.table_left ul
+{
+    margin:10px 0;
+}
+.security_group_box .label span
+{
+    display: inline-block;
+}
+.security_group_box .label .redDot
+{
+    padding-left:5px;
+}
+.blank {
+    margin-left: 73px;
+    margin-right: 73px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.button-step-bottom{
+    position: absolute;
+    right: 38%;
+    bottom: 10px;;
+    /*margin-right: 73px;*/
+}
+/*.button-step-bottom span.btn{*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+/*}*/
+/*.button-step-bottom span.btn,*/
+/*.button-step-bottom span.btn a:hover{*/
+    /*border-radius: 10px 10px 0 0;*/
+    /*/!*line-height: 35px;*!/*/
+/*}*/
+/*.button-step span.btn,.button-step span.btn a:hover{*/
+    /*border-radius:10px 10px 0 0;*/
+/*}*/
+/*a.panel-tool-close{*/
+    /*background-position: -326px -973px;*/
+/*}*/
+.table_right p{
+    color: #333333;
+}

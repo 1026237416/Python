@@ -1,0 +1,29 @@
+
+        <div style="padding:5px;" class="plain-datagrid">
+            <table id="hostlist"
+                   style="width:100%;" data-options="
+				singleSelect:true,
+				pagination:true,
+				pageSize:10">
+                <thead>
+                <tr>
+                    <th field="ck" checkbox="true" ></th>
+                    <th field="label" width="41%">主机名</th>
+                    <th field="ip" width="45%">IP</th>
+                    <th field="vlan" >所在vlan</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+                <script>
+                    $.getJSON("data/hostlist.json", function (response) {
+                        //console.log(response);
+                        $('#hostlist').datagrid({data: response}).datagrid('clientPaging');
+                    });
+                </script>
+<link rel="stylesheet" href="theme/default/css/tenant.css" type="text/css">
+<link rel="stylesheet" href="theme/default/css/global.css" type="text/css">
+<script type="text/javascript" src="js/libs/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/libs/easyui/jquery.easyui.clientpaging.js"></script>
+<script type="text/javascript" src="js/tenant.js"></script>
+<script src="js/addTenant3.js"></script>

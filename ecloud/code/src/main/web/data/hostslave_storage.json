@@ -1,0 +1,17 @@
+[
+  {
+    "cpus": 4,
+    "des": "",
+    "id": 2,
+    "ip": "10.10.3.41",
+    "ipmi_ip": "10.10.133.222",
+    "ipmi_pass": "",
+    "ipmi_user": "ADMIN",
+    "memory_mb": 32149,
+    "name": "UI",
+    "running_vms": 3,
+    "status": "available",
+    "used_cpus": 3,
+    "used_memory_mb": 4608
+  }
+]

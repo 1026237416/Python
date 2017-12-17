@@ -1,0 +1,42 @@
+.right-cont{
+    margin-top: 0;
+    margin-left: 0;
+}
+.test{
+    height: 36px;
+    width: 36px;
+    background-position: -3px -3px;
+}
+a.panel-tool-close{
+    background-position: -564px -174px !important;
+}
+.table{
+    margin-left:5%;
+    margin-top: 46px;
+}
+.table td{
+    width:50%;
+    height:50px;
+    color:#5d5d5d;
+    position:relative;
+}
+.table td>span{
+    color:#f6cc46;
+    position:absolute;
+}
+span.colum{
+    left:30% !important;
+}
+.spanContent{
+    left:15% !important;
+}
+span.btn{
+    border-bottom-left-radius:0 !important;
+    border-bottom-right-radius:0 !important;
+    margin-top:57px;
+}
+.submit-bottom{
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}

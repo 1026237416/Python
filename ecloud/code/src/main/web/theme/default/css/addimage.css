@@ -1,0 +1,18 @@
+label {
+    font-size: 14px;
+    min-width: 71px;
+    float: left;
+    text-align: right;
+}
+.addImageTr:not(:last-child)  span:nth-child(2) label{
+    min-width: 142px;
+}
+.addImageTr:not(:last-child)  span:nth-child(3) label{
+    min-width: 142px;
+}
+.image-add-i {
+    position: relative;
+    float: right;
+    left: -75px;
+    top: 3px;
+}

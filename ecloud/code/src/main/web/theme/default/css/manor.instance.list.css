@@ -1,0 +1,82 @@
+.tem_icon {
+    position: relative;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+}
+.manor-list-state-normal{
+    background-position: -810px -64px;
+}
+.manor-list-state-building{
+    background-position: -810px -137px;
+}
+.manor-list-state-failure{
+    background-position: -810px -352px;
+
+}
+.manor-list-state-part{
+    background-position: -810px -414px;
+}
+.manor-list-state-stop{
+    background-position: -810px -101px;
+}
+.manor-list-state-down{
+    background-position: -810px -381px;
+}
+.manor-list-state-offline{
+    background-position: -810px -445px;
+}
+.manor-list-state-working
+{
+    background: url("../images/loading2.gif");
+    background-repeat:no-repeat;
+    width: 22px;
+    height: 22px;
+}
+.group-right  .icon-menus
+{
+   width: 100%;
+    position: relative;
+    right:-8px;
+    top: -7px;
+}
+.group-right  .icon-menus li
+{
+    height: 45px !important;
+    filter:alpha(opacity=70) !important;
+    -moz-opacity:0.70 !important;
+    -khtml-opacity: 0.70 !important;
+    opacity: 0.70 !important;
+}
+.manor_list_state
+{
+    height: 30px !important;
+    line-height: 30px !important;
+}
+.datagrid-btable tr td[field="app_name"]{
+    padding-left: 11px !important;
+}
+.datagrid-btable tr td[field="app_description"]>div{
+    padding-left: 4px !important;
+}
+.datagrid-btable tr td[field="state"] .tem_icon {
+    height: 28px;
+}
+.datagrid-btable tr td[field="state"]>div {
+    padding-left: 4px;
+}
+.datagrid-btable tr td[field="state"]>div span{
+    padding-left: 1px;
+}
+.appBlock-block:hover {
+     line-height: 35px;
+    background: #c91c20;
+}
+.toggle-button  ul.icon-menus{
+    top: -8px;
+    left: -13px;
+}
+.ef-combox .textbox .textbox-text{
+    padding-left:0 !important;
+    margin-left:10px !important;
+}

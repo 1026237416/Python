@@ -1,0 +1,14 @@
+2017-04-23 18:00:37 PM - root - DEBUG - test1: debug
+2017-04-23 18:01:53 PM - root - DEBUG - test1: debug
+2017-04-23 18:01:53 PM - root - INFO - test1: info
+2017-04-23 18:01:53 PM - root - WARNING - test1: Warning
+2017-04-23 18:01:53 PM - root - ERROR - test1: error
+2017-04-23 18:01:59 PM - root - DEBUG - test1: debug
+2017-04-23 18:01:59 PM - root - INFO - test1: info
+2017-04-23 18:01:59 PM - root - WARNING - test1: Warning
+2017-04-23 18:01:59 PM - root - ERROR - test1: error
+2017-04-23 18:02:26 PM - root - DEBUG - test1: debug
+2017-04-23 18:02:26 PM - root - INFO - test1: info
+2017-04-23 18:02:26 PM - root - WARNING - test1: Warning
+2017-04-23 18:02:26 PM - root - CRITICAL - test1: critical
+2017-04-23 18:02:26 PM - root - ERROR - test1: error

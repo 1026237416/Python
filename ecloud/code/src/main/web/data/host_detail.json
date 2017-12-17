@@ -1,0 +1,40 @@
+{
+    "displayname": "vm2245",
+    "image": {
+      "os": "centos",
+      "id": "cfbdc86c-782d-49db-a6e9-84c83639eec9",
+      "name": "cirros"
+    },
+    "host": {
+      "ip": "10.10.130.52",
+      "id": 2,
+      "name": "DC1-node2"
+    },
+    "user": {
+      "display_name": "displayname1211",
+      "id": "33853356e0d34f0cb77ab520cd397bcc",
+      "name": "username1211"
+    },
+    "id": "2c6e6a10-ed52-4f31-a77f-39744490c6fa",
+    "tenant": {
+      "count": "3",
+      "description": "None",
+      "name": "projectname97",
+      "id": "303deb8e0f734053ad99ab6e0b7a3ab2"
+    },
+    "network": {
+      "v_yangtao": ["192.168.2.26"]
+    },
+    "name": "vm-8-1",
+    "sys_volume": {
+      "type": "Default",
+      "size": 1
+    },
+    "created_at": 1464677184,
+    "des": "desc",
+    "memory_mb": 1024,
+    "state": "active",
+    "cores": 1,
+    "keepalive": 0
+  }
+

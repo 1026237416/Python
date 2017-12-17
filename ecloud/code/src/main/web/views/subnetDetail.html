@@ -1,0 +1,141 @@
+ <!--<div class="icon-menus-box">-->
+ <!--<div class="icon-menus-bg"></div>-->
+ <!--<div class="vlandetail-icon-box icon-menus-cont"></div>-->
+ <!--</div>-->
+<div class="block-lists block-lists-padding valn_cont">
+    <div class="right-cont">
+        <div class="block-lists">
+            <div >
+                    <div class="block-list">
+                        <div class="block-list-left left" style="width: 37.85%">
+                            <div class="block-list-content box_shadow" style="height: 332px;clear:both">
+                                <div class="detail-page-nav">
+                                    <div class="block-list-label" id="description">
+                                    </div>
+                                </div>
+
+                                <div class="right descriptBtns righticons">
+
+                                </div>
+                                <table class="plain-table vlan-detail-descript" >
+                                    <tr>
+                                        <td>名称：</td>
+                                        <td class="data_name">
+                                            <input id="vlanDetailname"
+                                                   style="width:197px;padding-left:10px;height: 30px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>CIDR：</td>
+                                        <td class="data_cidr">
+                                            <input class="easyui-textbox" disabled
+                                                   style="width:197px;padding-left:10px;height: 30px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>网关：</td>
+                                        <td class="data_gateway">
+                                            <input id="netgate" class="easyui-textbox" disabled
+                                                   style="width:197px;padding-left:10px;height: 30px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>DNS：</td>
+                                        <td class="data_dns">
+                                            <input id="vlanDetailDNS"
+                                                   style="width:197px;padding-left:10px;height: 30px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="block-list-content box_shadow" id="subnetDetailIPContent" style="">
+                                <div class="detail-page-nav">
+                                    <div class="block-list-label" id="iplist"></div>
+                                </div>
+                                <div class="right delVmOcupyBtns righticons"></div>
+                                <div class="clear" style="margin-top: 20px;margin-bottom: 20px;">
+                                    <p class="input-text" style="margin-left: 20px;">
+                                    <div class="ip_sect_search">
+                                        <span>地址：</span>
+                                        <span class="pos1" style="width: 30px;"></span>
+                                        <span>.</span>
+                                        <span class="pos2" style="width: 30px;"></span>
+                                        <span>.</span>
+                                        <span>
+                                            <input id="ipSearchThree" style="width: 70px;height: 30px;text-align: center"/>
+                                        </span>
+                                        <span>.</span>
+                                        <span>
+                                            <input id="ipSearchFour" style="width: 70px;height: 30px;text-align: center">
+                                        </span>
+                                    </div>
+                                    </p>
+                                    <p class="input-text" style="margin-left: 20px;">
+                                        <span class="ef-combox">
+                                            <select id="occCom" name="user" style="width:197px;height:30px;padding-left:10px;min-width: 150px;"></select>
+                                        </span>
+                                        <span style="" class="icon-refresh-span"><i class="icon-refresh" id="reset"></i></span>
+                                    </p>
+                                </div>
+                                <div style="width:90%; margin-bottom:6px;height:430px;" class="plain-datagrid plain-datagrid-overflowpager">
+                                    <table id="vlandetailip_grid" width="100%"
+                                           data-options="singleSelect:true,
+                                prompt:'占用情况',
+                            fitColumns:'true',
+                            pagination:true,
+                            pageSize:10,
+                            pageNumber:1,"
+                                           style="height:429px;">
+                                    </table>
+                                </div></div>
+
+                        </div>
+                        <div class="block-list-right right" style="width:60.1%;">
+                            <div class="block-list-content box_shadow">
+                                <div class="detail-page-nav">
+                                    <div class="block-list-label" id="iprange">
+
+                                    </div>
+                                </div>
+                                <div class="right ipBtns righticons">
+
+                                </div>
+                                <div class="cidr_ip" style="display: none;"></div>
+                                <div>
+                                    <div class="ip_legend"></div>
+                                    <div class="ip_sect" style="font-size: 14px;margin-left: 10px;">
+                                        <span>IP段：</span>
+                                        <span class="pos1"></span>
+                                        <span>.</span>
+                                        <span class="pos2"></span>
+                                        <span>.</span>
+                                <span id="pos3" style="display: none;">
+                                    <input id="pos3Sel" style="width: 60px;height: 30px;text-align: center"/>
+                                </span>
+                                        <span id="pos3Text"></span>
+                                        <span>.</span>
+                                        <span id="pos4">X</span>
+                                        <span class="ipSelectAll-content ip-detail"><input type="checkbox" id="ipSelectAll"></span>
+                                        <span class="ipSelectAll-text">全选当前页</span>
+                                        <span class="ip-selectAll-range"></span>
+                                        <div class="ip-selected-text ip-detail" style="display: none;">
+                                            <span class="ip-selected"
+                                                  style="color: #79a7fd;margin-right: 5px;"></span><span>已选</span>
+                                            <span class="ip-splice">|</span>
+                                            <span class="ip-wait-selected"
+                                                  style="color:#6ca2b2;margin-right: 5px;">0</span><span>预选</span>
+                                        </div>
+                                    </div>
+                                    <div class="ip_box" style="font-size: 14px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <link rel="stylesheet" href="theme/default/css/host.css" type="text/css">
+<link rel="stylesheet" href="theme/default/css/vlan.css" type="text/css">
+ <link rel="stylesheet" href="theme/default/css/subnetdetail.css" type="text/css">

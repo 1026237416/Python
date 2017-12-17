@@ -1,0 +1,364 @@
+
+.item-title
+{
+    clear:both;
+    padding-left:30px;
+    font-size:18px;
+}
+
+.operate-list
+{
+    width:700px;
+    height: 180px;
+    overflow:hidden;
+}
+.operate-list li
+{
+    float:left;
+    width:320px;
+    height:43px;
+    background-color:#ffffff;
+    line-height: 43px;
+    padding-left:5px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size:13px;
+    border: darkgray 1px solid;
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+}
+.operate-list li.selected
+{
+    cursor:default;
+    background:#edf0f3 no-repeat right top;
+}
+.operate-list span
+{
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    vertical-align: middle;
+    padding-left:5px;
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.host-route
+{
+    clear:both;
+    padding-right: 35px;
+}
+.host-route span
+{
+    cursor: pointer;
+    color:darkgreen;
+    float: right;
+}
+.item-list
+{
+    clear:both;
+    font-size:15px;
+}
+.item-list li
+{
+    float:left;
+    padding:0px 10px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 5px 20px;
+    min-width:38px;
+    text-align: center;
+    background: #edf0f3;
+}
+.item-list li.selected
+{
+    background-color:#13cb4f;
+    cursor: default;
+    color:#fff;
+}
+.item-list-title
+{
+    font-weight: normal;
+    width:75px;
+    cursor: none;
+    border:none!important;
+    font-size: 18px;
+}
+
+.select
+{
+    clear:both;
+}
+.select li
+{
+    float:left;
+    padding:5px 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.backup-box
+{
+    margin:20px;
+    margin-left:30px;
+}
+.bound-area
+{
+    height:250px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.item-list li.item-list-title,.item-list li.item-list-none
+{
+    cursor: default;
+    background: none!important;
+}
+.pre-table
+{
+    font-size:16px;
+    color:gray;
+}
+.pre-table
+{
+    color:black;
+}
+.pre-table td:nth-child(even)
+{
+    color:#8f8f8f;
+    font-size: 14px;
+}
+.pre-table td:nth-child(odd)
+{
+    min-width: 90px;
+}
+.data_disk span
+{
+    display: inline-block;
+    padding-right:10px;
+}
+.mount,.unmount
+{
+    vertical-align: middle;
+}
+.mount img,.unmount img
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type="checkbox"]{
+    border: 1px solid #aaaaaa;
+    background: transparent;
+    background-color: #fff;
+}
+span.unmount,span.mount
+{
+    margin-left:-10px;
+}
+span.unmount img,span.mount img
+{
+    margin-top:-5px;
+}
+label
+{
+    font-size: 14px;
+}
+.slider
+{
+    display: inline-block;
+    margin-top: 10px;
+    width: 640px;
+}
+.textinput
+{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.slider input
+{
+    width: 40px;
+}
+textarea
+{
+    height: 70px;
+    vertical-align: top;
+    /*margin-left: 35px;*/
+    width: 430px;
+}
+#addHostlist
+{
+    width: 500px;
+    height: 150px;
+}
+.bound-area .plain-datagrid
+{
+    margin-top: 20px;
+}
+.label_two
+{
+    margin-left: 35px;
+}
+.icon-step-text
+{
+    font-size: 15px;
+}
+.icon-step-icon img
+{
+    width: 57px;
+}
+#overdatadish
+{
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+}
+#overdatadish:hover
+{
+    overflow: auto;
+}
+.addhostos
+{
+    height: 35px;
+    width: 40px;
+    display: inline-block;
+    margin-top: -3px;
+    margin-left: -3px;
+}
+.addhost-adddatadish
+{
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+}
+.step-base-icon
+{
+    background-position: -14px -100px;
+}
+.step-base-icon-select
+{
+    background-position: -14px -100px;
+}
+.step-setting-icon
+{
+    background-position: -90px -100px;
+}
+.step-setting-icon-select
+{
+    background-position: -165px -100px;
+}
+.step-net-icon
+{
+    background-position: -241px -100px;
+}
+.step-net-icon-select
+{
+    background-position: -316px -100px;
+}
+.step-complete-icon
+{
+    background-position: -392px -100px;
+}
+.setp-complete-icon-select
+{
+    background-position: -467px -100px;
+}
+/*状态*/
+.icon-state
+{
+    height: 16px;
+    width: 12px;
+    background-position: -812px -354px !important;
+}
+.os
+{
+    float: right;
+    height: 20px;
+    width: 20px;
+    background-position: -15px -58px;
+    margin:2px;
+}
+.host_status{
+    font-style: normal;
+    position: absolute;
+    margin-left: 13px;
+    line-height: 28px;
+    color:#000;
+}
+.host_restarting{
+    margin-left:5px;
+    margin-top:3px;
+    position: absolute;
+
+}
+#overbackup{
+    word-break:break-all;
+}
+.menuBound .m-btn .l-btn-left .m-btn-line
+{
+    border: none!important;
+}
+.menuBound
+{
+    position: relative;
+
+}
+.menu-content .loading
+{
+    position: absolute;
+    width:100%;
+    height:100%;
+    line-height:150px;
+    text-align: center;
+    vertical-align: middle;
+    z-index:2;
+    background-color:white;
+}
+.ef-picker-square.selected,.ef-picker-square.ef-picker-origin
+{
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+.ef-picker-square
+{
+    filter:alpha(opacity=70);
+    -moz-opacity:.7;
+    -khtml-opacity: .70;
+    opacity: .70;
+}
+.ef-picker-square-hover
+{
+
+}
+.datagrid-btable tr td[field="username"]{
+    padding-left: 5px !important;
+}
+ .datagrid-btable tr td[field="tenant"]{
+    padding-left: 1px !important;
+}
+.datagrid-btable tr td[field="state"]>div{
+    padding-left: 3px !important;
+}
+.datagrid-btable tr td[field="hypervisor"]{
+    padding-left: 4px !important;
+}
+td[field='ck'] {
+    position: relative;
+    left: 7px;
+    top: 2px;
+}
+td[field="displayname"]>div>div{
+    padding-left:9px;
+}
+#addHostDialog .system-area.mgtop16 .quotaSquare
+{
+    margin-right: 0px !important;
+}

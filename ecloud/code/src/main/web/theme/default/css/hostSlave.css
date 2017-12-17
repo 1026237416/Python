@@ -1,0 +1,205 @@
+.hostSlave_icon
+{
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    margin-top: -8px;
+}
+.hostSlave_state
+{
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+.use_rate {
+    line-height: 50px;
+    display: block;
+    clear: both;
+}
+.progressbar-value .progressbar-text
+{
+    background-color: blue;
+}
+.slave_input input{
+    font-size: 16px;
+    border: none;
+    width: 192px;
+}
+.data_des
+{
+    height: 70px;
+    width: 232px;
+    resize: none;
+    font-size: 14px;
+    padding:0;
+    margin:0;
+    margin-top: 3px;
+
+}
+textarea.data_des
+{
+    /*border:1px solid #d9d9d9 !important;*/
+}
+textarea.data_des:read-only
+{
+    border: 1px solid white !important;
+}
+textarea.data_des:-moz-read-only{
+    border: 0 !important;
+}
+textarea:-moz-read-only{
+    box-shadow: 0 0;
+}
+.data_vlans
+{
+    word-wrap:break-word;
+    max-height: 90px;
+    overflow: auto
+}
+.data_vlans span{
+    float: left;
+}
+#a_ipmi
+{
+    color: #4DA4D6;
+    text-decoration:none;
+}
+.selectBox
+{
+    float:left;
+    z-index: 10000;
+    position: relative;
+    margin-left: 110px;
+}
+.vm.plain-datagrid
+{
+    width: 96.5%;
+    margin-left: 20px;
+}
+/*本地存储部分*/
+.nodes-store{
+    padding:5px;
+    border: none;
+    width:99%;
+     height: 300px;
+     overflow-y: auto;
+     overflow-x:hidden;
+}
+
+.leftstore{
+    margin-left:4%;
+    margin-top:15px;
+    padding-bottom:15px;
+}
+.rightstore{
+    margin-right:4%;
+    margin-top:15px;
+    padding-bottom:15px
+}
+.upspan{
+    display:block;
+    /*margin-top:10px;*/
+    margin-bottom:8px;
+}
+.downspan{
+    display:inline-block;
+    margin-top:8px;
+    color:#919191;
+    font-size:15px;
+}
+.istyle{
+    display:inline;
+    font-style:normal;
+    color:#5D5D5D;
+}
+.progressbar,.progressbar-value{
+    height:15px;
+    border-radius: 15px;
+}
+.progressbar{
+    background-color:#EDEDED;
+    border-color:transparent;
+}
+.lowvalue{
+    background-color:#3A88ED;
+}
+.highvalue{
+    background-color:#df8d34;
+}
+.superhighvalue{
+    background-color:#e22d2d;
+}
+.lowvaltext{
+    color:#3A88ED
+}
+.highvaltext{
+    color:#D59043
+}
+.superhightext{
+    color:#e22d2d;
+}
+#scroll-wrapper{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+.plain-table {
+    margin:0;
+    margin-left:11px;
+}
+.float-table {
+    width: 49%;
+}
+.host-detail-descript .float-table{
+    border-right: 0;
+}
+.plain-table tr td:first-child{
+    text-align: right;
+}
+.border {
+    float: left;
+    width: 1px;
+    margin-top: 30px;
+    height: 100px;
+    border-left: 1px solid #ddd;
+}
+.hostWarn .plain-datagrid{
+    margin-left: 20px;
+    width:96.5%;
+}
+.datagrid-btable tr td[field="user"]{
+    padding-left: 2px !important;
+}
+.datagrid-btable tr td[field="ip"]{
+    padding-left:6px !important;
+}
+.datagrid-btable tr td[field="cpus"]>div{
+    padding-left:4px !important;
+}
+
+.datagrid-btable tr td[field="type"] div{
+     padding-left: 6px !important;
+ }
+.datagrid-btable tr td[field="role"] div{
+    padding-left: 4px !important;
+}
+
+.datagrid-btable tr td[field="user"]{
+    padding-left: 10px !important;
+}
+.hostSlaveDetail tr
+{
+    height: 40px;
+}
+#totalstore{
+position: relative;
+top: -14px;
+}
+.icon-hostslave
+{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+}

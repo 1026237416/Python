@@ -1,0 +1,6 @@
+2017-04-23 19:49:04,448 -simple_example -INFO -info message
+2017-04-23 19:49:04,448 -simple_example -WARNING -warn message
+2017-04-23 19:49:04,448 -simple_example -ERROR -error message
+2017-04-23 19:50:40,094 -simple_example -INFO -info message
+2017-04-23 19:50:40,094 -simple_example -WARNING -warn message
+2017-04-23 19:50:40,094 -simple_example -ERROR -error message

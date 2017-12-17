@@ -1,0 +1,89 @@
+<div class="host-step-cont">
+</div>
+<ul class="viewstack-box2 addsubnet">
+    <li>
+        <div class="block-lists">
+            <div class="stack-cont">
+                <ul class="item-list-ul-first">
+                    <li>
+                        <label>名称<i>*</i>：</label>
+                        <input id="nameinput" class="ef-combox" style="width:197px;height: 30px;">
+                    </li>
+                    <li style="width: 100%;">
+                        <label>CIDR<i>*</i>：</label>
+                        <span class="cidr_group"></span>
+                    </li>
+                    <li id="net" class="addVlan-li-lright">
+                        <label>网关<i>*</i>：</label>
+                        <span>
+                        <div class="addvlan-net">
+                            <span class="pos1 pos" id="netPos1"></span>
+                            <span>.</span>
+                            <span class="pos2 pos" id="netPos2"></span>
+                            <span>.</span>
+                            <span style="display: none;">
+                                <span class="pos3 " id="netPos3"></span>
+                            </span>
+                            <span class="pos3-text"></span>
+                            <span>.</span>
+                            <span class="pos4" id="netPos4"></span>
+                        </div>
+                    </span>
+                    </li>
+                    <li>
+                        <label style="vertical-align: top">DNS：</label>
+                        <div class="addVlanDNSadd">
+                            <div class="addVlanDNS"><input id="DNSinput" style="width:197px;height: 30px;"><span style="float: right;margin-top: 5px;margin-right: 80px;"><i class="icon-menus-icon-vlan-dns-add" style="cursor: pointer;"></i></span></div>
+                            <div class="addDns" class="ef-combox"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="stack-cont cont-ip">
+            <div class="ip_legend add"></div>
+            <div class="cont-ip-duan">
+                <span>IP段：</span>
+                <span class="pos1"></span>
+                <span>.</span>
+                <span class="pos2"></span>
+                <span>.</span>
+                        <span id="pos3" style="display: none;">
+                            <input id="pos3Sel" style="width: 60px;height: 30px;text-align: center"/>
+                        </span>
+                <span id="pos3Text"></span>
+                <span>.</span>
+                <span id="pos4">X</span>
+                <span class="ipSelectAll-content"><input type="checkbox" id="ipSelectAll"></span>
+                <span>全选当前页</span>
+                <span class="ip-selectAll-range"></span>
+                <div class="ip-selected-text">
+                    <span class="ip-selected" style="color: #79a7fd;margin-right: 5px;"></span><span>已选</span>
+                    <span class="ip-splice">|</span>
+                    <span class="ip-wait-selected" style="color:#6ca2b2;margin-right: 5px;">0</span><span>预选</span>
+                </div>
+            </div>
+            <div class="ip_box_set-content">
+                <div class="ip_box_set viewstack">
+
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="basic-result-box"></div>
+<div class="v_middle addSubnet">
+    <i class="drawer_btn"></i>
+</div>
+<div class="btn-router-bottom button-route-box button-route panel-bottom addsubnet">
+
+</div>
+<link href="theme/default/css/vlan.css" rel="stylesheet" type="text/css">
+<link href="theme/default/css/cal.host.create.basic.css" rel="stylesheet" type="text/css">
+<style>
+    .button-step span.btn {
+        width: 82px;
+    }
+</style>

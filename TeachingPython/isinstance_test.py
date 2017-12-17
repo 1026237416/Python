@@ -1,0 +1,20 @@
+#coding=gbk 
+'''
+Created on 2017Äê3ÔÂ22ÈÕ
+
+@author: li
+'''
+
+class A:
+    pass
+
+class B(A):
+    pass
+
+a = A()
+b = B()
+
+print(isinstance(a, A))
+print(isinstance(a, B))
+print(isinstance(b, B))
+print(isinstance(b, A))

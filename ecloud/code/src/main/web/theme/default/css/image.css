@@ -1,0 +1,111 @@
+label
+{
+    font-size: 14px;
+    min-width: 146px;
+    float: left;
+    text-align: right;
+}
+.addImageContent
+{
+    margin-top: 10px;
+    margin-left: 40px;
+    height: 399px;
+}
+.addImageTr
+{
+    line-height: 44px;
+    position: relative;
+
+}
+textarea
+{
+    width: 594px;
+    height: 120px;
+    resize: none;
+    vertical-align: top;
+}
+.addImageTrLeft
+{
+    float: left;
+    width: 49%;
+}
+.addImageFloat
+{
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000000;
+    background-color:black;
+    opacity:0.5;
+}
+.addImageFloat-text
+{
+    position: absolute;
+    text-align: center;
+    color: white;
+    margin-top: 220px;
+    margin-left: 43%;
+}
+.addImageFloat-loading
+{
+   position: absolute;
+    top:260px;
+    left: 35%;
+    z-index: 1111111;
+}
+.icon-image
+{
+    width: 20px;
+    height: 20px;
+}
+.fileUpload
+{
+    width: 210px;
+}
+.button-step-bottom {
+    position: absolute;
+    right: 40%;
+    bottom: 10px;
+}
+.image-edit-i
+{
+    position: relative;
+    top: 3px;
+    float: right;
+    left: -10px;
+}
+.image-edit-i-os
+{
+    left: -43px;
+}
+.image-add-i
+{
+    position: relative;
+    float: right;
+    left: -60px;
+    top: 3px;
+}
+.addImageTr span:last-child  .image-add-i,#addImageFile .image-add-i{
+    left: -50px;
+}
+.addImageTr:first-child  span:last-child label,
+.addImageTr:nth-child(2)  span:last-child label,
+.addImageTr:nth-child(3)  span:last-child label{
+    min-width: 130px;
+}
+/*#addImage .addImageTr*/
+/*{*/
+    /*margin-left: -80px;*/
+/*}*/
+#addImage .addImageTrLeft
+{
+    width: 46.9%;
+}
+#addImage textarea
+{
+    width: 664px;
+}

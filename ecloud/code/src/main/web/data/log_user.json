@@ -1,0 +1,30 @@
+[
+    {
+        "label":"全部",
+        "value":"all"
+    },
+    {
+        "label":"创建",
+        "value":"create"
+    },
+    {
+        "label":"编辑",
+        "value":"update"
+    },
+    {
+        "label":"删除",
+        "value":"delete"
+    },
+    {
+        "label":"修改密码",
+        "value":"reset_pass"
+    },
+    {
+        "label":"取消系统管理员",
+        "value":"cancel_admin_role"
+    },
+    {
+        "label":"设置系统管理员",
+        "value":"set_admin_role"
+    }
+]

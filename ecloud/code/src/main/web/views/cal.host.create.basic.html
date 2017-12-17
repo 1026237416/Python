@@ -1,0 +1,113 @@
+<div class="cal-create-wrapper">
+    <div class="cal-create-blank">
+        <div class="cal-create-inner">
+            <div class="cal-input-area">
+                <div class="cal-input-cell mb17 clearfix">
+                    <span class="left">
+                        <label class="cal-input-label">名称：</label>
+                        <div class="cal-input-value left-value">
+                            <input id="cal_vm_name" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                        <i>*</i>
+                    </span>
+                    <!--<span class="right">
+                        <label class="cal-input-label right-label">数量<i>*</i>：</label>
+                        <div class="cal-input-value">
+                            <input id="cal_vm_num" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                    </span>-->
+                </div>
+                <div class="cal-input-cell clearfix">
+                    <span class="left">
+                        <label class="cal-input-label">项目：</label>
+                        <div class="cal-input-value left-value">
+                            <input id="cal_pro" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                        <i>*</i>
+                    </span>
+                    <span class="right">
+                        <label class="cal-input-label right-label">用户：</label>
+                        <div class="cal-input-value">
+                            <input id="cal_tent" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                    </span>
+                </div>
+                <div class="cal-input-cell clearfix">
+                    <span class="left">
+                        <label class="cal-input-label">存储类型：</label>
+                        <div class="cal-input-value left-value">
+                            <input id="cal_default_type" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                        <i>*</i>
+                    </span>
+                    <span class="right">
+                        <label class="cal-input-label right-label">数量：</label>
+                        <div class="cal-input-value">
+                            <input id="cal_vm_num" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                        <i>*</i>
+                    </span>
+                </div>
+                <div id="lvm-message" style="display: none;">
+                    <!--选择本地存储会影响云主机部分功能的使用。如：迁移、高可用-->
+                </div>
+            </div>
+            <!--<div class="cal-type-wrapper clearfix">
+                &lt;!&ndash; <label class="cal-type-label">存储类型<i>*</i>：</label>
+                 <div class="saveRange cal-type-value clearfix"></div>&ndash;&gt;
+                <div class="cal-input-cell clearfix">
+                    <span class="left">
+                        <label class="cal-input-label">存储类型<i>*</i>：</label>
+                        <div class="cal-input-value left-value">
+                            <input id="cal_default_type" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                    </span>
+                    <span class="right">
+                        <label class="cal-input-label right-label">数量<i>*</i>：</label>
+                        <div class="cal-input-value">
+                            <input id="cal_vm_num" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                    </span>
+                </div>
+            </div>-->
+            <div class="system-area mgtop16">
+
+                <label class="f14" name="svm-basic-label">操作系统：</label>
+                <div id="sys-list" class="system-box clearfix"
+                    >
+
+                </div>
+                <i class="required">*</i>
+            </div>
+            <div class="cal-image-wrapper">
+                <div class="cal-input-cell clearfix">
+                    <span class="left">
+                        <label class="cal-input-label">镜像：</label>
+                        <div class="cal-input-value left-value">
+                            <input id="cal_img" type="text"
+                                   style="width: 210px; height: 30px;" />
+                        </div>
+                        <i>*</i>
+                    </span>
+                     <span class="right">
+                        <label class="cal-input-label right-label" id="switchAval">高可用性：</label>
+                        <div class="cal-input-value cal-switch-value">
+                            <span id="swtich">
+                                <span id="addhostswitch" style="height: 20px;width: 48px"></span>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="theme/default/css/cal.host.create.basic.css" type="text/css"/>

@@ -1,0 +1,66 @@
+.float-table
+{
+    height: auto;
+    margin-bottom: 10px;
+}
+.plain-table
+{
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-top: 5px;
+    line-height: 35px;
+}
+.plain-table tr{
+    padding-bottom: 20px;
+}
+.data_host_backup
+{
+    resize: none;
+    width: 168px;
+    border: 1px solid #797979;
+    height: 60px;font-size: 16px;
+    margin-top: 8px;
+    color: #aaa;
+}
+.datagrid-header-inner
+{
+    background-color: #ffffff;
+}
+.datagrid-header
+{
+    border: none;
+}
+.datagrid-htable td{
+    border: none;
+}
+.validatebox-text
+{
+    color: #aaa;
+
+}
+.save .validatebox-text
+{
+    font-size: 13px;
+    padding-top: 3px !important;
+}
+/*.save .textbox*/
+/*{*/
+    /*border: 1px solid #797979;*/
+/*}*/
+.textbox-disabled input
+{
+    background-color: transparent;
+    color: #c4c4c4!important;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+span.textbox.textbox-disabled
+{
+    border-bottom:1px solid #D4D4D4 !important;
+}
+.order_pwd .textbox
+{
+    border: none !important;
+}

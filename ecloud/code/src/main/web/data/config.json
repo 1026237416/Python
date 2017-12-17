@@ -1,0 +1,209 @@
+{
+  "webroot": "/",
+  "isDebug":true,
+  "isTimeout":false,
+  "menu": [
+    {
+      "src": "dashboard.html",
+      "icon": "theme/default/images/home.png",
+      "iconClass": "nav-icon-home",
+      "id": "dashboard",
+      "access": [8],
+      "isRepain":true
+    },
+    {
+      "icon": "theme/default/images/Calculation.png",
+      "iconClass": "nav-icon-cal",
+      "id": "cal",
+      "access": [7,8,9,10,11],
+      "isRepain":true,
+      "children": [
+        {
+          "src": "host.html",
+          "id": "cal.host",
+          "access": [7,8,9,10,11],
+          "noDashboard":true,
+          "children":[
+            {
+              "id": "cal.host.hostDetail",
+              "src": "hostDetail.html",
+              "isDetail":true
+            }
+          ]
+        },
+        {
+          "src": "disk.html",
+          "id": "cal.disk",
+          "access": [7,8,9,10,11]
+        },
+        {
+          "src":"backup.html",
+          "id": "cal.backup",
+          "access": [7,8,9,10,11],
+          "children":[
+            {
+              "src":"backupDetail.html",
+              "id": "cal.backupDetail",
+              "isDetail":true
+            }
+          ]
+        },
+        {
+          "id": "cal.image",
+          "src": "mirror.html",
+          "access": [8,9,10,11]
+        },
+        {
+          "src": "mastslave.html",
+          "id": "cal.hostslave",
+          "access": [8,9,10,11],
+          "children":[
+            {
+              "id": "cal.hostslave.hostslaveDetail",
+              "src": "mastslaveDetail.html",
+              "isDetail":true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manor",
+      "icon": "theme/default/images/setting.png",
+      "iconClass": "nav-icon-app",
+      "access": [7,8,9,10],
+      "isRepain":true,
+      "children":[
+        {
+          "src": "manorTemplate.html",
+          "id": "manor.template",
+          "access": [7,8,9,10],
+          "children":[
+            {
+              "id":"manor.template.detail",
+              "src":"manorTemplateDetail.html",
+              "isDetail":true
+            }
+          ]
+        },
+        {
+          "src": "manorInstance.html",
+          "id": "manor.instance",
+          "access": [7,8,9,10],
+          "children":[
+            {
+              "id":"manor.instance.detail",
+              "src":"manorInstance.detail.html",
+              "isDetail":true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "theme/default/images/Inter.png",
+      "iconClass": "nav-icon-network",
+      "id": "network",
+      "isRepain":true,
+      "access": [8,9,10,11],
+      "children": [
+        {
+          "src": "netvlan.html",
+          "id": "network.vlan",
+          "access": [7,8,9,10,11],
+          "children":[
+            {
+              "id":"network.vlanDetail",
+              "src":"netvalndetail.html",
+              "access": [7,8,9,10,11],
+              "isDetail":true,
+              "children":[
+                {
+                  "id":"network.subnetDetail",
+                  "src":"subnetDetail.html",
+                  "access": [7,8,9,10,11]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "src": "nettopo.html",
+          "id": "network.topo",
+          "access": [7,8,9,10,11]
+        }
+      ]
+    },
+    {
+      "icon": "theme/default/images/alarm.png",
+      "iconClass": "nav-icon-alarm",
+      "src": "warn.host.html",
+      "isRepain":true,
+      "access": [8],
+      "id": "warn.host"
+    },
+    {
+      "icon": "theme/default/images/log.png",
+      "iconClass": "nav-icon-log",
+      "isRepain":true,
+      "access": [8,9,10],
+      "id": "log",
+      "src": "log.html"
+    },
+    {
+      "icon": "theme/default/images/setting.png",
+      "iconClass": "nav-icon-setting",
+      "isRepain":true,
+      "access": [7,8,9,10,11],
+      "id": "setting",
+      "children": [
+        {
+          "src": "user.html",
+          "id": "setting.user",
+          "access": [8,11],
+          "children":[
+            {
+              "id":"setting.userDetail",
+              "src":"userdetail.html",
+              "isDetail":true
+            }
+          ]
+        },
+        {
+          "src": "tenant.html",
+          "id": "setting.project",
+          "access": [7,8,11],
+          "children":[
+            {
+              "id":"setting.tenanteDetail",
+              "src":"tenanteDetail.html",
+              "isDetail":true
+            }
+          ]
+        },
+        {
+          "src": "securityGroup.html",
+          "id": "security.group",
+          "access": [7,8,9]
+        },
+        {
+          "src": "service.html",
+          "id": "setting.service",
+          "access": [8,9,10,11]
+        },
+        {
+          "src": "parameter.html",
+          "id": "setting.param",
+          "access": [8,9]
+        },
+        {
+          "src": "sysinfo.html",
+          "id": "setting.sysinfo",
+          "lac":true,
+          "access": [7,8]
+        }
+      ]
+    }
+  ]
+}
+

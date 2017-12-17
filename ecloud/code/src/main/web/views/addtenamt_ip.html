@@ -1,0 +1,22 @@
+<div class="block-list">
+    <div class="block-list-left">
+        <div class="block-list-content">
+            <div class="block-list-label">
+                IP范围
+            </div>
+            <div class="right" style="cursor: pointer">
+                <img src="theme/default/images/edit.png"/>
+            </div>
+            <div id="ba" style="padding-left: 20px"></div>
+        </div>
+    </div>
+</div>
+        <script>
+            $.getJSON("data/ip_range.json",function(response)
+            {
+                $("#ba").ip(response);
+            });
+        </script>
+<script src="js/addTenant3.js"></script>
+<link rel="stylesheet" href="theme/default/css/tenant.css" type="text/css">
+<link rel="stylesheet" href="theme/default/css/global.css" type="text/css">

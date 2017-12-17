@@ -1,0 +1,14 @@
+[
+  {
+    "value":"all"
+  },
+  {
+    "value":"create"
+  },
+  {
+    "value":"update"
+  },
+  {
+    "value":"delete"
+  }
+]

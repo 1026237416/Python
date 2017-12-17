@@ -1,0 +1,56 @@
+/**
+ * Created by wangahui1 on 15/12/14.
+ */
+require.config(
+    {
+        baseUrl:"../js",
+        paths:
+        {
+            "jquery":["./libs/easyui/jquery.min"],
+            "i18n":"./libs/jquery/jquery.i18n.properties-1.0.9",//国际化库,
+            "locale":"../unittest/qunit/locale",//本地国际化
+            "underscore":"./libs/backbone/underscore-1.8.2",
+            "contextmenu":'./libs/jquery/jquery-smartMenu',//右键菜单插件
+            "easyui":"./libs/easyui/jquery.easyui.min",
+            "clientPaging":"./libs/easyui/jquery.easyui.clientpaging",//easyui客户端分页插件
+            "easyui.lang.zh":"./libs/easyui/locale/easyui-lang-zh_CN",//easyui全局中文本地化
+            "echart":"./libs/echarts/echarts-all",//echart图表插件
+            "domReady":"./libs/require/domReady",//view加载完毕时候调用
+            "framework.shell": "./framework/output/framework.min",//Our Framework
+            "role":"./modules/role",//公用角色模块
+            "user":"./modules/user",//公用用户模块
+            "signature":"./modules/signature",//签署模块
+            "qunit":"./libs/qunit/qunit",
+            "qunit.app":"../unittest/qunit/qunit.app",
+            "alarm":"./modules/alarm",
+            "warn.host":"./modules/warn/warn.host"
+        },
+        waitSeconds:90,
+        shim:
+        {
+             "i18n":["jquery"],
+             easyui:["jquery"],
+            "easyui.lang.zh":['jquery'],
+            "framework.shell":
+            {
+                deps:['locale','easyui',"qunit"],
+                exports:"ef"
+            },
+            "locale":["i18n"],
+            "qunit":
+            {
+                exports:"QUnit"
+            },
+            "qunit.app":
+            {
+                deps:["framework.shell"]
+            }
+        },
+        map:
+        {
+            '*':
+            {
+                'css': 'libs/require/css'
+            }
+        }
+    })(["qunit.app"]);

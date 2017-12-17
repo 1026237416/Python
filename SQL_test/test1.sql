@@ -89,3 +89,5 @@ ALTER TABLE user_info RENAME AS user;
 ALTER TABLE user RENAME user_info;
 
 RENAME TABLE user_info TO user;
+
+-- ALTER

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二手车卖场</title>
+</head>
+<body>
+    <h2>欢迎光临DJ二手车卖场</h2>
+    <table>
+        <tr>
+            {% for m in car_maker %}
+                <td bgcolor="#ccffcc">
+                    <a href="{% url 'carlist-url' forloop.counter0 %}">{{ m }}</a>
+                </td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% if cars %}
+        <table>
+            <tr>
+                <td>
+                    车场
+                </td>
+                <td>
+                    车款
+                </td>
+            </tr>
+    {% endif %}
+
+    {% for c in cars %}
+        <tr bgcolor="{% cycle '#eeeeee' '#cccccc' %}">
+            <td>{{ maker_name }}</td>
+            <td >{{ c }}</td>
+        </tr>
+        {% empty %}
+        <h3>
+            车厂
+            <em>
+                {{ maker_name }}
+            </em>
+            目前无车存在
+        </h3>
+    {% endfor %}
+    {% if car %}
+        </table>
+    {% endif %}
+</body>
+</html>

@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 import urlparse
 from multiprocessing import Pool
 
-BASE_URL = "http://yxpjw.club/xiurenwang/2017/1130/4265.html"
+BASE_URL = "http://yxpjwnet.com/luyilu/2016/0703/2146.html"
 SAVE_PATH = "./img"
 
 image_info = {}

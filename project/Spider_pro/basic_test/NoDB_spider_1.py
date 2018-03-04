@@ -41,3 +41,4 @@ for mulu in soup.find_all(class_="mulu"):
         content.append(result)
 with open("nodb_spider_1.txt", "wb") as fp:
     json.dump(content, fp=fp, indent=4)
+

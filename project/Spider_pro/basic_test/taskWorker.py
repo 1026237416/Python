@@ -34,3 +34,4 @@ while(not task.empty()):
     result.put("%s------>success" % image_url)
 
 print "Worker exit."
+

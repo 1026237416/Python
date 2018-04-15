@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽屉</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Times New Roman";
+            font-size: 12px;
+        }
+
+        /*----------------------head部分开始----------------------*/
+        .head-box {
+            background-color: #2459a2;
+            height: 44px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        .head-content {
+            width: 1016px;
+            height: 44px;
+            line-height: 44px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .head-content .logo {
+            display: inline-block;
+            background: url("images/logo.png");
+            width: 127px;
+            height: 29px;
+            float: left;
+            margin-top: 8px;
+        }
+
+        .head-content .action-menu {
+            float: left;
+            margin-left: 5px;
+        }
+
+        .head-content .action-menu a.tb {
+            display: inline-block;
+            margin-left: -3px;
+            padding: 0 16px 0;
+            color: darkgray;
+        }
+
+        .head-content .action-menu a.tb:hover {
+            color: white;
+            background-color: #396bb3;
+        }
+
+        .head-content .action-menu a.active {
+            color: white;
+            background-color: #204982;
+        }
+
+        .head-content .action-menu a.active:hover {
+            color: white;
+            background-color: #396bb3;
+        }
+
+        .key-search {
+            float: right;
+            margin-top: 5px;
+        }
+
+        .key-search .search-txt {
+            float: left;
+            width: 91px;
+            height: 25px;
+            padding: 2px 2px 2px 5px;
+        }
+
+        .key-search a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: #F4F4F4;
+        }
+
+        .key-search a span.ico {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            background: url("images/icon.png") no-repeat 0 -181px;
+            margin-left: 8px;
+            margin-top: -9px;
+        }
+
+        .action-nav {
+            position: absolute;
+            right: 150px;
+        }
+
+        .action-nav a {
+            display: inline-block;
+            line-height: 44px;
+            color: white;
+            margin: 0 5px;
+            padding: 0 20px;
+        }
+
+        .action-nav a:hover {
+            background-color: #396bb3;
+
+        }
+        /*----------------------head部分结束----------------------*/
+
+    </style>
+
+</head>
+<body>
+
+<div class="head-box">
+    <div class="head-content">
+
+        <a href="#" class="logo"></a>
+
+        <div class="action-menu">
+
+            <a href="" class="tb active">全部</a>
+            <a href="" class="tb">42区</a>
+            <a href="" class="tb">段子</a>
+            <a href="" class="tb">图片</a>
+            <a href="" class="tb">挨踢1024</a>
+            <a href="" class="tb">你问我答</a>
+
+        </div>
+
+        <div class="key-search">
+            <form action="/" method="post">
+                <input type="text" class="search-txt">
+
+                <a href="#" class="i">
+                    <span class="ico"></span>
+                </a>
+
+            </form>
+        </div>
+
+        <div class="action-nav">
+            <a href="#" class="login-btn">登录</a>
+            <a href="#" class="register-btn">注册</a>
+        </div>
+    </div>
+</div>
+
+<div class="main-content-box">
+
+    <div class="main-content">
+
+        <div class="content-L"></div>
+        <div class="content_R"></div>
+        <div class="footer-box">
+            <div class="foot-nav"></div>
+            <div class="footer-nav2"></div>
+            <div></div>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Server" createEmptyFolders="true">
+    <serverData>
+      <paths name="Server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/Dev" local="$PROJECT_DIR$/Django_project" web="/Dev" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

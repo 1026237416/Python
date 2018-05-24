@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .outer {
+            margin: 50px auto;
+            height: 768px;
+            width: 1366px;
+            position: relative;
+        }
+
+        .img li {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .num {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .num li {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-color: grey;
+            color: #ffffff;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .btn {
+            position: absolute;
+            height: 60px;
+            width: 30px;
+            background-color: darkgray;
+            color: #ffffff;
+            text-align: center; /* 文本内容居中显示 */
+            line-height: 60px;
+            top: 50%; /* 相对居中 */
+            margin-top: -30px; /* 减掉btn本身的高度 */
+            display: none; /*默认不显示 */
+        }
+
+        .lift_btn {
+            left: 0;
+        }
+
+        .right_btn {
+            right: 0;
+        }
+
+        /* 鼠标在outer上时btn显示出来 */
+        .outer:hover .btn {
+            display: block;
+        }
+
+        .current {
+            background-color: red !important; /* !important：颜色优先级*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="img">
+        <li><a><img src="statics/img/1.jpg"> </a></li>
+        <li><a><img src="statics/img/2.jpg"> </a></li>
+        <li><a><img src="statics/img/3.jpg"> </a></li>
+        <li><a><img src="statics/img/4.jpg"> </a></li>
+        <li><a><img src="statics/img/5.jpg"> </a></li>
+        <li><a><img src="statics/img/6.jpg"> </a></li>
+    </ul>
+    <ul class="num">
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <div class="lift_btn btn"> <</div>
+    <div class="right_btn btn"> <</div>
+</div>
+
+<script src="jquery-2.1.4.min.js"></script>
+
+<script>
+    $(".num li").mouseover(function () {
+        $(this).addClass("current").sibling().removeClass("current");
+        var index = $(this).index();
+        $(".img li").eq(index).fadeIn(1000).sibling().fadeOut(1000);
+    });
+
+    var time = setInterval(move, 1500);
+
+    i = 0;
+    function move() {
+        if(i==5) {
+            i = -1;
+        }
+
+        i++;
+        $(".num li").eq(i).addClass("current").sibling().removeClass("current");
+                $(".img li").eq(i).stop().fadeIn(1000).sibling().stop().fadeOut(1000);
+    }
+
+    function moveL() {
+        if(i==0) {
+            i = 6;
+        }
+
+        i --;
+        $(".num li").eq(i).addClass("current").sibling().removeClass("current");
+        $(".img li").eq(i).stop().fadeIn(1000).sibling().stop().fadeOut(1000);
+    }
+    
+    $(".outer").hover(function () {
+        clearInterval(time);
+    }, function () {
+        time=setInterval(move(), 1500);
+    })
+    
+    $(".right_btn").click(function () {
+        move();
+    })
+
+    $(".lift_btn").click(function () {
+        moveL();
+    })
+</script>
+
+</body>
+</html>

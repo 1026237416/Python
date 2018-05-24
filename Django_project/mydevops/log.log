@@ -1,0 +1,7 @@
+[W 2018-05-08 21:59:18 base:93 Not Found: /]
+[W 2018-05-08 21:59:18 basehttp:124 "GET / HTTP/1.1" 404 2147]
+[I 2018-05-08 21:59:32 basehttp:124 "GET /sendinfos HTTP/1.1" 301 0]
+[I 2018-05-08 21:59:32 views:28 IP [127.0.0.1] already exist in database.]
+[I 2018-05-08 21:59:32 basehttp:124 "GET /sendinfos/ HTTP/1.1" 200 180]
+[I 2018-05-09 07:53:10 views:28 IP [127.0.0.1] already exist in database.]
+[I 2018-05-09 07:53:10 basehttp:124 "GET /sendinfos/ HTTP/1.1" 200 180]

@@ -1,0 +1,8 @@
+---
+- hosts: 192.168.206.201
+  remote_user: root
+  tasks:
+      - file: dest=/tmp/aa state=directory
+      - copy: src={{ item }} dest=/tmp/bb owner=root mode=600
+        with_fileglob:
+            - aa/*

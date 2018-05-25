@@ -5,90 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1ad6e9-627b-4c73-8909-cd2cf5b721f3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Anaconda/matplotlib_learn/折线图1.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Anaconda/matplotlib_learn/散点图1.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Anaconda/matplotlib_learn/散点图2.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/lunbotu/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/lunbotu/settings.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/lunbotu/urls.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/lunbotu/wsgi.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/manage.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/statics/img/1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/statics/img/2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/statics/img/3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/statics/img/4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/statics/img/5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/lunbotu/statics/img/6.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/logger.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/settings/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/settings/basic.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/settings/logger_setting.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/settings/settings.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/urls.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/admin/wsgi.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/migrations/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/tests.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/apps/detail/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/db.sqlite3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/devops_design.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/log.log" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/manage.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/migrations/0001_initial.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/migrations/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/tests.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/util/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/util/tools.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Django_project/mydevops/scanhosts/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_test/play1.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_test/play2.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_test/play3.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_test/play4.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ansible_test/test.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/basic_test/try_copy.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/basic_test/try_deepcopy.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data_structure/DoubleLinkList.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/data_structure/SingleLinkList.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/orm_learn/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/orm_learn/start1.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/python反射.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/scrapy.cfg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/items.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/middlewares.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/pipelines.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/settings.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tutorial/tutorial/spiders/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/协程/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/协程/单线程并行.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/网络编程/ssh_cocket_client.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/网络编程/ssh_socket_server.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/自定义异常.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/li.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/li.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_event.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_ex1.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_ex2.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_ex3.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_ex4.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_ex5.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_ex6.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/threading_ex/threading_semaphore.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TeachingPython/1.html" afterPath="$PROJECT_DIR$/TeachingPython/1.html" />
-      <change beforePath="$PROJECT_DIR$/TeachingPython/2.html" afterPath="$PROJECT_DIR$/TeachingPython/2.html" />
-      <change beforePath="$PROJECT_DIR$/TeachingPython/3.html" afterPath="$PROJECT_DIR$/TeachingPython/3.html" />
-      <change beforePath="$PROJECT_DIR$/data_structure/Single_node.py" afterPath="$PROJECT_DIR$/Anaconda/matplotlib_learn/1.py" />
-      <change beforePath="$PROJECT_DIR$/file_rename.py" afterPath="$PROJECT_DIR$/file_rename.py" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,92 +23,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Python$py_test_in_threading_ex1_py.coverage" NAME="py.test in threading_ex1.py Coverage Results" MODIFIED="1527173286880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/threading_ex" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Django_project/mydevops/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play2.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ansible_test/play2.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play3.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ansible_test/play3.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play4.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ansible_test/play4.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game_test/game1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="单线程并行.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/协程/单线程并行.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="python反射.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python反射.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="自定义异常.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/自定义异常.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ssh_socket_server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/网络编程/ssh_socket_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="483">
               <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding>
                 <element signature="e#249#258#0" expanded="true" />
@@ -192,12 +40,106 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ssh_cocket_client.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ssh_cocket_client.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/网络编程/ssh_cocket_client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="460">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_ex1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="707">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#278#294#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_ex2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_ex3.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#268#284#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_ex4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding>
+                <element signature="e#280#296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_ex5.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#358#374#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_ex6.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex6.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+              <folding>
+                <element signature="e#378#394#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_semaphore.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_semaphore.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding>
+                <element signature="e#263#279#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading_event.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/threading_ex/threading_event.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#269#285#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -223,14 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/文本属性.html" />
-        <option value="$PROJECT_DIR$/html/边框属性.html" />
-        <option value="$PROJECT_DIR$/html/列表标签属性.html" />
-        <option value="$PROJECT_DIR$/html/float.html" />
-        <option value="$PROJECT_DIR$/html/抽屉网模拟.html" />
-        <option value="$PROJECT_DIR$/TKinter/start_1.py" />
-        <option value="$PROJECT_DIR$/pythom game/game_start.py" />
-        <option value="$PROJECT_DIR$/arithmetic/abc_sum.py" />
         <option value="$PROJECT_DIR$/data_structure/Single_node.py" />
         <option value="$PROJECT_DIR$/basic_test/try_copy.py" />
         <option value="$PROJECT_DIR$/basic_test/try_deepcopy.py" />
@@ -274,6 +208,14 @@
         <option value="$PROJECT_DIR$/自定义异常.py" />
         <option value="$PROJECT_DIR$/网络编程/ssh_socket_server.py" />
         <option value="$PROJECT_DIR$/网络编程/ssh_cocket_client.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_ex1.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_ex2.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_ex3.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_ex4.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_ex5.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_ex6.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_semaphore.py" />
+        <option value="$PROJECT_DIR$/threading_ex/threading_event.py" />
       </list>
     </option>
   </component>
@@ -293,10 +235,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="779" />
-    <option name="y" value="15" />
+    <option name="x" value="882" />
     <option name="width" value="1553" />
-    <option name="height" value="1056" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -316,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -327,7 +267,7 @@
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python" type="57c3d0a0:Web2PyBaseDirNode" />
-              <item name="arithmetic" type="462c0819:PsiDirectoryNode" />
+              <item name="threading_ex" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
@@ -342,6 +282,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
@@ -350,7 +291,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -389,26 +330,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Python">
-    <configuration name="单线程并行" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/协程" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/协程/单线程并行.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.threading_event">
     <configuration name="Python" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -423,25 +345,6 @@
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web2py/web2py.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="自定义异常" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/自定义异常.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -466,58 +369,115 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="threading_event" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Django_project/mydevops" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threading_ex" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Django_project/mydevops/manage.py" />
-      <option name="PARAMETERS" value="runserver 8005" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="python反射" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python反射.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threading_ex/threading_event.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="threading_ex3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threading_ex" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threading_ex/threading_ex3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="threading_ex4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threading_ex" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threading_ex/threading_ex4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="threading_ex5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threading_ex" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threading_ex/threading_ex5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="threading_ex6" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threading_ex" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threading_ex/threading_ex6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="threading_semaphore" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threading_ex" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threading_ex/threading_semaphore.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -604,19 +564,21 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Python" />
-      <item index="1" class="java.lang.String" itemvalue="Python.manage" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.单线程并行" />
-      <item index="4" class="java.lang.String" itemvalue="Python.python反射" />
+      <item index="1" class="java.lang.String" itemvalue="Python.threading_ex4" />
+      <item index="2" class="java.lang.String" itemvalue="Python.threading_ex5" />
+      <item index="3" class="java.lang.String" itemvalue="Python.threading_ex6" />
+      <item index="4" class="java.lang.String" itemvalue="Python.threading_semaphore" />
+      <item index="5" class="java.lang.String" itemvalue="Python.threading_event" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.python反射" />
-        <item index="1" class="java.lang.String" itemvalue="Python.单线程并行" />
-        <item index="2" class="java.lang.String" itemvalue="Python.manage" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.threading_event" />
+        <item index="1" class="java.lang.String" itemvalue="Python.threading_semaphore" />
+        <item index="2" class="java.lang.String" itemvalue="Python.threading_ex6" />
+        <item index="3" class="java.lang.String" itemvalue="Python.threading_ex5" />
+        <item index="4" class="java.lang.String" itemvalue="Python.threading_ex4" />
       </list>
     </recent_temporary>
   </component>
@@ -658,24 +620,36 @@
       <option name="project" value="LOCAL" />
       <updated>1523798143932</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2018.5.25">
+      <created>1527172756708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527172756708</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="py_test_in_threading_ex1_py - 2018.05.24 at 22h 48m 07s.xml">
+      <configuration name="py.test in threading_ex1.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="7947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="779" y="15" width="1553" height="1056" extended-state="0" />
+    <frame x="882" y="0" width="1553" height="1100" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.018754186" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="0" width="300" height="800" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2860335" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47486034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61554843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3094972" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953784" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19022103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14132619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2877698" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -698,7 +672,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32731378" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -752,57 +726,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Anaconda/matplotlib_learn/1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Anaconda/matplotlib_learn/散点图1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Anaconda/matplotlib_learn/折线图1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Anaconda/matplotlib_learn/散点图2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="e#234#252#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orm_learn/start1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="79" column="24" lean-forward="false" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_project/mydevops/admin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_project/mydevops/devops_design.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Django_project/imoocc_online/apps/users/utils/verify.py" />
     <entry file="file://$PROJECT_DIR$/Django_project/imoocc_online/LICENSE" />
     <entry file="file://$PROJECT_DIR$/Django_project/imoocc_online/scanhosts/views.py" />
     <entry file="file://$PROJECT_DIR$/Django_project/imoocc_online/scanhosts/admin.py" />
@@ -837,12 +760,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Django_project/mydevops/log.log">
-      <provider editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -929,7 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2139">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +950,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/网络编程/ssh_socket_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="483">
           <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding>
             <element signature="e#249#258#0" expanded="true" />
@@ -1047,9 +960,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/网络编程/ssh_cocket_client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="460">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#278#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#268#284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="e#280#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#358#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_ex6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding>
+            <element signature="e#378#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_semaphore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="e#263#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threading_ex/threading_event.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#269#285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -72,7 +72,6 @@ class OrmTest(object):
         return self.session.query(News).get(key)
 
 
-
 def main():
     obj = OrmTest()
     # res = obj.add_one()

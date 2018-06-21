@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>状态查询</title>
+    <link rel="stylesheet" href="/static/js/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-md-8 col-md-offset-2">
+    <form action="/case/running" method="post">
+        <div class="form-group">
+            <label for="casemanes">casemanes</label>
+            <input type="text" class="form-control" id="casemanes" name="casenames" placeholder="casenames">
+        </div>
+        <button type="submit" class="btn btn-primary">查询</button>
+    </form>
+     {% if casenames %}
+    <h3 style="color:red">执行状态：{{casenames}}</h3>
+    {% endif %}
+    {% if error_msg %}
+    <h3>{{error_msg}}</h3>
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.206.201, 192.168.206.202
+  remote_user: root
+  tasks:
+  - name: "echo msg"
+    command: "echo 'This is {{ansible_distribution}} {{ansible_distribution_major_version}} system'"
+    when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "7") or (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6")

@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.206.201
+  remote_user: root
+  tasks:
+      - debug: msg="{{ item.key }} is the winner!"
+        with_dict: {'Json': {'english': 60, 'chinese': 30}, 'tom': {'english': 50, 'chinese': 80}}
+        when: item.value.english >= 60

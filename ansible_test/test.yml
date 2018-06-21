@@ -1,0 +1,7 @@
+- host: 192.168.206.201
+  remote_user: root
+  vars:
+      touch_file: li_test
+  tasks:
+      - name: touch file
+        shell: "touch /tmp/{{touch_file}}"

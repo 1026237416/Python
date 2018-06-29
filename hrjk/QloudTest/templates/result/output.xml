@@ -1,0 +1,4563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180618 22:58:52.531" generator="Robot 2.8.7 (Python 2.7.12 on win32)">
+<suite source="E:\AUTO_PRO" id="s1" name="AUTO PRO">
+<suite source="E:\AUTO_PRO\ESBDemo" id="s1-s1" name="ESBDemo">
+<suite source="E:\AUTO_PRO\ESBDemo\ESBDemo.txt" id="s1-s1-s1" name="ESBDemo">
+<test id="s1-s1-s1-t1" name="[公共管理]1100200015202-token申请">
+<kw type="kw" name="案例执行.[公共管理]1100200015202">
+<doc></doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/excel/tokenNew.xls</arg>
+<arg>E:\\AUTO_PRO\\ESBDemo/excel/tokenNew_tmp.xls</arg>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/1100200015202.xml</arg>
+<arg>token申请</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>${excel_input}</arg>
+<arg>${sheet_name}</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.927" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:53.928" starttime="20180618 22:58:52.888"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.928" starttime="20180618 22:58:52.888"></status>
+</kw>
+<kw type="kw" name="${node_element_sys} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>${recv_xml}</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.930" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1100200015202.xml exists</msg>
+<msg timestamp="20180618 22:58:53.930" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:53.930" starttime="20180618 22:58:53.930"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.932" level="INFO">${root} = &lt;Element 'service' at 0x0000000008B5F3F0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.932" starttime="20180618 22:58:53.931"></status>
+</kw>
+<kw type="kw" name="${child} = XML.Get Child Elements">
+<doc>Returns the child elements of the specified element as a list.</doc>
+<arguments>
+<arg>${root}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.933" level="INFO">${child} = [&lt;Element 'sys-header' at 0x0000000008B5F450&gt;, &lt;Element 'app-header' at 0x0000000008B5FBD0&gt;, &lt;Element 'local-header' at 0x0000000008B5FCC0&gt;, &lt;Element 'body' at 0x0000000008B5FD80&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:53.933" starttime="20180618 22:58:53.933"></status>
+</kw>
+<kw type="kw" name="${child_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${child}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.934" level="INFO">Length is 4</msg>
+<msg timestamp="20180618 22:58:53.935" level="INFO">${child_len} = 4</msg>
+<status status="PASS" endtime="20180618 22:58:53.935" starttime="20180618 22:58:53.934"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${child_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.938" level="INFO">${node_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:53.938" starttime="20180618 22:58:53.937"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.939" starttime="20180618 22:58:53.936"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.939" starttime="20180618 22:58:53.935"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.940" starttime="20180618 22:58:53.939"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.941" starttime="20180618 22:58:53.939"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.942" starttime="20180618 22:58:53.941"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.942" starttime="20180618 22:58:53.941"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.944" starttime="20180618 22:58:53.943"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.944" starttime="20180618 22:58:53.943"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.944" starttime="20180618 22:58:53.935"></status>
+</kw>
+<kw type="kw" name="${node_element} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${child[${node_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.945" level="INFO">${node_element} = &lt;Element 'sys-header' at 0x0000000008B5F450&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.945" starttime="20180618 22:58:53.944"></status>
+</kw>
+<kw type="kw" name="XML.Log Element">
+<doc>Logs the string representation of the specified element.</doc>
+<arguments>
+<arg>${node_element}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.947" level="INFO">&lt;sys-header&gt;
+&lt;data name="SYS_HEAD"&gt;
+&lt;struct&gt;
+&lt;data name="RET"&gt;
+&lt;array&gt;
+&lt;struct&gt;
+&lt;data name="RET_CODE"&gt;
+&lt;field length="6" scale="0" type="string"&gt;000000&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="RET_MSG"&gt;
+&lt;field length="6" scale="0" type="string"&gt;璋冪敤鏈嶅姟鎴愬姛&lt;/field&gt;
+&lt;/data&gt;
+&lt;/struct&gt;
+&lt;/array&gt;
+&lt;/data&gt;
+&lt;data name="ESB_SEQ_NO"&gt;
+&lt;field length="52" scale="0" type="string"&gt;2018022283686359377205104015799&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="SERVICE_SCENE"&gt;
+&lt;field length="2" scale="0" type="string"&gt;02&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="SERVICE_CODE"&gt;
+&lt;field length="30" scale="0" type="string"&gt;11002000152&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="CONSUMER_SEQ_NO"&gt;
+&lt;field length="52" scale="0" type="string"&gt;413134&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="RET_STATUS"&gt;
+&lt;field length="1" scale="0" type="string"&gt;S&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="TRAN_TIMESTAMP"&gt;
+&lt;field length="9" scale="0" type="string"&gt;104015799&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="TRAN_DATE"&gt;
+&lt;field length="8" scale="0" type="string"&gt;20180222&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="CONSUMER_ID"&gt;
+&lt;field length="6" scale="0" type="string"&gt;108990&lt;/field&gt;
+&lt;/data&gt;
+&lt;/struct&gt;
+&lt;/data&gt;
+&lt;/sys-header&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.947" starttime="20180618 22:58:53.946"></status>
+</kw>
+<msg timestamp="20180618 22:58:53.947" level="INFO">${node_element_sys} = &lt;Element 'sys-header' at 0x0000000008B5F450&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.947" starttime="20180618 22:58:53.929"></status>
+</kw>
+<kw type="kw" name="${ret_status_text} = 公共关键字.获取RET_STATUS内容">
+<doc>功能：获取sys-header节点下RET_STATUS指定内容，例如type，length，scale，text</doc>
+<arguments>
+<arg>${node_element_sys}</arg>
+<arg>text</arg>
+</arguments>
+<kw type="kw" name="${systag} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${node_element.tag}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.949" level="INFO">${systag} = sys-header</msg>
+<status status="PASS" endtime="20180618 22:58:53.949" starttime="20180618 22:58:53.949"></status>
+</kw>
+<kw type="kw" name="${sys_data1} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.951" level="INFO">${sys_data1} = &lt;Element 'data' at 0x0000000008B5F4B0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.951" starttime="20180618 22:58:53.950"></status>
+</kw>
+<kw type="kw" name="${sys_data1_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data1.attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.952" level="INFO">${sys_data1_attrib} = SYS_HEAD</msg>
+<status status="PASS" endtime="20180618 22:58:53.952" starttime="20180618 22:58:53.951"></status>
+</kw>
+<kw type="kw" name="${sys_data2} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.953" level="INFO">${sys_data2} = [&lt;Element 'data' at 0x0000000008B5F510&gt;, &lt;Element 'data' at 0x0000000008B5F6C0&gt;, &lt;Element 'data' at 0x0000000008B5F750&gt;, &lt;Element 'data' at 0x0000000008B5F7E0&gt;, &lt;Element 'data' at 0x0000000008B5F8A0&gt;,...</msg>
+<status status="PASS" endtime="20180618 22:58:53.953" starttime="20180618 22:58:53.952"></status>
+</kw>
+<kw type="kw" name="${sys_data2_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${sys_data2}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.954" level="INFO">Length is 9</msg>
+<msg timestamp="20180618 22:58:53.954" level="INFO">${sys_data2_len} = 9</msg>
+<status status="PASS" endtime="20180618 22:58:53.954" starttime="20180618 22:58:53.953"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${sys_data2_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.956" level="INFO">${data2_attrib} = RET</msg>
+<status status="PASS" endtime="20180618 22:58:53.956" starttime="20180618 22:58:53.955"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.957" starttime="20180618 22:58:53.956"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.957" starttime="20180618 22:58:53.955"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.959" level="INFO">${data2_attrib} = ESB_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:53.959" starttime="20180618 22:58:53.958"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.960" starttime="20180618 22:58:53.959"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.960" starttime="20180618 22:58:53.958"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.961" level="INFO">${data2_attrib} = SERVICE_SCENE</msg>
+<status status="PASS" endtime="20180618 22:58:53.961" starttime="20180618 22:58:53.960"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.962" starttime="20180618 22:58:53.962"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.962" starttime="20180618 22:58:53.960"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.964" level="INFO">${data2_attrib} = SERVICE_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:53.964" starttime="20180618 22:58:53.963"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.965" starttime="20180618 22:58:53.964"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.965" starttime="20180618 22:58:53.963"></status>
+</kw>
+<kw type="foritem" name="${index} = 4">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.966" level="INFO">${data2_attrib} = CONSUMER_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:53.966" starttime="20180618 22:58:53.966"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.967" starttime="20180618 22:58:53.967"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.968" starttime="20180618 22:58:53.965"></status>
+</kw>
+<kw type="foritem" name="${index} = 5">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.969" level="INFO">${data2_attrib} = RET_STATUS</msg>
+<status status="PASS" endtime="20180618 22:58:53.969" starttime="20180618 22:58:53.968"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.971" level="INFO">${ret_status_index} = 5</msg>
+<status status="PASS" endtime="20180618 22:58:53.971" starttime="20180618 22:58:53.970"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.972" starttime="20180618 22:58:53.969"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.972" starttime="20180618 22:58:53.968"></status>
+</kw>
+<kw type="foritem" name="${index} = 6">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.973" level="INFO">${data2_attrib} = TRAN_TIMESTAMP</msg>
+<status status="PASS" endtime="20180618 22:58:53.973" starttime="20180618 22:58:53.973"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.974" starttime="20180618 22:58:53.974"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.975" starttime="20180618 22:58:53.972"></status>
+</kw>
+<kw type="foritem" name="${index} = 7">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.976" level="INFO">${data2_attrib} = TRAN_DATE</msg>
+<status status="PASS" endtime="20180618 22:58:53.976" starttime="20180618 22:58:53.975"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.977" starttime="20180618 22:58:53.976"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.977" starttime="20180618 22:58:53.975"></status>
+</kw>
+<kw type="foritem" name="${index} = 8">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.979" level="INFO">${data2_attrib} = CONSUMER_ID</msg>
+<status status="PASS" endtime="20180618 22:58:53.978" starttime="20180618 22:58:53.978"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.980" starttime="20180618 22:58:53.979"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.980" starttime="20180618 22:58:53.977"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:53.980" starttime="20180618 22:58:53.954"></status>
+</kw>
+<kw type="kw" name="${ret_status_elem} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${sys_data2[${ret_status_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.981" level="INFO">${ret_status_elem} = &lt;Element 'data' at 0x0000000008B5F930&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.981" starttime="20180618 22:58:53.980"></status>
+</kw>
+<kw type="kw" name="${ret_status_field} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_status_elem}</arg>
+<arg>xpath=field</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.982" level="INFO">${ret_status_field} = &lt;Element 'field' at 0x0000000008B5F960&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.982" starttime="20180618 22:58:53.982"></status>
+</kw>
+<kw type="kw" name="${re_status_field_attrib} = XML.Get Element Attributes">
+<doc>Returns all attributes of the specified element.</doc>
+<arguments>
+<arg>${ret_status_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.983" level="INFO">${re_status_field_attrib} = {'length': '1', 'scale': '0', 'type': 'string'}</msg>
+<status status="PASS" endtime="20180618 22:58:53.983" starttime="20180618 22:58:53.983"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_type} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${re_status_field_attrib}</arg>
+<arg>type</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.984" level="INFO">${ret_status_field_type} = string</msg>
+<status status="PASS" endtime="20180618 22:58:53.984" starttime="20180618 22:58:53.984"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_length} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${re_status_field_attrib}</arg>
+<arg>length</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.986" level="INFO">${ret_status_field_length} = 1</msg>
+<status status="PASS" endtime="20180618 22:58:53.985" starttime="20180618 22:58:53.985"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_scale} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${re_status_field_attrib}</arg>
+<arg>scale</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.987" level="INFO">${ret_status_field_scale} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:53.986" starttime="20180618 22:58:53.986"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_text} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${ret_status_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.988" level="INFO">${ret_status_field_text} = S</msg>
+<status status="PASS" endtime="20180618 22:58:53.988" starttime="20180618 22:58:53.987"></status>
+</kw>
+<kw type="kw" name="${output_value} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${input_keyname}'=='type'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_type}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='length'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_length}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='scale'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_scale}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='text'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_status_field_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:53.990" starttime="20180618 22:58:53.989"></status>
+</kw>
+<msg timestamp="20180618 22:58:53.990" level="INFO">${output_value} = S</msg>
+<status status="PASS" endtime="20180618 22:58:53.990" starttime="20180618 22:58:53.988"></status>
+</kw>
+<msg timestamp="20180618 22:58:53.991" level="INFO">${ret_status_text} = S</msg>
+<status status="PASS" endtime="20180618 22:58:53.991" starttime="20180618 22:58:53.948"></status>
+</kw>
+<kw type="kw" name="${ret_code_text} = 公共关键字.获取RET_CODE内容">
+<doc>功能：获取sys-header节点下RET_CODE指定内容，例如type，length，scale，text</doc>
+<arguments>
+<arg>${node_element_sys}</arg>
+<arg>text</arg>
+</arguments>
+<kw type="kw" name="${systag} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${node_element.tag}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.993" level="INFO">${systag} = sys-header</msg>
+<status status="PASS" endtime="20180618 22:58:53.993" starttime="20180618 22:58:53.992"></status>
+</kw>
+<kw type="kw" name="${sys_data1} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.994" level="INFO">${sys_data1} = &lt;Element 'data' at 0x0000000008B5F4B0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:53.994" starttime="20180618 22:58:53.993"></status>
+</kw>
+<kw type="kw" name="${sys_data1_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data1.attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.995" level="INFO">${sys_data1_attrib} = SYS_HEAD</msg>
+<status status="PASS" endtime="20180618 22:58:53.995" starttime="20180618 22:58:53.995"></status>
+</kw>
+<kw type="kw" name="${sys_data2} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.996" level="INFO">${sys_data2} = [&lt;Element 'data' at 0x0000000008B5F510&gt;, &lt;Element 'data' at 0x0000000008B5F6C0&gt;, &lt;Element 'data' at 0x0000000008B5F750&gt;, &lt;Element 'data' at 0x0000000008B5F7E0&gt;, &lt;Element 'data' at 0x0000000008B5F8A0&gt;,...</msg>
+<status status="PASS" endtime="20180618 22:58:53.996" starttime="20180618 22:58:53.996"></status>
+</kw>
+<kw type="kw" name="${sys_data2_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${sys_data2}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.997" level="INFO">Length is 9</msg>
+<msg timestamp="20180618 22:58:53.998" level="INFO">${sys_data2_len} = 9</msg>
+<status status="PASS" endtime="20180618 22:58:53.997" starttime="20180618 22:58:53.997"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${sys_data2_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:53.999" level="INFO">${data2_attrib} = RET</msg>
+<status status="PASS" endtime="20180618 22:58:53.999" starttime="20180618 22:58:53.999"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.002" level="INFO">${ret_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.002" starttime="20180618 22:58:54.000"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.002" starttime="20180618 22:58:54.000"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.003" starttime="20180618 22:58:53.998"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.004" level="INFO">${data2_attrib} = ESB_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.004" starttime="20180618 22:58:54.003"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.005" starttime="20180618 22:58:54.005"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.005" starttime="20180618 22:58:54.003"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.007" level="INFO">${data2_attrib} = SERVICE_SCENE</msg>
+<status status="PASS" endtime="20180618 22:58:54.007" starttime="20180618 22:58:54.006"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.008" starttime="20180618 22:58:54.007"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.008" starttime="20180618 22:58:54.006"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.010" level="INFO">${data2_attrib} = SERVICE_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.009" starttime="20180618 22:58:54.009"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.011" starttime="20180618 22:58:54.010"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.011" starttime="20180618 22:58:54.008"></status>
+</kw>
+<kw type="foritem" name="${index} = 4">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.012" level="INFO">${data2_attrib} = CONSUMER_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.012" starttime="20180618 22:58:54.011"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.013" starttime="20180618 22:58:54.013"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.013" starttime="20180618 22:58:54.011"></status>
+</kw>
+<kw type="foritem" name="${index} = 5">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.015" level="INFO">${data2_attrib} = RET_STATUS</msg>
+<status status="PASS" endtime="20180618 22:58:54.015" starttime="20180618 22:58:54.014"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.016" starttime="20180618 22:58:54.015"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.016" starttime="20180618 22:58:54.014"></status>
+</kw>
+<kw type="foritem" name="${index} = 6">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.017" level="INFO">${data2_attrib} = TRAN_TIMESTAMP</msg>
+<status status="PASS" endtime="20180618 22:58:54.017" starttime="20180618 22:58:54.017"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.019" starttime="20180618 22:58:54.018"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.019" starttime="20180618 22:58:54.016"></status>
+</kw>
+<kw type="foritem" name="${index} = 7">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.020" level="INFO">${data2_attrib} = TRAN_DATE</msg>
+<status status="PASS" endtime="20180618 22:58:54.020" starttime="20180618 22:58:54.019"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.021" starttime="20180618 22:58:54.021"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.021" starttime="20180618 22:58:54.019"></status>
+</kw>
+<kw type="foritem" name="${index} = 8">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.023" level="INFO">${data2_attrib} = CONSUMER_ID</msg>
+<status status="PASS" endtime="20180618 22:58:54.023" starttime="20180618 22:58:54.022"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.024" starttime="20180618 22:58:54.023"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.024" starttime="20180618 22:58:54.022"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.024" starttime="20180618 22:58:53.998"></status>
+</kw>
+<kw type="kw" name="${ret_elem} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${sys_data2[${ret_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.025" level="INFO">${ret_elem} = &lt;Element 'data' at 0x0000000008B5F510&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.025" starttime="20180618 22:58:54.025"></status>
+</kw>
+<kw type="kw" name="${ret_data} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.026" level="INFO">${ret_data} = [&lt;Element 'data' at 0x0000000008B5F5D0&gt;, &lt;Element 'data' at 0x0000000008B5F630&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.026" starttime="20180618 22:58:54.026"></status>
+</kw>
+<kw type="kw" name="${ret_data_length} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${ret_data}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.027" level="INFO">Length is 2</msg>
+<msg timestamp="20180618 22:58:54.028" level="INFO">${ret_data_length} = 2</msg>
+<status status="PASS" endtime="20180618 22:58:54.028" starttime="20180618 22:58:54.027"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${ret_data_length} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.029" level="INFO">${ret_data_attrib} = RET_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.029" starttime="20180618 22:58:54.029"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_CODE'</arg>
+<arg>set global variable</arg>
+<arg>${ret_code_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_code_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.032" level="INFO">${ret_code_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.032" starttime="20180618 22:58:54.031"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.033" starttime="20180618 22:58:54.030"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.033" starttime="20180618 22:58:54.028"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.034" level="INFO">${ret_data_attrib} = RET_MSG</msg>
+<status status="PASS" endtime="20180618 22:58:54.034" starttime="20180618 22:58:54.033"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_CODE'</arg>
+<arg>set global variable</arg>
+<arg>${ret_code_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.035" starttime="20180618 22:58:54.035"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.035" starttime="20180618 22:58:54.033"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.036" starttime="20180618 22:58:54.028"></status>
+</kw>
+<kw type="kw" name="${ret_field} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data/field</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.037" level="INFO">${ret_field} = [&lt;Element 'field' at 0x0000000008B5F600&gt;, &lt;Element 'field' at 0x0000000008B5F660&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.036" starttime="20180618 22:58:54.036"></status>
+</kw>
+<kw type="kw" name="${ret_code_field} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_field[${ret_code_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.038" level="INFO">${ret_code_field} = &lt;Element 'field' at 0x0000000008B5F600&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.038" starttime="20180618 22:58:54.037"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_attrib} = XML.Get Element Attributes">
+<doc>Returns all attributes of the specified element.</doc>
+<arguments>
+<arg>${ret_code_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.039" level="INFO">${ret_code_field_attrib} = {'length': '6', 'scale': '0', 'type': 'string'}</msg>
+<status status="PASS" endtime="20180618 22:58:54.039" starttime="20180618 22:58:54.038"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_type} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_code_field_attrib}</arg>
+<arg>type</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.040" level="INFO">${ret_code_field_type} = string</msg>
+<status status="PASS" endtime="20180618 22:58:54.040" starttime="20180618 22:58:54.039"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_length} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_code_field_attrib}</arg>
+<arg>length</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.041" level="INFO">${ret_code_field_length} = 6</msg>
+<status status="PASS" endtime="20180618 22:58:54.041" starttime="20180618 22:58:54.040"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_scale} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_code_field_attrib}</arg>
+<arg>scale</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.042" level="INFO">${ret_code_field_scale} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.042" starttime="20180618 22:58:54.042"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_text} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${ret_code_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.043" level="INFO">${ret_code_field_text} = 000000</msg>
+<status status="PASS" endtime="20180618 22:58:54.043" starttime="20180618 22:58:54.043"></status>
+</kw>
+<kw type="kw" name="${output_value} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${input_keyname}'=='type'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_type}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='length'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_length}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='scale'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_scale}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='text'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_code_field_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.045" starttime="20180618 22:58:54.045"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.045" level="INFO">${output_value} = 000000</msg>
+<status status="PASS" endtime="20180618 22:58:54.045" starttime="20180618 22:58:54.044"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.046" level="INFO">${ret_code_text} = 000000</msg>
+<status status="PASS" endtime="20180618 22:58:54.046" starttime="20180618 22:58:53.991"></status>
+</kw>
+<kw type="kw" name="${ret_msg_text} = 公共关键字.获取RET_MSG内容">
+<doc>功能：获取sys-header节点下RET_MSG指定内容，例如type，length，scale，text</doc>
+<arguments>
+<arg>${node_element_sys}</arg>
+<arg>text</arg>
+</arguments>
+<kw type="kw" name="${systag} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${node_element.tag}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.048" level="INFO">${systag} = sys-header</msg>
+<status status="PASS" endtime="20180618 22:58:54.048" starttime="20180618 22:58:54.048"></status>
+</kw>
+<kw type="kw" name="${sys_data1} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.050" level="INFO">${sys_data1} = &lt;Element 'data' at 0x0000000008B5F4B0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.049" starttime="20180618 22:58:54.049"></status>
+</kw>
+<kw type="kw" name="${sys_data1_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data1.attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.051" level="INFO">${sys_data1_attrib} = SYS_HEAD</msg>
+<status status="PASS" endtime="20180618 22:58:54.051" starttime="20180618 22:58:54.050"></status>
+</kw>
+<kw type="kw" name="${sys_data2} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.052" level="INFO">${sys_data2} = [&lt;Element 'data' at 0x0000000008B5F510&gt;, &lt;Element 'data' at 0x0000000008B5F6C0&gt;, &lt;Element 'data' at 0x0000000008B5F750&gt;, &lt;Element 'data' at 0x0000000008B5F7E0&gt;, &lt;Element 'data' at 0x0000000008B5F8A0&gt;,...</msg>
+<status status="PASS" endtime="20180618 22:58:54.052" starttime="20180618 22:58:54.051"></status>
+</kw>
+<kw type="kw" name="${sys_data2_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${sys_data2}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.053" level="INFO">Length is 9</msg>
+<msg timestamp="20180618 22:58:54.053" level="INFO">${sys_data2_len} = 9</msg>
+<status status="PASS" endtime="20180618 22:58:54.053" starttime="20180618 22:58:54.052"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${sys_data2_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.055" level="INFO">${data2_attrib} = RET</msg>
+<status status="PASS" endtime="20180618 22:58:54.055" starttime="20180618 22:58:54.054"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.057" level="INFO">${ret_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.057" starttime="20180618 22:58:54.056"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.057" starttime="20180618 22:58:54.055"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.057" starttime="20180618 22:58:54.054"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.059" level="INFO">${data2_attrib} = ESB_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.059" starttime="20180618 22:58:54.058"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.060" starttime="20180618 22:58:54.059"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.060" starttime="20180618 22:58:54.058"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.061" level="INFO">${data2_attrib} = SERVICE_SCENE</msg>
+<status status="PASS" endtime="20180618 22:58:54.061" starttime="20180618 22:58:54.061"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.062" starttime="20180618 22:58:54.062"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.063" starttime="20180618 22:58:54.060"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.064" level="INFO">${data2_attrib} = SERVICE_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.064" starttime="20180618 22:58:54.063"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.065" starttime="20180618 22:58:54.065"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.065" starttime="20180618 22:58:54.063"></status>
+</kw>
+<kw type="foritem" name="${index} = 4">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.067" level="INFO">${data2_attrib} = CONSUMER_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.066" starttime="20180618 22:58:54.066"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.068" starttime="20180618 22:58:54.067"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.068" starttime="20180618 22:58:54.066"></status>
+</kw>
+<kw type="foritem" name="${index} = 5">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.069" level="INFO">${data2_attrib} = RET_STATUS</msg>
+<status status="PASS" endtime="20180618 22:58:54.069" starttime="20180618 22:58:54.068"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.070" starttime="20180618 22:58:54.070"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.070" starttime="20180618 22:58:54.068"></status>
+</kw>
+<kw type="foritem" name="${index} = 6">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.072" level="INFO">${data2_attrib} = TRAN_TIMESTAMP</msg>
+<status status="PASS" endtime="20180618 22:58:54.072" starttime="20180618 22:58:54.071"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.073" starttime="20180618 22:58:54.072"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.073" starttime="20180618 22:58:54.071"></status>
+</kw>
+<kw type="foritem" name="${index} = 7">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.074" level="INFO">${data2_attrib} = TRAN_DATE</msg>
+<status status="PASS" endtime="20180618 22:58:54.074" starttime="20180618 22:58:54.074"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.075" starttime="20180618 22:58:54.075"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.076" starttime="20180618 22:58:54.073"></status>
+</kw>
+<kw type="foritem" name="${index} = 8">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.077" level="INFO">${data2_attrib} = CONSUMER_ID</msg>
+<status status="PASS" endtime="20180618 22:58:54.077" starttime="20180618 22:58:54.076"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.078" starttime="20180618 22:58:54.077"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.078" starttime="20180618 22:58:54.076"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.079" starttime="20180618 22:58:54.053"></status>
+</kw>
+<kw type="kw" name="${ret_elem} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${sys_data2[${ret_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.080" level="INFO">${ret_elem} = &lt;Element 'data' at 0x0000000008B5F510&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.079" starttime="20180618 22:58:54.079"></status>
+</kw>
+<kw type="kw" name="${ret_data} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.081" level="INFO">${ret_data} = [&lt;Element 'data' at 0x0000000008B5F5D0&gt;, &lt;Element 'data' at 0x0000000008B5F630&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.081" starttime="20180618 22:58:54.080"></status>
+</kw>
+<kw type="kw" name="${ret_data_length} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${ret_data}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.082" level="INFO">Length is 2</msg>
+<msg timestamp="20180618 22:58:54.082" level="INFO">${ret_data_length} = 2</msg>
+<status status="PASS" endtime="20180618 22:58:54.082" starttime="20180618 22:58:54.081"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${ret_data_length} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.084" level="INFO">${ret_data_attrib} = RET_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.084" starttime="20180618 22:58:54.083"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_MSG'</arg>
+<arg>set global variable</arg>
+<arg>${ret_msg_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.085" starttime="20180618 22:58:54.084"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.085" starttime="20180618 22:58:54.083"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.086" level="INFO">${ret_data_attrib} = RET_MSG</msg>
+<status status="PASS" endtime="20180618 22:58:54.086" starttime="20180618 22:58:54.086"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_MSG'</arg>
+<arg>set global variable</arg>
+<arg>${ret_msg_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_msg_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.089" level="INFO">${ret_msg_index} = 1</msg>
+<status status="PASS" endtime="20180618 22:58:54.089" starttime="20180618 22:58:54.088"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.090" starttime="20180618 22:58:54.087"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.090" starttime="20180618 22:58:54.085"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.090" starttime="20180618 22:58:54.082"></status>
+</kw>
+<kw type="kw" name="${ret_field} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data/field</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.091" level="INFO">${ret_field} = [&lt;Element 'field' at 0x0000000008B5F600&gt;, &lt;Element 'field' at 0x0000000008B5F660&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.091" starttime="20180618 22:58:54.090"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_field[${ret_msg_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.092" level="INFO">${ret_msg_field} = &lt;Element 'field' at 0x0000000008B5F660&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.092" starttime="20180618 22:58:54.091"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_attrib} = XML.Get Element Attributes">
+<doc>Returns all attributes of the specified element.</doc>
+<arguments>
+<arg>${ret_msg_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.093" level="INFO">${ret_msg_field_attrib} = {'length': '6', 'scale': '0', 'type': 'string'}</msg>
+<status status="PASS" endtime="20180618 22:58:54.093" starttime="20180618 22:58:54.093"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_type} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_msg_field_attrib}</arg>
+<arg>type</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.094" level="INFO">${ret_msg_field_type} = string</msg>
+<status status="PASS" endtime="20180618 22:58:54.094" starttime="20180618 22:58:54.094"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_length} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_msg_field_attrib}</arg>
+<arg>length</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.095" level="INFO">${ret_msg_field_length} = 6</msg>
+<status status="PASS" endtime="20180618 22:58:54.095" starttime="20180618 22:58:54.095"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_scale} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_msg_field_attrib}</arg>
+<arg>scale</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.097" level="INFO">${ret_msg_field_scale} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.096" starttime="20180618 22:58:54.096"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_text} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${ret_msg_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.098" level="INFO">${ret_msg_field_text} = 璋冪敤鏈嶅姟鎴愬姛</msg>
+<status status="PASS" endtime="20180618 22:58:54.097" starttime="20180618 22:58:54.097"></status>
+</kw>
+<kw type="kw" name="${output_value} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${input_keyname}'=='type'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_type}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='length'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_length}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='scale'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_scale}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='text'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_msg_field_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.100" starttime="20180618 22:58:54.099"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.100" level="INFO">${output_value} = 璋冪敤鏈嶅姟鎴愬姛</msg>
+<status status="PASS" endtime="20180618 22:58:54.100" starttime="20180618 22:58:54.098"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.101" level="INFO">${ret_msg_text} = 璋冪敤鏈嶅姟鎴愬姛</msg>
+<status status="PASS" endtime="20180618 22:58:54.100" starttime="20180618 22:58:54.047"></status>
+</kw>
+<kw type="kw" name="公共关键字.字符串内容对比">
+<doc></doc>
+<arguments>
+<arg>${expect_status}</arg>
+<arg>${ret_status_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expect_value}</arg>
+<arg>${return_value}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.103" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.103" starttime="20180618 22:58:54.102"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.103" starttime="20180618 22:58:54.101"></status>
+</kw>
+<kw type="kw" name="公共关键字.字符串内容对比">
+<doc></doc>
+<arguments>
+<arg>${expect_code}</arg>
+<arg>${ret_code_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expect_value}</arg>
+<arg>${return_value}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.105" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.105" starttime="20180618 22:58:54.105"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.106" starttime="20180618 22:58:54.104"></status>
+</kw>
+<kw type="kw" name="公共关键字.字符串内容对比">
+<doc></doc>
+<arguments>
+<arg>${expect_msg}</arg>
+<arg>${ret_msg_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expect_value}</arg>
+<arg>${return_value}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.108" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20180618 22:58:54.109" level="FAIL">璋冪敤鏈嶅姟鎴愬姛 != success</msg>
+<status status="FAIL" endtime="20180618 22:58:54.109" starttime="20180618 22:58:54.107"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.110" starttime="20180618 22:58:54.106"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.110" starttime="20180618 22:58:52.886"></status>
+</kw>
+<doc>#token申请</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.111" critical="yes" starttime="20180618 22:58:52.885">璋冪敤鏈嶅姟鎴愬姛 != success</status>
+</test>
+<test id="s1-s1-s1-t2" name="[公共管理]1100200015203-token验证">
+<kw type="kw" name="案例执行.[公共管理]1100200015203">
+<doc></doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/excel/tokenNew_tmp.xls</arg>
+<arg>token验证</arg>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/1100200015203.xml</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>${excel_input}</arg>
+<arg>${sheet_name}</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.219" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.219" starttime="20180618 22:58:54.115"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.220" starttime="20180618 22:58:54.114"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>${recv_xml}</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.222" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1100200015203.xml exists</msg>
+<msg timestamp="20180618 22:58:54.222" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.222" starttime="20180618 22:58:54.222"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.224" level="INFO">${root} = &lt;Element 'service' at 0x0000000008BCBB10&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.224" starttime="20180618 22:58:54.223"></status>
+</kw>
+<kw type="kw" name="${child} = XML.Get Child Elements">
+<doc>Returns the child elements of the specified element as a list.</doc>
+<arguments>
+<arg>${root}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.225" level="INFO">${child} = [&lt;Element 'sys-header' at 0x0000000008BCB9C0&gt;, &lt;Element 'app-header' at 0x0000000008BCBD50&gt;, &lt;Element 'local-header' at 0x0000000008B2A8D0&gt;, &lt;Element 'body' at 0x0000000008B2A8A0&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.225" starttime="20180618 22:58:54.224"></status>
+</kw>
+<kw type="kw" name="${child_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${child}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.226" level="INFO">Length is 4</msg>
+<msg timestamp="20180618 22:58:54.226" level="INFO">${child_len} = 4</msg>
+<status status="PASS" endtime="20180618 22:58:54.226" starttime="20180618 22:58:54.225"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${child_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.229" level="INFO">${node_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.229" starttime="20180618 22:58:54.228"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.229" starttime="20180618 22:58:54.227"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.229" starttime="20180618 22:58:54.227"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.231" starttime="20180618 22:58:54.230"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.231" starttime="20180618 22:58:54.230"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.232" starttime="20180618 22:58:54.232"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.233" starttime="20180618 22:58:54.231"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${child[${index}].tag}'=='${input_node}'</arg>
+<arg>set global variable</arg>
+<arg>${node_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.234" starttime="20180618 22:58:54.233"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.234" starttime="20180618 22:58:54.233"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.234" starttime="20180618 22:58:54.226"></status>
+</kw>
+<kw type="kw" name="${node_element} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${child[${node_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.235" level="INFO">${node_element} = &lt;Element 'sys-header' at 0x0000000008BCB9C0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.235" starttime="20180618 22:58:54.235"></status>
+</kw>
+<kw type="kw" name="XML.Log Element">
+<doc>Logs the string representation of the specified element.</doc>
+<arguments>
+<arg>${node_element}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.237" level="INFO">&lt;sys-header&gt;
+&lt;data name="SYS_HEAD"&gt;
+&lt;struct&gt;
+&lt;data name="RET"&gt;
+&lt;array&gt;
+&lt;struct&gt;
+&lt;data name="RET_CODE"&gt;
+&lt;field length="8" scale="0" type="string"&gt;99999999&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="RET_MSG"&gt;
+&lt;field length="25" scale="0" type="string"&gt;閿欒淇℃伅涓猴細features.error.0216&lt;/field&gt;
+&lt;/data&gt;
+&lt;/struct&gt;
+&lt;/array&gt;
+&lt;/data&gt;
+&lt;data name="ESB_SEQ_NO"&gt;
+&lt;field length="52" scale="0" type="string"&gt;2018022293465329381968104016550&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="SERVICE_SCENE"&gt;
+&lt;field length="2" scale="0" type="string"&gt;03&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="SERVICE_CODE"&gt;
+&lt;field length="30" scale="0" type="string"&gt;11002000152&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="CONSUMER_SEQ_NO"&gt;
+&lt;field length="52" scale="0" type="string"&gt;416848&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="RET_STATUS"&gt;
+&lt;field length="1" scale="0" type="string"&gt;F&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="TRAN_TIMESTAMP"&gt;
+&lt;field length="9" scale="0" type="string"&gt;104016550&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="TRAN_DATE"&gt;
+&lt;field length="8" scale="0" type="string"&gt;20180222&lt;/field&gt;
+&lt;/data&gt;
+&lt;data name="CONSUMER_ID"&gt;
+&lt;field length="6" scale="0" type="string"&gt;108990&lt;/field&gt;
+&lt;/data&gt;
+&lt;/struct&gt;
+&lt;/data&gt;
+&lt;/sys-header&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.237" starttime="20180618 22:58:54.236"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.238" level="INFO">${node_element} = &lt;Element 'sys-header' at 0x0000000008BCB9C0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.238" starttime="20180618 22:58:54.221"></status>
+</kw>
+<kw type="kw" name="${ret_status_text} = 公共关键字.获取RET_STATUS内容">
+<doc>功能：获取sys-header节点下RET_STATUS指定内容，例如type，length，scale，text</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>text</arg>
+</arguments>
+<kw type="kw" name="${systag} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${node_element.tag}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.240" level="INFO">${systag} = sys-header</msg>
+<status status="PASS" endtime="20180618 22:58:54.240" starttime="20180618 22:58:54.239"></status>
+</kw>
+<kw type="kw" name="${sys_data1} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.241" level="INFO">${sys_data1} = &lt;Element 'data' at 0x0000000008BCBB70&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.241" starttime="20180618 22:58:54.240"></status>
+</kw>
+<kw type="kw" name="${sys_data1_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data1.attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.242" level="INFO">${sys_data1_attrib} = SYS_HEAD</msg>
+<status status="PASS" endtime="20180618 22:58:54.242" starttime="20180618 22:58:54.241"></status>
+</kw>
+<kw type="kw" name="${sys_data2} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.243" level="INFO">${sys_data2} = [&lt;Element 'data' at 0x0000000008BCB960&gt;, &lt;Element 'data' at 0x0000000008BCB870&gt;, &lt;Element 'data' at 0x0000000008BCB900&gt;, &lt;Element 'data' at 0x0000000008BCBF30&gt;, &lt;Element 'data' at 0x0000000008BCB270&gt;,...</msg>
+<status status="PASS" endtime="20180618 22:58:54.243" starttime="20180618 22:58:54.243"></status>
+</kw>
+<kw type="kw" name="${sys_data2_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${sys_data2}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.244" level="INFO">Length is 9</msg>
+<msg timestamp="20180618 22:58:54.245" level="INFO">${sys_data2_len} = 9</msg>
+<status status="PASS" endtime="20180618 22:58:54.245" starttime="20180618 22:58:54.244"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${sys_data2_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.247" level="INFO">${data2_attrib} = RET</msg>
+<status status="PASS" endtime="20180618 22:58:54.247" starttime="20180618 22:58:54.246"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.248" starttime="20180618 22:58:54.247"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.248" starttime="20180618 22:58:54.245"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.249" level="INFO">${data2_attrib} = ESB_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.249" starttime="20180618 22:58:54.248"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.250" starttime="20180618 22:58:54.250"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.250" starttime="20180618 22:58:54.248"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.252" level="INFO">${data2_attrib} = SERVICE_SCENE</msg>
+<status status="PASS" endtime="20180618 22:58:54.252" starttime="20180618 22:58:54.251"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.253" starttime="20180618 22:58:54.252"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.253" starttime="20180618 22:58:54.251"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.254" level="INFO">${data2_attrib} = SERVICE_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.254" starttime="20180618 22:58:54.254"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.256" starttime="20180618 22:58:54.255"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.256" starttime="20180618 22:58:54.253"></status>
+</kw>
+<kw type="foritem" name="${index} = 4">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.257" level="INFO">${data2_attrib} = CONSUMER_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.257" starttime="20180618 22:58:54.256"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.258" starttime="20180618 22:58:54.258"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.259" starttime="20180618 22:58:54.256"></status>
+</kw>
+<kw type="foritem" name="${index} = 5">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.260" level="INFO">${data2_attrib} = RET_STATUS</msg>
+<status status="PASS" endtime="20180618 22:58:54.260" starttime="20180618 22:58:54.259"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.262" level="INFO">${ret_status_index} = 5</msg>
+<status status="PASS" endtime="20180618 22:58:54.262" starttime="20180618 22:58:54.261"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.262" starttime="20180618 22:58:54.260"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.262" starttime="20180618 22:58:54.259"></status>
+</kw>
+<kw type="foritem" name="${index} = 6">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.264" level="INFO">${data2_attrib} = TRAN_TIMESTAMP</msg>
+<status status="PASS" endtime="20180618 22:58:54.264" starttime="20180618 22:58:54.263"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.265" starttime="20180618 22:58:54.264"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.265" starttime="20180618 22:58:54.263"></status>
+</kw>
+<kw type="foritem" name="${index} = 7">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.266" level="INFO">${data2_attrib} = TRAN_DATE</msg>
+<status status="PASS" endtime="20180618 22:58:54.266" starttime="20180618 22:58:54.266"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.267" starttime="20180618 22:58:54.267"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.268" starttime="20180618 22:58:54.265"></status>
+</kw>
+<kw type="foritem" name="${index} = 8">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.269" level="INFO">${data2_attrib} = CONSUMER_ID</msg>
+<status status="PASS" endtime="20180618 22:58:54.269" starttime="20180618 22:58:54.268"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET_STATUS'</arg>
+<arg>set global variable</arg>
+<arg>${ret_status_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.270" starttime="20180618 22:58:54.269"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.270" starttime="20180618 22:58:54.268"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.271" starttime="20180618 22:58:54.245"></status>
+</kw>
+<kw type="kw" name="${ret_status_elem} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${sys_data2[${ret_status_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.272" level="INFO">${ret_status_elem} = &lt;Element 'data' at 0x0000000008BCB3F0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.272" starttime="20180618 22:58:54.271"></status>
+</kw>
+<kw type="kw" name="${ret_status_field} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_status_elem}</arg>
+<arg>xpath=field</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.273" level="INFO">${ret_status_field} = &lt;Element 'field' at 0x0000000008BCB0C0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.273" starttime="20180618 22:58:54.272"></status>
+</kw>
+<kw type="kw" name="${re_status_field_attrib} = XML.Get Element Attributes">
+<doc>Returns all attributes of the specified element.</doc>
+<arguments>
+<arg>${ret_status_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.274" level="INFO">${re_status_field_attrib} = {'length': '1', 'scale': '0', 'type': 'string'}</msg>
+<status status="PASS" endtime="20180618 22:58:54.274" starttime="20180618 22:58:54.273"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_type} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${re_status_field_attrib}</arg>
+<arg>type</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.275" level="INFO">${ret_status_field_type} = string</msg>
+<status status="PASS" endtime="20180618 22:58:54.275" starttime="20180618 22:58:54.274"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_length} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${re_status_field_attrib}</arg>
+<arg>length</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.276" level="INFO">${ret_status_field_length} = 1</msg>
+<status status="PASS" endtime="20180618 22:58:54.276" starttime="20180618 22:58:54.275"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_scale} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${re_status_field_attrib}</arg>
+<arg>scale</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.277" level="INFO">${ret_status_field_scale} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.277" starttime="20180618 22:58:54.276"></status>
+</kw>
+<kw type="kw" name="${ret_status_field_text} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${ret_status_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.278" level="INFO">${ret_status_field_text} = F</msg>
+<status status="PASS" endtime="20180618 22:58:54.278" starttime="20180618 22:58:54.278"></status>
+</kw>
+<kw type="kw" name="${output_value} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${input_keyname}'=='type'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_type}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='length'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_length}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='scale'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_scale}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='text'</arg>
+<arg>set variable</arg>
+<arg>${ret_status_field_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_status_field_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.281" starttime="20180618 22:58:54.280"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.281" level="INFO">${output_value} = F</msg>
+<status status="PASS" endtime="20180618 22:58:54.281" starttime="20180618 22:58:54.279"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.282" level="INFO">${ret_status_text} = F</msg>
+<status status="PASS" endtime="20180618 22:58:54.281" starttime="20180618 22:58:54.238"></status>
+</kw>
+<kw type="kw" name="${ret_code_text} = 公共关键字.获取RET_CODE内容">
+<doc>功能：获取sys-header节点下RET_CODE指定内容，例如type，length，scale，text</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>text</arg>
+</arguments>
+<kw type="kw" name="${systag} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${node_element.tag}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.284" level="INFO">${systag} = sys-header</msg>
+<status status="PASS" endtime="20180618 22:58:54.284" starttime="20180618 22:58:54.283"></status>
+</kw>
+<kw type="kw" name="${sys_data1} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.285" level="INFO">${sys_data1} = &lt;Element 'data' at 0x0000000008BCBB70&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.285" starttime="20180618 22:58:54.284"></status>
+</kw>
+<kw type="kw" name="${sys_data1_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data1.attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.286" level="INFO">${sys_data1_attrib} = SYS_HEAD</msg>
+<status status="PASS" endtime="20180618 22:58:54.286" starttime="20180618 22:58:54.285"></status>
+</kw>
+<kw type="kw" name="${sys_data2} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.287" level="INFO">${sys_data2} = [&lt;Element 'data' at 0x0000000008BCB960&gt;, &lt;Element 'data' at 0x0000000008BCB870&gt;, &lt;Element 'data' at 0x0000000008BCB900&gt;, &lt;Element 'data' at 0x0000000008BCBF30&gt;, &lt;Element 'data' at 0x0000000008BCB270&gt;,...</msg>
+<status status="PASS" endtime="20180618 22:58:54.287" starttime="20180618 22:58:54.286"></status>
+</kw>
+<kw type="kw" name="${sys_data2_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${sys_data2}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.288" level="INFO">Length is 9</msg>
+<msg timestamp="20180618 22:58:54.288" level="INFO">${sys_data2_len} = 9</msg>
+<status status="PASS" endtime="20180618 22:58:54.288" starttime="20180618 22:58:54.288"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${sys_data2_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.290" level="INFO">${data2_attrib} = RET</msg>
+<status status="PASS" endtime="20180618 22:58:54.290" starttime="20180618 22:58:54.290"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.292" level="INFO">${ret_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.292" starttime="20180618 22:58:54.292"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.293" starttime="20180618 22:58:54.291"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.293" starttime="20180618 22:58:54.289"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.294" level="INFO">${data2_attrib} = ESB_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.294" starttime="20180618 22:58:54.293"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.295" starttime="20180618 22:58:54.295"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.296" starttime="20180618 22:58:54.293"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.297" level="INFO">${data2_attrib} = SERVICE_SCENE</msg>
+<status status="PASS" endtime="20180618 22:58:54.297" starttime="20180618 22:58:54.296"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.298" starttime="20180618 22:58:54.297"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.298" starttime="20180618 22:58:54.296"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.299" level="INFO">${data2_attrib} = SERVICE_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.299" starttime="20180618 22:58:54.299"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.300" starttime="20180618 22:58:54.300"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.301" starttime="20180618 22:58:54.298"></status>
+</kw>
+<kw type="foritem" name="${index} = 4">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.302" level="INFO">${data2_attrib} = CONSUMER_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.302" starttime="20180618 22:58:54.301"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.303" starttime="20180618 22:58:54.303"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.303" starttime="20180618 22:58:54.301"></status>
+</kw>
+<kw type="foritem" name="${index} = 5">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.305" level="INFO">${data2_attrib} = RET_STATUS</msg>
+<status status="PASS" endtime="20180618 22:58:54.305" starttime="20180618 22:58:54.304"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.306" starttime="20180618 22:58:54.306"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.306" starttime="20180618 22:58:54.304"></status>
+</kw>
+<kw type="foritem" name="${index} = 6">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.308" level="INFO">${data2_attrib} = TRAN_TIMESTAMP</msg>
+<status status="PASS" endtime="20180618 22:58:54.308" starttime="20180618 22:58:54.307"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.309" starttime="20180618 22:58:54.308"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.309" starttime="20180618 22:58:54.307"></status>
+</kw>
+<kw type="foritem" name="${index} = 7">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.310" level="INFO">${data2_attrib} = TRAN_DATE</msg>
+<status status="PASS" endtime="20180618 22:58:54.310" starttime="20180618 22:58:54.310"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.312" starttime="20180618 22:58:54.311"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.312" starttime="20180618 22:58:54.309"></status>
+</kw>
+<kw type="foritem" name="${index} = 8">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.313" level="INFO">${data2_attrib} = CONSUMER_ID</msg>
+<status status="PASS" endtime="20180618 22:58:54.313" starttime="20180618 22:58:54.312"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.314" starttime="20180618 22:58:54.314"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.314" starttime="20180618 22:58:54.312"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.315" starttime="20180618 22:58:54.289"></status>
+</kw>
+<kw type="kw" name="${ret_elem} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${sys_data2[${ret_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.316" level="INFO">${ret_elem} = &lt;Element 'data' at 0x0000000008BCB960&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.316" starttime="20180618 22:58:54.315"></status>
+</kw>
+<kw type="kw" name="${ret_data} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.317" level="INFO">${ret_data} = [&lt;Element 'data' at 0x0000000008BCB480&gt;, &lt;Element 'data' at 0x0000000008BCB4B0&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.317" starttime="20180618 22:58:54.316"></status>
+</kw>
+<kw type="kw" name="${ret_data_length} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${ret_data}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.318" level="INFO">Length is 2</msg>
+<msg timestamp="20180618 22:58:54.318" level="INFO">${ret_data_length} = 2</msg>
+<status status="PASS" endtime="20180618 22:58:54.318" starttime="20180618 22:58:54.317"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${ret_data_length} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.320" level="INFO">${ret_data_attrib} = RET_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.320" starttime="20180618 22:58:54.319"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_CODE'</arg>
+<arg>set global variable</arg>
+<arg>${ret_code_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_code_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.322" level="INFO">${ret_code_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.322" starttime="20180618 22:58:54.321"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.322" starttime="20180618 22:58:54.320"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.322" starttime="20180618 22:58:54.319"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.324" level="INFO">${ret_data_attrib} = RET_MSG</msg>
+<status status="PASS" endtime="20180618 22:58:54.324" starttime="20180618 22:58:54.323"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_CODE'</arg>
+<arg>set global variable</arg>
+<arg>${ret_code_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.325" starttime="20180618 22:58:54.324"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.325" starttime="20180618 22:58:54.323"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.325" starttime="20180618 22:58:54.318"></status>
+</kw>
+<kw type="kw" name="${ret_field} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data/field</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.326" level="INFO">${ret_field} = [&lt;Element 'field' at 0x0000000008BCBED0&gt;, &lt;Element 'field' at 0x0000000008BCB2D0&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.326" starttime="20180618 22:58:54.326"></status>
+</kw>
+<kw type="kw" name="${ret_code_field} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_field[${ret_code_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.328" level="INFO">${ret_code_field} = &lt;Element 'field' at 0x0000000008BCBED0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.327" starttime="20180618 22:58:54.327"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_attrib} = XML.Get Element Attributes">
+<doc>Returns all attributes of the specified element.</doc>
+<arguments>
+<arg>${ret_code_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.329" level="INFO">${ret_code_field_attrib} = {'length': '8', 'scale': '0', 'type': 'string'}</msg>
+<status status="PASS" endtime="20180618 22:58:54.329" starttime="20180618 22:58:54.328"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_type} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_code_field_attrib}</arg>
+<arg>type</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.330" level="INFO">${ret_code_field_type} = string</msg>
+<status status="PASS" endtime="20180618 22:58:54.330" starttime="20180618 22:58:54.329"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_length} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_code_field_attrib}</arg>
+<arg>length</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.331" level="INFO">${ret_code_field_length} = 8</msg>
+<status status="PASS" endtime="20180618 22:58:54.331" starttime="20180618 22:58:54.330"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_scale} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_code_field_attrib}</arg>
+<arg>scale</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.332" level="INFO">${ret_code_field_scale} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.332" starttime="20180618 22:58:54.331"></status>
+</kw>
+<kw type="kw" name="${ret_code_field_text} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${ret_code_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.333" level="INFO">${ret_code_field_text} = 99999999</msg>
+<status status="PASS" endtime="20180618 22:58:54.333" starttime="20180618 22:58:54.332"></status>
+</kw>
+<kw type="kw" name="${output_value} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${input_keyname}'=='type'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_type}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='length'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_length}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='scale'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_scale}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='text'</arg>
+<arg>set variable</arg>
+<arg>${ret_code_field_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_code_field_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.335" starttime="20180618 22:58:54.334"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.335" level="INFO">${output_value} = 99999999</msg>
+<status status="PASS" endtime="20180618 22:58:54.335" starttime="20180618 22:58:54.333"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.336" level="INFO">${ret_code_text} = 99999999</msg>
+<status status="PASS" endtime="20180618 22:58:54.336" starttime="20180618 22:58:54.282"></status>
+</kw>
+<kw type="kw" name="${ret_msg_text} = 公共关键字.获取RET_MSG内容">
+<doc>功能：获取sys-header节点下RET_MSG指定内容，例如type，length，scale，text</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>text</arg>
+</arguments>
+<kw type="kw" name="${systag} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${node_element.tag}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.339" level="INFO">${systag} = sys-header</msg>
+<status status="PASS" endtime="20180618 22:58:54.339" starttime="20180618 22:58:54.338"></status>
+</kw>
+<kw type="kw" name="${sys_data1} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.340" level="INFO">${sys_data1} = &lt;Element 'data' at 0x0000000008BCBB70&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.340" starttime="20180618 22:58:54.339"></status>
+</kw>
+<kw type="kw" name="${sys_data1_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data1.attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.341" level="INFO">${sys_data1_attrib} = SYS_HEAD</msg>
+<status status="PASS" endtime="20180618 22:58:54.341" starttime="20180618 22:58:54.340"></status>
+</kw>
+<kw type="kw" name="${sys_data2} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${node_element}</arg>
+<arg>xpath=data/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.342" level="INFO">${sys_data2} = [&lt;Element 'data' at 0x0000000008BCB960&gt;, &lt;Element 'data' at 0x0000000008BCB870&gt;, &lt;Element 'data' at 0x0000000008BCB900&gt;, &lt;Element 'data' at 0x0000000008BCBF30&gt;, &lt;Element 'data' at 0x0000000008BCB270&gt;,...</msg>
+<status status="PASS" endtime="20180618 22:58:54.342" starttime="20180618 22:58:54.341"></status>
+</kw>
+<kw type="kw" name="${sys_data2_len} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${sys_data2}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.343" level="INFO">Length is 9</msg>
+<msg timestamp="20180618 22:58:54.343" level="INFO">${sys_data2_len} = 9</msg>
+<status status="PASS" endtime="20180618 22:58:54.343" starttime="20180618 22:58:54.342"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${sys_data2_len} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.345" level="INFO">${data2_attrib} = RET</msg>
+<status status="PASS" endtime="20180618 22:58:54.345" starttime="20180618 22:58:54.344"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.347" level="INFO">${ret_index} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.347" starttime="20180618 22:58:54.346"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.347" starttime="20180618 22:58:54.346"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.347" starttime="20180618 22:58:54.344"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.349" level="INFO">${data2_attrib} = ESB_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.349" starttime="20180618 22:58:54.348"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.350" starttime="20180618 22:58:54.349"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.350" starttime="20180618 22:58:54.348"></status>
+</kw>
+<kw type="foritem" name="${index} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.351" level="INFO">${data2_attrib} = SERVICE_SCENE</msg>
+<status status="PASS" endtime="20180618 22:58:54.351" starttime="20180618 22:58:54.351"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.353" starttime="20180618 22:58:54.352"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.353" starttime="20180618 22:58:54.350"></status>
+</kw>
+<kw type="foritem" name="${index} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.354" level="INFO">${data2_attrib} = SERVICE_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.354" starttime="20180618 22:58:54.353"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.355" starttime="20180618 22:58:54.355"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.355" starttime="20180618 22:58:54.353"></status>
+</kw>
+<kw type="foritem" name="${index} = 4">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.357" level="INFO">${data2_attrib} = CONSUMER_SEQ_NO</msg>
+<status status="PASS" endtime="20180618 22:58:54.357" starttime="20180618 22:58:54.356"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.358" starttime="20180618 22:58:54.357"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.358" starttime="20180618 22:58:54.356"></status>
+</kw>
+<kw type="foritem" name="${index} = 5">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.359" level="INFO">${data2_attrib} = RET_STATUS</msg>
+<status status="PASS" endtime="20180618 22:58:54.359" starttime="20180618 22:58:54.359"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.360" starttime="20180618 22:58:54.360"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.361" starttime="20180618 22:58:54.358"></status>
+</kw>
+<kw type="foritem" name="${index} = 6">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.362" level="INFO">${data2_attrib} = TRAN_TIMESTAMP</msg>
+<status status="PASS" endtime="20180618 22:58:54.362" starttime="20180618 22:58:54.361"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.363" starttime="20180618 22:58:54.363"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.363" starttime="20180618 22:58:54.361"></status>
+</kw>
+<kw type="foritem" name="${index} = 7">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.365" level="INFO">${data2_attrib} = TRAN_DATE</msg>
+<status status="PASS" endtime="20180618 22:58:54.364" starttime="20180618 22:58:54.364"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.366" starttime="20180618 22:58:54.365"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.366" starttime="20180618 22:58:54.364"></status>
+</kw>
+<kw type="foritem" name="${index} = 8">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${data2_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${sys_data2[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.367" level="INFO">${data2_attrib} = CONSUMER_ID</msg>
+<status status="PASS" endtime="20180618 22:58:54.367" starttime="20180618 22:58:54.366"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${data2_attrib}'=='RET'</arg>
+<arg>set global variable</arg>
+<arg>${ret_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.369" starttime="20180618 22:58:54.368"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.369" starttime="20180618 22:58:54.366"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.369" starttime="20180618 22:58:54.344"></status>
+</kw>
+<kw type="kw" name="${ret_elem} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${sys_data2[${ret_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.370" level="INFO">${ret_elem} = &lt;Element 'data' at 0x0000000008BCB960&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.370" starttime="20180618 22:58:54.369"></status>
+</kw>
+<kw type="kw" name="${ret_data} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.371" level="INFO">${ret_data} = [&lt;Element 'data' at 0x0000000008BCB480&gt;, &lt;Element 'data' at 0x0000000008BCB4B0&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.371" starttime="20180618 22:58:54.371"></status>
+</kw>
+<kw type="kw" name="${ret_data_length} = BuiltIn.Get Length">
+<doc>Returns and logs the length of the given item.</doc>
+<arguments>
+<arg>${ret_data}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.372" level="INFO">Length is 2</msg>
+<msg timestamp="20180618 22:58:54.372" level="INFO">${ret_data_length} = 2</msg>
+<status status="PASS" endtime="20180618 22:58:54.372" starttime="20180618 22:58:54.372"></status>
+</kw>
+<kw type="for" name="${index} IN RANGE [ 0 | ${ret_data_length} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${index} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.374" level="INFO">${ret_data_attrib} = RET_CODE</msg>
+<status status="PASS" endtime="20180618 22:58:54.374" starttime="20180618 22:58:54.373"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_MSG'</arg>
+<arg>set global variable</arg>
+<arg>${ret_msg_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.375" starttime="20180618 22:58:54.375"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.375" starttime="20180618 22:58:54.373"></status>
+</kw>
+<kw type="foritem" name="${index} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${ret_data_attrib} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_data[${index}].attrib}</arg>
+<arg>name</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.377" level="INFO">${ret_data_attrib} = RET_MSG</msg>
+<status status="PASS" endtime="20180618 22:58:54.377" starttime="20180618 22:58:54.376"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${ret_data_attrib}'=='RET_MSG'</arg>
+<arg>set global variable</arg>
+<arg>${ret_msg_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${ret_msg_index}</arg>
+<arg>${index}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.378" level="INFO">${ret_msg_index} = 1</msg>
+<status status="PASS" endtime="20180618 22:58:54.379" starttime="20180618 22:58:54.378"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.379" starttime="20180618 22:58:54.377"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.379" starttime="20180618 22:58:54.376"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.379" starttime="20180618 22:58:54.373"></status>
+</kw>
+<kw type="kw" name="${ret_field} = XML.Get Elements">
+<doc>Returns a list of elements in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${ret_elem}</arg>
+<arg>xpath=array/struct/data/field</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.380" level="INFO">${ret_field} = [&lt;Element 'field' at 0x0000000008BCBED0&gt;, &lt;Element 'field' at 0x0000000008BCB2D0&gt;]</msg>
+<status status="PASS" endtime="20180618 22:58:54.380" starttime="20180618 22:58:54.380"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_field[${ret_msg_index}]}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.381" level="INFO">${ret_msg_field} = &lt;Element 'field' at 0x0000000008BCB2D0&gt;</msg>
+<status status="PASS" endtime="20180618 22:58:54.381" starttime="20180618 22:58:54.381"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_attrib} = XML.Get Element Attributes">
+<doc>Returns all attributes of the specified element.</doc>
+<arguments>
+<arg>${ret_msg_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.383" level="INFO">${ret_msg_field_attrib} = {'length': '25', 'scale': '0', 'type': 'string'}</msg>
+<status status="PASS" endtime="20180618 22:58:54.382" starttime="20180618 22:58:54.382"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_type} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_msg_field_attrib}</arg>
+<arg>type</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.384" level="INFO">${ret_msg_field_type} = string</msg>
+<status status="PASS" endtime="20180618 22:58:54.384" starttime="20180618 22:58:54.383"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_length} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_msg_field_attrib}</arg>
+<arg>length</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.385" level="INFO">${ret_msg_field_length} = 25</msg>
+<status status="PASS" endtime="20180618 22:58:54.385" starttime="20180618 22:58:54.384"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_scale} = Collections.Get From Dictionary">
+<doc>Returns a value from the given `dictionary` based on the given `key`.</doc>
+<arguments>
+<arg>${ret_msg_field_attrib}</arg>
+<arg>scale</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.386" level="INFO">${ret_msg_field_scale} = 0</msg>
+<status status="PASS" endtime="20180618 22:58:54.386" starttime="20180618 22:58:54.385"></status>
+</kw>
+<kw type="kw" name="${ret_msg_field_text} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${ret_msg_field}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.387" level="INFO">${ret_msg_field_text} = 閿欒淇℃伅涓猴細features.error.0216</msg>
+<status status="PASS" endtime="20180618 22:58:54.387" starttime="20180618 22:58:54.386"></status>
+</kw>
+<kw type="kw" name="${output_value} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${input_keyname}'=='type'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_type}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='length'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_length}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='scale'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_scale}</arg>
+<arg>ELSE IF</arg>
+<arg>'${input_keyname}'=='text'</arg>
+<arg>set variable</arg>
+<arg>${ret_msg_field_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${ret_msg_field_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180618 22:58:54.389" starttime="20180618 22:58:54.389"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.390" level="INFO">${output_value} = 閿欒淇℃伅涓猴細features.error.0216</msg>
+<status status="PASS" endtime="20180618 22:58:54.390" starttime="20180618 22:58:54.388"></status>
+</kw>
+<msg timestamp="20180618 22:58:54.390" level="INFO">${ret_msg_text} = 閿欒淇℃伅涓猴細features.error.0216</msg>
+<status status="PASS" endtime="20180618 22:58:54.390" starttime="20180618 22:58:54.337"></status>
+</kw>
+<kw type="kw" name="公共关键字.字符串内容对比">
+<doc></doc>
+<arguments>
+<arg>${expect_status}</arg>
+<arg>${ret_status_text}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${expect_value}</arg>
+<arg>${return_value}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.392" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20180618 22:58:54.393" level="FAIL">F != S</msg>
+<status status="FAIL" endtime="20180618 22:58:54.393" starttime="20180618 22:58:54.392"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.394" starttime="20180618 22:58:54.391"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.394" starttime="20180618 22:58:54.113"></status>
+</kw>
+<doc>#token验证</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.394" critical="yes" starttime="20180618 22:58:54.111">F != S</status>
+</test>
+<test id="s1-s1-s1-t3" name="[客户运营]0200300000101-贷款汇总查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000101</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.414" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.414" starttime="20180618 22:58:54.399"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.415" starttime="20180618 22:58:54.398"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.417" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000101.xml exists</msg>
+<msg timestamp="20180618 22:58:54.417" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.417" starttime="20180618 22:58:54.416"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.419" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.420" starttime="20180618 22:58:54.418"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.420" starttime="20180618 22:58:54.415"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.420" starttime="20180618 22:58:54.397"></status>
+</kw>
+<doc>#贷款汇总查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.421" critical="yes" starttime="20180618 22:58:54.395">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t4" name="[客户运营]0200300000102-贷款基本信息查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000102</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.441" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.442" starttime="20180618 22:58:54.426"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.442" starttime="20180618 22:58:54.425"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.444" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000102.xml exists</msg>
+<msg timestamp="20180618 22:58:54.445" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.445" starttime="20180618 22:58:54.444"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.446" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.446" starttime="20180618 22:58:54.445"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.447" starttime="20180618 22:58:54.443"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.447" starttime="20180618 22:58:54.424"></status>
+</kw>
+<doc>#贷款基本信息查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.447" critical="yes" starttime="20180618 22:58:54.421">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t5" name="[客户运营]0200300000201-综合授信额度查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000201</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.477" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.477" starttime="20180618 22:58:54.452"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.478" starttime="20180618 22:58:54.451"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.480" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000201.xml exists</msg>
+<msg timestamp="20180618 22:58:54.481" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.480" starttime="20180618 22:58:54.479"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.482" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.482" starttime="20180618 22:58:54.481"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.483" starttime="20180618 22:58:54.478"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.483" starttime="20180618 22:58:54.450"></status>
+</kw>
+<doc>#综合授信额度查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.484" critical="yes" starttime="20180618 22:58:54.448">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t6" name="[客户运营]0200300000202-综合授信额度明细查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000202</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.512" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.512" starttime="20180618 22:58:54.489"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.513" starttime="20180618 22:58:54.488"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.516" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000202.xml exists</msg>
+<msg timestamp="20180618 22:58:54.516" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.516" starttime="20180618 22:58:54.515"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.518" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.518" starttime="20180618 22:58:54.517"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.519" starttime="20180618 22:58:54.513"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.519" starttime="20180618 22:58:54.487"></status>
+</kw>
+<doc>#综合授信额度明细查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.520" critical="yes" starttime="20180618 22:58:54.484">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t7" name="[客户运营]0200300000205-自助贷款授信额度查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000205</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.550" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.550" starttime="20180618 22:58:54.525"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.551" starttime="20180618 22:58:54.524"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.553" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000205.xml exists</msg>
+<msg timestamp="20180618 22:58:54.553" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.553" starttime="20180618 22:58:54.552"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.555" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.555" starttime="20180618 22:58:54.554"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.555" starttime="20180618 22:58:54.551"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.556" starttime="20180618 22:58:54.523"></status>
+</kw>
+<doc>#自助贷款授信额度查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.556" critical="yes" starttime="20180618 22:58:54.520">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t8" name="[客户运营]0200300000301-承兑业务查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000301</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.596" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.596" starttime="20180618 22:58:54.561"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.597" starttime="20180618 22:58:54.560"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.599" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000301.xml exists</msg>
+<msg timestamp="20180618 22:58:54.600" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.599" starttime="20180618 22:58:54.599"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.601" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.601" starttime="20180618 22:58:54.600"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.602" starttime="20180618 22:58:54.598"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.602" starttime="20180618 22:58:54.559"></status>
+</kw>
+<doc>#承兑业务查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.602" critical="yes" starttime="20180618 22:58:54.557">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t9" name="[客户运营]0200300000401-保函业务查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000401</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.644" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.644" starttime="20180618 22:58:54.607"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.645" starttime="20180618 22:58:54.606"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.647" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000401.xml exists</msg>
+<msg timestamp="20180618 22:58:54.647" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.647" starttime="20180618 22:58:54.646"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.648" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.649" starttime="20180618 22:58:54.648"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.649" starttime="20180618 22:58:54.645"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.649" starttime="20180618 22:58:54.605"></status>
+</kw>
+<doc>#保函业务查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.650" critical="yes" starttime="20180618 22:58:54.603">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t10" name="[客户运营]0200300000501-信用证业务查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300000501</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.695" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.695" starttime="20180618 22:58:54.655"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.696" starttime="20180618 22:58:54.654"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.698" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300000501.xml exists</msg>
+<msg timestamp="20180618 22:58:54.698" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.698" starttime="20180618 22:58:54.697"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.699" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.700" starttime="20180618 22:58:54.699"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.700" starttime="20180618 22:58:54.696"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.701" starttime="20180618 22:58:54.653"></status>
+</kw>
+<doc>#信用证业务查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.701" critical="yes" starttime="20180618 22:58:54.651">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t11" name="[客户运营]0200300002015-批量预授信额度查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300002015</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.731" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.731" starttime="20180618 22:58:54.706"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.732" starttime="20180618 22:58:54.705"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.734" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300002015.xml exists</msg>
+<msg timestamp="20180618 22:58:54.734" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.734" starttime="20180618 22:58:54.733"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.736" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.736" starttime="20180618 22:58:54.735"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.736" starttime="20180618 22:58:54.732"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.737" starttime="20180618 22:58:54.704"></status>
+</kw>
+<doc>#批量预授信额度查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.737" critical="yes" starttime="20180618 22:58:54.702">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t12" name="[客户运营]1300300000105-名单制详情查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>1300300000105</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.766" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.766" starttime="20180618 22:58:54.742"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.766" starttime="20180618 22:58:54.741"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.769" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1300300000105.xml exists</msg>
+<msg timestamp="20180618 22:58:54.770" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.769" starttime="20180618 22:58:54.769"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.771" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.771" starttime="20180618 22:58:54.770"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.771" starttime="20180618 22:58:54.767"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.772" starttime="20180618 22:58:54.740"></status>
+</kw>
+<doc>#名单制详情查询</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.772" critical="yes" starttime="20180618 22:58:54.738">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t13" name="[客户运营]1100200000701-开立客户号_个人">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>1100200000701</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.802" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.802" starttime="20180618 22:58:54.777"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.803" starttime="20180618 22:58:54.776"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.805" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1100200000701.xml exists</msg>
+<msg timestamp="20180618 22:58:54.805" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.805" starttime="20180618 22:58:54.804"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.813" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.813" starttime="20180618 22:58:54.812"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.814" starttime="20180618 22:58:54.803"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.814" starttime="20180618 22:58:54.775"></status>
+</kw>
+<doc>#开立客户号_个人</doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.815" critical="yes" starttime="20180618 22:58:54.773">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t14" name="[客户运营]0100300000501-客户存款实时查询">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0100300000501</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.839" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.839" starttime="20180618 22:58:54.820"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.840" starttime="20180618 22:58:54.819"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.843" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0100300000501.xml exists</msg>
+<msg timestamp="20180618 22:58:54.843" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.843" starttime="20180618 22:58:54.842"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.845" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.845" starttime="20180618 22:58:54.844"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.846" starttime="20180618 22:58:54.841"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.846" starttime="20180618 22:58:54.818"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.846" critical="yes" starttime="20180618 22:58:54.816">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t15" name="[客户运营]1100200004701-客户基础信息维护">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>1100200004701</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.880" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.881" starttime="20180618 22:58:54.851"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.882" starttime="20180618 22:58:54.850"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.886" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1100200004701.xml exists</msg>
+<msg timestamp="20180618 22:58:54.886" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.886" starttime="20180618 22:58:54.884"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.888" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.888" starttime="20180618 22:58:54.887"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.888" starttime="20180618 22:58:54.883"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.889" starttime="20180618 22:58:54.849"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.890" critical="yes" starttime="20180618 22:58:54.847">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t16" name="[客户运营]1100200004901-补充信息维护">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>1100200004901</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.932" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.932" starttime="20180618 22:58:54.894"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.933" starttime="20180618 22:58:54.893"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.935" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1100200004901.xml exists</msg>
+<msg timestamp="20180618 22:58:54.935" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.935" starttime="20180618 22:58:54.934"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.937" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.937" starttime="20180618 22:58:54.936"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.937" starttime="20180618 22:58:54.933"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.938" starttime="20180618 22:58:54.892"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.938" critical="yes" starttime="20180618 22:58:54.890">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t17" name="[客户运营]1100200008402-个人信息维护">
+<kw type="kw" name="案例执行.[客户运营]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>1100200008402</arg>
+<arg>S</arg>
+<arg>交易成功</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.968" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:54.968" starttime="20180618 22:58:54.942"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:54.969" starttime="20180618 22:58:54.941"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.971" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/1100200008402.xml exists</msg>
+<msg timestamp="20180618 22:58:54.971" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:54.971" starttime="20180618 22:58:54.970"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:54.973" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:54.973" starttime="20180618 22:58:54.972"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.973" starttime="20180618 22:58:54.969"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:54.973" starttime="20180618 22:58:54.940"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:54.974" critical="yes" starttime="20180618 22:58:54.939">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t18" name="[通用计价]0200200000502-计算">
+<kw type="kw" name="案例执行.[通用计价]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200200000502</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.005" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:55.006" starttime="20180618 22:58:54.978"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:55.006" starttime="20180618 22:58:54.977"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.008" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200200000502.xml exists</msg>
+<msg timestamp="20180618 22:58:55.008" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:55.008" starttime="20180618 22:58:55.008"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.010" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:55.010" starttime="20180618 22:58:55.009"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:55.010" starttime="20180618 22:58:55.007"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:55.011" starttime="20180618 22:58:54.976"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:55.011" critical="yes" starttime="20180618 22:58:54.974">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t19" name="[通用计价]0200300004502-试算">
+<kw type="kw" name="案例执行.[通用计价]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300004502</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.043" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:55.043" starttime="20180618 22:58:55.015"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:55.044" starttime="20180618 22:58:55.014"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.046" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300004502.xml exists</msg>
+<msg timestamp="20180618 22:58:55.046" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:55.046" starttime="20180618 22:58:55.045"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.048" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:55.048" starttime="20180618 22:58:55.047"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:55.048" starttime="20180618 22:58:55.044"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:55.049" starttime="20180618 22:58:55.013"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:55.049" critical="yes" starttime="20180618 22:58:55.012">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t20" name="[订单交易]0200300001008-印花税查询">
+<kw type="kw" name="案例执行.[订单交易]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200300001008</arg>
+<arg>S</arg>
+<arg>${empty}</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.081" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:55.081" starttime="20180618 22:58:55.053"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:55.082" starttime="20180618 22:58:55.052"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.084" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200300001008.xml exists</msg>
+<msg timestamp="20180618 22:58:55.084" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:58:55.084" starttime="20180618 22:58:55.083"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.086" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:58:55.086" starttime="20180618 22:58:55.085"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:55.086" starttime="20180618 22:58:55.082"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:58:55.087" starttime="20180618 22:58:55.051"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:58:55.087" critical="yes" starttime="20180618 22:58:55.050">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t21" name="[订单交易]0200200003801-创建订单-自助贷款">
+<kw type="kw" name="案例执行.[订单交易]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200200003801-自助贷</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:58:55.121" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:58:55.122" starttime="20180618 22:58:55.091"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:58:55.122" starttime="20180618 22:58:55.091"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:00.126" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200200003801-自助贷.xml not found</msg>
+<msg timestamp="20180618 22:59:00.128" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:59:00.127" starttime="20180618 22:58:55.125"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:00.132" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:59:00.132" starttime="20180618 22:59:00.129"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:00.133" starttime="20180618 22:58:55.123"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:00.135" starttime="20180618 22:58:55.090"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>skip</tag>
+</tags>
+<status status="FAIL" endtime="20180618 22:59:00.136" critical="yes" starttime="20180618 22:58:55.088">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t22" name="[订单交易]0200200003801-创建订单-兴农卡">
+<kw type="kw" name="案例执行.[订单交易]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200200003801-兴农卡</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:00.201" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:59:00.201" starttime="20180618 22:59:00.149"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:59:00.202" starttime="20180618 22:59:00.146"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:05.206" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200200003801-兴农卡.xml not found</msg>
+<msg timestamp="20180618 22:59:05.207" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:59:05.207" starttime="20180618 22:59:00.204"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:05.211" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:59:05.212" starttime="20180618 22:59:05.209"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:05.213" starttime="20180618 22:59:00.202"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:05.214" starttime="20180618 22:59:00.144"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>skip</tag>
+</tags>
+<status status="FAIL" endtime="20180618 22:59:05.216" critical="yes" starttime="20180618 22:59:00.138">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t23" name="[订单交易]0200200003801-创建订单-畅易贷">
+<kw type="kw" name="案例执行.[订单交易]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200200003801-畅易贷</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:05.259" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:59:05.260" starttime="20180618 22:59:05.229"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:59:05.260" starttime="20180618 22:59:05.226"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:10.263" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200200003801-畅易贷.xml not found</msg>
+<msg timestamp="20180618 22:59:10.265" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:59:10.264" starttime="20180618 22:59:05.263"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:10.268" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:59:10.269" starttime="20180618 22:59:10.266"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:10.270" starttime="20180618 22:59:05.261"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:10.272" starttime="20180618 22:59:05.223"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>skip</tag>
+</tags>
+<status status="FAIL" endtime="20180618 22:59:10.273" critical="yes" starttime="20180618 22:59:05.217">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t24" name="[订单交易]0200200003801-创建订单-普通贷">
+<kw type="kw" name="案例执行.[订单交易]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200200003801-普通贷</arg>
+<arg>S</arg>
+<arg>success</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:10.318" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:59:10.318" starttime="20180618 22:59:10.287"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:59:10.319" starttime="20180618 22:59:10.284"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:15.321" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200200003801-普通贷.xml not found</msg>
+<msg timestamp="20180618 22:59:15.322" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:59:15.322" starttime="20180618 22:59:10.320"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:15.326" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:59:15.327" starttime="20180618 22:59:15.324"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:15.328" starttime="20180618 22:59:10.319"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:15.329" starttime="20180618 22:59:10.280"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>skip</tag>
+</tags>
+<status status="FAIL" endtime="20180618 22:59:15.330" critical="yes" starttime="20180618 22:59:10.274">ParseError: no element found: line 1, column 0</status>
+</test>
+<test id="s1-s1-s1-t25" name="[订单交易]0200200002506-兴农卡放款核准">
+<kw type="kw" name="案例执行.[订单交易]通用接口返回码验证">
+<doc></doc>
+<arguments>
+<arg>0200200002506-兴农卡</arg>
+<arg>S</arg>
+<arg>贷款发放核准通过!</arg>
+<arg>000000</arg>
+</arguments>
+<kw type="kw" name="公共关键字.接口调用">
+<doc>功能：执行接口调用，发送报文，并返回xml报文</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/xml/${xmlname}.xml</arg>
+<arg>xml</arg>
+</arguments>
+<kw type="kw" name="CustomLibrary.Jvm Run">
+<doc>该方法用于调用java接口。</doc>
+<arguments>
+<arg>java start</arg>
+<arg>${input_file}</arg>
+<arg>${input_param}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:15.373" level="INFO">java进程正在被调用</msg>
+<status status="PASS" endtime="20180618 22:59:15.373" starttime="20180618 22:59:15.344"></status>
+</kw>
+<status status="PASS" endtime="20180618 22:59:15.374" starttime="20180618 22:59:15.341"></status>
+</kw>
+<kw type="kw" name="${node_element} = 公共关键字.获取节点内容">
+<doc>传入参数：</doc>
+<arguments>
+<arg>E:\\AUTO_PRO\\ESBDemo/recvXML/${xmlname}.xml</arg>
+<arg>sys-header</arg>
+</arguments>
+<kw type="kw" name="${file} = CustomLibrary.File Exists">
+<doc></doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:20.377" level="INFO">E:\AUTO_PRO\ESBDemo/recvXML/0200200002506-兴农卡.xml not found</msg>
+<msg timestamp="20180618 22:59:20.378" level="INFO">${file} = None</msg>
+<status status="PASS" endtime="20180618 22:59:20.378" starttime="20180618 22:59:15.376"></status>
+</kw>
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${recv_xml_filepath}</arg>
+</arguments>
+<msg timestamp="20180618 22:59:20.382" level="FAIL">ParseError: no element found: line 1, column 0</msg>
+<status status="FAIL" endtime="20180618 22:59:20.383" starttime="20180618 22:59:20.380"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:20.384" starttime="20180618 22:59:15.375"></status>
+</kw>
+<status status="FAIL" endtime="20180618 22:59:20.385" starttime="20180618 22:59:15.338"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20180618 22:59:20.386" critical="yes" starttime="20180618 22:59:15.332">ParseError: no element found: line 1, column 0</status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20180618 22:59:20.392" starttime="20180618 22:58:52.575"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20180618 22:59:20.407" starttime="20180618 22:58:52.572"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20180618 22:59:20.419" starttime="20180618 22:58:52.538"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="25" pass="0">已执行测试案例</stat>
+<stat fail="25" pass="0">全部测试案例</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="0" fail="4">skip</stat>
+</tag>
+<suite>
+<stat fail="25" pass="0" id="s1" name="AUTO PRO">AUTO PRO</stat>
+<stat fail="25" pass="0" id="s1-s1" name="ESBDemo">AUTO PRO.ESBDemo</stat>
+<stat fail="25" pass="0" id="s1-s1-s1" name="ESBDemo">AUTO PRO.ESBDemo.ESBDemo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

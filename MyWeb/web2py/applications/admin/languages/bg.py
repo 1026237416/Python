@@ -126,7 +126,7 @@
 'There are no translators, only default language is supported': 'There are no translators, only default language is supported',
 'There are no views': 'There are no views',
 'These files are served without processing, your images go here': 'These files are served without processing, your images go here',
-'This is the %(filename)s template': 'This is the %(filename)s template',
+'This is the %(filename)s templates': 'This is the %(filename)s templates',
 'Ticket': 'Ticket',
 'To create a plugin, name a file/folder plugin_[name]': 'To create a plugin, name a file/folder plugin_[name]',
 'Translation strings for the application': 'Translation strings for the application',

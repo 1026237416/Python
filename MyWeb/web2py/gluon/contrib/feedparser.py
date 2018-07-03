@@ -2628,7 +2628,7 @@ class _HTMLSanitizer(_BaseHTMLProcessor):
       'repeat-max', 'repeat-min', 'replace', 'required', 'rev', 'rightspacing',
       'rows', 'rowspan', 'rules', 'scope', 'selected', 'shape', 'size', 'span',
       'src', 'start', 'step', 'summary', 'suppress', 'tabindex', 'target',
-      'template', 'title', 'toppadding', 'type', 'unselectable', 'usemap',
+      'templates', 'title', 'toppadding', 'type', 'unselectable', 'usemap',
       'urn', 'valign', 'value', 'variable', 'volume', 'vspace', 'vrml',
       'width', 'wrap', 'xml:lang'])
 

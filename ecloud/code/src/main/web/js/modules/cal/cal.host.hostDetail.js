@@ -2512,7 +2512,7 @@ define(["easyui", "clientPaging", "echart", "module", "user", "domReady", "api",
                     }
                 },
                 {
-                    iconClass: "icon-menus-icon-template",
+                    iconClass: "icon-menus-icon-templates",
                     tip: ef.util.getLocale('host.iconmenu.template.tip'),//"创建镜像",
                     "access": [8, 9, 88],
                     id: 8,

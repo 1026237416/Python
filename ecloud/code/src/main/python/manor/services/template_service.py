@@ -47,12 +47,12 @@ class TemplateHandler(RestHandler):
         self.response(rs)
 
     @coroutine
-    @put(_path='/manor/template')
+    @put(_path='/manor/templates')
     def put_template(self,body):
         yield self.save_template('create')
 
     @coroutine
-    @post(_path='/manor/template')
+    @post(_path='/manor/templates')
     def update_template(self,body):
         yield self.save_template('update')
 
@@ -80,19 +80,19 @@ class TemplateHandler(RestHandler):
             else:
                 operation_log_type=Operator.UPDATE
                 if 'name' not in body:
-                    raise Exception('error.manor.template.no.name')
+                    raise Exception('error.manor.templates.no.name')
                 if body['name']=='':
-                    raise Exception('error.manor.template.name.is.empty')
+                    raise Exception('error.manor.templates.name.is.empty')
                 if not os.path.isfile('%s/%s.yaml'%(app_path,body['name'])):
-                    raise Exception('error.manor.template.update.not.exist')
+                    raise Exception('error.manor.templates.update.not.exist')
                 for a in body['action']:
                     if 'deploy'==a['type']:
                         a['label']='install_stream'
                     if 'label' not in a:
-                        raise Exception('error.manor.template.action.no.label')
+                        raise Exception('error.manor.templates.action.no.label')
                     if a['label']=='':
                         raise Exception(
-                            'error.manor.template.action.label.is.empty')
+                            'error.manor.templates.action.label.is.empty')
 
             script_path='%s/_%s'%(app_path,body['name'])
             if not os.path.isdir(script_path):
@@ -133,7 +133,7 @@ class TemplateHandler(RestHandler):
             raise e
 
     @coroutine
-    @delete(_path='/manor/template/{name}')
+    @delete(_path='/manor/templates/{name}')
     def delete_template(self,name):
         template_path=cfgutils.getval('app','template_path')
         with open('%s/%s.yaml'%(template_path,name)) as f:

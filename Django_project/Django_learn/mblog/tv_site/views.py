@@ -29,12 +29,12 @@ def tv_center(request, tvno="0"):
             "tvcode": "cctv6"
         },
     ]
-    # template = get_template("tv_center.html")
+    # templates = get_template("tv_center.html")
     now = datetime.now()
     tvno = tvno
 
     tv = tv_list[int(tvno)]
-    # html = template.render(locals())
+    # html = templates.render(locals())
     print locals()
 
     # return HttpResponse(html)

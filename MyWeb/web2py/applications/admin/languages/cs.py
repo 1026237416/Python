@@ -405,7 +405,7 @@
 'This App': 'Tato aplikace',
 'This is a copy of the scaffolding application': 'Toto je kopie aplikace skelet.',
 'This is an experimental feature and it needs more testing. If you decide to upgrade you do it at your own risk': 'This is an experimental feature and it needs more testing. If you decide to upgrade you do it at your own risk',
-'This is the %(filename)s template': 'This is the %(filename)s template',
+'This is the %(filename)s templates': 'This is the %(filename)s templates',
 'this page to see if a breakpoint was hit and debug interaction is required.': 'tuto stránku, abyste uviděli, zda se dosáhlo bodu přerušení.',
 'Ticket': 'Ticket',
 'Ticket ID': 'Ticket ID',

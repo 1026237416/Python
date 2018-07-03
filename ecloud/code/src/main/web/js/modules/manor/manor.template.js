@@ -1,7 +1,7 @@
 define(['easyui','clientPaging',"domReady","module","api","resize"], function (eu,clientPaging,domReady,module,api) {
     var implement=new ef.Interface.implement();
     implement.init = function () {
-        $("#manor-template-search").textbox({
+        $("#manor-templates-search").textbox({
             prompt: ef.util.getLocale("apply.template.search-item.label"),
             iconCls:'icon-search',
             iconAlign:'left',
@@ -37,7 +37,7 @@ define(['easyui','clientPaging',"domReady","module","api","resize"], function (e
                 {field: 'action', width: "20%", title: ef.util.getLocale("apply.template.table.action"), formatter: function (val, row) {
                     if(row.status==1){
                         var dom = $('<span></span>');
-                        dom.html('<i class="icon-offline template-action-icon"></i><a style="text-decoration: none;color: #4DA4D6;top: 0px;padding-left: 3px;position: relative">下线</a>');
+                        dom.html('<i class="icon-offline templates-action-icon"></i><a style="text-decoration: none;color: #4DA4D6;top: 0px;padding-left: 3px;position: relative">下线</a>');
                         dom.click(function () {
                             ef.getJSON({
                                 url:api.getAPI("manorTemplate")+"/templates/status/"+row.name,
@@ -52,7 +52,7 @@ define(['easyui','clientPaging',"domReady","module","api","resize"], function (e
                     }
                     else if(row.status==0) {
                         var $dom = $('<span></span>');
-                        $dom.html('<i class="icon-online template-action-icon"></i><a style="text-decoration: none;color: #4DA4D6;position: relative;top: 0px;padding-left: 3px;">上线</a>');
+                        $dom.html('<i class="icon-online templates-action-icon"></i><a style="text-decoration: none;color: #4DA4D6;position: relative;top: 0px;padding-left: 3px;">上线</a>');
                         $dom.click(function () {
                             ef.getJSON({
                                 url: api.getAPI("manorTemplate") + "/templates/status/" + row.name,
@@ -70,11 +70,11 @@ define(['easyui','clientPaging',"domReady","module","api","resize"], function (e
             ]]
         }).datagrid("loading");
         $("#reset").click(function () {
-            $("#manor-template-search").textbox('clear');
+            $("#manor-templates-search").textbox('clear');
         });
     };
     implement.filter = function () {
-        var opt = $("#manor-template-search").textbox('getValue').toLowerCase();
+        var opt = $("#manor-templates-search").textbox('getValue').toLowerCase();
         $("#manor-templateGrid").datagrid({
             loadFilter: function(data){
                 var tmp = {total:0,rows:[]};
@@ -83,7 +83,7 @@ define(['easyui','clientPaging',"domReady","module","api","resize"], function (e
                         tmp.total = tmp.total+1;
                         tmp.rows.push(il);
                     }
-                    opt = $("#manor-template-search").textbox('getValue').toLowerCase();
+                    opt = $("#manor-templates-search").textbox('getValue').toLowerCase();
                 });
                 return tmp;
             }
@@ -153,7 +153,7 @@ define(['easyui','clientPaging',"domReady","module","api","resize"], function (e
                             ef.loading.show();
                             ef.getJSON(
                                 {
-                                    url: api.getAPI("manorTemplate") + "/template/" + dg.name,
+                                    url: api.getAPI("manorTemplate") + "/templates/" + dg.name,
                                     type: "delete",//get,post,put,delete
                                     data:{},
                                     success: function () {

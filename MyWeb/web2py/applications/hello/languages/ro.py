@@ -317,7 +317,7 @@
 'these files are served without processing, your images go here': 'aceste fișiere sunt servite fără procesare, imaginea se plasează acolo',
 'This App': 'Această aplicație',
 'This is a copy of the scaffolding application': 'Aceasta este o copie a aplicației schelet',
-'This is the %(filename)s template': 'Aceasta este șablonul fișierului %(filename)s',
+'This is the %(filename)s templates': 'Aceasta este șablonul fișierului %(filename)s',
 'Ticket': 'Tichet',
 'Time in Cache (h:m:s)': 'Time in Cache (h:m:s)',
 'Timestamp': 'Moment în timp (timestamp)',

@@ -400,7 +400,7 @@
 'These files are not served, they are only available from within your app': 'Estos archivos no se proveen, ellos sólo están disponibles para su aplicación',
 'These files are served without processing, your images go here': 'Estos archivos se proveen sin procesar, sus imágenes van aquí',
 'these files are served without processing, your images go here': 'estos archivos se proveen sin procesar, sus imágenes van aquí',
-'This is the %(filename)s template': 'Está es la plantilla %(filename)s',
+'This is the %(filename)s templates': 'Está es la plantilla %(filename)s',
 'this page to see if a breakpoint was hit and debug interaction is required.': 'esta página para ver si un punto de ruptura fue configurado y la depuración es requerida.',
 'Ticket': 'Ticket',
 'Ticket ID': 'Ticket ID',

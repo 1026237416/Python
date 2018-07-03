@@ -83,7 +83,7 @@ class AppHandler(RestHandler):
         self.response(generals.gen_response(rs))
 
     @coroutine
-    @get(_path='/manor/app/template/{serial}')
+    @get(_path='/manor/app/templates/{serial}')
     def get_app_template(self,serial,*args):
         instance_path=cfgutils.getval('app','instance_path')
         with open('%s/%s.yaml'%(instance_path,serial.replace(' ',''))) as f:

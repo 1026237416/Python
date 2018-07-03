@@ -30,7 +30,7 @@ class Template:
         pdf.set_keywords(keywords)
 
     def parse_csv(self, infile, delimiter=",", decimal_sep="."):
-        "Parse template format csv file and create elements dict"
+        "Parse templates format csv file and create elements dict"
         keys = ('name','type','x1','y1','x2','y2','font','size',
             'bold','italic','underline','foreground','background',
             'align','text','priority', 'multiline')

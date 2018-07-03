@@ -98,7 +98,7 @@ class Collection(object):
         return links
 
     def table2template(self,table):
-        """ confeverts a table into its form template """
+        """ confeverts a table into its form templates """
         data = []
         fields = self.table_policy.get('fields', table.fields)
         for fieldname in fields:
@@ -253,7 +253,7 @@ class Collection(object):
             data = []
             if not self.compact:
                 r['queries'] = self.table2queries(table, r['href'])
-            r['template'] = self.table2template(table)
+            r['templates'] = self.table2template(table)
             response.headers['Content-Type'] = 'application/vnd.collection+json'
             return response.json({'collection':r})
         # process DELETE

@@ -10,6 +10,11 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="ssh://root@192.168.206.200:22/usr/bin/python3" name="ssh://root@192.168.206.200:22/usr/bin/python3">
+        <fileTransfer host="192.168.206.200" port="22" accessType="SFTP">
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

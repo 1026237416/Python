@@ -41,9 +41,9 @@ define(["exports","module","domReady","api"],function(exports,module,domReady,ap
 
                 //if(!impl.flow_param.current)
                 //{
-                //    $(".icon-template-save").parent().removeClass("disabled");
+                //    $(".icon-templates-save").parent().removeClass("disabled");
                 //}
-                //$(".icon-template-save").parent().css({opacity: 1});
+                //$(".icon-templates-save").parent().css({opacity: 1});
 
             }
         });
@@ -61,10 +61,10 @@ define(["exports","module","domReady","api"],function(exports,module,domReady,ap
                     $(".flow_param_item_ul_value",impl.context).hide();
                 }
                 else{$(".flow_param_item_ul_value",impl.context).show();}
-                //$(".icon-template-save").parent().css({opacity: 1});
+                //$(".icon-templates-save").parent().css({opacity: 1});
                 if(impl.flow_param.current)
                 {
-                    $(".icon-template-save",impl.context).parent().removeClass("disabled");
+                    $(".icon-templates-save",impl.context).parent().removeClass("disabled");
                 }
             }
         });
@@ -80,25 +80,25 @@ define(["exports","module","domReady","api"],function(exports,module,domReady,ap
             {
                 if(impl.flow_param.current)
                 {
-                    $(".icon-template-save",impl.context).parent().removeClass("disabled");
+                    $(".icon-templates-save",impl.context).parent().removeClass("disabled");
                 }
             }
         });
         $(".flow_parm_description",impl.context).textbox({width:197,height:100,multiline:true,disabled:impl.owner&&impl.owner.disable,onChange:function()
         {
-            //$(".icon-template-save").parent().css({opacity:1});
+            //$(".icon-templates-save").parent().css({opacity:1});
             if(impl.flow_param.current)
             {
-                $(".icon-template-save",impl.context).parent().removeClass("disabled");
+                $(".icon-templates-save",impl.context).parent().removeClass("disabled");
             }
         }});
         $(".icon-recycle-delete",impl.context).parent().addClass("disabled");
-        $(".icon-template-save",impl.context).parent().addClass("disabled");
+        $(".icon-templates-save",impl.context).parent().addClass("disabled");
         if(this.owner&&this.owner.disable)
         {
             $(".icon-recycle-delete",impl.context).parent().addClass("disabled");
-            $(".icon-template-save",impl.context).parent().addClass("disabled");
-            $(".icon-template-add",impl.context).parent().addClass("disabled");
+            $(".icon-templates-save",impl.context).parent().addClass("disabled");
+            $(".icon-templates-add",impl.context).parent().addClass("disabled");
         }
     };
     impl.clear = function (isReset) {
@@ -110,8 +110,8 @@ define(["exports","module","domReady","api"],function(exports,module,domReady,ap
         if(isReset)
         {
             $(".icon-recycle-delete",impl.context).parent().addClass("disabled");
-            $(".icon-template-save",impl.context).parent().addClass("disabled");
-            $(".icon-template-add",impl.context).parent().removeClass("disabled");
+            $(".icon-templates-save",impl.context).parent().addClass("disabled");
+            $(".icon-templates-add",impl.context).parent().removeClass("disabled");
         }
     };
     impl.addParam = function (res) {
@@ -194,12 +194,12 @@ define(["exports","module","domReady","api"],function(exports,module,domReady,ap
                         }
                     }
                 }
-                $(".icon-template-add",impl.context).parent().click(function () {
+                $(".icon-templates-add",impl.context).parent().click(function () {
                     if(impl.owner&&impl.owner.disable){return false;}
                     if($(this).hasClass("disabled"))return false;
                     impl.addParam(res);
                 });
-                $(".icon-template-save",impl.context).parent().click(function () {
+                $(".icon-templates-save",impl.context).parent().click(function () {
                     if(impl.owner&&impl.owner.disable){return false;}
                     if($(this).hasClass("disabled"))return false;
                     if($.inArray(paramClickName,res)!=-1){return false;}
@@ -218,26 +218,26 @@ define(["exports","module","domReady","api"],function(exports,module,domReady,ap
                     }
                     if($.inArray(paramClickName,res)!=-1){
                         $(".icon-recycle-delete",impl.context).parent().addClass("disabled");
-                        $(".icon-template-save",impl.context).parent().addClass("disabled");
+                        $(".icon-templates-save",impl.context).parent().addClass("disabled");
                         $(".flow_parm_name",impl.context).textbox({
                             onChange: function (newValue,oldValue) {
                                 var typeValue = $(".flow_parm_type",impl.context).combobox('getValue');
                                 if(typeValue=="default"){
                                     $(".flow_parm_type",impl.context).combobox('clear');
                                 }
-                                $(".icon-template-save",impl.context).parent().addClass("disabled");
+                                $(".icon-templates-save",impl.context).parent().addClass("disabled");
                             }
                         });
                     }
                     else{
                         $(".icon-recycle-delete",impl.context).parent().removeClass("disabled");
-                        $(".icon-template-save",impl.context).parent().addClass("disabled");
+                        $(".icon-templates-save",impl.context).parent().addClass("disabled");
                     }
                     if(impl.owner&&impl.owner.disable)
                     {
                         $(".icon-recycle-delete",impl.context).parent().addClass("disabled");
-                        $(".icon-template-save",impl.context).parent().addClass("disabled");
-                        $(".icon-template-add",impl.context).parent().addClass("disabled");
+                        $(".icon-templates-save",impl.context).parent().addClass("disabled");
+                        $(".icon-templates-add",impl.context).parent().addClass("disabled");
                     }
 
                 });

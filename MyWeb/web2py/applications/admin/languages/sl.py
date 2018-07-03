@@ -181,7 +181,7 @@
 'There are no views': 'Ni pogledov',
 'These files are served without processing, your images go here': 'Te datoteke so poslane brez obdelave. Vaše slike shranite tu.',
 'This is a copy of the scaffolding application': 'To je kopija okvirne aplikacije',
-'This is the %(filename)s template': 'To je predloga %(filename)s',
+'This is the %(filename)s templates': 'To je predloga %(filename)s',
 'Ticket': 'Listek',
 'Ticket ID': 'ID listka',
 'Timestamp': 'Časovni žig',

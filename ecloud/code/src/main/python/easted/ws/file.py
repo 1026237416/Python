@@ -34,7 +34,7 @@ class Service(RestHandler):
           <head><title>Upload File</title></head>
           <body>
             <form action='/download' method='GET'>
-            <input id="filename" name="filename" value="/template/car.xls">
+            <input id="filename" name="filename" value="/templates/car.xls">
             <input type='submit' value='submit'/>
             </form>
           </body>

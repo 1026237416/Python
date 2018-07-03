@@ -66,7 +66,7 @@ define("framework.param",["framework.core","exports"],function(ef,exports)
         this.data.dataProvider = this.data.dataProvider.concat(data);
         this.draw();
         //var _self=this;
-        //var itm=_self.template.clone(true);
+        //var itm=_self.templates.clone(true);
         //itm.find(".paramText").text(data);
         //_self.box.find(".paramSquare:first").before(itm);
         //$(itm).click(function(){

@@ -158,7 +158,7 @@ def serve_controller(request, response, session):
     """
     This function is used to generate a dynamic page.
     It first runs all models, then runs the function in the controller,
-    and then tries to render the output using a view/template.
+    and then tries to render the output using a view/templates.
     this function must run from the [application] folder.
     A typical example would be the call to the url
     /[application]/[controller]/[function] that would result in a call

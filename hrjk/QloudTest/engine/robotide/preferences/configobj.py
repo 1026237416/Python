@@ -479,7 +479,7 @@ class TemplateInterpolation(InterpolationEngine):#插入模板
 
 interpolation_engines = {
     'configparser': ConfigParserInterpolation,
-    'template': TemplateInterpolation,
+    'templates': TemplateInterpolation,
 }
 
 
@@ -566,7 +566,7 @@ class Section(dict):
             if name == True:  # note that "if name:" would be incorrect here
                 # backwards-compatibility: interpolation=True means use default
                 name = DEFAULT_INTERPOLATION
-            name = name.lower()  # so that "Template", "template", etc. all work
+            name = name.lower()  # so that "Template", "templates", etc. all work
             class_ = interpolation_engines.get(name, None)
             if class_ is None:
                 # invalid value for self.main.interpolation

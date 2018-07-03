@@ -113,7 +113,7 @@ define(['easyui','clientPaging',"domReady","module",'user',"api","role","dashboa
                    //   }else if(row.type=="security_group"){
                    //       $dom.text(ef.util.getLocale("server.operate." +row.type+"."+row.operation)+val).attr("title", ef.util.getLocale("server.operate." +row.type+"."+row.operation)+val);
                    //       return $dom;
-                   //   }else if(row.type=="template"&&row.operation=="create"){
+                   //   }else if(row.type=="templates"&&row.operation=="create"){
                    //       $dom.text(ef.util.getLocale("server.operate." +row.type+"_tem."+row.operation)+val).attr("title", ef.util.getLocale("server.operate." +row.type+"_tem."+row.operation)+val);
                    //       return $dom;
                    //   }else if(row.type=="instance"&&row.operation=="create"){

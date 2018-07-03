@@ -1,23 +1,23 @@
 def hello1():
-    """ simple page without template """
+    """ simple page without templates """
 
     return 'Hello World'
 
 
 def hello2():
-    """ simple page without template but with internationalization """
+    """ simple page without templates but with internationalization """
 
     return T('Hello World')
 
 
 def hello3():
-    """ page rendered by template simple_examples/index3.html or generic.html"""
+    """ page rendered by templates simple_examples/index3.html or generic.html"""
 
     return dict(message='Hello World')
 
 
 def hello4():
-    """ page rendered by template simple_examples/index3.html or generic.html"""
+    """ page rendered by templates simple_examples/index3.html or generic.html"""
 
     response.view = 'simple_examples/hello3.html'
     return dict(message=T('Hello World'))

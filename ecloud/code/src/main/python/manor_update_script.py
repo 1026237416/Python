@@ -47,7 +47,7 @@ pars.add_argument('-serial',
                   )
 pars.add_argument('-tmp_name',
                   required=True,
-                  help='template name'
+                  help='templates name'
                   )
 pars.add_argument('-action_name',required=True)
 
@@ -83,7 +83,7 @@ try:
             for k in ex_keys:
                 for p in a['streamlet'][k]['params']:
                     if 'execute_script_content' in json.dumps(p.keys()):
-                        print p['execute_script_content']
+                        print(p['execute_script_content'])
                         pp=p
 
     for a in i_c['action']:
@@ -94,9 +94,9 @@ try:
                     if 'execute_script_content' in json.dumps(p.keys()):
                         p['execute_script_content']=pp['execute_script_content']
 
-    print pyaml.dumps(pp)
+    print(pyaml.dumps(pp))
 
-    print '----------------------------------------'
+    print('----------------------------------------')
 
     for a in i_c['action']:
         if a['name']==action_name:
@@ -104,7 +104,7 @@ try:
             for k in ex_keys:
                 for p in a['streamlet'][k]['params']:
                     if 'execute_script_content' in json.dumps(p.keys()):
-                        print p['execute_script_content']
+                        print(p['execute_script_content'])
 
     with codecs.open('%s/%s.yaml'%(instance_path,str(serial)),'w+',
                      'utf-8') as f:
@@ -113,6 +113,6 @@ try:
 
 
 except:
-    print trace()
+    print(trace())
 
-print 'DONE..'
+print('DONE..')

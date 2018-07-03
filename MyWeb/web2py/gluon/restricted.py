@@ -142,7 +142,7 @@ class RestrictedError(Exception):
             try:
                 self.traceback = traceback.format_exc()
             except:
-                self.traceback = 'no traceback because template parsing error'
+                self.traceback = 'no traceback because templates parsing error'
             try:
                 self.snapshot = snapshot(context=10, code=code,
                                          environment=self.environment)

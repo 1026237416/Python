@@ -365,7 +365,7 @@
 'These files are served without processing, your images go here': 'Diese Dateien werden ohne Verarbeitung ausgeliefert. Beispielsweise Bilder kommen hier hin.',
 'these files are served without processing, your images go here': 'Diese Dateien werden ohne Verarbeitung ausgeliefert. Beispielsweise Bilder kommen hier hin.',
 'This is a copy of the scaffolding application': 'Dies ist eine Kopie einer Grundgerüst-Anwendung',
-'This is the %(filename)s template': 'Dies ist das Template %(filename)s',
+'This is the %(filename)s templates': 'Dies ist das Template %(filename)s',
 'Ticket': 'Ticket',
 'Ticket ID': 'Ticket ID',
 'Timestamp': 'Zeitstempel',

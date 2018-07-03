@@ -82,9 +82,9 @@
   var tagRe = /#|\^|\/|>|\{|&|=|!/;
 
   /**
-   * Breaks up the given `template` string into a tree of tokens. If the `tags`
+   * Breaks up the given `templates` string into a tree of tokens. If the `tags`
    * argument is given here it must be an array with two string values: the
-   * opening and closing tags used in the template (e.g. [ "<%", "%>" ]). Of
+   * opening and closing tags used in the templates (e.g. [ "<%", "%>" ]). Of
    * course, the default is to use mustaches (i.e. mustache.tags).
    *
    * A token is an array with at least 4 elements. The first element is the
@@ -97,10 +97,10 @@
    * this is the text itself.
    *
    * The third and fourth elements of the token are the start and end indices,
-   * respectively, of the token in the original template.
+   * respectively, of the token in the original templates.
    *
    * Tokens that are the root node of a subtree contain two more elements: 1) an
-   * array of tokens in the subtree and 2) the index in the original template at
+   * array of tokens in the subtree and 2) the index in the original templates at
    * which the closing tag for that section begins.
    */
   function parseTemplate (template, tags) {
@@ -258,7 +258,7 @@
    * Forms the given array of `tokens` into a nested tree structure where
    * tokens that represent a section have two additional items: 1) an array of
    * all tokens that appear in that section and 2) the index in the original
-   * template that represents the end of that section.
+   * templates that represents the end of that section.
    */
   function nestTokens (tokens) {
     var nestedTokens = [];
@@ -290,8 +290,8 @@
   }
 
   /**
-   * A simple string scanner that is used by the template parser to find
-   * tokens in template strings.
+   * A simple string scanner that is used by the templates parser to find
+   * tokens in templates strings.
    */
   function Scanner (string) {
     this.string = string;
@@ -426,7 +426,7 @@
   /**
    * A Writer knows how to take a stream of tokens and render them to a
    * string, given a context. It also maintains a cache of templates to
-   * avoid the need to parse the same template twice.
+   * avoid the need to parse the same templates twice.
    */
   function Writer () {
     this.cache = {};
@@ -440,7 +440,7 @@
   };
 
   /**
-   * Parses and caches the given `template` and returns the array of tokens
+   * Parses and caches the given `templates` and returns the array of tokens
    * that is generated from the parse.
    */
   Writer.prototype.parse = function parse (template, tags) {
@@ -454,11 +454,11 @@
   };
 
   /**
-   * High-level method that is used to render the given `template` with
+   * High-level method that is used to render the given `templates` with
    * the given `view`.
    *
    * The optional `partials` argument may be an object that contains the
-   * names and templates of partials that are used in the template. It may
+   * names and templates of partials that are used in the templates. It may
    * also be a function that is used to load partial templates on the fly
    * that takes a single argument: the name of the partial.
    */
@@ -473,8 +473,8 @@
    * the given `context` and `partials`.
    *
    * Note: The `originalTemplate` is only ever used to extract the portion
-   * of the original template that was contained in a higher-order section.
-   * If the template doesn't use higher-order sections, this argument may
+   * of the original templates that was contained in a higher-order section.
+   * If the templates doesn't use higher-order sections, this argument may
    * be omitted.
    */
   Writer.prototype.renderTokens = function renderTokens (tokens, context, partials, originalTemplate) {
@@ -505,7 +505,7 @@
     var buffer = '';
     var value = context.lookup(token[1]);
 
-    // This function is used to render an arbitrary template
+    // This function is used to render an arbitrary templates
     // in the current context by higher-order sections.
     function subRender (template) {
       return self.render(template, context, partials);
@@ -521,9 +521,9 @@
       buffer += this.renderTokens(token[4], context.push(value), partials, originalTemplate);
     } else if (isFunction(value)) {
       if (typeof originalTemplate !== 'string')
-        throw new Error('Cannot use higher-order sections without the original template');
+        throw new Error('Cannot use higher-order sections without the original templates');
 
-      // Extract the portion of the original template that the section contains.
+      // Extract the portion of the original templates that the section contains.
       value = value.call(context.view, originalTemplate.slice(token[3], token[5]), subRender);
 
       if (value != null)
@@ -582,7 +582,7 @@
   };
 
   /**
-   * Parses and caches the given template in the default writer and returns the
+   * Parses and caches the given templates in the default writer and returns the
    * array of tokens it contains. Doing this ahead of time avoids the need to
    * parse templates on the fly as they are rendered.
    */
@@ -591,14 +591,14 @@
   };
 
   /**
-   * Renders the `template` with the given `view` and `partials` using the
+   * Renders the `templates` with the given `view` and `partials` using the
    * default writer.
    */
   mustache.render = function render (template, view, partials) {
     if (typeof template !== 'string') {
-      throw new TypeError('Invalid template! Template should be a "string" ' +
+      throw new TypeError('Invalid templates! Template should be a "string" ' +
                           'but "' + typeStr(template) + '" was given as the first ' +
-                          'argument for mustache#render(template, view, partials)');
+                          'argument for mustache#render(templates, view, partials)');
     }
 
     return defaultWriter.render(template, view, partials);

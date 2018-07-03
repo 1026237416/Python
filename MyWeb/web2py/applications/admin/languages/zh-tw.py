@@ -253,7 +253,7 @@
 'There are no translators, only default language is supported': '沒有翻譯檔,只支援原始語言',
 'There are no views': '沒有視圖',
 'these files are served without processing, your images go here': '這些檔案保留未經處理,你的影像檔在此',
-'This is the %(filename)s template': '這是%(filename)s檔案的樣板(template)',
+'This is the %(filename)s templates': '這是%(filename)s檔案的樣板(templates)',
 'ticket': '問題單',
 'Ticket': '問題單',
 'Timestamp': '時間標記',

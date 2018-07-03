@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-    Unit tests for gluon.template
+    Unit tests for gluon.templates
 """
 
 import unittest

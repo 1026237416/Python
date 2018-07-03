@@ -298,7 +298,7 @@
 'These files are not served, they are only available from within your app': 'These files are not served, they are only available from within your app',
 'These files are served without processing, your images go here': 'These files are served without processing, your images go here',
 'these files are served without processing, your images go here': 'questi files vengono serviti così come sono, le immagini vanno qui',
-'This is the %(filename)s template': 'Questo è il template %(filename)s',
+'This is the %(filename)s templates': 'Questo è il templates %(filename)s',
 'Ticket': 'Ticket',
 'Ticket ID': 'Ticket ID',
 'TM': 'TM',

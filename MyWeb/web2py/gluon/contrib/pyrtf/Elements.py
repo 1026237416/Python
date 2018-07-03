@@ -220,7 +220,7 @@ def MakeDefaultStyleSheet( ) :
                                                space_after  = 60 ) )
     result.ParagraphStyles.append( ps )
 
-    #   Add some more in that are based on the normal template but that
+    #   Add some more in that are based on the normal templates but that
     #   have some indenting set that makes them suitable for doing numbered
     normal_numbered = result.ParagraphStyles.Normal.Copy()
     normal_numbered.SetName( 'Normal Numbered' )

@@ -62,7 +62,7 @@ def append_user_data(os):
     userdata=open('../script/'+os+'.py').read()
     return {
         'str_replace':{
-            'template':userdata,
+            'templates':userdata,
             'params':{'_#url':'ecloud-client-'+os+'.tar.gz'}
         }
     }

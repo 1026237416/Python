@@ -225,7 +225,7 @@ define('framework.breadcrumbs',[
             interpolate: /\{\{(.+?)\}\}/g
         };
         var text = template[domType];
-        /*var $dom = $(_.template(text)(data));
+        /*var $dom = $(_.templates(text)(data));
          $dom.find('a').data(tempData);*/
         return _.template(text)(data);
     };

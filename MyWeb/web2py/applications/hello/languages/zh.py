@@ -201,7 +201,7 @@
 'There are no translators, only default language is supported': '沒有翻譯檔,只支援原始語言',
 'There are no views': '沒有視圖',
 'This App': 'This App',
-'This is the %(filename)s template': '這是%(filename)s檔案的樣板(template)',
+'This is the %(filename)s templates': '這是%(filename)s檔案的樣板(templates)',
 'Ticket': '問題單',
 'Time in Cache (h:m:s)': 'Time in Cache (h:m:s)',
 'Timestamp': '時間標記',

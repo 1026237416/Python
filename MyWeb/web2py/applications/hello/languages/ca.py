@@ -402,7 +402,7 @@
 'This App': 'Aquesta Aplicació',
 'This email already has an account': 'Aquest correu electrònic ja té un compte',
 'This is a copy of the scaffolding application': 'Aquesta és una còpia de la aplicació de bastiment',
-'This is the %(filename)s template': 'Aquesta és la plantilla %(filename)s',
+'This is the %(filename)s templates': 'Aquesta és la plantilla %(filename)s',
 'Ticket': 'Tiquet',
 'Time in Cache (h:m:s)': 'Temps en Caché (h:m:s)',
 'Timestamp': 'Marca de temps',

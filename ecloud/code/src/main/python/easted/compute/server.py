@@ -151,7 +151,7 @@ def create_server(vm):
             if len(unused) < vm.num:
                 raise IpsInUsedError
 
-        """create vm template"""
+        """create vm templates"""
         name_ips = []
         vm_templates = []
         vm_host_used = {}

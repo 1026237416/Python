@@ -39,7 +39,7 @@ class Type(object):
     GLOBAL_SETTINGS = 'global_settings'
     SNAPSHOT = 'snapshot'
     LICENSE = 'license'
-    APP_TEMPLATE = 'template'
+    APP_TEMPLATE = 'templates'
     APP_INSTANCE = 'instance'
     ALARM = 'alarm'
 

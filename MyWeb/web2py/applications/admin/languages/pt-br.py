@@ -291,7 +291,7 @@
 'There are no views': 'Não existem visões',
 'These files are served without processing, your images go here': 'Estes arquivos são servidos sem processamento, suas imagens ficam aqui',
 'these files are served without processing, your images go here': 'Estes arquivos são servidos sem processamento, suas imagens ficam aqui',
-'This is the %(filename)s template': 'Este é o template %(filename)s',
+'This is the %(filename)s templates': 'Este é o templates %(filename)s',
 'Ticket': 'Ticket',
 'Ticket ID': 'Número do Ticket',
 'Timestamp': 'Momento de geração',

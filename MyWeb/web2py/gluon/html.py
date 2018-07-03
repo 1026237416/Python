@@ -555,7 +555,7 @@ class XmlComponent(object):
 class XML(XmlComponent):
     """
     use it to wrap a string that contains XML/HTML so that it will not be
-    escaped by the template
+    escaped by the templates
 
     Examples:
 

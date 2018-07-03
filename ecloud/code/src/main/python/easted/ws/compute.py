@@ -269,9 +269,9 @@ class Service(RestHandler):
     @gen.coroutine
     @post(_path="/vm/{vm_id}/upload/image", _required=['name'])
     def upload_image_template(self, vm_id, vm_template):
-        """ generate vm template from exist vm
+        """ generate vm templates from exist vm
         :param vm_id: the id of vm
-        :param vm_template: the params of create vm template
+        :param vm_template: the params of create vm templates
         :return:
         """
         vm_template = compute.VMTemplate(**vm_template)

@@ -118,7 +118,7 @@
 'There are no translators, only default language is supported': 'Brak plików tłumaczeń, wspierany jest tylko domyślny język',
 'There are no views': 'Brak widoków',
 'These files are served without processing, your images go here': 'These files are served without processing, your images go here',
-'This is the %(filename)s template': 'To jest szablon %(filename)s',
+'This is the %(filename)s templates': 'To jest szablon %(filename)s',
 'Ticket': 'Bilet',
 'To create a plugin, name a file/folder plugin_[name]': 'Aby utworzyć wtyczkę, nazwij plik/katalog plugin_[nazwa]',
 'Translation strings for the application': 'Translation strings for the application',

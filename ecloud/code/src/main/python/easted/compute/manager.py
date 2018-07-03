@@ -178,7 +178,7 @@ def vnc(vm_id):
 @gen.coroutine
 @required("vm_id", "template_name")
 def template(vm_id, template):
-    """ generate vm template from exist vm
+    """ generate vm templates from exist vm
     :param template:
     :param image_id:
     :param vm_id: the id of vm
@@ -225,6 +225,6 @@ def template(vm_id, template):
         yield set_or_update_vm_meta(vm_id, "upt_image_id", image_id)
 
     except Exception, e:
-        LOG.error("generate vm template error: %s" % e)
+        LOG.error("generate vm templates error: %s" % e)
         raise ServerOperationFailed
     raise gen.Return(image_id)

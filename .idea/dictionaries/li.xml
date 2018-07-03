@@ -4,15 +4,26 @@
       <w>addr</w>
       <w>ansible</w>
       <w>asctime</w>
+      <w>cmdb</w>
       <w>datefmt</w>
       <w>devops</w>
       <w>dirname</w>
+      <w>endwith</w>
+      <w>fanout</w>
       <w>formatters</w>
+      <w>informations</w>
+      <w>infos</w>
       <w>levelname</w>
       <w>lineno</w>
       <w>liping</w>
+      <w>microblog</w>
+      <w>objs</w>
+      <w>pika</w>
+      <w>pymysql</w>
       <w>scanhosts</w>
+      <w>sqlalchemy</w>
       <w>tablename</w>
+      <w>wapper</w>
       <w>warpper</w>
     </words>
   </dictionary>

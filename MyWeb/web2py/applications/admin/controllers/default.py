@@ -1374,7 +1374,7 @@ def create_file():
         elif path[-7:] == '/views/':
             if request.vars.plugin and not filename.startswith('plugin_%s/' % request.vars.plugin):
                 filename = 'plugin_%s/%s' % (request.vars.plugin, filename)
-            # Handle template (html) views
+            # Handle templates (html) views
             if filename.find('.') < 0:
                 filename += '.html'
             extension = filename.split('.')[-1].lower()
@@ -1383,7 +1383,7 @@ def create_file():
                 raise SyntaxError
 
             msg = T(
-                'This is the %(filename)s template', dict(filename=filename))
+                'This is the %(filename)s templates', dict(filename=filename))
             if extension == 'html':
                 text = dedent("""
                    {{extend 'layout.html'}}

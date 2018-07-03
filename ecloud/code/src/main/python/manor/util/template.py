@@ -18,7 +18,7 @@ from easted.log import Operator
 
 def check_template(body):
     if len(body['action'])==0:
-        raise Exception('error.manor.template.no.action')
+        raise Exception('error.manor.templates.no.action')
     for a in body['action']:
         check_structure(a)
         is_acyclic(a)
@@ -64,7 +64,7 @@ def create_instance(request,name,action_name,seq):
 
         if action_type=='deploy':
             if not os.path.isfile('%s/%s.yaml'%(template_path,name)):
-                raise Exception('error.manor.template.not.exist')
+                raise Exception('error.manor.templates.not.exist')
             content=load_template(template_path,name.replace(' ','')+'.yaml')
         else:
             with open('%s/%s.yaml'%(
@@ -93,8 +93,8 @@ def create_instance(request,name,action_name,seq):
                     (name,app_name,serial,'building',content['app_description'],
                      seq))
 
-            # save origin template.
-            log.debug('save app template : %s'%str(serial))
+            # save origin templates.
+            log.debug('save app templates : %s'%str(serial))
             with codecs.open(
                     '%s/%s.yaml'%(instance_path,str(serial).replace(' ','')),'w+',
                 'utf-8') as f:

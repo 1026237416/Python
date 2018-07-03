@@ -13,6 +13,7 @@
 """
 
 import functools
+from flask import flash
 
 
 def wapper(func):
@@ -45,3 +46,5 @@ def f3():
 print(f1.__name__)
 print(f2.__name__)
 print(f3.__name__)
+
+open()

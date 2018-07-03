@@ -141,7 +141,7 @@ class Highlighter(object):
                                    + r'static|register|auto|volatile|extern|const)(?![a-zA-Z0-9_])'),
              'color:#185369; font-weight: bold'),
             ('CPPKEYWORD',
-             re.compile(r'(class|private|protected|public|template|new|delete|'
+             re.compile(r'(class|private|protected|public|templates|new|delete|'
                         + r'this|friend|using|inline|export|bool|throw|try|catch|'
                         + r'operator|typeid|virtual)(?![a-zA-Z0-9_])'),
              'color: blue; font-weight: bold'),

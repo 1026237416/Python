@@ -21,7 +21,7 @@ Attention: Requires Chrome or Safari. For IE of Firefox you need https://github.
    from gluon.contrib.websocket_messaging import websocket_send
    websocket_send('http://127.0.0.1:8888', 'Hello World', 'mykey', 'mygroup')
 
-4) from any template you can receive them with
+4) from any templates you can receive them with
 
    <script>
    $(document).ready(function(){

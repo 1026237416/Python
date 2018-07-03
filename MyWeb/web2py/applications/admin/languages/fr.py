@@ -118,7 +118,7 @@
 'There are no translators, only default language is supported': "Il n'y a pas de traducteurs, seule la langue par défaut est prise en charge",
 'There are no views': "Il n'y a pas de vues",
 'These files are served without processing, your images go here': 'Ces fichiers sont renvoyés sans traitement, vos images viennent ici',
-'This is the %(filename)s template': 'Ceci est le modèle %(filename)s ',
+'This is the %(filename)s templates': 'Ceci est le modèle %(filename)s ',
 'Ticket': 'Ticket',
 'To create a plugin, name a file/folder plugin_[name]': 'Pour créer un plugin, créer un fichier /dossier plugin_[nom]',
 'Translation strings for the application': "Chaînes de traduction pour l'application",

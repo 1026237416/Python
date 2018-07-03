@@ -50,7 +50,7 @@ class CJenkinsAPI():
         nRet, strMsg, nBuild = 0, "", 0
 
         # 配置文件模板
-        strConfigTemplate = CJenkinsAPI._strConfigTemplatePath + "/config.template.xml"
+        strConfigTemplate = CJenkinsAPI._strConfigTemplatePath + "/config.templates.xml"
 
         # 用PlanID和配置ID来作为项目名
         strProjectName = "P%d-%s" %(nPlanId, strConfigId)

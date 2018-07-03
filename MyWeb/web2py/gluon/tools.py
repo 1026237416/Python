@@ -5959,7 +5959,7 @@ class Wiki(object):
 
         if self.settings.templates is None and not \
            self.settings.manage_permissions:
-            self.settings.templates = db.wiki_page.tags.contains('template') & \
+            self.settings.templates = db.wiki_page.tags.contains('templates') & \
                 db.wiki_page.can_read.contains('everybody')
 
         def update_tags_insert(page, id, db=db):

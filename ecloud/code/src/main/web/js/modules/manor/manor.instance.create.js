@@ -547,7 +547,7 @@ define("manor.instance.create",[
         togglebuttonConfig:[
             [{
                 id:"3",
-                iconClass: "icon-template-left-auto",
+                iconClass: "icon-templates-left-auto",
                 tip: ef.util.getLocale("apply.template.create.auto"),
                 click:function(){
                     if(network)

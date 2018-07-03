@@ -311,7 +311,7 @@
 'These files are served without processing, your images go here': 'Эти файлы обслуживаются без обработки, ваши изображения попадут сюда',
 'these files are served without processing, your images go here': 'Эти файлы обслуживаются без обработки, ваши изображения попадут сюда',
 'This is a copy of the scaffolding application': 'Это копия сгенерированного приложения',
-'This is the %(filename)s template': 'Это шаблон %(filename)s',
+'This is the %(filename)s templates': 'Это шаблон %(filename)s',
 'Ticket': 'Тикет',
 'Ticket ID': 'Ticket ID',
 'Timestamp': 'Время',

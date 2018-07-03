@@ -281,7 +281,7 @@
 'These files are not served, they are only available from within your app': 'These files are not served, they are only available from within your app',
 'these files are served without processing, your images go here': '',
 'These files are served without processing, your images go here': 'These files are served without processing, your images go here',
-'This is the %(filename)s template': '这是 %(filename)s 模板',
+'This is the %(filename)s templates': '这是 %(filename)s 模板',
 'Ticket': '传票',
 'Timestamp': '时间戳',
 'TM': '',

@@ -1989,7 +1989,7 @@ def _slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
 
-    From Django's "django/template/defaultfilters.py".
+    From Django's "django/templates/defaultfilters.py".
     """
     import unicodedata
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode()

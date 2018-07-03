@@ -5,10 +5,13 @@
       <sourceFolder url="file://$MODULE_DIR$/web2py/site-packages" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/web2py" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Django_project/mydevops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ecloud/code/src/main/python" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (Python) (1)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="imoocc_online" />
+    <orderEntry type="module" module-name="mnist_dome" />
+    <orderEntry type="module" module-name="Django_oldboy" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="myDocStringFormat" value="Google" />

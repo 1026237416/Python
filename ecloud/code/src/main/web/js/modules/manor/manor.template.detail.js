@@ -134,7 +134,7 @@ define(["module","exports","domReady","api"],function(module,exports,domReady,ap
                 //    id: "5",
                 //    "access":[7,8,88],
                 //    click: function () {
-                //        ef.nav.goto("manorTemplate.html","manor.template");
+                //        ef.nav.goto("manorTemplate.html","manor.templates");
                 //    }
                 //}
             ]);

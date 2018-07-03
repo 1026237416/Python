@@ -6,7 +6,7 @@
 | License: LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
 | Author: Thadeus Burgess
 | Contributors:
-| - Massimo Di Pierro for creating the original gluon/template.py
+| - Massimo Di Pierro for creating the original gluon/templates.py
 | - Jonathan Lundell for extensively testing the regex on Jython.
 | - Limodou (creater of uliweb) who inspired the block-element support for web2py.
 
@@ -144,7 +144,7 @@ class BlockNode(Node):
         Merges all nodes into a single string.
 
         Args:
-            blocks: Dictionary of blocks that are extending from this template.
+            blocks: Dictionary of blocks that are extending from this templates.
         """
         return ''.join(output_aux(node, blocks) for node in self.nodes)
 
@@ -230,7 +230,7 @@ class TemplateParser(object):
         _super_nodes: a list of nodes to check for inclusion
             this should only be set by "self.extend"
             It contains a list of SuperNodes from a child
-            template that need to be handled.
+            templates that need to be handled.
 
     """
 
@@ -304,7 +304,7 @@ class TemplateParser(object):
         self.stack = [self.content]
 
         # This variable will hold a reference to every super block
-        # that we come across in this template.
+        # that we come across in this templates.
         self.super_nodes = []
 
         # This variable will hold a reference to the child
@@ -312,7 +312,7 @@ class TemplateParser(object):
         self.child_super_nodes = _super_nodes
 
         # This variable will hold a reference to every block
-        # that we come across in this template
+        # that we come across in this templates
         self.blocks = {}
 
         # Begin parsing.
@@ -320,7 +320,7 @@ class TemplateParser(object):
 
     def to_string(self):
         """
-        Returns the parsed template with correct indentation.
+        Returns the parsed templates with correct indentation.
 
         Used to make it easier to port to python3.
         """
@@ -427,14 +427,14 @@ class TemplateParser(object):
 
         # If they didn't specify a filename, how can we find one!
         if not filename.strip():
-            self._raise_error('Invalid template filename')
+            self._raise_error('Invalid templates filename')
 
         # Allow Views to include other views dynamically
         context = self.context
         if current and not "response" in context:
             context["response"] = getattr(current, 'response', None)
 
-        # Get the filename; filename looks like ``"template.html"``.
+        # Get the filename; filename looks like ``"templates.html"``.
         # We need to eval to remove the quotes and get the string type.
         filename = eval(filename, context)
 
@@ -494,7 +494,7 @@ class TemplateParser(object):
                            _super_nodes=super_nodes)
 
         # Make a temporary buffer that is unique for parent
-        # template.
+        # templates.
         buf = BlockNode(
             name='__include__' + filename, delimiters=self.delimiters)
         pre = []
@@ -503,7 +503,7 @@ class TemplateParser(object):
         for node in self.content.nodes:
             # If a node is a block
             if isinstance(node, BlockNode):
-                # That happens to be in the parent template
+                # That happens to be in the parent templates
                 if node.name in t.content.blocks:
                     # Do not include it
                     continue
@@ -614,7 +614,7 @@ class TemplateParser(object):
                     # This will replace newlines in block comments
                     # with the newline character. This is so that they
                     # retain their formatting, but squish down to one
-                    # line in the rendered template.
+                    # line in the rendered templates.
 
                     # First check if we have any custom lexers
                     if name in self.lexers:
@@ -631,7 +631,7 @@ class TemplateParser(object):
 
                     elif name == '=':
                         # So we have a variable to insert into
-                        # the template
+                        # the templates
                         buf = "\n%s(%s)" % (self.writer, value)
                         top.append(Node(buf, pre_extend=pre_extend))
 
@@ -694,7 +694,7 @@ class TemplateParser(object):
 
                     elif name == 'extend' and not value.startswith('='):
                         # We need to extend the following
-                        # template.
+                        # templates.
                         extend = value
                         pre_extend = False
 
@@ -760,7 +760,7 @@ class TemplateParser(object):
             # Sometimes I miss C-Style pointers... I want my asterisk...
             self.child_super_nodes.remove(node)
 
-        # If we need to extend a template.
+        # If we need to extend a templates.
         if extend:
             self.extend(extend)
 
@@ -777,7 +777,7 @@ def parse_template(filename,
     Args:
         filename: can be a view filename in the views folder or an input stream
         path: is the path of a views folder
-        context: is a dictionary of symbols used to render the template
+        context: is a dictionary of symbols used to render the templates
         lexers: dict of custom lexers to use
         delimiters: opening and closing tags
     """
@@ -793,7 +793,7 @@ def parse_template(filename,
     else:
         text = filename.read()
 
-    # Use the file contents to get a parsed template and return it.
+    # Use the file contents to get a parsed templates and return it.
     return str(TemplateParser(text, context=context, path=path, lexers=lexers, delimiters=delimiters))
 
 
@@ -852,8 +852,8 @@ def render(content="hello world",
 
     Args:
         content: default content
-        stream: file-like obj to read template from
-        filename: where to find template
+        stream: file-like obj to read templates from
+        filename: where to find templates
         path: base path for templates
         context: env
         lexers: custom lexers to use
@@ -920,7 +920,7 @@ def render(content="hello world",
         elif content:
             stream = StringIO.StringIO(content)
 
-    # Execute the template.
+    # Execute the templates.
     code = str(TemplateParser(stream.read(
     ), context=context, path=path, lexers=lexers, delimiters=delimiters, writer=writer))
     try:

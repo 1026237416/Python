@@ -23,7 +23,7 @@ def is_acyclic(action):
         log().debug('%s - %s'%(next,next_steps))
         if next:
             if root in next_steps:
-                raise Exception('error.manor.template.action.is.acyclic')
+                raise Exception('error.manor.templates.action.is.acyclic')
             else:
                 check(next,root)
 
@@ -36,10 +36,10 @@ def is_acyclic(action):
 def check_structure(action):
     log().debug(yaml.safe_dump(action))
     if 'stream_module' not in action:
-        raise Exception('error.manor.template.no.stream_module')
+        raise Exception('error.manor.templates.no.stream_module')
 
     if 'streamlet' not in action:
-        raise Exception('error.manor.template.no.streamlet')
+        raise Exception('error.manor.templates.no.streamlet')
 
     nodes=set(action['stream_module']['nodes']['_data'].keys())
     e_from=[action['stream_module']['edges']['_data'][_]['from'] for _ in
@@ -55,7 +55,7 @@ def check_structure(action):
     log().debug(e_n)
 
     if nodes!=e_n:
-        raise Exception('error.manor.template.nodes.not.match.edges')
+        raise Exception('error.manor.templates.nodes.not.match.edges')
 
     s_n=set(action['streamlet'].keys())
     s_n.add('start')
@@ -64,4 +64,4 @@ def check_structure(action):
     log().debug(s_n)
 
     if nodes!=s_n:
-        raise Exception('error.manor.template.nodes.not.match.streamlet')
+        raise Exception('error.manor.templates.nodes.not.match.streamlet')

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="i1">
+        欢迎各位领导莅临指导
+    </div>
+
+    <script>
+        function func() {
+            var tag = document.getElementById("i1");
+            var content = tag.innerText;
+
+            var f = content.charAt(0);
+            var l = content.substring(1, content.length);
+
+            tag.innerText = l.concat(f);
+        }
+        setInterval("func()", 200)
+    </script>
+</body>
+</html>

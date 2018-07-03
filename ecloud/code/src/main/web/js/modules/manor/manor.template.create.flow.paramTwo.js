@@ -199,7 +199,7 @@ define(["exports","module","domReady","api","setting.param"],function(exports,mo
                                     $("#paramImage",implement.context).combobox('setText',image).combobox('setValue',il.image);
                                 }else
                                 {
-                                    //image=ef.util.getLocale("apply.template.image.noexist");
+                                    //image=ef.util.getLocale("apply.templates.image.noexist");
                                     //$("#paramImage",implement.context).combobox('setText',image);
                                 }
                                 implement.checkSet(il,implement.imageChoose);

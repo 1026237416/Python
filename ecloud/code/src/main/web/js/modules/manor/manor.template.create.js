@@ -155,7 +155,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
                 dataProvider:[
                     {label:ef.util.getLocale("apply.template.checkbox.data.hide"),value:"hide"}
                     //,
-                    //{label:ef.util.getLocale("apply.template.checkbox.data.readOnly"),value:"readOnly"}
+                    //{label:ef.util.getLocale("apply.templates.checkbox.data.readOnly"),value:"readOnly"}
                 ]
             });
         };
@@ -660,7 +660,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
                                     case 1:
                                     {
                                         ef.i18n.parse($(".flow_param",implement.context));
-                                        require(["manor.template.create.flow.param.two"],function(module)
+                                        require(["manor.templates.create.flow.param.two"],function(module)
                                         {
                                             var param = {data:network,id:templateNodesId,type:nodeType};
                                             module.redraw(param,implement,implement.context);
@@ -1138,7 +1138,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
                                     //case 1:
                                     //{
                                     //    ef.i18n.parse($(".flow_param",implement.context));
-                                    //    require(["manor.template.create.flow.param.four"],function(module)
+                                    //    require(["manor.templates.create.flow.param.four"],function(module)
                                     //    {
                                     //        var param = {data:network,id:templateNodesId,type:nodeType};
                                     //        module.redraw(param,implement);
@@ -1426,7 +1426,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
             _toggle=$(".toggle-box",implement.context).togglebutton([
                 [
                     {
-                        iconClass: "icon-template-left-add",
+                        iconClass: "icon-templates-left-add",
                         tip: ef.util.getLocale("apply.template.create.add"),
                         id:1,
                         click:function(menu)
@@ -1517,7 +1517,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
                         }
                     },
                     {
-                        iconClass: "icon-template-refresh",
+                        iconClass: "icon-templates-refresh",
                         tip: ef.util.getLocale("apply.template.create.refresh"),
                         id:3,
                         click:function()
@@ -1544,7 +1544,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
                         }
                     },
                     {
-                        iconClass: "icon-template-left-auto",
+                        iconClass: "icon-templates-left-auto",
                         tip: ef.util.getLocale("apply.template.create.auto"),
                         id:4,
                         click:function()
@@ -1615,7 +1615,7 @@ define("manor.template.create",["domReady","module","codemirror","xml","active-l
                     }
                 }
                 ef.getJSON({
-                    url:api.getAPI("manorTemplate")+"/template",
+                    url:api.getAPI("manorTemplate")+"/templates",
                     type:"put",
                     data:implement.postData(desData),
                     success: function (response) {

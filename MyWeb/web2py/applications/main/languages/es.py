@@ -355,7 +355,7 @@
 'This App': 'Esta Aplicación',
 'This email already has an account': 'Este correo electrónico ya tiene una cuenta',
 'This is a copy of the scaffolding application': 'Esta es una copia de la aplicación de andamiaje',
-'This is the %(filename)s template': 'Esta es la plantilla %(filename)s',
+'This is the %(filename)s templates': 'Esta es la plantilla %(filename)s',
 'Ticket': 'Tiquete',
 'Time in Cache (h:m:s)': 'Tiempo en Caché (h:m:s)',
 'Timestamp': 'Marca de tiempo',

@@ -749,7 +749,7 @@ define(["echart","module","domReady","api","user"],function(echarts,module,domRe
     implement.updateLog=function(response,dom,isOnlyOperate)
     {
         dom.empty();
-        /*var template=$(' <li >'
+        /*var templates=$(' <li >'
             +'<div class="date_l left"><span class="_time"></span></div>'
             +'<div class="date_r right"><em class="_user"></em><em class="green_font"></em></div>'
             +'<div class="data_b" style="width: 255px"><span class="_operation" style="display: block"></span></div>'
@@ -823,7 +823,7 @@ define(["echart","module","domReady","api","user"],function(echarts,module,domRe
             //$opertation.text(item.operation + "-" + item.des).attr("title", item.operation + item.des);
             //$user.text(item.user);
             //$user.attr("title", item.user);
-            //dom.append($template);
+            //dom.append($templates);
         });
     };
     /**

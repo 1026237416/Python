@@ -549,7 +549,7 @@ define("api.config", function () {
         //更新模版
         {
             "name":"manorTemplateDetail",
-            "url":"/manor/template",
+            "url":"/manor/templates",
             "proxy":"data/manor.template.update.json"
         },
         //应用模板
@@ -569,7 +569,7 @@ define("api.config", function () {
             "name":"deleteInstance",
             "url":"/manor/app/"
         },
-        // 创建实例 todo /manor/templates/execute/{template name}下拉框中选择的name值
+        // 创建实例 todo /manor/templates/execute/{templates name}下拉框中选择的name值
         //          todo /{action name}action中的type为deploy的name值
         {
             "name":"createInstance",
@@ -609,10 +609,10 @@ define("api.config", function () {
             "url":"/manor/app/resources/",
             "proxy":"data/manor_node_detail.json"
         },
-        //实例详情模板 todo /manor/app/template/app serial
+        //实例详情模板 todo /manor/app/templates/app serial
         {
             "name":"manorTempDetail",
-            "url":"/manor/app/template/",
+            "url":"/manor/app/templates/",
             "proxy":"data/manor_temp_detail.json"
         },
         {
@@ -714,7 +714,7 @@ define("api.config", function () {
         },
         {
             "name":"manor.instance.template",
-            "url":"/manor/app/template/",
+            "url":"/manor/app/templates/",
             "proxy":"manor.instance.template.json"
         },
         {

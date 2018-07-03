@@ -30,9 +30,7 @@ conn.set_listener('', MyListener())
 conn.start()
 conn.connect()
 
-conn.subscribe(destination='/queue/test', id=1, ack='auto')
-# 注意，官方示例这样发送消息是有问题的
-# conn.send(body='hello,garfield! this is '.join(sys.argv[1:]), destination='/queue/test')
+conn.subscribe(destination='/queue/test', id="1", ack='auto')
 conn.send(body='hello,garfield!', destination='/queue/test')
 
 time.sleep(2)

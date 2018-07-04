@@ -5,1085 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1ad6e9-627b-4c73-8909-cd2cf5b721f3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/admin/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/admin/forms.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/admin/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/home/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/home/forms.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/home/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/templates/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/templates/admin/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/templates/home/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/manage.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/static/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/easyUI1.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/jquery-1.12.4.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/xxx.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/文字循环.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/添加内容.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/菜单隐藏.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/PublisherBase.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_consumer.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_ex1_common.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_ex2_connection_pool.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_ex3_pipe.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_ex4_string.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_ex5_hash.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_ex6_list.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/redis_ex/redis_publisher.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/装饰器/wrapper1.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/li.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/li.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/flask_project/werkzeug_test/start.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/1.pk1" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Django_project/Django_learn/mblog/tv_site/views.py" afterPath="$PROJECT_DIR$/Django_project/Django_learn/mblog/tv_site/views.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/controllers/default.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/controllers/default.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/bg.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/bg.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/cs.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/cs.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/de.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/de.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/es.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/es.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/fr.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/fr.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/he.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/he.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/it.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/it.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/nl.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/nl.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/pl.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/pl.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/pt-br.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/pt-br.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/pt.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/pt.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/ro.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/ro.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/ru.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/ru.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/sl.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/sl.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/tr.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/tr.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/uk.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/uk.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/zh-tw.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/zh-tw.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/zh.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/languages/zh.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/static/codemirror/emmet.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/static/codemirror/emmet.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/static/codemirror/mode/css/css.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/static/codemirror/mode/css/css.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/static/js/typeahead.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/admin/static/js/typeahead.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/examples/controllers/simple_examples.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/examples/controllers/simple_examples.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/ca.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/ca.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/cs.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/cs.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/es.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/es.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/nl.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/nl.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/ro.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/ro.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/zh-cn.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/zh-cn.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/zh-tw.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/zh-tw.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/zh.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/languages/zh.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/static/js/analytics.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/static/js/analytics.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/static/js/modernizr-2.8.3.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/hello/static/js/modernizr-2.8.3.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/ca.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/ca.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/cs.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/cs.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/es.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/es.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/nl.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/nl.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/ro.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/ro.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/zh-cn.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/zh-cn.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/zh-tw.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/zh-tw.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/zh.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/languages/zh.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/static/js/analytics.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/static/js/analytics.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/main/static/js/modernizr-2.8.3.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/main/static/js/modernizr-2.8.3.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/ca.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/ca.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/cs.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/cs.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/es.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/es.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/nl.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/nl.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/ro.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/ro.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/zh-cn.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/zh-cn.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/zh-tw.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/zh-tw.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/zh.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/languages/zh.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/static/js/analytics.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/static/js/analytics.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/static/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/static/js/modernizr-2.8.3.min.js" afterPath="$PROJECT_DIR$/MyWeb/web2py/applications/welcome/static/js/modernizr-2.8.3.min.js" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contenttype.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contenttype.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/feedparser.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/feedparser.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/fpdf/template.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/fpdf/template.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/hypermedia.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/hypermedia.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/markdown/markdown2.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/markdown/markdown2.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/pyrtf/Elements.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/pyrtf/Elements.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/websocket_messaging.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/contrib/websocket_messaging.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/highlight.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/highlight.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/html.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/html.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/main.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/main.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/packages/dal/docs/conf.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/packages/dal/docs/conf.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/restricted.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/restricted.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/template.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/template.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/tests/test_template.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/tests/test_template.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/gluon/tools.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/gluon/tools.py" />
-      <change beforePath="$PROJECT_DIR$/MyWeb/web2py/handlers/fcgihandler.py" afterPath="$PROJECT_DIR$/MyWeb/web2py/handlers/fcgihandler.py" />
-      <change beforePath="$PROJECT_DIR$/TKinter/__init__.py" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/TKinter/start_1.py" afterPath="$PROJECT_DIR$/flask_project/moive_projrct/app.py" />
-      <change beforePath="$PROJECT_DIR$/TeachingPython/jenkinsapi_test.py" afterPath="$PROJECT_DIR$/TeachingPython/jenkinsapi_test.py" />
-      <change beforePath="$PROJECT_DIR$/attr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/configObj.conf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/configobj_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/cv_3.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/compute/manager.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/compute/manager.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/compute/server.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/compute/server.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/log/log.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/log/log.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/ws/compute.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/ws/compute.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/ws/file.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/easted/ws/file.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/screwdriver/vendor_heat.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/screwdriver/vendor_heat.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/services/app_service.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/services/app_service.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/services/template_service.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/services/template_service.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/stream/stream_checker.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/stream/stream_checker.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/util/template.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/manor/util/template.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/python/manor_update_script.py" afterPath="$PROJECT_DIR$/ecloud/code/src/main/python/manor_update_script.py" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/api.config.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/api.config.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/framework/framework.Breadcrumbs.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/framework/framework.Breadcrumbs.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/framework/framework.Parameter.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/framework/framework.Parameter.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/backbone/underscore-1.8.2.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/backbone/underscore-1.8.2.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/compatible/html5shiv.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/compatible/html5shiv.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/jquery/jquery.min-1-12.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/jquery/jquery.min-1-12.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/mustache/mustache.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/mustache/mustache.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/mustache/mustache.min.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/libs/mustache/mustache.min.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/cal/cal.host.hostDetail.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/cal/cal.host.hostDetail.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/index/dashboard.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/index/dashboard.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/log/log.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/log/log.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.instance.create.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.instance.create.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.create.flow.param.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.create.flow.param.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.create.flow.paramTwo.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.create.flow.paramTwo.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.create.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.create.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.detail.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.detail.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.js" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/js/modules/manor/manor.template.js" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/views/addManorTemplateCreate.html" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/views/addManorTemplateCreate.html" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/views/manor.instance.crate.startType.html" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/views/manor.instance.crate.startType.html" />
-      <change beforePath="$PROJECT_DIR$/ecloud/code/src/main/web/views/manorTemplateDetail.html" afterPath="$PROJECT_DIR$/ecloud/code/src/main/web/views/manorTemplateDetail.html" />
-      <change beforePath="$PROJECT_DIR$/hrjk/QloudTest/engine/robotide/preferences/configobj.py" afterPath="$PROJECT_DIR$/hrjk/QloudTest/engine/robotide/preferences/configobj.py" />
-      <change beforePath="$PROJECT_DIR$/hrjk/QloudTest/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/hrjk/QloudTest/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.js" />
-      <change beforePath="$PROJECT_DIR$/hrjk/QloudTest/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/hrjk/QloudTest/static/js/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/pyqt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pyqt/icons/web.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pyqt/ui_test1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pyqt/ui_test2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pythonTestHelloworld.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/python_test_100/1.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/stomp_test.py" afterPath="$PROJECT_DIR$/stomp_test.py" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/CHANGELOG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/MANIFEST.in" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/README.markdown" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/VERSION" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/anyserver.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/ABOUT" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/appadmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/debug.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/default.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/gae.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/mercurial.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/openshift.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/plugin_jqmobile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/shell.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/toolbar.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/webservices.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/controllers/wizard.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/cron/crontab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/cron/expire_sessions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/af.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/bg.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/cs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/de.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/default.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/es.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/fr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/he.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/it.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/ja.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/my-mm.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/nl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/pl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/plural-en.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/plural-ru.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/plural-uk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/pt-br.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/pt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/ro.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/ru.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/sl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/sr-cr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/sr-lt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/tr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/uk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/zh-tw.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/languages/zh.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/0.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/0_imports.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/access.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/buttons.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/db.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/menu.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/plugin_multiselect.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/models/plugin_statebutton.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/modules/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/private/hosts.deny" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/sessions/1f1/098/127.0.0.1-f392ba22-c664-40a2-a582-b3eb7d8b2057" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/settings.cfg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/comment/comment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/comment/continuecomment.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/dialog/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/dialog/dialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/display/fullscreen.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/display/fullscreen.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/display/panel.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/display/placeholder.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/display/rulers.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/edit/closebrackets.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/edit/closetag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/edit/continuelist.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/edit/matchbrackets.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/edit/matchtags.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/edit/trailingspace.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/brace-fold.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/comment-fold.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/foldcode.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/foldgutter.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/foldgutter.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/indent-fold.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/markdown-fold.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/fold/xml-fold.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/anyword-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/css-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/html-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/javascript-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/python-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/show-hint.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/show-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/sql-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/hint/xml-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/mode/loadmode.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/mode/multiplex.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/mode/multiplex_test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/mode/overlay.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/mode/simple.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/search/match-highlighter.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/search/matchesonscrollbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/search/matchesonscrollbar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/search/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/search/searchcursor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/selection/active-line.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/selection/mark-selection.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/addon/selection/selection-pointer.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/emmet.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/keymap/emacs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/keymap/sublime.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/keymap/vim.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/lib/codemirror.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/lib/codemirror.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/css/css.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/css/less_test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/css/scss_test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/css/test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/htmlmixed/htmlmixed.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/javascript/javascript.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/javascript/test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/python/python.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/xml/test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/mode/xml/xml.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/3024-day.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/3024-night.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/ambiance-mobile.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/ambiance.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/base16-dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/base16-light.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/blackboard.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/cobalt.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/colorforth.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/eclipse.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/elegant.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/erlang-dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/lesser-dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/mbo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/mdn-like.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/midnight.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/monokai.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/neat.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/neo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/night.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/paraiso-dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/paraiso-light.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/pastel-on-dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/rubyblue.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/solarized.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/the-matrix.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/tomorrow-night-bright.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/tomorrow-night-eighties.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/twilight.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/vibrant-ink.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/web2py.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/xq-dark.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/xq-light.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/codemirror/theme/zenburn.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/bootstrap-responsive.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/bootstrap_adapters.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/bootstrap_essentials.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/calendar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/jqueryMultiSelect.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/typeahead.js-bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/web2py-codemirror.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/web2py.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/web2py_bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/css/web2py_bootstrap_nojs.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/chat.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/delete_icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/dim_bullet.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/embossed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/files_toggle.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/folder.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/folder_locked.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/folder_sm.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/glyphicons-halflings-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/glyphicons-halflings.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/header_bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/header_shadow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/help.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/menu.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/menu_responsive.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/questions.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/red_bullet.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/save_icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/search.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/section_bullet.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/sidebar_background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/sidebar_bullet.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/small_button.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/small_special_button.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/spinner.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/start.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/test_icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/images/ticket_section.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/ajax_editor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/analytics.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/autoscroll.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/calendar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/dd_belatedpng.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/hogan-2.0.0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/jquery.flot.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/jquery.flot.resize.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/jquery.hotkeys.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/jqueryMultiSelect.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/modernizr.custom.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/share.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/typeahead.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/web2py.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/js/web2py_bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/dd_belatedpng.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/images/ajax-loader.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/images/icons-18-black.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/images/icons-18-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/images/icons-36-black.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/images/icons-36-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/images/iphone.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/jquery.mobile-1.2.0.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/jquery.mobile-1.2.0.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/jquery.mobile-1.3.1.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_jqmobile/jquery.mobile-1.3.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_multiselect/jquery.multi-select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_multiselect/multi-select.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_multiselect/start.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_multiselect/switch.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_statebutton/css/bootstrap-switch.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/static/plugin_statebutton/js/bootstrap-switch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/appadmin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/debug/breakpoints.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/debug/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/debug/interact.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/about.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/change_password.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/delete.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/delete_plugin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/design.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/downgrade_web2py.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/edit.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/edit_language.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/errors.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/git_pull.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/git_push.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/layout.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/peek.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/plugin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/resolve.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/site.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/test.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/ticket.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/ticket.load" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/uninstall.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/upgrade_web2py.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default.mobile/user.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/about.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/bulk_register.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/change_password.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/delete.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/delete_plugin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/design.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/edit.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/edit_js.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/edit_language.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/edit_plurals.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/editor_sessions.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/editor_settings.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/editor_shortcuts.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/errors.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/files_menu.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/git_pull.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/git_push.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/install_plugin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/manage_students.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/pack_custom.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/peek.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/plugin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/plugins.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/resolve.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/site.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/test.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/ticket.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/ticket.load" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/todolist.load" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/twitter.load" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/uninstall.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/upgrade_web2py.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/default/user.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/gae/deploy.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/generic.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/layout.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/mercurial/commit.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/mercurial/revision.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/openshift/deploy.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/plugin_jqmobile/about.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/plugin_jqmobile/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/plugin_jqmobile/layout.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/shell/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/toolbar/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/web2py_ajax.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/wizard/generated.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/admin/views/wizard/step.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/ABOUT" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/ajax_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/appadmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/cache_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/default.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/form_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/global.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/layout_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/session_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/simple_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/soap_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/spreadsheet.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/controllers/template_examples.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/cron/crontab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/languages/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/models/feeds_reader.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/models/markmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/models/menu.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/models/session.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/documentation/community.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/documentation/main.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/documentation/more.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/documentation/official.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/index/maincontent.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/index/whyweb2py.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/usergroups/grouplist.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/private/content/en/default/what/whyweb2py.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/403.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/404.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/500.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/artwork.tar.gz" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/artwork.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/bootstrap-responsive.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/calendar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/examples.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/web2py.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/web2py_bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/css/web2py_bootstrap_nojs.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers7.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/Stickers8.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/book-4th.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/book-5th.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/book-recipes.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/facebook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/favicon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/glyphicons-halflings-white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/glyphicons-halflings.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/gplus-32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/infoworld2012.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/logo_bw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/logo_db.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/logo_lb.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/menu.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/poweredby.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/questions.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/shadow-bottom.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/stripes.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/tag-cloud-color-small.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/twitter.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/videos.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/images/web2py_logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/analytics.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/calendar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/dd_belatedpng.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/modernizr.custom.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/share.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/web2py.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/js/web2py_bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/markmin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/robots.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/title.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/web2py_cheatsheet.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/web2py_contributor_agreement.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/static/web2py_logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/ajax_examples/fade.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/ajax_examples/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/appadmin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/cache_examples/generic.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/database_examples/buy.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/database_examples/register_dog.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/database_examples/register_person.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/database_examples/register_product.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/changelog.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/documentation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/download.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/examples.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/license.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/support.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/usergroups.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/videos.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/what.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/default/who.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/form_examples/form.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/generic.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/generic.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/generic.load" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/generic.rss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/generic.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/global/vars.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/images_examples/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/layout.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/layout_examples/basic.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/layout_examples/civilized.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/layout_examples/layout_civilized.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/layout_examples/layout_sleek.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/layout_examples/slick.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/session_examples/counter.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/simple_examples/ajaxwiki.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/simple_examples/hello3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/simple_examples/status.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/soap_examples/generic.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/spreadsheet/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/beautify.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/escape.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/test_def.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/test_for.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/test_if.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/test_try.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/variables.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/template_examples/xml.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/examples/views/web2py_ajax.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/ABOUT" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/controllers/appadmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/controllers/default.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/cron/crontab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/cron/crontab.example" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_cas.table" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_event.table" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_group.table" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_membership.table" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_permission.table" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/c8b669d15150d7109e5f7ab36744a5b7_auth_user.table" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/sql.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/databases/storage.sqlite" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/ar.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/ca.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/cs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/de.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/default.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/es.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/fr-ca.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/fr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/hi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/hu.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/id.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/it.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/my-mm.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/my.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/nl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/pl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/plural-cs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/plural-en.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/plural-es.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/plural-ru.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/plural-uk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/pt-br.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/pt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/ro.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/ru.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/sk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/tr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/uk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/zh-cn.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/zh-tw.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/languages/zh.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/models/db.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/models/menu.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/modules/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/private/appconfig.ini" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/routes.example.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/403.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/404.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/500.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/css/bootstrap-theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/css/calendar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/css/web2py-bootstrap3.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/css/web2py.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/images/background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/images/facebook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/images/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/images/favicon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/images/gplus-32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/images/twitter.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/analytics.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/calendar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/modernizr-2.8.3.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/respond-1.4.2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/share.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/web2py-bootstrap3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/static/js/web2py.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/appadmin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/default/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/default/user.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.ics" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.jsonp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.load" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.rss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/generic.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/layout.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/applications/welcome/views/web2py_ajax.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/app.example.yaml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/appengine_config.example.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/logging.example.conf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/options_std.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/queue.example.yaml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/routes.parametric.example.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/routes.patterns.example.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/examples/web.config" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/build_web2py/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/build_web2py/setup_app.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/build_web2py/setup_exe.conf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/build_web2py/setup_exe.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/icons/splashlogo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/icons/web2py.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/icons/web2py.icns" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/extras/icons/web2py.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/admin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/cache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/cfs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/compileapp.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contenttype.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/AuthorizeNet.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/DowCommerce.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/aes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/appconfig.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/autolinks.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/feedparser.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/fonts.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/fpdf.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/html.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/php.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/template.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/fpdf/ttfonts.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/gae_memcache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/gae_retry.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/gateways/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/gateways/fcgi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/generics.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/google_wallet.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/heroku.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/hypermedia.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/imageutils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/ipaddr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/basic_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/browserid_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/cas_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/dropbox_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/email_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/extended_login_form.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/gae_google_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/janrain_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/ldap_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/linkedin_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/loginradius_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/loginza.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/motp_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/oauth10a_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/oauth20_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/oneall_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/openid_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/pam_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/rpx_account.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/saml2_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/login_methods/x509_auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markdown/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markdown/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markdown/markdown2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markmin/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markmin/markmin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markmin/markmin.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markmin/markmin2html.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markmin/markmin2latex.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/markmin/markmin2pdf.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/memcache/ChangeLog" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/memcache/PKG-INFO" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/memcache/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/memcache/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/memcache/memcache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/memdb.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/minify/cssmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/minify/htmlmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/minify/jsmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/minify/minify.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/ordereddict.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pam.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/paymentech.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pbkdf2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pbkdf2_ctypes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pdfinvoice.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pg8000/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pg8000/_version.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pg8000/core.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pg8000/six.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/af.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/ar.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/bg.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/cs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/de.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/en.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/es.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/fr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/he.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/hi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/hu.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/id.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/it.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/ja.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/lt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/my.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/nl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/pl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/pt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/ro.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/ru.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/sk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/sl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/tr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/uk.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/plural_rules/zh.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/populate.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyfpdf.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/CHANGELOG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/README.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/charset.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/connections.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/CLIENT.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/COMMAND.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/ER.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/FIELD_TYPE.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/FLAG.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/SERVER_STATUS.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/constants/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/converters.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/cursors.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/err.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/test_DictCursor.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/test_SSCursor.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/test_basic.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/test_example.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/tests/test_issues.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/times.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pymysql/util.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pypyodbc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/Constants.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/Elements.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/PropertySets.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/Renderer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/Styles.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyrtf/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pysimplesoap/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pysimplesoap/client.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pysimplesoap/helpers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pysimplesoap/server.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pysimplesoap/simplexml.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pysimplesoap/transport.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyuca/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyuca/README.markmin" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyuca/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyuca/allkeys.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/pyuca/pyuca.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/qdb.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/redis_cache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/redis_session.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/rss2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/shell.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/decoder.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/encoder.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/ordered_dict.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/scanner.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejson/tool.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/simplejsonrpc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/sms_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/spreadsheet.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/stripe.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/taskbar_widget.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/timecollect.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/user_agent_parser.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/webclient.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/contrib/websocket_messaging.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/custom_import.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/dal.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/debug.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/decoder.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/fileutils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/globals.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/highlight.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/html.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/http.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/import_all.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/languages.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/main.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/messageboxhandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/myregex.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/newcron.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/AUTHORS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/CHANGES" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/MANIFEST.in" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/appveyor.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/docs/Makefile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/docs/conf.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/docs/index.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/docs/pydal.adapters.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/docs/pydal.helpers.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/docs/requirements.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/_compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/_gae.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/_globals.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/_load.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/couchdb.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/cubrid.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/db2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/firebird.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/google_adapters.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/imap.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/informix.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/ingres.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/mongo.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/mssql.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/mysql.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/oracle.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/postgres.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/sapdb.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/sqlite.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/adapters/teradata.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/connection.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/contrib/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/contrib/mockimaplib.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/contrib/ordereddict.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/contrib/portalocker.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/contrib/reserved_sql_keywords.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/drivers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/exceptions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/helpers/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/helpers/classes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/helpers/gae.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/helpers/methods.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/helpers/regex.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/helpers/serializers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/pydal/objects.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/setup.cfg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/setup.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/_adapt.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/_compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/caching.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/nosql.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/smart_query.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/sql.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tests/validation.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/packages/dal/tox.ini" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/portalocker.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/recfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/reserved_sql_keywords.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/restricted.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/rewrite.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/rocket.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/rocket.py.footer" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/sanitizer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/scheduler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/serializers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/settings.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/shell.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/sql.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/sqlhtml.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/storage.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/streamer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/template.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/coverage.ini" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/fix_path.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_cache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_contenttype.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_contribs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_dal.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_fileutils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_globals.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_html.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_http.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_is_url.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_languages.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_old_doctests.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_router.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_routes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_serializers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_storage.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_template.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_tools.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_validators.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/test_web.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tests/tests_markmin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/tools.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/utf8.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/validators.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/widget.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/gluon/xmlrpc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/README" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/cgihandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/fcgihandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/gaehandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/isapiwsgihandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/modpythonhandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/scgihandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/web2py_on_gevent.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/handlers/wsgihandler.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/httpserver.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/httpserver.pid" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/parameters_8000.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/parameters_8080.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/autoroutes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/bench.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/cleancss.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/cleanhtml.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/cleanjs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/contentparser.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/cpdb.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/cpplugin.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/dict_diff.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/extract_mysql_models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/extract_oracle_models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/extract_pgsql_models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/extract_sqlite_models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/fixws.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/import_static.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/layout_make.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/make_min_web2py.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/manage.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/parse_top_level_domains.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/rmorphans.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/sessions2trash.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-scheduler-centos.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-shared-hosting-2.4.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-ubuntu-12-04-redmine-unicorn-web2py-uwsgi-nginx.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-virtualenv-web2py.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-centos7.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-cloudfoundry.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-debian-sid.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-fedora-ami.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-fedora.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-heroku.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-nginx-uwsgi-centos64.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-nginx-uwsgi-centos7.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-nginx-uwsgi-on-centos.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-nginx-uwsgi-opensuse.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-nginx-uwsgi-ubuntu.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/setup-web2py-ubuntu.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/standalone_exe_cxfreeze.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/sync_languages.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/tickets2db.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/tickets2email.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/tickets2slack.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/update-web2py.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/update_web2py.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/web2py-lock.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/web2py.archlinux.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/web2py.fedora.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/web2py.ubuntu.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/writedoc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/scripts/zip_static_files.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/site-packages/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/web2py.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py/welcome.w2p" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web2py_src.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/装饰器/wapper2.py" afterPath="$PROJECT_DIR$/装饰器/wapper2.py" />
+      <change beforePath="$PROJECT_DIR$/装饰器/wapper2.py" afterPath="$PROJECT_DIR$/装饰器/wrapper2.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1120,21 +44,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wapper2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/装饰器/wapper2.py">
+      <file leaf-file-name="wrapper2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/装饰器/wrapper2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="339">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wrapper1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wrapper1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/装饰器/wrapper1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask_project/werkzeug_test/start.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <folding>
+                <element signature="e#247#294#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serving.py" pinned="false" current-in-tab="true">
+        <entry file="file://C:/Python36/Lib/site-packages/werkzeug/serving.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-979">
+              <caret line="688" column="14" lean-forward="false" selection-start-line="688" selection-start-column="8" selection-end-line="688" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -1170,8 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/orm/orm_ex3_add.py" />
-        <option value="$PROJECT_DIR$/orm/orm_ex4_foreignKey.py" />
         <option value="$PROJECT_DIR$/orm/orm_ex5_multi_foreignKey.py" />
         <option value="$PROJECT_DIR$/orm/orm_ex5_api.py" />
         <option value="$PROJECT_DIR$/html/文字循环.html" />
@@ -1219,8 +163,10 @@
         <option value="$PROJECT_DIR$/flask_project/上传下载文件/run.py" />
         <option value="$PROJECT_DIR$/flask_project/上传下载文件/upload.py" />
         <option value="$PROJECT_DIR$/ecloud/code/src/main/python/manor_update_script.py" />
-        <option value="$PROJECT_DIR$/装饰器/wrapper1.py" />
         <option value="$PROJECT_DIR$/stomp_test.py" />
+        <option value="$PROJECT_DIR$/装饰器/wrapper2.py" />
+        <option value="$PROJECT_DIR$/装饰器/wrapper1.py" />
+        <option value="$PROJECT_DIR$/flask_project/werkzeug_test/start.py" />
       </list>
     </option>
   </component>
@@ -1239,9 +185,9 @@
     <handled-path value="$PROJECT_DIR$/project/fullstack_template/static/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="915" />
-    <option name="y" value="71" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="749" />
+    <option name="y" value="65" />
     <option name="width" value="1240" />
     <option name="height" value="1047" />
   </component>
@@ -1275,6 +221,15 @@
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python" type="462c0819:PsiDirectoryNode" />
               <item name="装饰器" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mnist_dome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mnist_dome" type="462c0819:PsiDirectoryNode" />
+              <item name="mnist" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1329,7 +284,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.wrapper1">
+  <component name="RunManager" selected="Python.start">
     <configuration name="菜单隐藏.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Python/html/菜单隐藏.html" />
     <configuration name="Python" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -1364,25 +319,6 @@
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="context" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/with" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/with/context.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -1440,6 +376,25 @@
       <module name="Python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_project/上传下载文件/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask_project/werkzeug_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask_project/werkzeug_test/start.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -1571,19 +526,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Django server.Django_oldboy" />
       <item index="1" class="java.lang.String" itemvalue="Python.Python" />
-      <item index="2" class="java.lang.String" itemvalue="Python.context" />
-      <item index="3" class="java.lang.String" itemvalue="Python.context_closing" />
-      <item index="4" class="java.lang.String" itemvalue="Python.download" />
-      <item index="5" class="java.lang.String" itemvalue="Python.run" />
-      <item index="6" class="java.lang.String" itemvalue="Python.wrapper1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.context_closing" />
+      <item index="3" class="java.lang.String" itemvalue="Python.download" />
+      <item index="4" class="java.lang.String" itemvalue="Python.run" />
+      <item index="5" class="java.lang.String" itemvalue="Python.wrapper1" />
+      <item index="6" class="java.lang.String" itemvalue="Python.start" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.wrapper1" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run" />
-        <item index="2" class="java.lang.String" itemvalue="Python.download" />
-        <item index="3" class="java.lang.String" itemvalue="Python.context_closing" />
-        <item index="4" class="java.lang.String" itemvalue="Python.context" />
+        <item index="0" class="java.lang.String" itemvalue="Python.start" />
+        <item index="1" class="java.lang.String" itemvalue="Python.wrapper1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run" />
+        <item index="3" class="java.lang.String" itemvalue="Python.download" />
+        <item index="4" class="java.lang.String" itemvalue="Python.context_closing" />
       </list>
     </recent_temporary>
   </component>
@@ -1716,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530457462143</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="flask 上传文件">
+      <created>1530620140618</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1530620140618</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1740,7 +702,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="749" y="65" width="1240" height="1047" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1748,13 +710,13 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22234763" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32513967" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28329572" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.449162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2945824" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3092551" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953784" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21055438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33474576" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13129103" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261851" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32513967" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2877698" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1865,30 +827,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flask_project/moive_projrct/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_project/moive_projrct/app/home/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_project/moive_projrct/app/home/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flask_project/moive_projrct/app/admin/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -2255,29 +1193,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/装饰器/wapper2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="36" column="9" lean-forward="false" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stomp_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#243#254#0" expanded="true" />
+            <element signature="e#243#254#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/装饰器/wrapper1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2285,6 +1207,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fabric_test/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/装饰器/wrapper2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/装饰器/wrapper1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_project/werkzeug_test/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <element signature="e#247#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-979">
+          <caret line="688" column="14" lean-forward="false" selection-start-line="688" selection-start-column="8" selection-end-line="688" selection-end-column="14" />
           <folding />
         </state>
       </provider>

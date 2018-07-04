@@ -7,7 +7,7 @@
     @contact: liping19901114@163.com
     @site: 
     @software: PyCharm
-    @file: wapper2.py
+    @file: wrapper2.py
     @time: 2018/6/26 23:02
     @desc:
 """

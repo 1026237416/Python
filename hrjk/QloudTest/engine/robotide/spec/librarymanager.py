@@ -84,7 +84,7 @@ class LibraryManager(Thread):#库管理器
         except Exception, err:
             kws = self._spec_initializer.init_from_spec(library_name)
             if not kws:
-                msg = 'Importing test library "%s" failed' % library_name
+                msg = 'Importing test_case library "%s" failed' % library_name
                 RideLogException(
                     message=msg, exception=err, level='WARN').publish()
             return kws

@@ -23,7 +23,7 @@ import sys
 
 class Logger(object):#日志文件
     empty_suite_init_file_warn = re.compile("Test suite directory initialization "
-                                            "file '.*' contains no test data.")
+                                            "file '.*' contains no test_case data.")
 
     def __init__(self):
         self._messages = []

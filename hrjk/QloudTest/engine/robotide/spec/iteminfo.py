@@ -173,7 +173,7 @@ class _XMLKeywordContent(_KeywordInfo):#xml文件关键词内容
 
 
 class LibraryKeywordInfo(_KeywordInfo):#库关键词信息
-    _type = 'test library'
+    _type = 'test_case library'
     _library_alias = None
     item = None
 
@@ -244,7 +244,7 @@ class _UserKeywordInfo(_KeywordInfo):#用户关键词信息
 
 
 class TestCaseUserKeywordInfo(_UserKeywordInfo):#测试案例用户关键词信息
-    _type = 'test case file'
+    _type = 'test_case case file'
 
     @property
     def longname(self):

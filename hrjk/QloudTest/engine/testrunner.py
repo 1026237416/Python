@@ -47,13 +47,12 @@ from robotide.context.platform import IS_WINDOWS
 from robotide.contrib.testrunner import TestRunnerAgent
 from robotide.controller.testexecutionresults import TestExecutionResults
 import datetime
-import platform
+
+from config import RESULT_PATH
 
 # import chardet
 
 ATEXIT_LOCK = threading.RLock()
-RESULT_PATH_WINDOWS = u'E:\\auto_case\\result\\'
-RESULT_PATH_LINUX = u'\\auto_case\\result\\'
 
 '''Changed by lill
 2017年12月20日，将pop方法中的“.encode('utf-8')”注释，解决UnicodeDecodeError
@@ -80,11 +79,7 @@ class TestRunner(object):  # 测试案例的运行
 
     def _create_temporary_directory(self):
         # self._output_dir = tempfile.mkdtemp(".d", "RIDE")
-        sysstr = platform.system()
-        if sysstr == "Windows":
-            self._output_dir = RESULT_PATH_WINDOWS
-        elif sysstr == "Linux":
-            self._output_dir = RESULT_PATH_LINUX
+        self._output_dir = RESULT_PATH
         atexit.register(self._remove_temporary_directory)
         # this plugin creates a temporary directory which _should_
         # get reaped at exit. Sometimes things happen which might
@@ -196,7 +191,7 @@ class TestRunner(object):  # 测试案例的运行
         self._process.run_command(command)
 
     def get_command(self, pythonpath, monitor_width, names_to_run, dir_path):
-        '''Return the command (as a list) used to run the test'''
+        '''Return the command (as a list) used to run the test_case'''
         command = [u'pybot.bat']
         # command = profile.get_command_prefix()[:]
         argfile = os.path.join(self._output_dir, "argfile.txt")
@@ -452,6 +447,7 @@ class RideListenerServer(SocketServer.TCPServer):  # ride服务监听
     def __init__(self, RequestHandlerClass, callback):
         SocketServer.TCPServer.__init__(self, ("", 0), RequestHandlerClass)
         self.callback = callback
+        # super(RideListenerServer, self).__init__()
 
 
 class RideListenerHandler(SocketServer.StreamRequestHandler):  # ride监听处理器

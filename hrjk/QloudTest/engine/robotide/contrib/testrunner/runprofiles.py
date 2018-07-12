@@ -39,7 +39,7 @@ from robotide.utils import overrides
 
 
 class BaseProfile(object):#平台运行基本类型(pybot、脚本)
-    '''Base class for all test runner profiles
+    '''Base class for all test_case runner profiles
 
     At a minimum each profile must set the name attribute, which is
     how the profile will appear in the dropdown list.
@@ -213,7 +213,7 @@ class PybotProfile(BaseProfile):#pybot型
         self._arguments = wx.TextCtrl(
             panel, wx.ID_ANY, size=(-1, -1), value=self.arguments)
         self._arguments.SetToolTipString(
-            u"测试案例运行的参数，参数是以空格分隔的列表。")#"Arguments for the test run. Arguments are space separated list."
+            u"测试案例运行的参数，参数是以空格分隔的列表。")#"Arguments for the test_case run. Arguments are space separated list."
         self._arguments.Bind(wx.EVT_TEXT, self.OnArgumentsChanged)
         sizer = wx.BoxSizer(wx.HORIZONTAL)
         sizer.Add(label, 0, wx.ALL | wx.EXPAND)
@@ -276,7 +276,7 @@ class PybotProfile(BaseProfile):#pybot型
             'white' if invalid_message else 'black')
         self._arguments.SetToolTipString(
             invalid_message or
-            u"测试案例运行的参数，参数是以空格分隔的列表。")#'Arguments for the test run. Arguments are space separated list.'
+            u"测试案例运行的参数，参数是以空格分隔的列表。")#'Arguments for the test_case run. Arguments are space separated list.'
 
     def _get_invalid_message(self, args):
         try:

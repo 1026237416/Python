@@ -14,11 +14,11 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-"""RIDE -- Robot Framework test data editor
+"""RIDE -- Robot Framework test_case data editor
 
 Usage: ride.py [--noupdatecheck] [--debugconsole] [inpath]
 
-RIDE can be started either without any arguments or by giving a path to a test
+RIDE can be started either without any arguments or by giving a path to a test_case
 data file or directory to be opened.
 
 To disable update checker use --noupdatecheck.

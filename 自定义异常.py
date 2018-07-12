@@ -25,3 +25,14 @@ try:
     raise MyException("Con not connection database")
 except MyException as e:
     print(e)
+
+
+v = dict.fromkeys(['k1', 'k2'], [])
+v["k1"].append(666)
+print(v)
+v["k1"] = 777
+print(v)
+
+{'k2': [666], 'k1': [666]}
+{'k2': [666, 777], 'k1': [666, 777]}
+

@@ -8,6 +8,8 @@ import platform
 from configparser import ConfigParser
 from configparser import NoOptionError, NoSectionError
 
+from flask import Flask
+
 ZIP_PATH_WINDOWS = u'E:\\auto_case\\case\\'
 ZIP_PATH_LINUX = u''
 SAVE_PATH_WINDOWS = u'E:\\auto_case\\result\\'
@@ -74,8 +76,22 @@ class ReadConf(object):
         except (NoOptionError, NoSectionError):
             return default
 
+#
+# # read_conf("setting.conf")
+#
+# r = ReadConf('setting.conf')
+# print r.read_option(section="DEFAULT", option="server_port", default="666")
 
-# read_conf("setting.conf")
+if __name__ == '__main__':
+    from connstomp import MessSendOrRecv
+    from config import recv_destination
 
-r = ReadConf('setting.conf')
-print r.read_option(section="DEFAULT", option="server_port", default="666")
+    # msg = json.dumps({"a": "aa", "b": "bb"})
+    msg = {"requestway": "run", "requestinfo": "110", "processName": "myProcess"}
+    stompmess = MessSendOrRecv(ip="192.168.11.20")
+    stompmess.send_message(message=msg, destination=recv_destination)
+    # stompmess.recv_message()
+    stompmess.disconnect()
+
+
+

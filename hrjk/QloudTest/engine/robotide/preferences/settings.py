@@ -111,7 +111,7 @@ class SettingsMigrator(object):#移动设置文件
 
     def migrate_from_1_to_2(self, settings):
         # See issue http://code.google.com/p/robotframework-ride/issues/detail?id=925
-        # And other reported issues about test run failure after pythonpath was added
+        # And other reported issues about test_case run failure after pythonpath was added
         # to run
         pythonpath = settings.get('pythonpath', [])
         if pythonpath:

@@ -119,8 +119,10 @@ class ElasticSearch(object):
                 self.index_data_type(js_file_name_list, dir_path, nowtime, 'js')
 
             else:
+                print "*****************"
                 for (dirpath, dirname, filenames) in path_list:
-                    html_file_name_list.extend(filenames)
+                    if filenames == "output.xml":
+                        html_file_name_list.extend(filenames)
                 self.index_data_type(html_file_name_list, dir_path, nowtime,
                                      'html/xml')
         except:

@@ -181,7 +181,7 @@ class TestRunner(object):#测试案例的运行
         self._process.run_command(command)
 
     def get_command(self, profile, pythonpath, monitor_width, names_to_run):
-        '''Return the command (as a list) used to run the test'''
+        '''Return the command (as a list) used to run the test_case'''
         command = profile.get_command_prefix()[:]
         argfile = os.path.join(self._output_dir, "argfile.txt")
         command.extend(["--argumentfile", argfile])
@@ -229,7 +229,7 @@ class TestRunner(object):#测试案例的运行
         standard_args.extend(["--monitorcolors", "off"])
         standard_args.extend(["--monitorwidth", monitor_width])
         for suite, test in names_to_run:
-            standard_args += ['--suite', suite, '--test', test]
+            standard_args += ['--suite', suite, '--test_case', test]
         return standard_args
 
     def _add_tmp_outputdir_if_not_given_by_user(self, command, standard_args):

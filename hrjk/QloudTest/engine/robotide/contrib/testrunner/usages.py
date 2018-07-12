@@ -1,19 +1,19 @@
 # -*- coding:utf-8 -*-
 '''注释说明'''
 USAGE = """\
-Robot Framework -- A generic test automation framework
+Robot Framework -- A generic test_case automation framework
 
 Usage:  pybot|jybot|ipybot [options] data_sources
    or:  python|jython|ipy -m robot.run [options] data_sources
    or:  python|jython|ipy path/to/robot/run.py [options] data_sources
    or:  java -jar robotframework.jar run [options] data_sources
 
-Robot Framework is a Python-based keyword-driven test automation framework for
-acceptance level testing and acceptance test-driven development (ATDD). It has
-an easy-to-use tabular syntax for creating test cases and its testing
-capabilities can be extended by test libraries implemented either with Python
+Robot Framework is a Python-based keyword-driven test_case automation framework for
+acceptance level testing and acceptance test_case-driven development (ATDD). It has
+an easy-to-use tabular syntax for creating test_case cases and its testing
+capabilities can be extended by test_case libraries implemented either with Python
 or Java. Users can also create new keywords from existing ones using the same
-simple syntax that is used for creating test cases.
+simple syntax that is used for creating test_case cases.
 
 Depending is Robot Framework installed using Python, Jython, or IronPython
 interpreter, it has a start-up script, `pybot`, `jybot` or `ipybot`,
@@ -21,11 +21,11 @@ respectively. Alternatively, it is possible to directly execute `robot.run`
 module (e.g. `python -m robot.run`) or `robot/run.py` script using a selected
 interpreter. Finally, there is also a standalone JAR distribution.
 
-Data sources given to Robot Framework are either test case files or directories
-containing them and/or other directories. Single test case file creates a test
-suite containing all the test cases in it and a directory containing test case
-files creates a higher level test suite with test case files or other
-directories as sub test suites. If multiple data sources are given, a virtual
+Data sources given to Robot Framework are either test_case case files or directories
+containing them and/or other directories. Single test_case case file creates a test_case
+suite containing all the test_case cases in it and a directory containing test_case case
+files creates a higher level test_case suite with test_case case files or other
+directories as sub test_case suites. If multiple data sources are given, a virtual
 top level suite containing suites generated from given data sources is created.
 
 By default Robot Framework creates an XML output file and a log and a report in
@@ -41,33 +41,33 @@ For more information about the framework see http://robotframework.org.
 Options
 =======
 
- -N --name name           Set the name of the top level test suite. Underscores
+ -N --name name           Set the name of the top level test_case suite. Underscores
                           in the name are converted to spaces. Default name is
                           created from the name of the executed data source.
- -D --doc documentation   Set the documentation of the top level test suite.
+ -D --doc documentation   Set the documentation of the top level test_case suite.
                           Underscores in the documentation are converted to
                           spaces and it may also contain simple HTML formatting
                           (e.g. *bold* and http://url/).
- -M --metadata name:value *  Set metadata of the top level test suite.
+ -M --metadata name:value *  Set metadata of the top level test_case suite.
                           Underscores in the name and value are converted to
                           spaces. Value can contain same HTML formatting as
                           --doc. Example: `--metadata version:1.2`
- -G --settag tag *        Sets given tag(s) to all executed test cases.
- -t --test name *         Select test cases to run by name or long name. Name
+ -G --settag tag *        Sets given tag(s) to all executed test_case cases.
+ -t --test_case name *         Select test_case cases to run by name or long name. Name
                           is case and space insensitive and it can also be a
                           simple pattern where `*` matches anything and `?`
                           matches any char. If using `*` and `?` in the console
                           is problematic see --escape and --argumentfile.
- -s --suite name *        Select test suites to run by name. When this option
-                          is used with --test, --include or --exclude, only
-                          test cases in matching suites and also matching other
+ -s --suite name *        Select test_case suites to run by name. When this option
+                          is used with --test_case, --include or --exclude, only
+                          test_case cases in matching suites and also matching other
                           filtering criteria are selected. Name can be a simple
-                          pattern similarly as with --test and it can contain
+                          pattern similarly as with --test_case and it can contain
                           parent name separated with a dot. For example
                           `-s X.Y` selects suite `Y` only if its parent is `X`.
- -i --include tag *       Select test cases to run by tag. Similarly as name in
-                          --test, tag is case and space insensitive. There are
-                          three ways to include test based on tags:
+ -i --include tag *       Select test_case cases to run by tag. Similarly as name in
+                          --test_case, tag is case and space insensitive. There are
+                          three ways to include test_case based on tags:
                           1) One tag as a simple pattern. Tests having a tag
                           matching the pattern are included. Example: `it-*`
                           2) Two or more tags (or patterns) separated by `&` or
@@ -76,19 +76,19 @@ Options
                           3) Two or more tags (or patterns) separated by `NOT`.
                           Tests having the first tag but not any of the latter
                           ones are included. Example: `it-10NOTsmoke`
- -e --exclude tag *       Select test cases not to run by tag. These tests are
+ -e --exclude tag *       Select test_case cases not to run by tag. These tests are
                           not run even if they are included with --include.
                           Tags are excluded using the rules explained in
                           --include.
  -R --runfailed output    Select failed tests from an earlier output file to be
                           re-executed. Equivalent to selecting same tests
-                          individually using --test option.
+                          individually using --test_case option.
  -c --critical tag *      Tests having given tag are considered critical. If no
                           critical tags are set, all tags are critical. Tags
-                          can be given as a pattern like e.g. with --test.
+                          can be given as a pattern like e.g. with --test_case.
  -n --noncritical tag *   Tests with given tag are not critical even if they
                           have a tag set with --critical. Tag can be a pattern.
- -v --variable name:value *  Set variables in the test data. Only scalar
+ -v --variable name:value *  Set variables in the test_case data. Only scalar
                           variables are supported and name is given without
                           `${}`. See --escape for how to use special characters
                           and --variablefile for a more powerful variable
@@ -115,7 +115,7 @@ Options
                           to --log, --report, --xunit, and --debugfile, is
                           relative to --outputdir unless given as an absolute
                           path. Other output files are created based on XML
-                          output files after the test execution and XML outputs
+                          output files after the test_case execution and XML outputs
                           can also be further processed with Rebot tool. Can be
                           disabled by giving a special value `NONE`. In this
                           case, also log and report are automatically disabled.
@@ -139,10 +139,10 @@ Options
                           `report-20070503-154410.html`.
     --splitlog            Split log file into smaller pieces that open in
                           browser transparently.
-    --logtitle title      Title for the generated test log. The default title
+    --logtitle title      Title for the generated test_case log. The default title
                           is `<Name Of The Suite> Test Log`. Underscores in
                           the title are converted into spaces in all titles.
-    --reporttitle title   Title for the generated test report. The default
+    --reporttitle title   Title for the generated test_case report. The default
                           title is `<Name Of The Suite> Test Report`.
     --reportbackground colors  Background colors to use in the report file.
                           Either `all_passed:critical_passed:failed` or
@@ -160,8 +160,8 @@ Options
                           shown. Example:  --suitestatlevel 3
     --tagstatinclude tag *  Include only matching tags in `Statistics by Tag`
                           and `Test Details` in log and report. By default all
-                          tags set in test cases are shown. Given `tag` can
-                          also be a simple pattern (see e.g. --test).
+                          tags set in test_case cases are shown. Given `tag` can
+                          also be a simple pattern (see e.g. --test_case).
     --tagstatexclude tag *  Exclude matching tags from `Statistics by Tag` and
                           `Test Details`. This option can be used with
                           --tagstatinclude similarly as --exclude is used with
@@ -197,7 +197,7 @@ Options
                           warnings are not removed except in `all` mode.
                           all:            remove data from all keywords
                           passed:         remove data only from keywords in
-                                          passed test cases and suites
+                                          passed test_case cases and suites
                           for:            remove passed iterations from for
                                           loops
                           wuks:           remove all but last failing keyword
@@ -206,8 +206,8 @@ Options
                                           pattern. Pattern can be the full name
                                           of the keyword with spaces removed or
                                           `*` wildcard.
-    --listener class *    A class for monitoring test execution. Gets
-                          notifications e.g. when a test case starts and ends.
+    --listener class *    A class for monitoring test_case execution. Gets
+                          notifications e.g. when a test_case case starts and ends.
                           Arguments to listener class can be given after class
                           name, using colon as separator. For example:
                           --listener MyListenerClass:arg1:arg2
@@ -216,16 +216,16 @@ Options
                           files. By default skipped files only cause an info
                           level syslog message.
     --nostatusrc          Sets the return code to zero regardless of failures
-                          in test cases. Error codes are returned normally.
-    --runemptysuite       Executes tests also if the top level test suite is
+                          in test_case cases. Error codes are returned normally.
+    --runemptysuite       Executes tests also if the top level test_case suite is
                           empty. Useful e.g. with --include/--exclude when it
-                          is not an error that no test matches the condition.
-    --dryrun              Verifies test data and runs tests so that library
+                          is not an error that no test_case matches the condition.
+    --dryrun              Verifies test_case data and runs tests so that library
                           keywords are not executed.
-    --exitonfailure       Stops test execution if ant critical test fails.
-    --skipteardownonexit  Causes teardowns to be skipped if test execution is
+    --exitonfailure       Stops test_case execution if ant critical test_case fails.
+    --skipteardownonexit  Causes teardowns to be skipped if test_case execution is
                           stopped prematurely.
-    --randomize all|suites|tests|none  Randomizes the test execution order.
+    --randomize all|suites|tests|none  Randomizes the test_case execution order.
                           all:    randomizes both suites and tests
                           suites: randomizes suites
                           tests:  randomizes tests
@@ -241,10 +241,10 @@ Options
                           off:  disable colors altogether
                           Note that colors do not work with Jython on Windows.
  -K --monitormarkers auto|on|off  Show `.` (success) or `F` (failure) on
-                          console when top level keywords in test cases end.
+                          console when top level keywords in test_case cases end.
                           Values have same semantics as with --monitorcolors.
  -P --pythonpath path *   Additional locations (directories, ZIPs, JARs) where
-                          to search test libraries from when they are imported.
+                          to search test_case libraries from when they are imported.
                           Multiple paths can be given by separating them with a
                           colon (`:`) or using this option several times. Given
                           path can also be a glob pattern matching multiple
@@ -279,14 +279,14 @@ Options
                           |  --name Regression Tests
                           |  # This is a comment line
                           |  my_tests.html
-                          |  path/to/test/directory/
+                          |  path/to/test_case/directory/
                           Examples:
                           --argumentfile argfile.txt --argumentfile STDIN
  -h -? --help             Print usage instructions.
  --version                Print version information.
 
 Options that are marked with an asterisk (*) can be specified multiple times.
-For example, `--test first --test third` selects test cases with name `first`
+For example, `--test_case first --test_case third` selects test_case cases with name `first`
 and `third`. If other options are given multiple times, the last value is used.
 
 Long option format is case-insensitive. For example, --SuiteStatLevel is
@@ -299,7 +299,7 @@ Environment Variables
 =====================
 
 ROBOT_SYSLOG_FILE         Path to a file where Robot Framework writes internal
-                          information about parsing test case files and running
+                          information about parsing test_case case files and running
                           tests. Can be useful when debugging problems. If not
                           set, or set to special value `NONE`, writing to the
                           syslog file is disabled.
@@ -310,19 +310,19 @@ ROBOT_SYSLOG_LEVEL        Log level to use when writing to the syslog file.
 Examples
 ========
 
-# Simple test run with `pybot` without options.
+# Simple test_case run with `pybot` without options.
 $ pybot tests.html
 
 # Using options and running with `jybot`.
 $ jybot --include smoke --name Smoke_Tests path/to/tests.txt
 
 # Executing `robot.run` module using Python.
-$ python -m robot.run --test test1 --test test2 test_directory
+$ python -m robot.run --test_case test1 --test_case test2 test_directory
 
 # Running `robot/run.py` script with Jython.
 $ jython /path/to/robot/run.py tests.robot
 
-# Executing multiple test case files and using case-insensitive long options.
+# Executing multiple test_case case files and using case-insensitive long options.
 $ pybot --SuiteStatLevel 2 /my/tests/*.html /your/tests.html
 
 # Setting syslog file before running tests.

@@ -162,23 +162,23 @@ class RideOpenVariableDialog(RideMessage):
     data = ['controller']
 
 class RideTestExecutionStarted(RideMessage):
-    """Sent whenever new test execution is started."""
+    """Sent whenever new test_case execution is started."""
     data = ['results']
 
 class RideTestSelectedForRunningChanged(RideMessage):
-    """Sent whenever a test is selected or unselected from the tree."""
+    """Sent whenever a test_case is selected or unselected from the tree."""
     data = ['tests']
 
 class RideTestRunning(RideMessage):
-    """Sent whenever RIDE is starting to run a test case."""
+    """Sent whenever RIDE is starting to run a test_case case."""
     data = ['item']
 
 class RideTestPassed(RideMessage):
-    """Sent whenever RIDE has executed a test case and it passed."""
+    """Sent whenever RIDE has executed a test_case case and it passed."""
     data = ['item']
 
 class RideTestFailed(RideMessage):
-    """Sent whenever RIDE has executed a test case and it failed."""
+    """Sent whenever RIDE has executed a test_case case and it failed."""
     data = ['item']
 
 class RideNotebookTabChanging(RideMessage):
@@ -249,7 +249,7 @@ class RideDataChanged(RideMessage):
 
 
 class RideFileNameChanged(RideDataChanged):
-    """Sent after test case or resource file is renamed"""
+    """Sent after test_case case or resource file is renamed"""
     data = ['datafile', 'old_filename']
 
 
@@ -356,22 +356,22 @@ class RideItemSettingsChanged(RideItem):
 
 
 class RideTestCaseAdded(RideDataChanged):
-    """Sent when a new test case is added to a suite."""
+    """Sent when a new test_case case is added to a suite."""
     data = ['datafile', 'name', 'item']
 
 
 class RideTestCaseRemoved(RideDataChanged):
-    """Sent when a test case is removed from a suite."""
+    """Sent when a test_case case is removed from a suite."""
     data = ['datafile', 'name', 'item']
 
 
 class RideItemMovedUp(RideDataChanged):
-    """Sent when an item (test, keyword, variable) is moved up."""
+    """Sent when an item (test_case, keyword, variable) is moved up."""
     data = ['item']
 
 
 class RideItemMovedDown(RideDataChanged):
-    """Sent when an item (test, keyword, variable) is moved down."""
+    """Sent when an item (test_case, keyword, variable) is moved down."""
     data = ['item']
 
 

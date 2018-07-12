@@ -479,7 +479,7 @@ class TemplateInterpolation(InterpolationEngine):#插入模板
 
 interpolation_engines = {
     'configparser': ConfigParserInterpolation,
-    'templates': TemplateInterpolation,
+    'template': TemplateInterpolation,
 }
 
 
@@ -566,7 +566,7 @@ class Section(dict):
             if name == True:  # note that "if name:" would be incorrect here
                 # backwards-compatibility: interpolation=True means use default
                 name = DEFAULT_INTERPOLATION
-            name = name.lower()  # so that "Template", "templates", etc. all work
+            name = name.lower()  # so that "Template", "template", etc. all work
             class_ = interpolation_engines.get(name, None)
             if class_ is None:
                 # invalid value for self.main.interpolation
@@ -1229,7 +1229,7 @@ class ConfigObj(Section):
             else:
                 # file doesn't already exist
                 if self.create_empty:
-                    # this is a good test that the filename specified
+                    # this is a good test_case that the filename specified
                     # isn't impossible - like on a non-existent device
                     h = open(infile, 'w')
                     h.write('')
@@ -1463,7 +1463,7 @@ class ConfigObj(Section):
             return infile.decode(encoding).splitlines(True)
         for i, line in enumerate(infile):
             if not isinstance(line, unicode):
-                # NOTE: The isinstance test here handles mixed lists of unicode/string
+                # NOTE: The isinstance test_case here handles mixed lists of unicode/string
                 # NOTE: But the decode will break on any non-string values
                 # NOTE: Or could raise a ``UnicodeDecodeError``
                 infile[i] = line.decode(encoding)
@@ -1958,10 +1958,10 @@ class ConfigObj(Section):
         Write the current ConfigObj as a file
 
         >>> filename = a.filename
-        >>> a.filename = 'test.ini'
+        >>> a.filename = ttest_casecase
         >>> a.write()
         >>> a.filename = filename
-        >>> a == ConfigObj('test.ini', raise_errors=True)
+        >>> a == ConfigObj(tetest_casease, raise_errors=True)
         1
         """
         if self.indent_type is None:
@@ -2064,7 +2064,7 @@ class ConfigObj(Section):
 
         To run ``validate`` on the current ConfigObj, call: ::
 
-            test = config.validate(validator)
+            tetest_case config.validate(validator)
 
         (Normally having previously passed in the configspec when the ConfigObj
         was created - you can dynamically assign a dictionary of checks to the

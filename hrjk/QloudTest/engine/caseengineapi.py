@@ -1,91 +1,45 @@
 # coding:utf-8
-'''
+"""
 @Create:lill
-'''
+"""
 import json
-import platform
-import os
-import requests
-import shutil
 import time
-import zipfile
 
-from xml.etree import ElementTree as ET
 from flask import Flask, request, jsonify
+
 from testrunnerplugin import TestRunnerPlugin
 from saveES import ElasticSearch
 from connstomp import MessSendOrRecv
-from common import Asset, ReadConf
 
-conf = ReadConf(file_path="setting.conf")
+from common import Asset
+from common import create_dir
 
-server_port = conf.read_option(section="DEFAULT",
-                               option="server_port",
-                               default="9000")
-sys_platform = platform.system()
-if sys_platform == "Windows":
-    ZIP_PATH = conf.read_option(section="DEFAULT",
-                                option="ZIP_PATH",
-                                default=u'E:\\auto_case\\case\\')
-    RESULT_PATH = conf.read_option(section="DEFAULT",
-                                   option="RESULT_PATH",
-                                   default=u'/auto_case/case/')
-elif sys_platform == "Linux":
-    ZIP_PATH = conf.read_option(section="DEFAULT",
-                                option="ZIP_PATH",
-                                default=u'E:\\auto_case\\result\\')
-    RESULT_PATH = conf.read_option(section="DEFAULT",
-                                   option="RESULT_PATH",
-                                   default=u'/auto_case/result/')
+from common import unzip
+from common import return_xml_status
+from common import copy_report_to_local
+from common import send_report_to_qloud
 
-ES_HOST = conf.read_option(section="ElasticSearch",
-                           option="host")
-ES_PORT = conf.read_option(section="ElasticSearch",
-                           option="port",
-                           default="9200")
-ES_USER = conf.read_option(section="ElasticSearch",
-                           option="user",
-                           default="")
-ES_PWD = conf.read_option(section="ElasticSearch",
-                          option="password",
-                          default="")
+from config import *
 
-STOMP_HOST = conf.read_option(section="Stomp_server",
-                              option="host")
-STOMP_PORT = conf.read_option(section="Stomp_server",
-                              option="port",
-                              default="61613")
-STOMP_USER = conf.read_option(section="Stomp_server",
-                              option="user",
-                              default="")
-STOMP_PWD = conf.read_option(section="Stomp_server",
-                             option="password",
-                             default="")
 
-ASSETS_HOST = conf.read_option(section="asset_server",
-                               option="host")
-ASSETS_PORT = conf.read_option(section="asset_server",
-                               option="port")
-ASSETS_USER = conf.read_option(section="asset_server",
-                               option="user")
-ASSETS_PWD = conf.read_option(section="asset_server",
-                              option="password")
-
-REPORT_PATH = "report"
-date_format = "%Y_%m_%d_%H_%M_%S"
-
-ASSETS_SERVER = "%s:%s" % (ASSETS_HOST, ASSETS_PORT)
-ASSETS_TYPE = "case"
+# 创建案例保存路径
+create_dir(RESULT_PATH, ZIP_PATH)
+from common import case_log
 
 asset = Asset(host=ASSETS_HOST, port=ASSETS_PORT, user=ASSETS_USER,
               passwd=ASSETS_PWD)
 
+
 app = Flask(__name__)
+
+
+test_runner_plugin = TestRunnerPlugin()
+test_runner_plugin.enable()
 
 
 # 测试引擎url
 @app.route('/case/engine', methods=["POST"])
-def CaseEngine():
+def case_engine_by_rest():
     """
     监听任务流，获取需执行的测试案例名称，
     从数据库获取对应案例信息并运行案例
@@ -95,220 +49,246 @@ def CaseEngine():
     """
     # 获取前端数据
     data = json.loads(request.get_data())
-    print "Receive new data ......"
+    case_log.info("Receive new data ......")
     # 获取requestway & requestinfo
     requestway = data["requestway"]
     # 需获取名字，到数据库取得案例
     requestinfo = data["requestinfo"]
     # 获取流程的名称
     process_name = data["processName"]
-    # 创建案例保存路径
-    create_dir()
-    print(
-        {"requestway": requestway,
-         "requestinfo": requestinfo,
-         "processName": process_name}
-    )
-    test_runner_plugin = TestRunnerPlugin()
-    test_runner_plugin.enable()
+    recv_msg = {"requestway": requestway,
+                "requestinfo": requestinfo,
+                "processName": process_name}
+    case_log.info("Received info: %s" % recv_msg)
 
-    if requestway == "run":
+    if requestway in ["run", "kill", "pause", "resume"]:
+        if requestway == "run":
+            case_log.info("Start to [run] case......")
+            run_rst = run_case(case_name=requestinfo, process_name=process_name)
+
+            status = {'name': requestinfo, "status": run_rst}
+        elif requestway == "kill":
+            case_log.info("Start to [stop] case......")
+            test_runner_plugin.OnStop()
+            status = {'name': requestinfo, 'status': 'stop'}
+        elif requestway == "pause":
+            case_log.info("Start to [pause] case......")
+            test_runner_plugin.OnPause()
+            status = {'name': requestinfo, 'status': 'pause'}
+        else:
+            case_log.info("Start to [resume] case......")
+            test_runner_plugin.OnContinue()
+            status = {'name': requestinfo, 'status': 'resume'}
+    else:
+        status = {"name": requestinfo, "status": "requestway error!"}
+        case_log.error("Received data error: %s" % status)
+
+    # 返回json数据
+    case_log.info("Return data: %s" % status)
+    return jsonify(status)
+
+
+def case_engine_by_mq(receive_data):
+    try:
+        print("Receive New Message: %s" % receive_data)
+        case_log.info("Receive New Message: %s" % receive_data)
+
+        receive_data = json.loads(receive_data)
+
+        if not isinstance(receive_data, dict):
+            err_msg = "Receive data is error, data: %s" % receive_data
+            raise Exception(err_msg)
+
+        execute_type = str(receive_data.get("requestway", None))
+        case_name = str(receive_data.get("requestinfo", None))
+        process_name = str(receive_data.get("processName", None))
+        parser_data = {"requestway": execute_type, "requestinfo": case_name,
+                       "processName": process_name}
+        case_log.debug("The data parsed is: %s" % parser_data)
+
+        if not (execute_type and case_name and process_name):
+            err_msg = "Receive data is error, data: %s" % receive_data
+            raise Exception(err_msg)
+
+        if execute_type not in support_exec_type:
+            err_msg = "Receive data is error, not support execute case type!"
+            raise Exception(err_msg)
+
+        if execute_type == "run":
+            case_log.info("Start to [run] case......")
+            run_rst = run_case(case_name=case_name, process_name=process_name)
+            status = {'name': case_name, "status": run_rst}
+        elif execute_type == "kill":
+            case_log.info("Start to [stop] case......")
+            test_runner_plugin.OnStop()
+            status = {'name': case_name, 'status': 'stop'}
+        elif execute_type == "pause":
+            case_log.info("Start to [pause] case......")
+            test_runner_plugin.OnPause()
+            status = {'name': case_name, 'status': 'pause'}
+        else:
+            case_log.info("Start to [resume] case......")
+            test_runner_plugin.OnContinue()
+            status = {'name': case_name, 'status': 'resume'}
+        return status
+
+    except Exception as e:
+        print(e.message)
+        case_log.info(e.message)
+
+
+def run_case(case_name, process_name):
+    """
+    接收前端任务执行的操作类型为“run”时，会调用该方法来做具体的操作
+    @param case_name: 案例的名称
+    @param process_name: 流程的名称
+    @return: 返回案例的运行结果
+    """
+    result = {
+        "status": RUN_SUCCESS,
+        "casename": case_name,
+        "processName": process_name,
+        "path": "",
+        "msg": ""
+    }
+    try:
         # 登录数据库
         login_status = asset.login()
         if not login_status:
-            return "Failed to login asset base."
+            err_msg = "Failed to login asset base."
+            result["status"] = RUN_ERROR
+            result["msg"] = err_msg
+
+            case_log.error(result)
+            return result
         else:
-            if '\.Main' not in requestinfo:
-                asset_name = requestinfo + '.zip'
-                save_path = ZIP_PATH + asset_name
-            else:
-                requestname = requestinfo.split('\.Main')[0]
-                asset_name = requestname + '.zip'
-                save_path = ZIP_PATH + asset_name
+            if '\.Main' in case_name:
+                case_name = case_name.split('\.Main')[0]
 
-            # 1、从资产信息库获取对应的资产信息
-            asset_info = asset.get_asset_info(asset_name=asset_name)
-            if not asset_info:
-                report_error(
-                    "Failed to get asset [%s] information." % asset_name)
+            asset_name = case_name + '.zip'
+            save_path = os.path.join(ZIP_PATH, asset_name)
+            case_log.debug("Get asset name is: %s" % asset_name)
+            case_log.debug("Asset package save path is: %s" % save_path)
+
+            # 1、从资产信息库获取案例对应的资产信息
+            get_status, get_info = asset.get_asset_info(asset_name=asset_name)
+            if not get_status:
+                # 获取案例的信息失败，返回status为RUN_ERROR及错误信息
+                err_msg = "Failed to get asset [%s] information: %s" % (
+                    asset_name, get_info)
+                result["status"] = RUN_ERROR
+                result["msg"] = err_msg
+
+                case_log.error(result)
+                return result
             else:
-                print(asset_info)
-                # 2、将取出的数据存到本地, 并判断是否获取成功
-                get_rst = asset.get_asset_package(
-                    asset_info=asset_info,
-                    save_path=save_path
-                )
-                if not get_rst:
-                    report_error(
-                        "Failed to get asset [%s] package." % asset_name)
-                else:
-                    # 3、解压zip文件内容
-                    unzip(save_path, ZIP_PATH)
+                case_log.info("Get asset [%s] infos: %s" % (asset_name, get_info))
+
+            # 2、将取出的数据存到本地, 并判断是否获取成功
+            get_rst = asset.get_asset_package(asset_info=get_info,
+                                              save_path=save_path)
+            if not get_rst:
+                # 获取案例压缩包失败，返回status为RUN_ERROR及错误信息
+                err_msg = "Failed to get asset [%s] package." % asset_name
+                result["status"] = RUN_ERROR
+                result["msg"] = err_msg
+
+                case_log.error(result)
+                return result
+            else:
+                case_log.info("Get case package success.")
+
+            # 3、解压zip文件内容，解压成功返回True，失败返回错误信息
+            case_log.debug("Start to Extract case package......")
+            unzip_result = unzip(save_path, ZIP_PATH)
+            if unzip_result is not True:
+                # 解压案例压缩包失败，返回status为RUN_ERROR及错误信息
+                result["status"] = RUN_ERROR
+                result["msg"] = unzip_result
+
+                case_log.error(result)
+                return result
+
             # 4、运行案例
-            test_runner_plugin.OnRun(requestinfo, ZIP_PATH)
-            status = return_status()
+            case_log.debug("Start to run case......")
+            test_runner_plugin.OnRun(case_name, ZIP_PATH)
 
-            # 5、结果上传es
+            # 5、解析案例运行结束后生成的"output.xml"文件
+            case_log.debug("Start to parser case report output.xml file......")
+            status, report_info = return_xml_status(
+                report_path=os.path.join(RESULT_PATH, "output.xml"),
+                case_name=case_name
+            )
+            if not status:
+                # 解析案例报告失败，直接返回
+                result["status"] = RUN_ERROR
+                result["msg"] = report_info
+
+                case_log.error(result)
+                return result
+            else:
+                # 解析报告成功,日志记录
+                case_log.debug("Get report info is: %s" % report_info)
+
+            # 6、结果上传es
+            case_log.debug("Start to save report to ElasticSearch......")
             es = ElasticSearch(
                 index_name="showhtml",
                 index_type="report",
                 ip=ES_HOST
             )
             es.create_index()
-            nowtime = es.index_data(RESULT_PATH)
+            save_es_time = es.index_data(RESULT_PATH)
+            case_log.info("Save case [%s] report to ElasticSearch at time: %s" % (
+                asset_name.split(".")[0], save_es_time
+            ))
 
-            # 6、案例运行完之后将将结果拷贝到指定的report目录
-            local_path = copy_report_to_local(case_name=requestinfo)
+            # 7、案例运行完之后将将结果拷贝到指定的report目录, 并检查
+            case_log.debug("Start to copy report file to local path......")
+            status, report_msg = copy_report_to_local(case_name=case_name,
+                                                      process_name=process_name)
+            if not status:
+                result["status"] = RUN_ERROR
+                result["msg"] = report_msg
+                case_log.error(result)
+                return result
+            else:
+                local_path = report_msg
+                case_log.info("Save case [%s] report to local path: %s" % (
+                    case_name, local_path))
 
-            # 7、将案例的运行报告保存到简云上
-            send_report_to_qcloud(src_path=local_path, dst_path="")
+            # 8、将案例的运行报告保存到简云上
+            case_log.debug("Start to copy report file to qloud path......")
+            qloud_path = send_report_to_qloud(
+                process_name=process_name,
+                case_name=case_name,
+                local_path=local_path
+            )
+            result["path"] = qloud_path
 
-            # 8、通过stomp告知前端
-            message = {
-                "status": 0,
-                "qcloud_path": "/case/engine/report",
-                "case": requestinfo
-            }
-            stompmess = MessSendOrRecv(ip=STOMP_HOST)
-            stompmess.send_message(message=message)
-            stompmess.disconnect()
-            status = "OK"
-    elif requestway == "kill":
-        test_runner_plugin.OnStop()
-        status = {'name': requestinfo, 'status': 'stop'}
-    elif requestway == "pause":
-        test_runner_plugin.OnPause()
-        status = {'name': requestinfo, 'status': 'pause'}
-    elif requestway == "resume":
-        test_runner_plugin.OnContinue()
-        status = {'name': requestinfo, 'status': 'pause'}
-    else:
-        status = ""
-    # 返回json数据
-    return jsonify(status)
+            # 9、案例运行结束，将结果通过stomp告知前端
+            stomp_mess.send_message(message=result,
+                                    destination=send_destination)
 
-
-def copy_report_to_local(case_name):
-    """
-    将案例运行结束后生成的报告拷贝到指定的report目录，并以执行的格式存储
-    @param case_name: 案例名称
-    @return: 拷贝成功返回报告的存储路径
-    """
-    report_filename = "report.html"
-    log_filename = "log.html"
-    output_filename = "output.xml"
-    timestamp = time.strftime(date_format, time.localtime(time.time()))
-
-    report_path = os.path.join(REPORT_PATH, "_".join([case_name, timestamp]))
-
-    filename_list = [report_filename, log_filename, output_filename]
-
-    if not os.path.isdir(REPORT_PATH):
-        os.mkdir(REPORT_PATH)
-
-    if not os.path.isdir(report_path):
-        os.mkdir(report_path)
-
-    for filename in filename_list:
-        shutil.copy(src=os.path.join(RESULT_PATH, filename),
-                    dst=os.path.join(report_path, filename))
-
-    return report_path
-
-
-def send_report_to_qcloud(src_path, dst_path):
-    """
-    将案例的运行报告拷贝到简云指定的目录下
-    @param src_path: 
-    @param dst_path: 
-    @return: 
-    """
-    pass
-
-
-def create_dir():
-    """
-    创建案例运行时保存案例压缩包和案例生成报告的文件夹
-    @return: 
-    """
-    if not os.path.isdir(ZIP_PATH):
-        os.makedirs(ZIP_PATH)
-    if not os.path.isdir(RESULT_PATH):
-        os.makedirs(RESULT_PATH)
-
-
-def return_status():
-    """
-    从案例的运行结束生成的报告文件“output.xml”中解析出需要的信息
-    @return: 提取到的报告信息
-    """
-    e = ET.parse(RESULT_PATH + u'output.xml').getroot()
-
-    l = []
-    for i in e.iter("stat"):
-        l.append(i)
-    status = l[-1].attrib
-    del status['id']
-    return status
-
-
-def unzip(zip_path, extract_path):
-    """
-    将传入路径下zip_path的zip文件解压到指定路径extract_path下
-    Args:
-        zip_path: zip文件路径
-        extract_path: zip文件解压目的路径
-    Returns: 解压成功返回True， 失败返回False
-    """
-    try:
-        if os.path.exists(zip_path):
-            zip_info = zipfile.ZipFile(zip_path)
-            zip_info.extractall(extract_path)
-            zip_info.close()
-            print("Extract package [%s] to path [%s] success." % (
-                zip_path, extract_path))
-        else:
-            raise Exception("No such file or directory: [%s]" % zip_path)
+            return result
     except Exception as e:
-        report_error("Failed to extract file [%s]: %s" % (zip_path, e.message))
-
-
-def login(user, passwd):
-    """
-    登录资产信息库，获得访问资产信息库的访问权限
-    @param user: 登录资产信息库的用户名
-    @param passwd: 登录资产信息库的密码
-    @return: 登录成功：True
-              登录失败：False
-    """
-    try:
-        login_url = "https://{host}/publisher/apis/authenticate".format(
-            host=ASSETS_SERVER
-        )
-        session = requests.session()
-        login_data = json.dumps({
-            'username': user,
-            'password': passwd,
-        })
-        r = session.get(login_url, data=login_data, verify=False)
-        return r.status_code
-    except Exception as e:
-        err_msg = "Failed to login asset base: %s" % e.message
-        report_error(err_msg)
-
-
-def report_error(err_msg):
-    """
-    对异常情况的处理, 当捕获到异常，或者处理非正常流程可调用该方法
-    @param err_msg: 错误信息
-    @return: 
-    """
-    print(err_msg)
+        err_msg = "Failed to execute [run] case: %s" % e.message
+        result["status"] = RUN_ERROR
+        result["msg"] = err_msg
+        case_log.error(result)
+        return result
 
 
 if __name__ == "__main__":
-    app.debug = True
-    app.run(host="0.0.0.0", port=int(server_port))
+    print("Start engine server......")
+    stomp_mess = MessSendOrRecv(ip=STOMP_HOST, callback=case_engine_by_mq)
+    stomp_mess.recv_message(destination=recv_destination,
+                            subscription_id="run_case")
+    stomp_mess.run_forever()
+
+    # app.debug = True
+    # app.run(host="0.0.0.0", port=int(server_port))
+
     # create_dir()
     # test_runner_plugin = TestRunnerPlugin()
     # test_runner_plugin.enable()
@@ -320,3 +300,18 @@ if __name__ == "__main__":
     # print get_asset_package(info, "201.zip")
     # copy_report_to_local(case_name="aaa")
     # print get_asset_info("2023.zip")
+
+    # stompmess = MessSendOrRecv(ip="192.168.11.20")
+    # msg = {
+    #     "status": 0,
+    #     "path": "/home/case/ds",
+    #     "casename": "aaa",
+    #     "processName": "a1",
+    #     "msg": ""
+    # }
+    # stompmess.send_message(message=msg)
+    # # stompmess.recv_message()
+    # stompmess.disconnect()
+    # send_report_to_qloud(process_name="aaa",
+    #                      case_name="bbb",
+    #                      local_path=r"E:\auto_case\result")

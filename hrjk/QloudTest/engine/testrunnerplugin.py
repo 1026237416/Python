@@ -89,7 +89,7 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
             name_run = set([(case_name.decode('utf-8'))])
         else:
             # 测试时ESBDemo.ESBDemo，正式的是Main.main
-            name_run = set([(case_name.decode('utf-8') + u'.ESBDemo.ESBDemo')])
+            name_run = set([(case_name.decode('utf-8') + u'.Main.main')])
         dir_path = first_dir_path.decode('utf-8') + u'\\' + case_name.decode(
             'utf-8')
         command = self._create_command(name_run, dir_path)
@@ -175,7 +175,7 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
         self._progress_bar.Stop()
         now = datetime.datetime.now()
         self._output(
-            "\ntest finished %s" % robottime.format_time(now.timetuple()))
+            "\ntest_case finished %s" % robottime.format_time(now.timetuple()))
         self._test_runner.command_ended()
 
     def OnTimer(self):
@@ -233,14 +233,14 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
 
     def _handle_start_test(self, args):
         longname = args[1]['longname']
-        self._append_to_message_log('Starting test: %s' % longname)
+        self._append_to_message_log('Starting test_case: %s' % longname)
 
     def _append_to_message_log(self, text):
         self._messages_log_texts.put(text)
 
     def _handle_end_test(self, args):
         longname = args[1]['longname']
-        self._append_to_message_log('Ending test:   %s\n' % longname)
+        self._append_to_message_log('Ending test_case:   %s\n' % longname)
         if args[1]['status'] == 'PASS':
             self._progress_bar.add_pass()
         else:
@@ -277,7 +277,7 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
 
 
 class ProgressBar():
-    '''A progress bar for the test runner plugin'''
+    '''A progress bar for the test_case runner plugin'''
 
     def __init__(self, judge=0):
         self._nowtime = time
@@ -301,14 +301,14 @@ class ProgressBar():
         self._update_message()
 
     def Start(self):
-        '''Signals the start of a test run; initialize progressbar.'''
+        '''Signals the start of a test_case run; initialize progressbar.'''
         self._initialize_state()
         self._start_time = self._nowtime.time()
         print 'time start: ', time.strftime('%Y-%m-%d %H:%M:%S',
                                             time.localtime(self._start_time))
 
     def Stop(self):
-        '''Signals the end of a test run'''
+        '''Signals the end of a test_case run'''
         self._stop_time = self._nowtime.time()
         print 'time stop: ', time.strftime('%Y-%m-%d %H:%M:%S',
                                            time.localtime(self._stop_time))

@@ -271,7 +271,7 @@ class Plugin(object):#插件
         return self.__app.ok_to_open_new()
 
     def open_suite(self, path):
-        """Opens a test suite specified by the ``path``.
+        """Opens a test_case suite specified by the ``path``.
 
         No suite is opened if parsing the suite fails.
         """
@@ -280,7 +280,7 @@ class Plugin(object):#插件
     def get_selected_datafile(self):
         """Returns the data file that is currently selected in the tree.
 
-        If a test case or a keyword is selected, the data file containing the
+        If a test_case case or a keyword is selected, the data file containing the
         selected item is returned.
 
         :rtype:
@@ -291,7 +291,7 @@ class Plugin(object):#插件
     def save_selected_datafile(self):
         """Saves the data file that is currently selected in the tree.
 
-        If a test case or a keyword is selected, the data file containing the
+        If a test_case case or a keyword is selected, the data file containing the
         selected item is saved.
         """
         self.__frame.save(self.tree.get_selected_datafile_controller())
@@ -308,7 +308,7 @@ class Plugin(object):#插件
     def get_selected_item(self):
         """Returns the item that is currently selected in the tree.
 
-        The item can be a test suite, a resource file, a test case or a keyword.
+        The item can be a test_case suite, a resource file, a test_case case or a keyword.
 
         :rtype:
             `InitFile`, `TestCaseFile`, `ResourceFile`, `TestCase` or `UserKeyword`
@@ -351,7 +351,7 @@ class Plugin(object):#插件
         return self.__namespace.is_library_keyword(self.datafile, name)
 
     def all_testcases(self):
-        """Returns all test cases from all suites in one, unsorted list"""
+        """Returns all test_case cases from all suites in one, unsorted list"""
         return self.model.all_testcases()
 
     def register_content_assist_hook(self, hook):
@@ -438,7 +438,7 @@ class Plugin(object):#插件
         return self.__app.get_editor(item_class)
 
     def highlight_cell(self, tcuk, obj=None, row=-1, column=-1):#单元格高亮
-        '''Highlight a specific row/column of a test case or user keyword'''
+        '''Highlight a specific row/column of a test_case case or user keyword'''
         self.tree.select_node_by_data(tcuk)
         self.__app.editor.highlight_cell(obj, row, column)
 

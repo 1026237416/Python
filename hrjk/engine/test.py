@@ -83,13 +83,13 @@ class ReadConf(object):
 # print r.read_option(section="DEFAULT", option="server_port", default="666")
 
 if __name__ == '__main__':
-    from connstomp import MessSendOrRecv
-    from config import recv_destination
+    from stomp_engine import MessSendOrRecv
+    from config import conductor_recv_topic
 
     # msg = json.dumps({"a": "aa", "b": "bb"})
     msg = {"requestway": "run", "requestinfo": "110", "processName": "myProcess"}
     stompmess = MessSendOrRecv(ip="192.168.11.20")
-    stompmess.send_message(message=msg, destination=recv_destination)
+    stompmess.send_message(message=msg, destination=conductor_recv_topic)
     # stompmess.recv_message()
     stompmess.disconnect()
 

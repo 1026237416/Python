@@ -21,7 +21,7 @@ def log(log_name, path):
     @param path: 日志存储的路径
     @return: 日志的句柄
     """
-    if not os.path.isdir(os.path.dirname(path)):
+    if not os.path.exists(os.path.dirname(path)):
         os.makedirs(os.path.dirname(path))
 
     log_format = ("%(asctime)s %(process)s %(name)s %(levelname)s %(pathname)s"

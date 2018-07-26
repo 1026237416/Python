@@ -9,7 +9,6 @@ import datetime
 import time
 import os
 import re
-# import shutil
 import platform
 
 from Queue import Queue
@@ -18,11 +17,7 @@ from robot.output import LEVELS
 from robot.utils import robottime
 
 from testrunner import TestRunner
-# from robotide.context import IS_WINDOWS, IS_MAC
 from robotide.contrib.testrunner import runprofiles
-
-# from robotide.publish.messages import RideTestSelectedForRunningChanged
-# from robotide.pluginapi import Plugin, ActionInfo
 
 STYLE_STDERR = 2
 
@@ -90,16 +85,32 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
         else:
             # 测试时ESBDemo.ESBDemo，正式的是Main.main
             name_run = set([(case_name.decode('utf-8') + u'.Main.main')])
-        dir_path = first_dir_path.decode('utf-8') + u'\\' + case_name.decode(
-            'utf-8')
+        print("***************************************************************")
+        print "run_name:", name_run
+        print("***************************************************************")
+        dir_path = os.path.join(first_dir_path, case_name)
+        print("***************************************************************")
+        print "dir_path:", dir_path
+        print("***************************************************************")
         command = self._create_command(name_run, dir_path)
-        self.html_path = '\\\\'.join(
-            command.split(' ')[2].split('\\')[:-1])  # 获取自动生成的文件路径
-        self._log_file = self.html_path + '\\\\report\\\\ShowReportPage.html'  # 日志文件绝对路径
+        print("***************************************************************")
+        print("Run command: ", command)
+        print("***************************************************************")
+
+        argfile_path = command.split(" ")[2]
+        self.html_path = os.path.dirname(argfile_path)
+        print("***************************************************************")
+        print "html path:", self.html_path
+        print("***************************************************************")
+
+        self._log_file = os.path.join(
+            self.html_path, "report", "ShowReportPage.html")
+        print("***************************************************************")
+        print self._log_file
+        print("***************************************************************")
         self._output("command: %s\n" % command)
         try:
-            self._test_runner.run_command(
-                command, dir_path)
+            self._test_runner.run_command(command, dir_path)
             self._set_running()
             self._progress_bar.Start()
             self.OnTimer()
@@ -116,13 +127,16 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
             '60',
             name_run,
             dir_path)
+        print("***************************************************************")
+        print "command_as_list:", command_as_list
+        print("***************************************************************")
+
         self._min_log_level_number = self._test_runner.get_message_log_level(
             command_as_list)  ###2
-        sysstr = platform.system()
-        if sysstr == "Windows":
-            pass
-        elif sysstr == "Linux":
-            command_as_list[0] = 'pybot.sh'
+        print("***************************************************************")
+        print "_min_log_level_number:", self._min_log_level_number
+        print("***************************************************************")
+
         command = self._format_command(command_as_list)
         return command
 
@@ -252,6 +266,8 @@ class TestRunnerPlugin(object):  # 平台测试案例运行
     def _handle_log_file(self, args):
         self._log_file = '\\'.join(args[0].split('\\')[
                                    :-1]) + '\\report\\ShowReportPage.html'  # args[0]
+        if platform.system() == "Linux":
+            self._log_file = self._log_file.replace(r"\\", "/")
 
     def _handle_start_keyword(self, args):
         self._progress_bar.set_current_keyword(args[0])

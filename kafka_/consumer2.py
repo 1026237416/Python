@@ -36,4 +36,3 @@ for msg in consumer:
     client.send_msg(topic_name="EVENT.QLOUD_TEST_ENGINE_ACK",
                     msg=ack_msg,
                     key=msg.key)
-

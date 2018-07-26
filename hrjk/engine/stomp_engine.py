@@ -5,10 +5,11 @@ Created on 2018年6月14日
 @author: pandas
 '''
 
-import sys
 import time
 import stomp
 import json
+
+from common import case_log
 
 
 def default_call_back(data):
@@ -26,7 +27,7 @@ class MyListener(stomp.ConnectionListener):
 
     def on_message(self, headers, message):
         print('received a message %s' % message)
-        self.callback(message)
+        self.callback(json.loads(message))
 
 
 class MessSendOrRecv(object):
@@ -40,20 +41,24 @@ class MessSendOrRecv(object):
         self.conn.start()
         self.conn.connect(username=user, passcode=pwd, wait=True)
 
-    def send_message(self, destination="/queue/test_case",message=b"test"):
+    def send_message(self, destination="/qloud/test_engine_report",
+                     message=b"test"):
         """
         发布信息到事业总线,发送消息到testQueue队列，指定consumerId='88.3@6006
         :param destination: 接收消息的队列名称
         :param message: 消息内容
         :return: 
         """
+        case_log.info("Start to send message......")
         self.conn.send(
             body=json.dumps(message),
             destination=destination,
             headers={'consumerId': '88.3@6006'},
         )
+        case_log.info("Send message Done! message: %s" % message)
 
-    def recv_message(self, destination="/queue/test_case", subscription_id=None):
+    def recv_message(self, destination="/qloud/test_engine_report",
+                     subscription_id=None):
         """
         从testQueue队列中接收消息，用selector过滤，只接收consumerId = '88.3@6006'的消息
         :param destination: 消息发送到的队列名称

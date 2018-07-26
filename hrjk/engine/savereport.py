@@ -70,7 +70,6 @@ class S3(object):
         else:
             print "login success: %s" % resp_data
             self.token = resp_data.get("result").get("token")
-            print self.token
             self.headers["Authorization"] = "Bearer {}".format(self.token)
             print self.headers
 

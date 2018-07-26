@@ -10,11 +10,15 @@
     @file: recv_msg.py
     @time: 2018/7/12 11:05
 """
-from connstomp import MessSendOrRecv
+from stomp_engine import MessSendOrRecv
 
-conductor_destination = "/EVENT.CASE_ENGINE"
-# conductor_destination = "/asd/78"
-send_destination = "/queue/test_case"
+# conductor_destination = "/EVENT.CASE_ENGINE"
+# conductor_destination = "/liping"
+# conductor_destination = "liping"
+# conductor_destination = "topic.liping"
+# conductor_destination = "/topic.liping"
+# conductor_destination = "/topic/liping"
+conductor_destination = "/qloud/test_engine_report"
 
 try:
     stompmess = MessSendOrRecv(ip="192.168.11.20")

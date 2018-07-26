@@ -25,7 +25,7 @@ from config import *
 
 case_log = log(
     log_name="run_case",
-    path=log_path
+    path=LOG_PATH
 )
 
 
@@ -73,14 +73,14 @@ class Asset(object):
                     data=login_data
                 )
             except Exception as e:
-                print(e.message)
+                print e.message
                 return True
             print(login_resp)
             if int(login_resp.status_code) != 200:
                 raise Exception(login_resp.content)
 
             resp_data = json.loads(login_resp.content)
-            print(resp_data)
+            print resp_data
         except Exception as e:
             err_msg = "Failed to login asset base: %s" % e.message
             print(err_msg)
@@ -339,8 +339,16 @@ def send_report_to_qloud(process_name, case_name, local_path,
         "report.html": report_url
     }
 
-    print(url_map)
+    print url_map
     return url_map
+
+
+def report_conductor_by_rest(url, msg):
+    print "Send msg:", msg
+    requests.post(
+        url=url,
+        data=json.dumps(msg)
+    )
 
 
 def report_error(err_msg):
@@ -355,7 +363,7 @@ def report_error(err_msg):
 if __name__ == '__main__':
     S = Asset(host="192.168.11.78", port="8081", user="admin", passwd="pass")
     infos = S.get_asset_info("1.zip")
-    print(infos)
+    print infos
     # S.get_asset_package(infos, "test_case.zip")
     # print S.login()
     # from config import log_path

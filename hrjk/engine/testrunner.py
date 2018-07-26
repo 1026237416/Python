@@ -47,6 +47,7 @@ from robotide.context.platform import IS_WINDOWS
 from robotide.contrib.testrunner import TestRunnerAgent
 from robotide.controller.testexecutionresults import TestExecutionResults
 import datetime
+import platform
 
 from config import RESULT_PATH
 
@@ -192,7 +193,12 @@ class TestRunner(object):  # 测试案例的运行
 
     def get_command(self, pythonpath, monitor_width, names_to_run, dir_path):
         '''Return the command (as a list) used to run the test_case'''
-        command = [u'pybot.bat']
+        sysstr = platform.system()
+        if sysstr == "Windows":
+            command = [u'pybot.bat']
+        else:
+            command = ['pybot']
+        # command = [u'pybot.bat']
         # command = profile.get_command_prefix()[:]
         argfile = os.path.join(self._output_dir, "argfile.txt")
         command.extend(["--argumentfile", argfile])

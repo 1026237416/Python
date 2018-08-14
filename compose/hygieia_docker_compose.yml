@@ -1,0 +1,171 @@
+version: '2'
+
+services:
+    mongodb:
+        image: mongo:latest
+        restart: always
+        container_name: mongodb
+        volumes:
+            - ./data/mongodb_master/db:/data/db
+        environment:
+            - MONGODB_USERNAME=dashboarduser
+            - MONGODB_DATABASE=dashboarddb
+            - MONGODB_PASSWORD=dbpassword
+        ports:
+            - "27017:27017"
+
+    hygieia-api:
+        image: capitaloneio/hygieia-api:latest
+        restart: always
+        container_name: hygieia-api
+        volumes:
+            - ./logs/hygieia-api:/hygieia/logs
+            - ./conf/hygieia-api:/hygieia/config
+        environment:
+            - jasypt.encryptor.password=hygieiasecret
+            - SPRING_DATA_MONGODB_DATABASE=dashboarddb
+            - SPRING_DATA_MONGODB_HOST=mongodb
+            - SPRING_DATA_MONGODB_PORT=27017
+            - SPRING_DATA_MONGODB_USERNAME=dashboarduser
+            - SPRING_DATA_MONGODB_PASSWORD=dbpassword
+            - FEATURE_DYNAMIC_PIPELINE=enabled
+            - AUTH_EXPIRATION_TIME=3600000
+            - AUTH_SECRET=secret
+            - SKIP_PROPERTIES_BUILDER=false
+        links:
+            - mongodb
+
+    hygieia-ui:
+        image: capitaloneio/hygieia-ui:latest
+#        restart: always
+        container_name: hygieia-ui
+        volumes:
+            - ./conf/hygieia-ui/:/etc/nginx/conf.d
+        ports:
+            - "18088:80"
+        links:
+            - hygieia-api
+
+    hygieia-jenkins-build-collector:
+        image: hygieia-jenkins-build-collector:latest
+        restart: always
+        container_name: hygieia-jenkins-build
+        volumes:
+            - ./logs/hygieia-jenkins-build:/hygieia/logs
+            - ./conf/hygieia-jenkins-build:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - JENKINS_CRON=0 */15 * * * *
+            - JENKINS_MASTER=http://li:password@10.0.0.130:9100
+            - SKIP_PROPERTIES_BUILDER=false
+
+    hygieia-jenkins-cucumber-test-collector:
+        image: hygieia-jenkins-cucumber-test-collector:latest
+        restart: always
+        container_name: hygieia-jenkins-cucumber
+        volumes:
+            - ./logs/hygieia-jenkins-cucumber:/hygieia/logs
+            - ./conf/hygieia-jenkins-cucumber:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - JENKINS_CRON=0 */15  * * * *
+            - JENKINS_MASTER=http://10.0.0.130:9100
+            - JENKINS_CUCUMBER_JSON_FILENAME=cucumber.json
+            - JENKINS_USERNAME=li
+            - JENKINS_API_KEY=password
+            - SKIP_PROPERTIES_BUILDER=false
+
+    hygieia-sonar-codequality-collector:
+        image: hygieia-sonar-codequality-collector:latest
+        restart: always
+        container_name: hygieia-sonar-codequality
+        volumes:
+            - ./logs/hygieia-sonar-codequality:/hygieia/logs
+            - ./conf/hygieia-sonar-codequality:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - SONAR_URL=http://10.112.34.22:9000
+            - SONAR_CRON=0 */5 * * * *
+            - SKIP_PROPERTIES_BUILDER=false
+
+    hygieia-github-scm-collector:
+        image: hygieia-github-scm-collector:latest
+        restart: always
+        container_name: hygieia-github
+        volumes:
+            - ./logs/hygieia-github:/hygieia/logs
+            - ./conf/hygieia-github:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - GITHUB_HOST=github.com
+            - GITHUB_CRON=0 */15 * * * *
+            - GITHUB_COMMIT_THRESHOLD_DAYS=60
+            - GITHUB_ERROR_THRESHOLD=3
+            - PERSONAL_ACCESS_TOKEN=baed423e812ec76dd1202a1c8d6fd32060dfb77e
+            - SKIP_PROPERTIES_BUILDER=false
+
+    hygieia-gitlab-scm-collector:
+        image: hygieia-gitlab-scm-collector:latest
+        restart: always
+        container_name: hygieia-gitlab
+        volumes:
+            - ./logs/hygieia-gitlab:/hygieia/logs
+            - ./conf/hygieia-gitlab:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - GITLAB_HOST=10.127.91.51
+            - GITLAB_PROTOCOL=http
+            - GITLAB_PORT=6080
+            - GITLAB_CRON=0 */15 * * * *
+            - GITLAB_API_TOKEN=xSyYNapktsbW-7Qnywhz
+            - GITLAB_COMMIT_THRESHOLD_DAYS=20
+            - SKIP_PROPERTIES_BUILDER=false
+
+    hygieia-gitlab-feature-collector:
+        image: hygieia-gitlab-feature-collector:latest
+        restart: always
+        container_name: hygieia-gitlab-feature
+        volumes:
+            - ./logs/hygieia-gitlab-feature:/hygieia/logs
+            - ./conf/hygieia-gitlab-feature:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - GITLAB_HOST=10.127.91.51
+            - GITLAB_PROTOCOL=http
+            - GITLAB_PORT=6080
+            - GITLAB_CRON=0 */15 * * * *
+            - GITLAB_API_TOKEN=xSyYNapktsbW-7Qnywhz
+            - GITLAB_COMMIT_THRESHOLD_DAYS=20
+            - SKIP_PROPERTIES_BUILDER=false
+
+    hygieia-jira-feature-collector:
+        image: hygieia-jira-feature-collector:latest
+        restart: always
+        container_name: hygieia-jira-feature
+        volumes:
+            - ./logs/hygieia-jira-feature:/hygieia/logs
+            - ./conf/hygieia-jira-feature:/hygieia/config
+        links:
+            - mongodb:mongo
+            - hygieia-api
+        environment:
+            - JIRA_BASE_URL=http://10.112.34.22:8888
+            - JIRA_CREDENTIALS=aHVhcWlhbmdsaTphZG1pbjEyMw==
+            - JIRA_DELTA_START_DATE=2018-01-01T00:00:00.000000
+            - JIRA_MASTER_START_DATE=2018-01-01T00:00:00.000000
+            - JIRA_DELTA_COLLECTOR_ITEM_START_DATE=2018-01-01T00:00:00.000000
+            - JIRA_CRON=0 */15 * * * *
+            - JIRA_BOARD_AS_TEAM=true
+            - SKIP_PROPERTIES_BUILDER=true

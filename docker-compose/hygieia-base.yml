@@ -1,0 +1,35 @@
+mongodb:
+  image: mongo:latest
+  environment:
+    - MONGODB_USERNAME=dashoarduser
+    - MONGODB_DATABASE=dashboarddb
+    - MONGODB_PASSWORD=dbpassword
+  ports:
+  - "27017:27017"
+
+hygieia-api:
+  image: capitalone/hygieia-api
+  volumes:
+  - ./logs:/hygieia/logs
+  - ./conf:/hygieia/config
+  environment:
+    - jasypt.encryptor.password=hygieiasecret
+    - SPRING_DATA_MONGODB_DATABASE=dashboarddb
+    - SPRING_DATA_MONGODB_HOST=mongodb
+    - SPRING_DATA_MONGODB_PORT=27017
+    - SPRING_DATA_MONGODB_USERNAME=dashoarduser
+    - SPRING_DATA_MONGODB_PASSWORD=dbpassword
+    - FEATURE_DYNAMIC_PIPELINE=enabled
+    - AUTH_EXPIRATION_TIME=3600000
+    - AUTH_SECRET=secret
+    - SKIP_PROPERTIES_BUILDER=false
+  links:
+  - mongodb
+
+hygieia-ui:
+  image: capitalone/hygieia-ui
+  container_name: hygieia-ui
+  ports:
+  - "18088:80"
+  links:
+  - hygieia-api

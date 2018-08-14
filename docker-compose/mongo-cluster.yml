@@ -1,0 +1,52 @@
+version: '2'
+
+services:
+    mongo_master:
+      image: mongo:latest
+      container_name: mongo_master
+      restart: always
+      command: mongod --dbpath /data/db --replSet newset --oplogSize 128
+      volumes:
+        - ./data/mongo/mongo_master/data:/data/db
+      environment:
+        - MONGODB_USERNAME=dashboarduser
+        - MONGODB_DATABASE=dashboarddb
+        - MONGODB_PASSWORD=dbpassword
+
+    mongo_slave:
+      image: mongo:latest
+      container_name: mongo_slave
+      restart: always
+      command: mongod --dbpath /data/db --replSet newset --oplogSize 128
+      volumes:
+        - ./data/mongo/mongo_slave/data:/data/db
+
+    mongo_myarbiter:
+      image: mongo:latest
+      container_name: mongo_myarbiter
+      restart: always
+      volumes:
+        - ./data/mongo/mongo_myarbiter/data:/data/db
+      command: mongod --dbpath /data/db --replSet newset --smallfiles --oplogSize 128
+#      ports:
+#        - "27017:27017"
+
+    hygieia-api:
+      image: hygieia-api:latest
+      volumes:
+        - ./logs:/hygieia/logs
+        - ./conf:/hygieia/config
+      environment:
+        - jasypt.encryptor.password=hygieiasecret
+        - SPRING_DATA_MONGODB_DATABASE=dashboarddb
+        - SPRING_DATA_MONGODB_HOST=mongodb
+        - SPRING_DATA_MONGODB_PORT=27017
+        - SPRING_DATA_MONGODB_USERNAME=dashboarduser
+        - SPRING_DATA_MONGODB_PASSWORD=dbpassword
+        - FEATURE_DYNAMIC_PIPELINE=enabled
+        - AUTH_EXPIRATION_TIME=3600000
+        - AUTH_SECRET=secret
+        - SKIP_PROPERTIES_BUILDER=false
+      links:
+      - mongodb
+

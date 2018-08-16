@@ -1,35 +1,96 @@
-mongodb:
+db:
   image: mongo:latest
+  volumes:
+    - ./data/mongodb_master/db:/data/db
   environment:
-    - MONGODB_USERNAME=dashoarduser
+    - MONGODB_USERNAME=dashboarduser
     - MONGODB_DATABASE=dashboarddb
     - MONGODB_PASSWORD=dbpassword
   ports:
-  - "27017:27017"
+    - "27017:27017"
 
-hygieia-api:
+api:
   image: capitalone/hygieia-api
   volumes:
-  - ./logs:/hygieia/logs
-  - ./conf:/hygieia/config
+    - ./logs/api:/hygieia/logs
+    - ./conf/api:/hygieia/config
+  ports:
+    - "8080:8080"
   environment:
     - jasypt.encryptor.password=hygieiasecret
     - SPRING_DATA_MONGODB_DATABASE=dashboarddb
-    - SPRING_DATA_MONGODB_HOST=mongodb
+    - SPRING_DATA_MONGODB_HOST=db
     - SPRING_DATA_MONGODB_PORT=27017
-    - SPRING_DATA_MONGODB_USERNAME=dashoarduser
+    - SPRING_DATA_MONGODB_USERNAME=dashboarduser
     - SPRING_DATA_MONGODB_PASSWORD=dbpassword
     - FEATURE_DYNAMIC_PIPELINE=enabled
     - AUTH_EXPIRATION_TIME=3600000
     - AUTH_SECRET=secret
     - SKIP_PROPERTIES_BUILDER=false
   links:
-  - mongodb
+    - db
 
-hygieia-ui:
-  image: capitalone/hygieia-ui
+ui:
+  image: hygieia-ui
   container_name: hygieia-ui
   ports:
-  - "18088:80"
+    - "18088:80"
+  environment:
+    - API_HOST=api
+    - API_PORT=8080
+  volumes:
+    - ./conf/ui/:/etc/nginx/conf.d
   links:
-  - hygieia-api
+    - api
+
+hygieia-jenkins-build-collector:
+  image: hygieia-jenkins-build-collector:latest
+  container_name: hygieia-jenkins-build
+  volumes:
+    - ./logs/jenkins-build:/hygieia/logs
+    - ./conf/jenkins-build:/hygieia/config
+  links:
+    - db
+    - api
+  environment:
+    - JENKINS_CRON=0 */15 * * * *
+    - JENKINS_MASTER=http://liping:bd599b8fd0ba61734b4a7de7c16b1a10@10.0.0.100:9100
+    - SKIP_PROPERTIES_BUILDER=false
+    - MONGO_PORT=tcp://db:27017
+
+
+hygieia-jenkins-cucumber-test-collector:
+  image: hygieia-jenkins-cucumber-test-collector:latest
+  container_name: hygieia-jenkins-cucumber
+  volumes:
+    - ./logs/jenkins-cucumber:/hygieia/logs
+    - ./conf/jenkins-cucumber:/hygieia/config
+  links:
+    - db
+    - api
+  environment:
+    - JENKINS_CRON=0 */15  * * * *
+    - JENKINS_MASTER=http://10.0.0.100:9100
+    - JENKINS_CUCUMBER_JSON_FILENAME=cucumber.json
+    - JENKINS_USERNAME=liping
+    - JENKINS_API_KEY=bd599b8fd0ba61734b4a7de7c16b1a10
+    - SKIP_PROPERTIES_BUILDER=false
+    - MONGO_PORT=tcp://db:27017
+
+
+hygieia-github-scm-collector:
+  image: hygieia-github-scm-collector:latest
+  container_name: hygieia-github
+  volumes:
+    - ./logs/github-scm:/hygieia/logs
+    - ./conf/github-scm:/hygieia/config
+  links:
+    - db
+    - api
+  environment:
+    - GITHUB_HOST=github.com
+    - GITHUB_CRON=0 */15 * * * *
+    - GITHUB_COMMIT_THRESHOLD_DAYS=60
+    - GITHUB_ERROR_THRESHOLD=3
+    - PERSONAL_ACCESS_TOKEN=cb0a8907b069c915d63fa3811f0a037af6288bf2
+    - SKIP_PROPERTIES_BUILDER=false

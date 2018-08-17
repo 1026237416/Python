@@ -1,0 +1,26 @@
+services:
+  DataBase:
+    image: mariadb:5.5
+    restart: always
+    container_name: mariadb_bugzilla
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql/data:/var/lib/mysql
+      - mysql/conf:/etc/mysql/conf.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+  bug:
+    image: bugzilla:1.0
+    restart: always
+    container_name: bugzilla_server
+    ports:
+      - "8060:80"
+    volumes:
+      - bugzilla/data:*
+      - bugzilla/conf:*
+    environment:
+      - MYSQL_HOST=DataBase
+      - MYSQL_USER=bugs
+      - MYSQL_PWD=password

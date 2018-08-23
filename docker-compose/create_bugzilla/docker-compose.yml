@@ -7,7 +7,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql/data:/var/lib/mysql
-      - mysql/conf:/etc/mysql/conf.d
+#      - mysql/conf:/etc/mysql/conf.d
     environment:
       - MYSQL_ROOT_PASSWORD=password
 
@@ -17,10 +17,13 @@ services:
     container_name: bugzilla_server
     ports:
       - "8060:80"
-    volumes:
-      - bugzilla/data:*
-      - bugzilla/conf:*
+      - "8061:8080"
     environment:
-      - MYSQL_HOST=DataBase
+      - MYSQL_HOST=10.0.0.100
+      - MYSQL_ROOT_PWD=password
       - MYSQL_USER=bugs
       - MYSQL_PWD=password
+      - MYSQL_PORT=3306
+      - ADMINISTRATOR_EMAIL=123@qq.com
+      - ADMINISTRATOR_NAME=li
+      - ADMINISTRATOR_PWD=password

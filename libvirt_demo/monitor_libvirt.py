@@ -51,7 +51,7 @@ class LibvirtInspector(object):
             global libvirt
             if libvirt is None:
                 libvirt = __import__('libvirt')
-            print self.uri
+            print(self.uri)
             self.connection = libvirt.open(self.uri)
         return self.connection
 
@@ -70,14 +70,14 @@ class LibvirtInspector(object):
             return self._get_connection().lookupByName(instance_name)
         except Exception as ex:
             if not libvirt or not isinstance(ex, libvirt.libvirtError):
-                raise InspectorException(unicode(ex))
+                raise InspectorException(ex)
             msg = ("Error from libvirt while looking up %(instance_name)s: "
                    "%(ex)s" % {'instance_name': instance_name,
                                'ex': ex})
             raise InstanceNotFoundException(msg)
 
     def inspect_instances(self):
-        print self._get_connection().numOfDomains()
+        print(self._get_connection().numOfDomains())
         if self._get_connection().numOfDomains() > 0:
             for domain_id in self._get_connection().listDomainsID():
                 try:
@@ -268,7 +268,7 @@ def output():
         not_run_result['memory_total'] = libvirtInspector.inspect_mem_info_for_down(instance.name)
         not_run_result['memory_used'] = ""
         not_run_result['memory_usage'] = ""
-    print not_run_result
+    print(not_run_result)
     #
     #     # get the nic infomation
     #     nic_List = []
@@ -341,7 +341,7 @@ def output():
             disk_dict['disk_write_request'] = disk[1].write_requests
             disk_List.append(disk_dict)
         result['disks'] = disk_List
-        print result
+        print(result)
 
 
 def main():

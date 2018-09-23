@@ -69,10 +69,10 @@
   Backbone.emulateJSON = false;
 
   // Proxy Backbone class methods to Underscore functions, wrapping the model's
-  // `attributes` object or collection's `models` array behind the scenes.
+  // `attributes` object or collections_demo's `models` array behind the scenes.
   //
-  // collection.filter(function(model) { return model.get('age') > 10 });
-  // collection.each(this.addView);
+  // collections_demo.filter(function(model) { return model.get('age') > 10 });
+  // collections_demo.each(this.addView);
   //
   // `Function#apply` can be slow so we use the method's arg count, if we know it.
   var addMethod = function(length, method, attribute) {
@@ -102,7 +102,7 @@
     });
   };
 
-  // Support `collection.sortBy('attr')` and `collection.findWhere({id: 1})`.
+  // Support `collections_demo.sortBy('attr')` and `collections_demo.findWhere({id: 1})`.
   var cb = function(iteratee, instance) {
     if (_.isFunction(iteratee)) return iteratee;
     if (_.isObject(iteratee) && !instance._isModel(iteratee)) return modelMatcher(iteratee);
@@ -653,7 +653,7 @@
     },
 
     // Destroy this model on the server if it was already persisted.
-    // Optimistically removes the model from its collection, if it has one.
+    // Optimistically removes the model from its collections_demo, if it has one.
     // If `wait: true` is passed, waits for the server to respond before removal.
     destroy: function(options) {
       options = options ? _.clone(options) : {};
@@ -743,7 +743,7 @@
 
   // If models tend to represent a single row of data, a Backbone Collection is
   // more analogous to a table full of data ... or a small slice or page of that
-  // table, or a collection of rows that belong together for a particular reason
+  // table, or a collections_demo of rows that belong together for a particular reason
   // -- all of the messages in this particular folder, all of the documents
   // belonging to this particular author, and so on. Collections maintain
   // indexes of their models, both in order, and for lookup by `id`.
@@ -777,7 +777,7 @@
   // Define the Collection's inheritable methods.
   _.extend(Collection.prototype, Events, {
 
-    // The default model for a collection is just a **Backbone.Model**.
+    // The default model for a collections_demo is just a **Backbone.Model**.
     // This should be overridden in most cases.
     model: Model,
 
@@ -813,10 +813,10 @@
       return singular ? removed[0] : removed;
     },
 
-    // Update a collection by `set`-ing a new list of models, adding new ones,
+    // Update a collections_demo by `set`-ing a new list of models, adding new ones,
     // removing models that are no longer present, and merging models that
-    // already exist in the collection, as necessary. Similar to **Model#set**,
-    // the core operation for updating the data contained by the collection.
+    // already exist in the collections_demo, as necessary. Similar to **Model#set**,
+    // the core operation for updating the data contained by the collections_demo.
     set: function(models, options) {
       if (models == null) return;
 
@@ -902,7 +902,7 @@
         this.length = this.models.length;
       }
 
-      // Silently sort the collection if appropriate.
+      // Silently sort the collections_demo if appropriate.
       if (sort) this.sort({silent: true});
 
       // Unless silenced, it's time to fire all appropriate add/sort events.
@@ -936,29 +936,29 @@
       return models;
     },
 
-    // Add a model to the end of the collection.
+    // Add a model to the end of the collections_demo.
     push: function(model, options) {
       return this.add(model, _.extend({at: this.length}, options));
     },
 
-    // Remove a model from the end of the collection.
+    // Remove a model from the end of the collections_demo.
     pop: function(options) {
       var model = this.at(this.length - 1);
       return this.remove(model, options);
     },
 
-    // Add a model to the beginning of the collection.
+    // Add a model to the beginning of the collections_demo.
     unshift: function(model, options) {
       return this.add(model, _.extend({at: 0}, options));
     },
 
-    // Remove a model from the beginning of the collection.
+    // Remove a model from the beginning of the collections_demo.
     shift: function(options) {
       var model = this.at(0);
       return this.remove(model, options);
     },
 
-    // Slice out a sub-array of models from the collection.
+    // Slice out a sub-array of models from the collections_demo.
     slice: function() {
       return slice.apply(this.models, arguments);
     },
@@ -988,7 +988,7 @@
       return this.where(attrs, true);
     },
 
-    // Force the collection to re-sort itself. You don't need to call this under
+    // Force the collections_demo to re-sort itself. You don't need to call this under
     // normal circumstances, as the set will maintain sort order as each item
     // is added.
     sort: function(options) {
@@ -1009,13 +1009,13 @@
       return this;
     },
 
-    // Pluck an attribute from each model in the collection.
+    // Pluck an attribute from each model in the collections_demo.
     pluck: function(attr) {
       return _.invoke(this.models, 'get', attr);
     },
 
-    // Fetch the default set of models for this collection, resetting the
-    // collection when they arrive. If `reset: true` is passed, the response
+    // Fetch the default set of models for this collections_demo, resetting the
+    // collections_demo when they arrive. If `reset: true` is passed, the response
     // data will be passed through the `reset` method instead of `set`.
     fetch: function(options) {
       options = _.extend({parse: true}, options);
@@ -1031,8 +1031,8 @@
       return this.sync('read', this, options);
     },
 
-    // Create a new instance of a model in this collection. Add the model to the
-    // collection immediately, unless `wait: true` is passed, in which case we
+    // Create a new instance of a model in this collections_demo. Add the model to the
+    // collections_demo immediately, unless `wait: true` is passed, in which case we
     // wait for the server to agree.
     create: function(model, options) {
       options = options ? _.clone(options) : {};
@@ -1051,12 +1051,12 @@
     },
 
     // **parse** converts a response into a list of models to be added to the
-    // collection. The default implementation is just to pass it through.
+    // collections_demo. The default implementation is just to pass it through.
     parse: function(resp, options) {
       return resp;
     },
 
-    // Create a new collection with an identical list of models as this one.
+    // Create a new collections_demo with an identical list of models as this one.
     clone: function() {
       return new this.constructor(this.models, {
         model: this.model,
@@ -1064,12 +1064,12 @@
       });
     },
 
-    // Define how to uniquely identify models in the collection.
+    // Define how to uniquely identify models in the collections_demo.
     modelId: function (attrs) {
       return attrs[this.model.prototype.idAttribute || 'id'];
     },
 
-    // Private method to reset all internal state. Called when the collection
+    // Private method to reset all internal state. Called when the collections_demo
     // is first initialized or reset.
     _reset: function() {
       this.length = 0;
@@ -1078,7 +1078,7 @@
     },
 
     // Prepare a hash of attributes (or other model) to be added to this
-    // collection.
+    // collections_demo.
     _prepareModel: function(attrs, options) {
       if (this._isModel(attrs)) {
         if (!attrs.collection) attrs.collection = this;
@@ -1121,12 +1121,12 @@
     },
 
     // Method for checking whether an object should be considered a model for
-    // the purposes of adding to the collection.
+    // the purposes of adding to the collections_demo.
     _isModel: function (model) {
       return model instanceof Model;
     },
 
-    // Internal method to create a model's ties to a collection.
+    // Internal method to create a model's ties to a collections_demo.
     _addReference: function(model, options) {
       this._byId[model.cid] = model;
       var id = this.modelId(model.attributes);
@@ -1134,7 +1134,7 @@
       model.on('all', this._onModelEvent, this);
     },
 
-    // Internal method to sever a model's ties to a collection.
+    // Internal method to sever a model's ties to a collections_demo.
     _removeReference: function(model, options) {
       delete this._byId[model.cid];
       var id = this.modelId(model.attributes);
@@ -1875,7 +1875,7 @@
     return child;
   };
 
-  // Set up inheritance for the model, collection, router, view and history.
+  // Set up inheritance for the model, collections_demo, router, view and history.
   Model.extend = Collection.extend = Router.extend = View.extend = History.extend = extend;
 
   // Throw an error when a URL is needed, and none is supplied.

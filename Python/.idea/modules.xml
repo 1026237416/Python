@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Django/Django_oldboy/.idea/Django_oldboy.iml" filepath="$PROJECT_DIR$/../Django/Django_oldboy/.idea/Django_oldboy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Message_thrift_python_service/Message_thrift_python_service.iml" filepath="$PROJECT_DIR$/Message_thrift_python_service/Message_thrift_python_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/Python.iml" filepath="$PROJECT_DIR$/../.idea/Python.iml" />
+      <module fileurl="file://G:/imoocc_online/.idea/imoocc_online.iml" filepath="G:/imoocc_online/.idea/imoocc_online.iml" />
+      <module fileurl="file://G:/mnist_dome/.idea/mnist_dome.iml" filepath="G:/mnist_dome/.idea/mnist_dome.iml" />
+    </modules>
+  </component>
+</project>

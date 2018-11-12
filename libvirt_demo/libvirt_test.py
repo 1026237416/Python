@@ -4,7 +4,6 @@
 import libvirt
 
 conn = libvirt.open("qemu:///system")
-print
 
 for instance_id in conn.listDomainsID():
     domain = conn.lookupByID(instance_id)
@@ -12,4 +11,4 @@ for instance_id in conn.listDomainsID():
     # print conn.getCapabilities()
     print("**************************************************")
     print(domain.info())
-    print("==================================================")
+    print()

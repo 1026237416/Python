@@ -33,7 +33,7 @@ __author__ = 'litao@easted.com.cn'
 #     print i
 
 
-"""collection"""
+"""collections_demo"""
 from collections import  namedtuple,deque,defaultdict,OrderedDict
 
 a = ["a:1","b:2","c:3"]

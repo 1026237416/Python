@@ -308,7 +308,7 @@ var config = {
 
 var urlParams = defined.document ? getUrlParams() : {};
 
-// Push a loose unnamed module to the modules collection
+// Push a loose unnamed module to the modules collections_demo
 config.modules.push( config.currentModule );
 
 if ( urlParams.filter === true ) {
@@ -357,7 +357,7 @@ function registerLoggingCallbacks( obj ) {
 	for ( i = 0, l = callbackNames.length; i < l; i++ ) {
 		key = callbackNames[ i ];
 
-		// Initialize key collection of logging callback
+		// Initialize key collections_demo of logging callback
 		if ( objectType( config.callbacks[ key ] ) === "undefined" ) {
 			config.callbacks[ key ] = [];
 		}
@@ -2120,7 +2120,7 @@ QUnit.dump = (function() {
 			HTML: false,
 			// indentation unit
 			indentChar: "  ",
-			// if true, items in a collection, are separated by a \n, else just a space.
+			// if true, items in a collections_demo, are separated by a \n, else just a space.
 			multiline: true
 		};
 

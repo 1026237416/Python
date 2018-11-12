@@ -82,7 +82,7 @@
     };
 
     // A mostly-internal function to generate callbacks that can be applied
-    // to each element in a collection, returning the desired result 鈥� either
+    // to each element in a collections_demo, returning the desired result 鈥� either
     // identity, an arbitrary callback, a property matcher, or a property accessor.
     var cb = function(value, context, argCount) {
         if (value == null) return _.identity;
@@ -122,7 +122,7 @@
         return result;
     };
 
-    // Helper for collection methods to determine whether a collection
+    // Helper for collections_demo methods to determine whether a collections_demo
     // should be iterated as an array or as an object
     // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
     var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
@@ -259,7 +259,7 @@
         return _.indexOf(obj, target, typeof fromIndex == 'number' && fromIndex) >= 0;
     };
 
-    // Invoke a method (with arguments) on every item in a collection.
+    // Invoke a method (with arguments) on every item in a collections_demo.
     _.invoke = function(obj, method) {
         var args = slice.call(arguments, 2);
         var isFunc = _.isFunction(method);
@@ -336,7 +336,7 @@
         return result;
     };
 
-    // Shuffle a collection, using the modern version of the
+    // Shuffle a collections_demo, using the modern version of the
     // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher鈥揧ates_shuffle).
     _.shuffle = function(obj) {
         var set = isArrayLike(obj) ? obj : _.values(obj);
@@ -350,7 +350,7 @@
         return shuffled;
     };
 
-    // Sample **n** random values from a collection.
+    // Sample **n** random values from a collections_demo.
     // If **n** is not specified, returns a single random element.
     // The internal `guard` argument allows it to work with `map`.
     _.sample = function(obj, n, guard) {
@@ -434,7 +434,7 @@
         return isArrayLike(obj) ? obj.length : _.keys(obj).length;
     };
 
-    // Split a collection into two arrays: one whose elements all satisfy the given
+    // Split a collections_demo into two arrays: one whose elements all satisfy the given
     // predicate, and one whose elements all do not satisfy the predicate.
     _.partition = function(obj, predicate, context) {
         predicate = cb(predicate, context);
